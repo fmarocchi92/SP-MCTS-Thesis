@@ -55,10 +55,13 @@ namespace MCTS2016.SP_MCTS
             long usedMemory = afterMemory - beforeMemory;
             long averageUsedMemoryPerIteration = 0;
             iterationsExecuted = 0;
-            
+
+            bool looped=false;
+
 
             for (iterationsExecuted = 0; iterationsExecuted < iterations; iterationsExecuted++)
             {
+                looped = false;
                 ISPTreeNode node = rootNode;
                 IPuzzleState state = rootState.Clone();
                 HashSet<IPuzzleState> visitedStatesInRollout = new HashSet<IPuzzleState>() { state.Clone() };
@@ -83,23 +86,24 @@ namespace MCTS2016.SP_MCTS
                         state.DoMove(move);
                         if (visitedStatesInRollout.Contains(state))
                         {
-                            while (node.GetUntriedMoves().Count() > 0 && visitedStatesInRollout.Contains(state))
-                            {
-                                state = backupState.Clone();
-                                move = node.GetUntriedMoves()[RNG.Next(node.GetUntriedMoves().Count())];
-                                state.DoMove(move);
-                                node.RemoveUntriedMove(move);
-                            }
-                            if (!visitedStatesInRollout.Contains(state)) //found valid move
-                            {
-                                node = node.AddChild(move, state);
-                                currentRollout.Add(move);
-                                nodeCount++;
-                            }
-                            else //all moves visited
-                            {
-                                state = backupState;
-                            }
+                            looped = true;
+                            //while (node.GetUntriedMoves().Count() > 0 && visitedStatesInRollout.Contains(state))
+                            //{
+                            //    state = backupState.Clone();
+                            //    move = node.GetUntriedMoves()[RNG.Next(node.GetUntriedMoves().Count())];
+                            //    state.DoMove(move);
+                            //    node.RemoveUntriedMove(move);
+                            //}
+                            //if (!visitedStatesInRollout.Contains(state)) //found valid move
+                            //{
+                            //    node = node.AddChild(move, state);
+                            //    currentRollout.Add(move);
+                            //    nodeCount++;
+                            //}
+                            //else //all moves visited
+                            //{
+                            //    state = backupState;
+                            //}
                         }
                         else
                         {
@@ -122,10 +126,8 @@ namespace MCTS2016.SP_MCTS
                 
 
                 // Rollout
-                int rolloutMovesCount = 0;
-                while (!state.isTerminal() && rolloutMovesCount<1000)
+                while (!state.isTerminal() && !looped)
                 {
-                    rolloutMovesCount++;
                     var move = state.GetSimulationMove();
                     backupState = state.Clone();
                     
@@ -134,18 +136,19 @@ namespace MCTS2016.SP_MCTS
                         state.DoMove(move);
                         if (visitedStatesInRollout.Contains(state))
                         {
-                            state = backupState.Clone();
-                            List<IPuzzleMove> availableMoves = state.GetMoves();
-                            while(availableMoves.Count()>0 && visitedStatesInRollout.Contains(state)) { //keep trying different moves until we end up in an unvisited state
-                                state = backupState.Clone();
-                                move = availableMoves[RNG.Next(availableMoves.Count())];
-                                availableMoves.Remove(move);
-                                state.DoMove(move);
-                            }
-                            if (availableMoves.Count() == 0 && visitedStatesInRollout.Contains(state))//all states have already been visited
-                            {
-                                break;
-                            }
+                            looped = true;
+                            //state = backupState.Clone();
+                            //List<IPuzzleMove> availableMoves = state.GetMoves();
+                            //while(availableMoves.Count()>0 && visitedStatesInRollout.Contains(state)) { //keep trying different moves until we end up in an unvisited state
+                            //    state = backupState.Clone();
+                            //    move = availableMoves[RNG.Next(availableMoves.Count())];
+                            //    availableMoves.Remove(move);
+                            //    state.DoMove(move);
+                            //}
+                            //if (availableMoves.Count() == 0 && visitedStatesInRollout.Contains(state))//all states have already been visited
+                            //{
+                            //    break;
+                            //}
                         }
                         currentRollout.Add(move);
                         visitedStatesInRollout.Add(state.Clone());
@@ -154,10 +157,6 @@ namespace MCTS2016.SP_MCTS
                     {
                         break;
                     }
-                }
-                if (rolloutMovesCount == 1000)
-                {
-                    Console.WriteLine("Rollout terminated after 1000 steps");
                 }
                 //Keep topScore and update bestRollout
                 double result = state.GetResult();
@@ -173,6 +172,10 @@ namespace MCTS2016.SP_MCTS
                 // Backpropagate
                 while (node != null)
                 {
+                    if (looped)
+                    {
+                        //TODO penalize score for loops?
+                    }
                     node.Update(result);
                     node = node.Parent;
                 }
@@ -195,7 +198,6 @@ namespace MCTS2016.SP_MCTS
                 }
 #endif
 
-             
             }
             IPuzzleMove bestMove;
             if (bestRollout != null && bestRollout.Count() > 0) //Remove first move from rollout so that if the topScore is not beaten we can just take the next move on the next search
