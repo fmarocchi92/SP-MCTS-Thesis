@@ -54,7 +54,7 @@ namespace MCTS2016.Puzzles.Sokoban
         private int playerX;
         private int playerY;
 
-        private int score;
+        private double  score;
         private bool win;
         public HashSet<Position> simpleDeadlock;
 
@@ -381,6 +381,7 @@ namespace MCTS2016.Puzzles.Sokoban
 
         private void PushBox(int xDirection, int yDirection)
         {
+            score -= 0.1;
             if (board[playerX + 2 * xDirection, playerY + 2 * yDirection] == EMPTY)
             {
                 board[playerX + 2 * xDirection, playerY + 2 * yDirection] = BOX;
@@ -390,6 +391,7 @@ namespace MCTS2016.Puzzles.Sokoban
             {
                 stateChanged = true;
                 board[playerX + 2 * xDirection, playerY + 2 * yDirection] = BOX_ON_GOAL;
+                score++;
             }
             if (stateChanged)
             {
@@ -400,6 +402,7 @@ namespace MCTS2016.Puzzles.Sokoban
                 else if (board[playerX + xDirection, playerY + yDirection] == BOX_ON_GOAL)
                 {
                     board[playerX + xDirection, playerY + yDirection] = PLAYER_ON_GOAL;
+                    score--;
                 }
                 if (board[playerX, playerY] == PLAYER)
                 {
@@ -652,6 +655,13 @@ namespace MCTS2016.Puzzles.Sokoban
                 case RewardType.PositiveBM:
                     reward = HungarianDistance();
                     break;
+                case RewardType.Boxes:
+                    reward = score;
+                    if (EndState())
+                    {
+                        reward+=10;
+                    }
+                    break;
             }
             return reward;
            
@@ -729,7 +739,7 @@ namespace MCTS2016.Puzzles.Sokoban
 
         public int GetScore()
         {
-            score = 0;
+            int score = 0;
             if (isDeadlock)
             {
                 score = -1;

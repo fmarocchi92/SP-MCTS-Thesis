@@ -60,8 +60,8 @@ namespace MCTS2016.SP_MCTS.SP_UCT
 
         private double SP_UCTValue()
         {
-            return wins / visits + topScore*0.02 + const_C * Math.Sqrt(2 * Math.Log(parent.visits) / visits);
-                //+ Math.Sqrt((squaredReward - visits * Math.Pow(wins / visits, 2) + const_D) / visits); //this should probably be used only in score maximization problems
+            return wins / visits + topScore*0.02 + const_C * Math.Sqrt(2 * Math.Log(parent.visits) / visits)
+            +Math.Sqrt((squaredReward - visits * Math.Pow(wins / visits, 2) + const_D) / visits); //this should probably be used only in score maximization problems
         }
 
         public virtual ISPTreeNode AddChild(IPuzzleMove move, IPuzzleState state)

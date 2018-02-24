@@ -12,7 +12,8 @@ namespace MCTS2016.Puzzles.Sokoban
         NegativeBM,
         LogBM,
         InverseBM,
-        PositiveBM
+        PositiveBM,
+        Boxes
     }
 
     enum SimulationType
