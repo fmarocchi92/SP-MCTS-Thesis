@@ -121,6 +121,10 @@ namespace MCTS2016.SP_MCTS
                 //if a node is a dead end remove it from the tree
                 if(!node.HasChildren() && !node.HasMovesToTry() && !state.EndState())
                 {
+                    if(node.Parent == null)//unsolvable level. The tree has been completely explored. Return current best score
+                    {
+                        break;
+                    }
                     node.Parent.RemoveChild(node);
                 }  
                 
