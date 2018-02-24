@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{380DC075-564D-4BD1-BEF5-FEBF8986E5B7}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MCTS2016</RootNamespace>
+    <AssemblyName>MCTS2016</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BFS\BFSNodePosition.cs" />
+    <Compile Include="BFS\BFSNodeState.cs" />
+    <Compile Include="Common\Abstract\IPuzzleMove.cs" />
+    <Compile Include="Common\Abstract\IPuzzleState.cs" />
+    <Compile Include="Common\MCTSEvalStats.cs" />
+    <Compile Include="IDAStar\AStarNode.cs" />
+    <Compile Include="IDAStar\IDAStar.cs" />
+    <Compile Include="Puzzles\Sokoban\AbstractSokobanState.cs" />
+    <Compile Include="Puzzles\Sokoban\HungarianAlgorithm.cs" />
+    <Compile Include="Puzzles\Sokoban\RewardType.cs" />
+    <Compile Include="Puzzles\Sokoban\SokobanEGreedyStrategy.cs" />
+    <Compile Include="Puzzles\Sokoban\SokobanInertiaStrategy.cs" />
+    <Compile Include="Puzzles\Sokoban\SokobanMCTSStrategy.cs" />
+    <Compile Include="Puzzles\Sokoban\SokobanPushMove.cs" />
+    <Compile Include="SP_MCTS\ISPSimulationStrategy.cs" />
+    <Compile Include="SP_MCTS\ISPTreeNode.cs" />
+    <Compile Include="SP_MCTS\ISPTreeNodeCreator.cs" />
+    <Compile Include="SP_MCTS\ISP_MCTSSimulationStrategy.cs" />
+    <Compile Include="SP_MCTS\SP_MCTSAlgorithm.cs" />
+    <Compile Include="SP_MCTS\SP_UCT\SP_UCTTreeNode.cs" />
+    <Compile Include="SP_MCTS\SP_UCT\SP_UCTTreeNodeCreator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Common\MersenneTwister\MersenneTwister.cs" />
+    <Compile Include="Common\Abstract\IGameMove.cs" />
+    <Compile Include="Common\Abstract\IGameState.cs" />
+    <Compile Include="Common\Abstract\IMCTSSimulationStrategy.cs" />
+    <Compile Include="Common\Abstract\IPlayer.cs" />
+    <Compile Include="Common\Abstract\ISimulationStrategy.cs" />
+    <Compile Include="Common\RNG.cs" />
+    <Compile Include="MCTS\ITreeNode.cs" />
+    <Compile Include="MCTS\ITreeNodeCreator.cs" />
+    <Compile Include="MCTS\MCTSAlgorithm.cs" />
+    <Compile Include="MCTS\DepthLimitedUCT\DepthLimitedUCTTreeNode.cs" />
+    <Compile Include="MCTS\DepthLimitedUCT\DepthLimitedUCTTreeNodeCreator.cs" />
+    <Compile Include="MCTS\DepthLimitedUCT\IStateBestMoveEstimator.cs" />
+    <Compile Include="MCTS\UCT\UCTTreeNode.cs" />
+    <Compile Include="MCTS\UCT\UCTTreeNodeCreator.cs" />
+    <Compile Include="Boardgames\TicTacToe\ITicTacToeSimulationStrategy.cs" />
+    <Compile Include="Boardgames\TicTacToe\TicTacToeGameMove.cs" />
+    <Compile Include="Boardgames\TicTacToe\TicTacToeGameState.cs" />
+    <Compile Include="Boardgames\TicTacToe\TicTacToeLookUpStrategy.cs" />
+    <Compile Include="Boardgames\TicTacToe\TicTacToeMCTSStrategy.cs" />
+    <Compile Include="Boardgames\TicTacToe\TicTacToeMiniMaxStrategy.cs" />
+    <Compile Include="Boardgames\TicTacToe\TicTacToeRandomStrategy.cs" />
+    <Compile Include="Boardgames\Forza4\Forza4GameMove.cs" />
+    <Compile Include="Boardgames\Forza4\Forza4GameState.cs" />
+    <Compile Include="Boardgames\Forza4\Forza4MCTSStrategy.cs" />
+    <Compile Include="Boardgames\Forza4\Forza4MiniMaxStrategy.cs" />
+    <Compile Include="Boardgames\Forza4\Forza4RandomStrategy.cs" />
+    <Compile Include="Boardgames\Forza4\Forza4SchmidtStrategy.cs" />
+    <Compile Include="Boardgames\Forza4\IForza4SimulationStrategy.cs" />
+    <Compile Include="Boardgames\Forza4\NFriendsFloyd\ConnectFinder.cs" />
+    <Compile Include="Boardgames\Forza4\NFriendsFloyd\FieldInfo.cs" />
+    <Compile Include="Boardgames\Forza4\NFriendsFloyd\Forza4NFriendsFloydStrategy.cs" />
+    <Compile Include="Boardgames\Forza4\NFriendsFloyd\MyField.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Common\TwoPlayersGameStats.cs" />
+    <Compile Include="Puzzles\SameGame\SamegameGameMove.cs" />
+    <Compile Include="Puzzles\SameGame\SamegameGameState.cs" />
+    <Compile Include="Puzzles\SameGame\SamegameMCTSStrategy.cs" />
+    <Compile Include="Puzzles\SameGame\SamegameRandomStrategy.cs" />
+    <Compile Include="Puzzles\SameGame\SamegameTabuColorRandomStrategy.cs" />
+    <Compile Include="Puzzles\Sokoban\SokobanGameMove.cs" />
+    <Compile Include="Puzzles\Sokoban\SokobanGameState.cs" />
+    <Compile Include="Puzzles\Sokoban\SokobanRandomStrategy.cs" />
+    <Compile Include="SinglePlayerMCTSMain.cs" />
+    <Compile Include="TrueSkill\TwoPlayerTrueSkillCalculator.cs" />
+    <Compile Include="TrueSkill\Numerics\GaussianDistribution.cs" />
+    <Compile Include="TrueSkill\Numerics\Matrix.cs" />
+    <Compile Include="TrueSkill\Numerics\Range.cs" />
+    <Compile Include="TrueSkill\Rating.cs" />
+    <Compile Include="TrueSkill\GameInfo.cs" />
+    <Compile Include="TrueSkill\PairwiseComparison.cs" />
+    <Compile Include="TrueSkill\SkillCalculator.cs" />
+    <Compile Include="TrueSkill\PlayersRange.cs" />
+    <Compile Include="TrueSkill\TeamsRange.cs" />
+    <Compile Include="TrueSkill\Guard.cs" />
+    <Compile Include="TrueSkill\RankSorter.cs" />
+    <Compile Include="TrueSkill\DrawMargin.cs" />
+    <Compile Include="TrueSkill\Factors\GaussianFactor.cs" />
+    <Compile Include="TrueSkill\Factors\GaussianGreaterThanFactor.cs" />
+    <Compile Include="TrueSkill\Factors\GaussianLikelihoodFactor.cs" />
+    <Compile Include="TrueSkill\Factors\GaussianPriorFactor.cs" />
+    <Compile Include="TrueSkill\Factors\GaussianWeightedSumFactor.cs" />
+    <Compile Include="TrueSkill\Factors\GaussianWithinFactor.cs" />
+    <Compile Include="TrueSkill\FactorGraphs\FactorGraph.cs" />
+    <Compile Include="TrueSkill\FactorGraphs\Factor.cs" />
+    <Compile Include="TrueSkill\FactorGraphs\FactorGraphLayer.cs" />
+    <Compile Include="TrueSkill\FactorGraphs\FactorList.cs" />
+    <Compile Include="TrueSkill\FactorGraphs\Message.cs" />
+    <Compile Include="TrueSkill\FactorGraphs\Schedule.cs" />
+    <Compile Include="TrueSkill\FactorGraphs\Variable.cs" />
+    <Compile Include="TrueSkill\FactorGraphs\VariableFactory.cs" />
+    <Compile Include="TrueSkill\TruncatedGaussianCorrectionFunctions.cs" />
+    <Compile Include="TrueSkill\Player.cs" />
+    <Compile Include="TrueSkill\Team.cs" />
+    <Compile Include="TrueSkill\ISupportPartialPlay.cs" />
+    <Compile Include="TrueSkill\ISupportPartialUpdate.cs" />
+    <Compile Include="TrueSkill\TrueSkillCalculator.cs" />
+    <Compile Include="TrueSkill\FactorGraphTrueSkillCalculator.cs" />
+    <Compile Include="TrueSkill\TrueSkillFactorGraph.cs" />
+    <Compile Include="TrueSkill\Layers\PlayerPriorValuesToSkillsLayer.cs" />
+    <Compile Include="TrueSkill\Layers\TrueSkillFactorGraphLayer.cs" />
+    <Compile Include="TrueSkill\PartialPlay.cs" />
+    <Compile Include="TrueSkill\Layers\PlayerPerformancesToTeamPerformancesLayer.cs" />
+    <Compile Include="TrueSkill\Layers\IteratedTeamDifferencesInnerLayer.cs" />
+    <Compile Include="TrueSkill\Layers\PlayerSkillsToPerformancesLayer.cs" />
+    <Compile Include="TrueSkill\Layers\TeamDifferencesComparisonLayer.cs" />
+    <Compile Include="TrueSkill\Layers\TeamPerformancesToTeamPerformanceDifferencesLayer.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
