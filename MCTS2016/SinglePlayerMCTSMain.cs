@@ -30,114 +30,133 @@ namespace MCTS2016
         private static uint threadIndex;
         private static int restarts;
         static TextWriter textWriter;
-        /// <summary>
-        /// - game
-        /// - constC
-        /// - constD
-        /// - iterations per search
-        /// - number of randomized restarts
-        /// - maximum number of threads
-        /// - seed
-        /// - log path
-        /// - level path
-        /// </summary>
-        /// <param name="args">
-        /// </param>
+
+
         public static void Main(string[] args)
         {
-            if (args.Length < 9)
-            {
-                PrintInputError("Missing arguments");
-                return;
-            }
-            string game = args[0];
-            double const_C;
-            if (!double.TryParse(args[1], out const_C))
-            {
-                PrintInputError("Const_C requires a double value");
-                return;
-            }
-            double const_D;
-            if (!double.TryParse(args[2], out const_D))
-            {
-                PrintInputError("Const_D requires a double value");
-                return;
-            }
+            string game;
             int iterations;
-            if (!int.TryParse(args[3], out iterations))
-            {
-                PrintInputError("iterations requires an integer value");
-                return;
-            }
-            int restarts;
-            if (!int.TryParse(args[4], out restarts))
-            {
-                PrintInputError("number of restarts requires an integer value");
-                return;
-            }
-            int maxThread;
-            if (!int.TryParse(args[5], out maxThread))
-            {
-                PrintInputError("maximum number of threads requires an integer value");
-                return;
-            }
-            uint seed;
-            if (!uint.TryParse(args[6], out seed))
-            {
-                PrintInputError("seed requires an unsigned integer value");
-                return;
-            }
-
-            bool abstractSokoban;
-            if (!bool.TryParse(args[7], out abstractSokoban))
-            {
-                PrintInputError("abstract sokoban requires a boolean value");
-                return;
-            }
+            int maxCost;
             RewardType rewardType;
-            if (!RewardType.TryParse(args[8], out rewardType))
-            {
-                PrintInputError("reward type requires an integer value");
-                return;
-            }
+            double const_C;
+            double epsilon;
+            double const_D;
+            int restarts;
+            uint seed;
             bool stopOnResult;
-            if (!bool.TryParse(args[9], out stopOnResult))
-            {
-                PrintInputError("stop on result requires a boolean value");
-                return;
-            }
-            //RNG.Seed(seed);
-            string logPath = args[10];
-            textWriter = File.AppendText(logPath);
-            string levelPath = args[11];
-            Log("\n");
-            Log("BEGIN TASK: " + game + " - const_C: " + const_C + " - const_D: " + const_D + " - iterations per move: " + iterations + " - restarts: " + restarts + " - max threads: "+maxThread+" - abstract: "+abstractSokoban);
+            string level;
 
-            switch (game)
+            if (args.Length != 3)
             {
+                throw new ArgumentException("Need three arguments: game method level");
+            }
+
+            textWriter = File.AppendText("Log.txt");
+
+            game = args[0];
+
+            string[] commands = args[1].Split(':');
+
+            level = args[2];
+
+            switch (game) {
                 case "sokoban":
-                    MultiThreadSokobanTest(const_C, const_D, iterations, restarts, levelPath, seed, abstractSokoban, rewardType, stopOnResult, 0.1, true, maxThread);
+                    switch (commands[0])
+                    {
+                        case "mcts":
+                            if (!int.TryParse(commands[1], out iterations))
+                            {
+                                PrintInputError("iterations requires an integer value");
+                                return;
+                            }
+                            if (!double.TryParse(commands[2], out const_C))
+                            {
+                                PrintInputError("Const_C requires a double value");
+                                return;
+                            }
+                            if (!double.TryParse(commands[3], out const_D))
+                            {
+                                PrintInputError("Const_D requires a double value");
+                                return;
+                            }
+                            if (!RewardType.TryParse(commands[4], out rewardType))
+                            {
+                                PrintInputError("reward type requires an valid RewardType");
+                                return;
+                            }
+                            if (!double.TryParse(commands[5], out epsilon))
+                            {
+                                PrintInputError("epsilon requires a double value");
+                                return;
+                            }
+                            if(!bool.TryParse(commands[6], out stopOnResult))
+                            {
+                                PrintInputError("stop on result requires a boolean value");
+                                return;
+                            }
+                            if(!uint.TryParse(commands[7], out seed))
+                            {
+                                PrintInputError("seed requires an unsigned integer value");
+                                return;
+                            }
+                            Log("\n********************\nBEGIN TASK:\nGame:" + game + "\nMethod: MCTS \niterations: " + iterations + "\nUCT constant: " + const_C+ "\nSP_UCT constant: "+ const_D +  "\nReward Type: "+rewardType+"\nepsilon: "+epsilon+ "level: "+ level +"\n********************");
+                            MultiThreadSokobanTest(const_C, const_D, iterations, 1, level, seed, true, rewardType, stopOnResult, epsilon, true, 1);
+                            break;
+                        case "ida":
+                            if (!int.TryParse(commands[1], out maxCost))
+                            {
+                                PrintInputError("maxCost requires an integer value");
+                                return;
+                            }
+                            if (!RewardType.TryParse(commands[2], out rewardType))
+                            {
+                                PrintInputError("reward type requires an valid RewardType");
+                                return;
+                            }
+                            Log("\n********************\nBEGIN TASK:\nGame:" + game + "\nMethod: IDA* \nMaximum cost: " + maxCost + "\nReward Type: " + rewardType + "\nlevel: "+level+"\n********************");
+                            IDAStarTest(level, maxCost);
+                            break;
+                    }
                     break;
                 case "samegame":
-                    MultiThreadSamegameTest(const_C, const_D, iterations, restarts, levelPath, maxThread, seed);
+                    switch (commands[0])
+                    {
+                        case "mcts":
+                            if (!int.TryParse(commands[1], out iterations))
+                            {
+                                PrintInputError("iterations requires an integer value");
+                                return;
+                            }
+                            if (!double.TryParse(commands[2], out const_C))
+                            {
+                                PrintInputError("const_C requires a double value");
+                                return;
+                            }
+                            if (!double.TryParse(commands[3], out const_D))
+                            {
+                                PrintInputError("const_d requires adouble value");
+                                return;
+                            }
+                            if (!int.TryParse(commands[4], out restarts))
+                            {
+                                PrintInputError("restarts requires an integer value");
+                                return;
+                            }
+                            if (!uint.TryParse(commands[5], out seed))
+                            {
+                                PrintInputError("seed requires an unsigned integer value");
+                                return;
+                            }
+                            Log("\n********************\nBEGIN TASK:\nGame:" + game + "\nMethod: MCTS \niterations: " + iterations + "\nUCT constant: " + const_C + "\nSP_UCT constant: " + const_D + "\nrestarts: " + restarts + "level: " + level + "\n********************");
+                            MultiThreadSamegameTest(const_C, const_D, iterations, restarts, level, 1, seed);
+                            break;
+                        case "ida":
+                            throw new NotImplementedException("IDA* for samegame not implemented");
+                            break;
+                    }
                     break;
-                case "idastar":
-                    IDAStarTest(levelPath, iterations);
-                    break;
-                case "sokobanTuning":
-                    string c_valuesPath = args[12];
-                    string e_valuesPath = args[13];
-                    SokobanTuning(levelPath,c_valuesPath, e_valuesPath, iterations, restarts, seed, abstractSokoban, stopOnResult, maxThread);
-                    break;
-                default:
-                    PrintInputError("Invalid game value");
-                    break;
+
             }
-            if (game.Equals("samegameidastar"))
-            {
-                SamegameIDAStarTest(levelPath, iterations);
-            }
-            //textWriter.Close();
         }
 
         
@@ -223,8 +242,6 @@ namespace MCTS2016
                     Console.Write("\rSolved " + solvedLevels + "/" + (i + 1));
                 }
             }
-            
-            
         }
 
         private static int[] MultiThreadSokobanTest(double const_C, double const_D, int iterations, int restarts, string levelPath, uint seed, bool abstractSokoban, RewardType rewardType, bool stopOnResult, double epsilonValue, bool log = true, int threadNumber = 8)

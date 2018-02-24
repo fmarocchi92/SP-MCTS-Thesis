@@ -1,4 +1,5 @@
 ﻿using Common;
+using Common.Abstract;
 using MCTS2016.Common.Abstract;
 using MCTS2016.SP_MCTS;
 using MCTS2016.SP_MCTS.SP_UCT;
@@ -10,15 +11,14 @@ using System.Threading.Tasks;
 
 namespace MCTS2016.Puzzles.Sokoban
 {
-    class SokobanMCTSStrategy:ISPSimulationStrategy
+    class SokobanMCTSStrategy:ISP_MCTSSimulationStrategy
     {
         private SP_MCTSAlgorithm mcts;
         private MersenneTwister rng;
-        private double maxTimeInMinutes;
 
         public int iterations { get; set; }
 
-        public SokobanMCTSStrategy(MersenneTwister rng, int iterations = 1000, double maxTimeInMinutes = 5, SP_MCTSAlgorithm mcts = null, double const_C = 4.31, double const_D = 96.67, bool stopOnResult = false)
+        public SokobanMCTSStrategy(MersenneTwister rng, int iterations = 1000, SP_MCTSAlgorithm mcts = null, double const_C = 4.31, double const_D = 96.67, bool stopOnResult = false)
         {
             if (mcts == null)
             {
@@ -26,7 +26,6 @@ namespace MCTS2016.Puzzles.Sokoban
             }
             this.mcts = mcts;
             this.iterations = iterations;
-            this.maxTimeInMinutes = maxTimeInMinutes;
         }
 
         public string getFriendlyName()
@@ -46,7 +45,9 @@ namespace MCTS2016.Puzzles.Sokoban
 
         public List<IPuzzleMove> GetSolution(IPuzzleState gameState)
         {
-            return mcts.Solve(gameState, iterations);
+            iterations = mcts.IterationsExecuted;
+            List<IPuzzleMove> solution = mcts.Solve(gameState, iterations);
+            return solution;
         }
     }
 }

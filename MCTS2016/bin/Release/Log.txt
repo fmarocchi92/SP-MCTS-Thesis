@@ -1,0 +1,1622 @@
+2/24/2018 - 10:28:35 PM  :  
+********************
+BEGIN TASK:
+Game:sokoban
+Method: MCTS 
+iterations: 10000
+UCT constant: 20
+SP_UCT constant: 100
+Reward Type: LogBM
+epsilon: 0.2level: ../Release/Levels/sokoban.txt
+********************
+2/24/2018 - 10:28:35 PM  :  Level 1 solved: True in 221 rollouts - solution length (moves/pushes): 61/13
+2/24/2018 - 10:28:35 PM  :  Moves: urrrDullDRurrdddlllUluurrdRurDllulldRRRllddrrURldlluururrDulD
+2/24/2018 - 10:28:35 PM  :  Level 2 solved: True in 47 rollouts - solution length (moves/pushes): 50/6
+2/24/2018 - 10:28:35 PM  :  Moves: rruuuulLullddddRdrrruulLuuullddRlddrdrrruulUrdddlU
+2/24/2018 - 10:28:35 PM  :  Level 3 solved: True in 141 rollouts - solution length (moves/pushes): 49/10
+2/24/2018 - 10:28:35 PM  :  Moves: ulLrrddlLrruullLdlUdddrUluurrDurrddlLLruulldDrruL
+2/24/2018 - 10:28:35 PM  :  Level 4 solved: True in 17 rollouts - solution length (moves/pushes): 35/8
+2/24/2018 - 10:28:35 PM  :  Moves: LuurrdDuLrrdddlUUlldRuuulldDrddlluR
+2/24/2018 - 10:28:35 PM  :  Level 5 solved: True in 535 rollouts - solution length (moves/pushes): 127/19
+2/24/2018 - 10:28:35 PM  :  Moves: ruuuulllddrRDrUdddlUruuUdllluurrurDlllddrrDruUddddlUruullluurrurrdLddddlUruuuullldddrRlluurRurrdLLulldddrrdrUUdllluuurrdLrurrdL
+2/24/2018 - 10:28:35 PM  :  Level 6 solved: True in 221 rollouts - solution length (moves/pushes): 57/10
+2/24/2018 - 10:28:35 PM  :  Moves: drrUdrrUdlluRldlluurRdrRlluurDlddrrrruulLddlluRluurDllldR
+2/24/2018 - 10:28:35 PM  :  Level 7 solved: True in 11 rollouts - solution length (moves/pushes): 101/17
+2/24/2018 - 10:28:35 PM  :  Moves: DDlldlddddrdRluluuuururrDDrddldDuuruuluurrdrddddldLdLrururuuuulullddrddlUddDuuuUUdddddlDRurDlddrUldlU
+2/24/2018 - 10:28:35 PM  :  Level 8 solved: True in 770 rollouts - solution length (moves/pushes): 76/18
+2/24/2018 - 10:28:35 PM  :  Moves: urDRlDDrrruuLLLddlddrUUrrruulllLrrrrddlllUdrrruullulldRlulldRurrdRRllulldRRR
+2/24/2018 - 10:28:35 PM  :  Level 9 solved: True in 6 rollouts - solution length (moves/pushes): 78/18
+2/24/2018 - 10:28:35 PM  :  Moves: ulllddddrrrruLUlDrdLLLuuuurrrDDDldllullddrUluRdrrrurrdLLLLUllddrUrrrruuuullldD
+2/24/2018 - 10:28:35 PM  :  Level 10 solved: True in 45 rollouts - solution length (moves/pushes): 137/36
+2/24/2018 - 10:28:35 PM  :  Moves: llDDDDDDldddrruuLuuuuuuurrdLulldRdddddlllddrrUruuuuuuurrdLulDDDDDDLdddrruuLrddllulluuRRllddrrdrruulUUUUUUluRddddddlllddrrUdlluurRdrUUUUUU
+2/24/2018 - 10:28:35 PM  :  Level 11 solved: True in 146 rollouts - solution length (moves/pushes): 111/33
+2/24/2018 - 10:28:35 PM  :  Moves: drruulLuLLulldRRdRRRluLLrrdddrruUUUUddlllluulldRldRuRldRRRuLrdRlllluRdrrddrruUlluLrdrrUUdllllluurDldRRRRlddrruU
+2/24/2018 - 10:28:35 PM  :  Level 12 solved: True in 54 rollouts - solution length (moves/pushes): 63/21
+2/24/2018 - 10:28:35 PM  :  Moves: rDlDDRdrruLdldlUUUUruLdlUrddddrruLdlUUUrDlddrruLuuuLrddddlUUruL
+2/24/2018 - 10:28:36 PM  :  Level 13 solved: False in 10000 rollouts - solution length (moves/pushes): 28/7
+2/24/2018 - 10:28:36 PM  :  Moves: rdddddlUruLUruulldRurDDlddrU
+2/24/2018 - 10:28:36 PM  :  Level 14 solved: True in 1054 rollouts - solution length (moves/pushes): 76/26
+2/24/2018 - 10:28:36 PM  :  Moves: urrDLLrrDullulldRRurrddDuuLulldRurrdddlddrUUUUruLLLdRurDlllluRRdrrDDlddrUUUU
+2/24/2018 - 10:28:37 PM  :  Level 15 solved: True in 478 rollouts - solution length (moves/pushes): 65/16
+2/24/2018 - 10:28:37 PM  :  Moves: drrrdrruUruulldllDurDurRdddllUURlluRdddrruUlllLdlluRRdRUrrrddllUU
+2/24/2018 - 10:28:37 PM  :  Level 16 solved: True in 1162 rollouts - solution length (moves/pushes): 42/11
+2/24/2018 - 10:28:37 PM  :  Moves: ullDurrdLulllddrURurrdLLLddrUluRurrdLululD
+2/24/2018 - 10:28:38 PM  :  Level 17 solved: True in 6270 rollouts - solution length (moves/pushes): 64/23
+2/24/2018 - 10:28:38 PM  :  Moves: dddrdrruLLdLUUUddlldRRRluuuruulDDDDldRurrrddlUruLLLdRurDlllluRRR
+2/24/2018 - 10:28:39 PM  :  Level 18 solved: True in 6278 rollouts - solution length (moves/pushes): 81/14
+2/24/2018 - 10:28:39 PM  :  Moves: rddDLrurDluuulllddddrUUdrrrrddllUdrruulLrrdLulLruuulllddrDrrrddlUruLuuullDurrdddL
+2/24/2018 - 10:28:41 PM  :  Level 19 solved: False in 10000 rollouts - solution length (moves/pushes): 62/14
+2/24/2018 - 10:28:41 PM  :  Moves: drrruulDLdlUrrrdLullUUddrrdLuluuruLdddrddlUUUUruulDrrrddldlluU
+2/24/2018 - 10:28:41 PM  :  Level 20 solved: True in 1871 rollouts - solution length (moves/pushes): 58/18
+2/24/2018 - 10:28:41 PM  :  Moves: lLLdlluRRRRRlllluurrrDulllddrrRuullDDrrdrrULLLrrrruulDrdLL
+2/24/2018 - 10:28:41 PM  :  Level 21 solved: True in 715 rollouts - solution length (moves/pushes): 99/29
+2/24/2018 - 10:28:41 PM  :  Moves: ruuLLLuullddRluurrdDDurrrddlUruLLLuullddRRRRurDldRdrruLdlluulldDllddrrUUUUlluurrDullddrRRRdRUddrruL
+2/24/2018 - 10:28:42 PM  :  Level 22 solved: False in 10000 rollouts - solution length (moves/pushes): 20/2
+2/24/2018 - 10:28:42 PM  :  Moves: llulDrrrrrdddllllluU
+2/24/2018 - 10:28:45 PM  :  Level 23 solved: False in 10000 rollouts - solution length (moves/pushes): 63/11
+2/24/2018 - 10:28:45 PM  :  Moves: lulldRurrdrrddllllllluuRurrdRRRlllulldRRlllddrrrrrrruUllulldRRR
+2/24/2018 - 10:28:45 PM  :  Level 24 solved: True in 2430 rollouts - solution length (moves/pushes): 60/10
+2/24/2018 - 10:28:45 PM  :  Moves: dlUrruulluRdrddllUdrruululldRddrruuruLLrdddlluuRurDllluRdrrD
+2/24/2018 - 10:28:46 PM  :  Level 25 solved: True in 5577 rollouts - solution length (moves/pushes): 149/56
+2/24/2018 - 10:28:46 PM  :  Moves: llllLLulLLLLLLulldRurDrrrrrrrddlUruLLLLLLLulldRRRddlUruRRRRllllLulldRurDrrrrrRurDllllllddlUrurrrrrddrUluurDldRlulllllLulldRRRRRRRRdrUdRRRRRdrruLLLLLL
+2/24/2018 - 10:28:48 PM  :  Level 26 solved: False in 10000 rollouts - solution length (moves/pushes): 71/20
+2/24/2018 - 10:28:48 PM  :  Moves: ldddlLDLdlluurDuRdddrUluuRRRurDllllddrUllldRuruRllddRuruRRllldddrUUluRR
+2/24/2018 - 10:28:48 PM  :  Level 27 solved: True in 41 rollouts - solution length (moves/pushes): 85/28
+2/24/2018 - 10:28:48 PM  :  Moves: rdrrrddlUruLLrrddddlUruululLrrrdddlUruulllulldRRRRurDDDldRRRlluUruLLLulldRRRRurDDDldR
+2/24/2018 - 10:28:49 PM  :  Level 28 solved: False in 10000 rollouts - solution length (moves/pushes): 55/11
+2/24/2018 - 10:28:49 PM  :  Moves: dlllllululDulldRRRRllllddrUluurrrdrRlllulldRRlddrUluurD
+2/24/2018 - 10:28:52 PM  :  Level 29 solved: False in 10000 rollouts - solution length (moves/pushes): 67/13
+2/24/2018 - 10:28:52 PM  :  Moves: uulllluurDDrruLrdrruLdlllDurrruLrdddddlllluuRuuluurDDDurruLdlluurDD
+2/24/2018 - 10:28:54 PM  :  Level 30 solved: False in 10000 rollouts - solution length (moves/pushes): 53/15
+2/24/2018 - 10:28:54 PM  :  Moves: rdddLdllluurrRUruulDDDlllddrrUdlluurRdRUUruulDDDlddrU
+2/24/2018 - 10:28:54 PM  :  Level 1 solved: True in 221
+2/24/2018 - 10:28:54 PM  :  Level 2 solved: True in 47
+2/24/2018 - 10:28:54 PM  :  Level 3 solved: True in 141
+2/24/2018 - 10:28:54 PM  :  Level 4 solved: True in 17
+2/24/2018 - 10:28:54 PM  :  Level 5 solved: True in 535
+2/24/2018 - 10:28:54 PM  :  Level 6 solved: True in 221
+2/24/2018 - 10:28:54 PM  :  Level 7 solved: True in 11
+2/24/2018 - 10:28:54 PM  :  Level 8 solved: True in 770
+2/24/2018 - 10:28:54 PM  :  Level 9 solved: True in 6
+2/24/2018 - 10:28:54 PM  :  Level 10 solved: True in 45
+2/24/2018 - 10:28:54 PM  :  Level 11 solved: True in 146
+2/24/2018 - 10:28:54 PM  :  Level 12 solved: True in 54
+2/24/2018 - 10:28:54 PM  :  Level 13 solved: False in 10000
+2/24/2018 - 10:28:54 PM  :  Level 14 solved: True in 1054
+2/24/2018 - 10:28:54 PM  :  Level 15 solved: True in 478
+2/24/2018 - 10:28:54 PM  :  Level 16 solved: True in 1162
+2/24/2018 - 10:28:54 PM  :  Level 17 solved: True in 6270
+2/24/2018 - 10:28:54 PM  :  Level 18 solved: True in 6278
+2/24/2018 - 10:28:54 PM  :  Level 19 solved: False in 10000
+2/24/2018 - 10:28:54 PM  :  Level 20 solved: True in 1871
+2/24/2018 - 10:28:54 PM  :  Level 21 solved: True in 715
+2/24/2018 - 10:28:54 PM  :  Level 22 solved: False in 10000
+2/24/2018 - 10:28:54 PM  :  Level 23 solved: False in 10000
+2/24/2018 - 10:28:54 PM  :  Level 24 solved: True in 2430
+2/24/2018 - 10:28:54 PM  :  Level 25 solved: True in 5577
+2/24/2018 - 10:28:54 PM  :  Level 26 solved: False in 10000
+2/24/2018 - 10:28:54 PM  :  Level 27 solved: True in 41
+2/24/2018 - 10:28:54 PM  :  Level 28 solved: False in 10000
+2/24/2018 - 10:28:54 PM  :  Level 29 solved: False in 10000
+2/24/2018 - 10:28:54 PM  :  Level 30 solved: False in 10000
+2/24/2018 - 10:28:54 PM  :  Solved 22/30
+2/24/2018 - 10:32:15 PM  :  
+********************
+BEGIN TASK:
+Game:sokoban
+Method: IDA* 
+Maximum cost: 30
+Reward Type: PositiveBM
+level: ../Release/Levels/sokoban.txt
+********************
+2/24/2018 - 10:32:15 PM  :  Level1:
+####### 
+#     # 
+#@$$$ ##
+#  #...#
+##    ##
+ ###### 
+[1,1]
+[2,3]:drU[2,1]:urD[4,1]:urrrD[4,3]:drdrruU
+2/24/2018 - 10:32:15 PM  :  Level 1 solved: True solution length:64/15
+2/24/2018 - 10:32:15 PM  :  Moves: urDurrDLulldRRurrdddlllUluurrdRurDllulldRRRllddrrURldlluururDurD
+2/24/2018 - 10:32:15 PM  :  Solved 1/1
+2/24/2018 - 10:32:15 PM  :  Level2:
+#######
+#     #
+# .$. #
+# $.$ #
+# .$. #
+# $.$ #
+#  @  #
+#######
+[1,1]
+[4,6]:rU[2,6]:lU[3,5]:uR[3,5]:uL[3,5]:uU[5,5]:rruL[1,5]:lluR[4,4]:rruulL[4,4]:rruulD[4,4]:rruulU[5,3]:rruuuL[2,4]:lluurR[2,4]:lluurD[2,4]:lluurU[1,3]:lluuuR[4,2]:rruuuulL[4,2]:rruuuulD[2,2]:lluuuurR[2,2]:lluuuurD[3,1]:rruuuululD
+2/24/2018 - 10:32:15 PM  :  Level 2 solved: True solution length:30/6
+2/24/2018 - 10:32:15 PM  :  Moves: rUruuululldRdDlUldddrUdrrruuuL
+2/24/2018 - 10:32:15 PM  :  Solved 2/2
+2/24/2018 - 10:32:15 PM  :  Level3:
+#######
+#. #  #
+#  $  #
+#. $#@#
+#  $  #
+#. #  #
+#######
+[4,1]
+[4,4]:dlL[4,2]:ulL
+2/24/2018 - 10:32:15 PM  :  Level 3 solved: True solution length:51/10
+2/24/2018 - 10:32:15 PM  :  Moves: dlLLulDrrrruulLrrddllUlluurDlddrrrruulLLrddlluUrrdL
+2/24/2018 - 10:32:15 PM  :  Solved 3/3
+2/24/2018 - 10:32:15 PM  :  Level4:
+ #######
+ #     #
+ # .$. #
+## $@$ #
+#  .$. #
+#      #
+########
+[4,3]
+[4,3]:R[4,3]:L[4,3]:D[4,3]:U
+2/24/2018 - 10:32:15 PM  :  Level 4 solved: True solution length:27/6
+2/24/2018 - 10:32:15 PM  :  Moves: LulDruurrdLrrddlUlldRldlluR
+2/24/2018 - 10:32:15 PM  :  Solved 4/4
+2/24/2018 - 10:32:15 PM  :  Level5:
+#######
+#     #
+#. .  #
+# ## ##
+#  $ # 
+###$ # 
+  #@ # 
+  #  # 
+  #### 
+[1,1]
+[4,4]:ruuL[2,4]:ruuuulllddrR
+2/24/2018 - 10:32:15 PM  :  Level 5 solved: True solution length:83/15
+2/24/2018 - 10:32:15 PM  :  Moves: ruuLDruuulllddRRdrUUddddlUruullluurrurrdLLrddddlUruuululldddrRdrUUdllluuurrdLrurrdL
+2/24/2018 - 10:32:15 PM  :  Solved 5/5
+2/24/2018 - 10:32:15 PM  :  Level6:
+  ####   
+###  ####
+#       #
+#@$***. #
+#       #
+#########
+[3,1]
+[2,4]:drU[2,2]:urD[3,4]:drrU[3,2]:urrD[4,4]:drrrU[4,2]:urrrD[5,4]:drrrrU[5,2]:urrrrD
+2/24/2018 - 10:32:15 PM  :  Level 6 solved: True solution length:41/8
+2/24/2018 - 10:32:15 PM  :  Moves: drUdrrURldlluRRluurDldlluRdrdrrrruulllulD
+2/24/2018 - 10:32:15 PM  :  Solved 6/6
+2/24/2018 - 10:32:15 PM  :  Level7:
+   ###   
+   #@#   
+ ###$### 
+##  .  ##
+#  # #  #
+# #   # #
+# #   # #
+# #   # #
+#  # #  #
+## $ $ ##
+ ##. .## 
+  #   #  
+  #   #  
+  #####  
+[4,1]
+[4,1]:D
+2/24/2018 - 10:32:15 PM  :  Level 7 solved: True solution length:97/17
+2/24/2018 - 10:32:15 PM  :  Moves: DDDDuurrdrddddldLdlUrruruuuulullddrddlDDDrdLuuuuruuluulldlddddrdRluluuuururrddrddlUUUddddDldRddlU
+2/24/2018 - 10:32:15 PM  :  Solved 7/7
+2/24/2018 - 10:32:15 PM  :  Level8:
+#######  
+#     ###
+#  @$$..#
+#### ## #
+  #     #
+  #  ####
+  #  #   
+  ####   
+[1,1]
+[4,1]:urD
+2/24/2018 - 10:32:15 PM  :  Level 8 solved: True solution length:58/18
+2/24/2018 - 10:32:15 PM  :  Moves: urDRlDDlddrUUrrruuLLLLrrrrddlllUdrrruullulldRRRlllulldRRRR
+2/24/2018 - 10:32:15 PM  :  Solved 8/8
+2/24/2018 - 10:32:15 PM  :  Level9:
+  ###### 
+  #    # 
+  # ##@##
+### # $ #
+# ..# $ #
+#       #
+#  ######
+####     
+[3,1]
+[5,4]:ulllddddrruR[5,3]:ulllddddrruuR[7,4]:ulllddddrrrruL[7,3]:ulllddddrrrruuL
+2/24/2018 - 10:32:15 PM  :  Level 9 solved: True solution length:96/26
+2/24/2018 - 10:32:15 PM  :  Moves: ulllddddrrrruLUlDrdLLLulldRRRRlluuuurrrDDrdLrdLLLLullddrUluRdrUdrrruulDrdLLLullddrUrrrruuuullldD
+2/24/2018 - 10:32:15 PM  :  Solved 9/9
+2/24/2018 - 10:32:15 PM  :  Level10:
+  ######
+  # ..@#
+  # $$ #
+  ## ###
+   # #  
+   # #  
+#### #  
+#    ## 
+# #   # 
+#   # # 
+###   # 
+  ##### 
+[3,1]
+[4,1]:llD
+2/24/2018 - 10:32:15 PM  :  Level 10 solved: True solution length:137/36
+2/24/2018 - 10:32:15 PM  :  Moves: llDDDDDDldddrruuLulDrrddllUlluurrruuuuuurrdLulDDDDDDlllddrrUdlluurRdddrruuLUUUUUUluRdrruLdldddddlllddrrUruuuuuuluRdddddddldlluurRdrUUUUUU
+2/24/2018 - 10:32:15 PM  :  Solved 10/10
+2/24/2018 - 10:32:15 PM  :  Level11:
+      ###
+##### #.#
+#   ###.#
+#   $ #.#
+# $  $  #
+#####@# #
+    #   #
+    #####
+[7,1]
+[5,5]:U[6,4]:drruulL
+2/24/2018 - 10:32:15 PM  :  Level 11 solved: True solution length:75/25
+2/24/2018 - 10:32:15 PM  :  Moves: drruulLuLLdRRRlddrruUUUUddlllluulldRldRRRRRlddrruUUUdllllluurDldRRRRlddrruU
+2/24/2018 - 10:32:15 PM  :  Solved 11/11
+2/24/2018 - 10:32:15 PM  :  Level12:
+####   
+#. ##  
+#.@ #  
+#. $#  
+##$ ###
+ # $  #
+ #    #
+ #  ###
+ ####  
+[1,1]
+[3,2]:rD[2,3]:dD
+2/24/2018 - 10:32:15 PM  :  Level 12 solved: True solution length:55/21
+2/24/2018 - 10:32:15 PM  :  Moves: rDlDDRddlUUUUruLdlUrdddrdrruLLdlUUUrDuuLddddrruLdlUUruL
+2/24/2018 - 10:32:15 PM  :  Solved 12/12
+2/24/2018 - 10:32:15 PM  :  Level13:
+ #####
+ # @ #
+ #   #
+###$ #
+# ...#
+# $$ #
+###  #
+  ####
+[2,1]
+[3,2]:dD[3,4]:rdddlD[3,4]:rdddlU[3,6]:rdddddlU
+2/24/2018 - 10:32:15 PM  :  Level 13 solved: True solution length:41/10
+2/24/2018 - 10:32:15 PM  :  Moves: rdddlUrdddlUUlldRurrddlUruLruuulldRDuurDD
+2/24/2018 - 10:32:15 PM  :  Solved 13/13
+2/24/2018 - 10:32:15 PM  :  Level14:
+########
+#   .. #
+#  @$$ #
+##### ##
+   #  # 
+   #  # 
+   #  # 
+   #### 
+[1,1]
+[5,1]:urrD
+2/24/2018 - 10:32:15 PM  :  Level 14 solved: True solution length:63/26
+2/24/2018 - 10:32:15 PM  :  Moves: urrDLLrrDDuullulldRRRurrdLddlddrUUUUruLLLdRurDDDlddrUUUUlllluRR
+2/24/2018 - 10:32:15 PM  :  Solved 14/14
+2/24/2018 - 10:32:15 PM  :  Level15:
+     #####
+   ###   #
+####.....#
+# @$$$$$ #
+#     # ##
+#####   # 
+    ##### 
+[1,3]
+[4,4]:drrU[5,4]:drrrU[7,4]:drrrdrruU
+2/24/2018 - 10:32:15 PM  :  Level 15 solved: True solution length:67/14
+2/24/2018 - 10:32:15 PM  :  Moves: drrrdrruUruulldllDLrurrRdddlluURlluRdddrruUlllldRllluRRdrUrrrddllUU
+2/24/2018 - 10:32:15 PM  :  Solved 15/15
+2/24/2018 - 10:32:15 PM  :  Level16:
+ ####  
+##  ###
+#     #
+#.**$@#
+#   ###
+##  #  
+ ####  
+[2,1]
+[3,2]:ullD[2,2]:ulllD[2,4]:ullllddrU[3,4]:ullllddrrU
+2/24/2018 - 10:32:15 PM  :  Level 16 solved: True solution length:51/13
+2/24/2018 - 10:32:15 PM  :  Moves: ullDurrdLulllddrURuulDlddrUrurrdLLLddrUluRuulDrrrdL
+2/24/2018 - 10:32:15 PM  :  Solved 16/16
+2/24/2018 - 10:32:15 PM  :  Level17:
+  ####  
+  #  #  
+  #@ #  
+  #  #  
+### ####
+#    * #
+#  $   #
+#####. #
+    ####
+[3,1]
+[4,5]:dddrR[4,6]:dddrdL[2,6]:dddldR[6,5]:dddrdrruL
+2/24/2018 - 10:32:15 PM  :  Level 17 solved: True solution length:72/25
+2/24/2018 - 10:32:15 PM  :  Moves: dddrdLrrruLLdlUUUddlldRRRluuuruulDDDDrdLulldRRurrrddlUruLLLdRurDlllluRRR
+2/24/2018 - 10:32:15 PM  :  Solved 17/17
+2/24/2018 - 10:32:15 PM  :  Level18:
+######  
+#  @ #  
+#  # ## 
+# .#  ##
+# .$$$ #
+# .#   #
+####   #
+   #####
+[1,1]
+[4,3]:rddD[5,3]:rddrD
+2/24/2018 - 10:32:15 PM  :  Level 18 solved: True solution length:73/14
+2/24/2018 - 10:32:15 PM  :  Moves: rddDLrurDrddlUruLLuuulllddddrUUluurrrdddLrrddlUruLuuulllddrDluuurDurrdddL
+2/24/2018 - 10:32:15 PM  :  Solved 18/18
+2/24/2018 - 10:32:15 PM  :  Level19:
+#####  
+#   ###
+#. .  #
+#   # #
+## #  #
+ #@$$ #
+ #    #
+ #  ###
+ ####  
+[1,1]
+[4,6]:drrU[4,4]:drrruulD
+2/24/2018 - 10:32:15 PM  :  Level 19 solved: True solution length:47/15
+2/24/2018 - 10:32:15 PM  :  Moves: drrruulDLdlUUUluRRldddrrrdLLdlUUUUruLdddrrruuuL
+2/24/2018 - 10:32:15 PM  :  Solved 19/19
+2/24/2018 - 10:32:15 PM  :  Level20:
+ #########
+ #    #  #
+## $#$#  #
+#  .$.@  #
+#  .#    #
+##########
+[7,1]
+[5,3]:lL[5,3]:lU
+2/24/2018 - 10:32:15 PM  :  Level 20 solved: True solution length:54/18
+2/24/2018 - 10:32:15 PM  :  Moves: lLLdlluRRRRRdrUllllluurDurrDulldDrRdrruLLLrrrruulDrdLL
+2/24/2018 - 10:32:15 PM  :  Solved 20/20
+2/24/2018 - 10:32:15 PM  :  Level21:
+#####     
+#   ####  
+# # # .#  
+#    $ ###
+### #$.  #
+#   #@   #
+# # ######
+#   #     
+#####     
+[5,2]
+[6,3]:ruuL
+2/24/2018 - 10:32:16 PM  :  Level 21 solved: True solution length:107/29
+2/24/2018 - 10:32:16 PM  :  Moves: ruuLLLrrrddlUruulDlluullddRluurrdDDDuurrrddlUruLLLuullddRRRRurDldRlullddllddrrUUUUlluurrDullddrRRRdrUddrruL
+2/24/2018 - 10:32:16 PM  :  Solved 21/21
+2/24/2018 - 10:32:16 PM  :  Level22:
+  ####    
+###  #####
+#  $  @..#
+# $    # #
+### #### #
+  #      #
+  ########
+[3,1]
+[4,2]:llL[3,3]:lldlL[3,3]:lldlU[3,1]:llulD
+2/24/2018 - 10:32:16 PM  :  Level 22 solved: True solution length:80/17
+2/24/2018 - 10:32:16 PM  :  Moves: llulDDulldRRurrrrrdddlllllUUluRRldddrrrrruuulldlLrrurrdddllllluUruRRRllldlluRRRR
+2/24/2018 - 10:32:16 PM  :  Solved 22/22
+2/24/2018 - 10:32:16 PM  :  Level23:
+     ##### 
+     #   ##
+     #    #
+ ######   #
+##     #. #
+# $ $ @  ##
+# ######.# 
+#        # 
+########## 
+[6,1]
+[5,5]:lL[3,5]:lulldR[3,5]:lulldL[1,5]:rrddllllllluuR
+2/24/2018 - 10:32:16 PM  :  Level 23 solved: False solution length:0/0
+2/24/2018 - 10:32:16 PM  :  Moves: 
+2/24/2018 - 10:32:16 PM  :  Solved 22/23
+2/24/2018 - 10:32:16 PM  :  Level24:
+#######
+#  *  #
+#     #
+## # ##
+ #$@.# 
+ #   # 
+ ##### 
+[1,1]
+[2,5]:dlU[4,1]:ruuuL[2,3]:ruulldD[2,1]:ruulluR
+2/24/2018 - 10:32:16 PM  :  Level 24 solved: True solution length:66/14
+2/24/2018 - 10:32:16 PM  :  Moves: dlUrruuuLdlDuluRRdrddldlUUdrruululldRddrruuruLLrdddlluuRurDDullluR
+2/24/2018 - 10:32:16 PM  :  Solved 23/24
+2/24/2018 - 10:32:16 PM  :  Level25:
+#####   ####       
+#   ##### .#       
+#       $  ########
+###  #### .$    @ #
+  #  #  #  ####   #
+  ####  ####  #####
+[12,3]
+[12,3]:llllL
+2/24/2018 - 10:32:16 PM  :  Level 25 solved: False solution length:0/0
+2/24/2018 - 10:32:16 PM  :  Moves: 
+2/24/2018 - 10:32:16 PM  :  Solved 23/25
+2/24/2018 - 10:32:16 PM  :  Level26:
+     ####
+     # @#
+     #  #
+###### .#
+#   $  .#
+#  $$# .#
+#    ####
+###  #   
+  ####   
+[6,1]
+[5,4]:ldddlL
+2/24/2018 - 10:32:16 PM  :  Level 26 solved: True solution length:68/24
+2/24/2018 - 10:32:16 PM  :  Moves: ldddlLLrDLddrUUluRRRdrUUldlllddlluRRdrUluRRRurDluuurDlddllldlluRRRRR
+2/24/2018 - 10:32:16 PM  :  Solved 24/26
+2/24/2018 - 10:32:16 PM  :  Level27:
+########  
+# @ #  #  
+#      #  
+#####$ #  
+    #  ###
+ ## #$ ..#
+ ## #  ###
+    ####  
+[1,1]
+[5,2]:rdrrD[5,4]:rdrrrddlD[5,4]:rdrrrddlU[5,6]:rdrrrddddlU
+2/24/2018 - 10:32:16 PM  :  Level 27 solved: True solution length:79/30
+2/24/2018 - 10:32:16 PM  :  Moves: rdrrrddlUruLLLrrrddddlUUUruulDllulldRRRRurDDDlUruLLLulldRRRRurDDlddRRRlluurDldR
+2/24/2018 - 10:32:16 PM  :  Solved 25/27
+2/24/2018 - 10:32:16 PM  :  Level28:
+###### #####
+#    ###   #
+# $$     #@#
+# $ #...   #
+#   ########
+#####       
+[1,1]
+[3,1]:dlllllululD[1,3]:dlllllululllddR[3,3]:dlllllulullldddrruL[3,3]:dlllllulullldddrruU
+2/24/2018 - 10:32:16 PM  :  Level 28 solved: True solution length:121/29
+2/24/2018 - 10:32:16 PM  :  Moves: dlllllululDulldRRRRRRdrrruullDurrddlLLLulllllddrUluRRRRRRlllllddrUluurrdrrrdrrruullDurrddlLLulllulldRRRRRdrrruullDurrddlL
+2/24/2018 - 10:32:16 PM  :  Solved 26/28
+2/24/2018 - 10:32:16 PM  :  Level29:
+####    
+#  #####
+# $$ $ #
+#      #
+## ## ##
+#...#@# 
+# ### ##
+#      #
+#  #   #
+########
+[1,1]
+[6,2]:uuruL[4,2]:uuluR[2,3]:uulllU[2,1]:uulllluurD
+2/24/2018 - 10:32:17 PM  :  Level 29 solved: True solution length:116/27
+2/24/2018 - 10:32:17 PM  :  Moves: uulllluurDDDurruLdlluRdrrrddddlllluuRuurruLrdrruLLdllluurDldRRRuLrrDDDDuuulllddlddrrrdrruLLLLdlUUdrrrruuuulllluurDDD
+2/24/2018 - 10:32:17 PM  :  Solved 27/29
+2/24/2018 - 10:32:17 PM  :  Level30:
+   ####
+   #  #
+   #@ #
+####$.#
+#   $.#
+# # $.#
+#    ##
+###### 
+[4,1]
+[5,4]:rddL[5,5]:rdddL
+2/24/2018 - 10:32:17 PM  :  Level 30 solved: True solution length:64/19
+2/24/2018 - 10:32:17 PM  :  Moves: rddLLrUruulDrddllddrUluRUruulDDDlddrUrUUlDldRuuuurDlddlddlluuRRR
+2/24/2018 - 10:32:17 PM  :  Solved 28/30
+2/24/2018 - 10:32:28 PM  :  
+********************
+BEGIN TASK:
+Game:sokoban
+Method: MCTS 
+iterations: 10000
+UCT constant: 20
+SP_UCT constant: 100
+Reward Type: LogBM
+epsilon: 0.2level: ../Release/Levels/sokoban.txt
+********************
+2/24/2018 - 10:32:28 PM  :  Level 1 solved: True in 221 rollouts - solution length (moves/pushes): 61/13
+2/24/2018 - 10:32:28 PM  :  Moves: urrrDullDRurrdddlllUluurrdRurDllulldRRRllddrrURldlluururrDulD
+2/24/2018 - 10:32:28 PM  :  Level 2 solved: True in 47 rollouts - solution length (moves/pushes): 50/6
+2/24/2018 - 10:32:28 PM  :  Moves: rruuuulLullddddRdrrruulLuuullddRlddrdrrruulUrdddlU
+2/24/2018 - 10:32:28 PM  :  Level 3 solved: True in 141 rollouts - solution length (moves/pushes): 49/10
+2/24/2018 - 10:32:28 PM  :  Moves: ulLrrddlLrruullLdlUdddrUluurrDurrddlLLruulldDrruL
+2/24/2018 - 10:32:28 PM  :  Level 4 solved: True in 17 rollouts - solution length (moves/pushes): 35/8
+2/24/2018 - 10:32:28 PM  :  Moves: LuurrdDuLrrdddlUUlldRuuulldDrddlluR
+2/24/2018 - 10:32:28 PM  :  Level 5 solved: True in 535 rollouts - solution length (moves/pushes): 127/19
+2/24/2018 - 10:32:28 PM  :  Moves: ruuuulllddrRDrUdddlUruuUdllluurrurDlllddrrDruUddddlUruullluurrurrdLddddlUruuuullldddrRlluurRurrdLLulldddrrdrUUdllluuurrdLrurrdL
+2/24/2018 - 10:32:28 PM  :  Level 6 solved: True in 221 rollouts - solution length (moves/pushes): 57/10
+2/24/2018 - 10:32:28 PM  :  Moves: drrUdrrUdlluRldlluurRdrRlluurDlddrrrruulLddlluRluurDllldR
+2/24/2018 - 10:32:28 PM  :  Level 7 solved: True in 11 rollouts - solution length (moves/pushes): 101/17
+2/24/2018 - 10:32:28 PM  :  Moves: DDlldlddddrdRluluuuururrDDrddldDuuruuluurrdrddddldLdLrururuuuulullddrddlUddDuuuUUdddddlDRurDlddrUldlU
+2/24/2018 - 10:32:29 PM  :  Level 8 solved: True in 770 rollouts - solution length (moves/pushes): 76/18
+2/24/2018 - 10:32:29 PM  :  Moves: urDRlDDrrruuLLLddlddrUUrrruulllLrrrrddlllUdrrruullulldRlulldRurrdRRllulldRRR
+2/24/2018 - 10:32:29 PM  :  Level 9 solved: True in 6 rollouts - solution length (moves/pushes): 78/18
+2/24/2018 - 10:32:29 PM  :  Moves: ulllddddrrrruLUlDrdLLLuuuurrrDDDldllullddrUluRdrrrurrdLLLLUllddrUrrrruuuullldD
+2/24/2018 - 10:32:29 PM  :  Level 10 solved: True in 45 rollouts - solution length (moves/pushes): 137/36
+2/24/2018 - 10:32:29 PM  :  Moves: llDDDDDDldddrruuLuuuuuuurrdLulldRdddddlllddrrUruuuuuuurrdLulDDDDDDLdddrruuLrddllulluuRRllddrrdrruulUUUUUUluRddddddlllddrrUdlluurRdrUUUUUU
+2/24/2018 - 10:32:29 PM  :  Level 11 solved: True in 146 rollouts - solution length (moves/pushes): 111/33
+2/24/2018 - 10:32:29 PM  :  Moves: drruulLuLLulldRRdRRRluLLrrdddrruUUUUddlllluulldRldRuRldRRRuLrdRlllluRdrrddrruUlluLrdrrUUdllllluurDldRRRRlddrruU
+2/24/2018 - 10:32:29 PM  :  Level 12 solved: True in 54 rollouts - solution length (moves/pushes): 63/21
+2/24/2018 - 10:32:29 PM  :  Moves: rDlDDRdrruLdldlUUUUruLdlUrddddrruLdlUUUrDlddrruLuuuLrddddlUUruL
+2/24/2018 - 10:32:29 PM  :  Level 13 solved: False in 10000 rollouts - solution length (moves/pushes): 28/7
+2/24/2018 - 10:32:29 PM  :  Moves: rdddddlUruLUruulldRurDDlddrU
+2/24/2018 - 10:32:30 PM  :  Level 14 solved: True in 1054 rollouts - solution length (moves/pushes): 76/26
+2/24/2018 - 10:32:30 PM  :  Moves: urrDLLrrDullulldRRurrddDuuLulldRurrdddlddrUUUUruLLLdRurDlllluRRdrrDDlddrUUUU
+2/24/2018 - 10:32:30 PM  :  Level 15 solved: True in 478 rollouts - solution length (moves/pushes): 65/16
+2/24/2018 - 10:32:30 PM  :  Moves: drrrdrruUruulldllDurDurRdddllUURlluRdddrruUlllLdlluRRdRUrrrddllUU
+2/24/2018 - 10:32:30 PM  :  Level 16 solved: True in 1162 rollouts - solution length (moves/pushes): 42/11
+2/24/2018 - 10:32:30 PM  :  Moves: ullDurrdLulllddrURurrdLLLddrUluRurrdLululD
+2/24/2018 - 10:32:31 PM  :  Level 17 solved: True in 6270 rollouts - solution length (moves/pushes): 64/23
+2/24/2018 - 10:32:31 PM  :  Moves: dddrdrruLLdLUUUddlldRRRluuuruulDDDDldRurrrddlUruLLLdRurDlllluRRR
+2/24/2018 - 10:32:32 PM  :  Level 18 solved: True in 6278 rollouts - solution length (moves/pushes): 81/14
+2/24/2018 - 10:32:32 PM  :  Moves: rddDLrurDluuulllddddrUUdrrrrddllUdrruulLrrdLulLruuulllddrDrrrddlUruLuuullDurrdddL
+2/24/2018 - 10:32:34 PM  :  Level 19 solved: False in 10000 rollouts - solution length (moves/pushes): 62/14
+2/24/2018 - 10:32:34 PM  :  Moves: drrruulDLdlUrrrdLullUUddrrdLuluuruLdddrddlUUUUruulDrrrddldlluU
+2/24/2018 - 10:32:34 PM  :  Level 20 solved: True in 1871 rollouts - solution length (moves/pushes): 58/18
+2/24/2018 - 10:32:34 PM  :  Moves: lLLdlluRRRRRlllluurrrDulllddrrRuullDDrrdrrULLLrrrruulDrdLL
+2/24/2018 - 10:32:34 PM  :  Level 21 solved: True in 715 rollouts - solution length (moves/pushes): 99/29
+2/24/2018 - 10:32:34 PM  :  Moves: ruuLLLuullddRluurrdDDurrrddlUruLLLuullddRRRRurDldRdrruLdlluulldDllddrrUUUUlluurrDullddrRRRdRUddrruL
+2/24/2018 - 10:32:35 PM  :  Level 22 solved: False in 10000 rollouts - solution length (moves/pushes): 20/2
+2/24/2018 - 10:32:35 PM  :  Moves: llulDrrrrrdddllllluU
+2/24/2018 - 10:32:38 PM  :  Level 23 solved: False in 10000 rollouts - solution length (moves/pushes): 63/11
+2/24/2018 - 10:32:38 PM  :  Moves: lulldRurrdrrddllllllluuRurrdRRRlllulldRRlllddrrrrrrruUllulldRRR
+2/24/2018 - 10:32:38 PM  :  Level 24 solved: True in 2430 rollouts - solution length (moves/pushes): 60/10
+2/24/2018 - 10:32:38 PM  :  Moves: dlUrruulluRdrddllUdrruululldRddrruuruLLrdddlluuRurDllluRdrrD
+2/24/2018 - 10:32:39 PM  :  Level 25 solved: True in 5577 rollouts - solution length (moves/pushes): 149/56
+2/24/2018 - 10:32:39 PM  :  Moves: llllLLulLLLLLLulldRurDrrrrrrrddlUruLLLLLLLulldRRRddlUruRRRRllllLulldRurDrrrrrRurDllllllddlUrurrrrrddrUluurDldRlulllllLulldRRRRRRRRdrUdRRRRRdrruLLLLLL
+2/24/2018 - 10:32:41 PM  :  Level 26 solved: False in 10000 rollouts - solution length (moves/pushes): 71/20
+2/24/2018 - 10:32:41 PM  :  Moves: ldddlLDLdlluurDuRdddrUluuRRRurDllllddrUllldRuruRllddRuruRRllldddrUUluRR
+2/24/2018 - 10:32:41 PM  :  Level 27 solved: True in 41 rollouts - solution length (moves/pushes): 85/28
+2/24/2018 - 10:32:41 PM  :  Moves: rdrrrddlUruLLrrddddlUruululLrrrdddlUruulllulldRRRRurDDDldRRRlluUruLLLulldRRRRurDDDldR
+2/24/2018 - 10:32:42 PM  :  Level 28 solved: False in 10000 rollouts - solution length (moves/pushes): 55/11
+2/24/2018 - 10:32:42 PM  :  Moves: dlllllululDulldRRRRllllddrUluurrrdrRlllulldRRlddrUluurD
+2/24/2018 - 10:32:45 PM  :  Level 29 solved: False in 10000 rollouts - solution length (moves/pushes): 67/13
+2/24/2018 - 10:32:45 PM  :  Moves: uulllluurDDrruLrdrruLdlllDurrruLrdddddlllluuRuuluurDDDurruLdlluurDD
+2/24/2018 - 10:32:47 PM  :  Level 30 solved: False in 10000 rollouts - solution length (moves/pushes): 53/15
+2/24/2018 - 10:32:47 PM  :  Moves: rdddLdllluurrRUruulDDDlllddrrUdlluurRdRUUruulDDDlddrU
+2/24/2018 - 10:32:47 PM  :  Level 1 solved: True in 221
+2/24/2018 - 10:32:47 PM  :  Level 2 solved: True in 47
+2/24/2018 - 10:32:47 PM  :  Level 3 solved: True in 141
+2/24/2018 - 10:32:47 PM  :  Level 4 solved: True in 17
+2/24/2018 - 10:32:47 PM  :  Level 5 solved: True in 535
+2/24/2018 - 10:32:47 PM  :  Level 6 solved: True in 221
+2/24/2018 - 10:32:47 PM  :  Level 7 solved: True in 11
+2/24/2018 - 10:32:47 PM  :  Level 8 solved: True in 770
+2/24/2018 - 10:32:47 PM  :  Level 9 solved: True in 6
+2/24/2018 - 10:32:47 PM  :  Level 10 solved: True in 45
+2/24/2018 - 10:32:47 PM  :  Level 11 solved: True in 146
+2/24/2018 - 10:32:47 PM  :  Level 12 solved: True in 54
+2/24/2018 - 10:32:47 PM  :  Level 13 solved: False in 10000
+2/24/2018 - 10:32:47 PM  :  Level 14 solved: True in 1054
+2/24/2018 - 10:32:47 PM  :  Level 15 solved: True in 478
+2/24/2018 - 10:32:47 PM  :  Level 16 solved: True in 1162
+2/24/2018 - 10:32:47 PM  :  Level 17 solved: True in 6270
+2/24/2018 - 10:32:47 PM  :  Level 18 solved: True in 6278
+2/24/2018 - 10:32:47 PM  :  Level 19 solved: False in 10000
+2/24/2018 - 10:32:47 PM  :  Level 20 solved: True in 1871
+2/24/2018 - 10:32:47 PM  :  Level 21 solved: True in 715
+2/24/2018 - 10:32:47 PM  :  Level 22 solved: False in 10000
+2/24/2018 - 10:32:47 PM  :  Level 23 solved: False in 10000
+2/24/2018 - 10:32:47 PM  :  Level 24 solved: True in 2430
+2/24/2018 - 10:32:47 PM  :  Level 25 solved: True in 5577
+2/24/2018 - 10:32:47 PM  :  Level 26 solved: False in 10000
+2/24/2018 - 10:32:47 PM  :  Level 27 solved: True in 41
+2/24/2018 - 10:32:47 PM  :  Level 28 solved: False in 10000
+2/24/2018 - 10:32:47 PM  :  Level 29 solved: False in 10000
+2/24/2018 - 10:32:47 PM  :  Level 30 solved: False in 10000
+2/24/2018 - 10:32:47 PM  :  Solved 22/30
+2/24/2018 - 10:33:23 PM  :  Completed run 1/1 of level 1. New top score found: 2393
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 0: [X: 13  Y: 0]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 1: [X: 7  Y: 12]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 2: [X: 12  Y: 8]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 3: [X: 4  Y: 13]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 4: [X: 12  Y: 4]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 5: [X: 10  Y: 9]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 6: [X: 0  Y: 2]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 7: [X: 11  Y: 10]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 8: [X: 8  Y: 4]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 9: [X: 6  Y: 5]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 10: [X: 0  Y: 5]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 11: [X: 5  Y: 1]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 12: [X: 1  Y: 4]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 13: [X: 1  Y: 0]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 14: [X: 5  Y: 11]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 15: [X: 6  Y: 0]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 16: [X: 6  Y: 2]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 17: [X: 0  Y: 3]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 18: [X: 9  Y: 5]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 19: [X: 10  Y: 11]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 20: [X: 7  Y: 3]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 21: [X: 2  Y: 10]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 22: [X: 2  Y: 7]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 23: [X: 9  Y: 0]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 24: [X: 8  Y: 1]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 25: [X: 0  Y: 8]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 26: [X: 1  Y: 6]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 27: [X: 3  Y: 1]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 28: [X: 0  Y: 2]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 29: [X: 3  Y: 7]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 30: [X: 9  Y: 6]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 31: [X: 4  Y: 5]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 32: [X: 2  Y: 5]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 33: [X: 7  Y: 4]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 34: [X: 0  Y: 2]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 35: [X: 11  Y: 5]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 36: [X: 2  Y: 5]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 37: [X: 11  Y: 3]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 38: [X: 1  Y: 4]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 39: [X: 1  Y: 1]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 40: [X: 2  Y: 1]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 41: [X: 13  Y: 8]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 42: [X: 12  Y: 3]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 43: [X: 12  Y: 2]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 44: [X: 3  Y: 4]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 45: [X: 4  Y: 4]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 46: [X: 5  Y: 5]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 47: [X: 6  Y: 5]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 48: [X: 5  Y: 4]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 49: [X: 0  Y: 0]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 50: [X: 4  Y: 1]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 51: [X: 4  Y: 0]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 52: [X: 3  Y: 0]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 53: [X: 2  Y: 0]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 54: [X: 9  Y: 1]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 55: [X: 0  Y: 0]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 56: [X: 7  Y: 1]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 57: [X: 6  Y: 2]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 58: [X: 8  Y: 0]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 59: [X: 7  Y: 0]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 60: [X: 6  Y: 4]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 61: [X: 4  Y: 1]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 62: [X: 6  Y: 1]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 63: [X: 7  Y: 0]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 64: [X: 1  Y: 0]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 65: [X: 1  Y: 0]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 66: [X: 2  Y: 0]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 67: [X: 1  Y: 0]
+2/24/2018 - 10:33:23 PM  :  Level 1 - move 68: [X: 0  Y: 0]
+2/24/2018 - 10:33:23 PM  :  Partial score : 2393 on 1 levels
+2/24/2018 - 10:33:54 PM  :  Completed run 1/1 of level 2. New top score found: 3309
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 0: [X: 7  Y: 4]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 1: [X: 11  Y: 3]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 2: [X: 6  Y: 8]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 3: [X: 10  Y: 3]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 4: [X: 7  Y: 4]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 5: [X: 2  Y: 11]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 6: [X: 13  Y: 0]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 7: [X: 0  Y: 14]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 8: [X: 10  Y: 5]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 9: [X: 11  Y: 7]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 10: [X: 10  Y: 6]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 11: [X: 0  Y: 8]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 12: [X: 10  Y: 1]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 13: [X: 5  Y: 7]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 14: [X: 0  Y: 3]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 15: [X: 8  Y: 9]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 16: [X: 2  Y: 10]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 17: [X: 6  Y: 2]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 18: [X: 9  Y: 3]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 19: [X: 4  Y: 7]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 20: [X: 7  Y: 5]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 21: [X: 7  Y: 6]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 22: [X: 0  Y: 6]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 23: [X: 2  Y: 5]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 24: [X: 7  Y: 0]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 25: [X: 12  Y: 9]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 26: [X: 13  Y: 0]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 27: [X: 14  Y: 8]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 28: [X: 11  Y: 0]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 29: [X: 0  Y: 6]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 30: [X: 1  Y: 1]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 31: [X: 4  Y: 0]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 32: [X: 4  Y: 0]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 33: [X: 4  Y: 0]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 34: [X: 5  Y: 3]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 35: [X: 9  Y: 8]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 36: [X: 6  Y: 7]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 37: [X: 6  Y: 2]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 38: [X: 0  Y: 4]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 39: [X: 12  Y: 2]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 40: [X: 9  Y: 2]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 41: [X: 11  Y: 3]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 42: [X: 9  Y: 5]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 43: [X: 4  Y: 0]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 44: [X: 3  Y: 0]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 45: [X: 10  Y: 2]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 46: [X: 1  Y: 4]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 47: [X: 12  Y: 1]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 48: [X: 3  Y: 0]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 49: [X: 11  Y: 3]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 50: [X: 2  Y: 0]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 51: [X: 9  Y: 3]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 52: [X: 0  Y: 3]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 53: [X: 6  Y: 0]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 54: [X: 5  Y: 0]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 55: [X: 11  Y: 4]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 56: [X: 7  Y: 0]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 57: [X: 4  Y: 0]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 58: [X: 3  Y: 0]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 59: [X: 6  Y: 2]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 60: [X: 1  Y: 0]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 61: [X: 0  Y: 0]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 62: [X: 0  Y: 1]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 63: [X: 2  Y: 0]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 64: [X: 1  Y: 0]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 65: [X: 0  Y: 1]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 66: [X: 1  Y: 0]
+2/24/2018 - 10:33:54 PM  :  Level 2 - move 67: [X: 0  Y: 0]
+2/24/2018 - 10:33:54 PM  :  Partial score : 5702 on 2 levels
+2/24/2018 - 10:34:19 PM  :  Completed run 1/1 of level 3. New top score found: 2041
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 0: [X: 13  Y: 13]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 1: [X: 9  Y: 4]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 2: [X: 2  Y: 1]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 3: [X: 2  Y: 2]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 4: [X: 3  Y: 2]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 5: [X: 11  Y: 4]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 6: [X: 5  Y: 8]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 7: [X: 10  Y: 5]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 8: [X: 12  Y: 7]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 9: [X: 1  Y: 2]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 10: [X: 2  Y: 8]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 11: [X: 10  Y: 0]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 12: [X: 9  Y: 1]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 13: [X: 5  Y: 8]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 14: [X: 2  Y: 5]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 15: [X: 7  Y: 13]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 16: [X: 11  Y: 1]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 17: [X: 11  Y: 9]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 18: [X: 0  Y: 4]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 19: [X: 8  Y: 1]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 20: [X: 12  Y: 7]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 21: [X: 7  Y: 3]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 22: [X: 14  Y: 1]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 23: [X: 6  Y: 1]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 24: [X: 1  Y: 2]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 25: [X: 3  Y: 2]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 26: [X: 7  Y: 4]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 27: [X: 2  Y: 1]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 28: [X: 2  Y: 3]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 29: [X: 4  Y: 0]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 30: [X: 4  Y: 7]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 31: [X: 5  Y: 5]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 32: [X: 4  Y: 0]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 33: [X: 6  Y: 4]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 34: [X: 0  Y: 3]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 35: [X: 0  Y: 2]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 36: [X: 8  Y: 5]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 37: [X: 8  Y: 2]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 38: [X: 8  Y: 0]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 39: [X: 4  Y: 2]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 40: [X: 6  Y: 6]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 41: [X: 12  Y: 7]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 42: [X: 0  Y: 6]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 43: [X: 9  Y: 5]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 44: [X: 11  Y: 2]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 45: [X: 0  Y: 2]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 46: [X: 1  Y: 1]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 47: [X: 0  Y: 2]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 48: [X: 14  Y: 2]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 49: [X: 0  Y: 0]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 50: [X: 9  Y: 0]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 51: [X: 4  Y: 1]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 52: [X: 3  Y: 0]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 53: [X: 7  Y: 1]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 54: [X: 8  Y: 0]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 55: [X: 8  Y: 1]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 56: [X: 2  Y: 0]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 57: [X: 6  Y: 1]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 58: [X: 6  Y: 1]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 59: [X: 0  Y: 0]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 60: [X: 3  Y: 2]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 61: [X: 0  Y: 1]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 62: [X: 3  Y: 1]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 63: [X: 0  Y: 0]
+2/24/2018 - 10:34:19 PM  :  Level 3 - move 64: [X: 0  Y: 0]
+2/24/2018 - 10:34:19 PM  :  Partial score : 7743 on 3 levels
+2/24/2018 - 10:34:41 PM  :  Completed run 1/1 of level 4. New top score found: 2913
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 0: [X: 10  Y: 0]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 1: [X: 11  Y: 12]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 2: [X: 11  Y: 1]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 3: [X: 7  Y: 9]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 4: [X: 13  Y: 11]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 5: [X: 10  Y: 10]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 6: [X: 9  Y: 10]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 7: [X: 3  Y: 1]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 8: [X: 10  Y: 9]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 9: [X: 5  Y: 14]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 10: [X: 6  Y: 7]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 11: [X: 8  Y: 0]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 12: [X: 5  Y: 4]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 13: [X: 5  Y: 0]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 14: [X: 13  Y: 3]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 15: [X: 7  Y: 7]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 16: [X: 4  Y: 5]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 17: [X: 4  Y: 2]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 18: [X: 6  Y: 3]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 19: [X: 3  Y: 11]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 20: [X: 12  Y: 8]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 21: [X: 13  Y: 9]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 22: [X: 8  Y: 1]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 23: [X: 12  Y: 10]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 24: [X: 2  Y: 3]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 25: [X: 9  Y: 0]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 26: [X: 0  Y: 0]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 27: [X: 11  Y: 1]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 28: [X: 7  Y: 4]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 29: [X: 3  Y: 3]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 30: [X: 3  Y: 5]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 31: [X: 2  Y: 10]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 32: [X: 12  Y: 6]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 33: [X: 1  Y: 3]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 34: [X: 4  Y: 5]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 35: [X: 0  Y: 3]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 36: [X: 11  Y: 3]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 37: [X: 7  Y: 3]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 38: [X: 0  Y: 6]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 39: [X: 0  Y: 3]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 40: [X: 12  Y: 6]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 41: [X: 12  Y: 4]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 42: [X: 2  Y: 1]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 43: [X: 0  Y: 3]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 44: [X: 7  Y: 2]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 45: [X: 5  Y: 1]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 46: [X: 6  Y: 0]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 47: [X: 1  Y: 2]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 48: [X: 1  Y: 5]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 49: [X: 0  Y: 1]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 50: [X: 3  Y: 1]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 51: [X: 10  Y: 2]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 52: [X: 7  Y: 0]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 53: [X: 0  Y: 0]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 54: [X: 6  Y: 0]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 55: [X: 7  Y: 0]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 56: [X: 6  Y: 1]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 57: [X: 3  Y: 0]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 58: [X: 5  Y: 0]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 59: [X: 2  Y: 0]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 60: [X: 2  Y: 0]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 61: [X: 1  Y: 0]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 62: [X: 0  Y: 1]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 63: [X: 0  Y: 1]
+2/24/2018 - 10:34:41 PM  :  Level 4 - move 64: [X: 0  Y: 0]
+2/24/2018 - 10:34:41 PM  :  Partial score : 10656 on 4 levels
+2/24/2018 - 10:35:05 PM  :  Completed run 1/1 of level 5. New top score found: 3005
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 0: [X: 11  Y: 7]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 1: [X: 10  Y: 3]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 2: [X: 0  Y: 4]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 3: [X: 4  Y: 3]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 4: [X: 4  Y: 6]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 5: [X: 4  Y: 2]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 6: [X: 9  Y: 10]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 7: [X: 6  Y: 4]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 8: [X: 5  Y: 10]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 9: [X: 4  Y: 2]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 10: [X: 0  Y: 7]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 11: [X: 1  Y: 0]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 12: [X: 8  Y: 0]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 13: [X: 9  Y: 0]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 14: [X: 9  Y: 7]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 15: [X: 1  Y: 0]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 16: [X: 3  Y: 10]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 17: [X: 3  Y: 1]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 18: [X: 6  Y: 9]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 19: [X: 9  Y: 6]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 20: [X: 0  Y: 1]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 21: [X: 7  Y: 0]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 22: [X: 13  Y: 3]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 23: [X: 2  Y: 9]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 24: [X: 6  Y: 6]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 25: [X: 9  Y: 4]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 26: [X: 10  Y: 1]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 27: [X: 6  Y: 0]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 28: [X: 13  Y: 9]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 29: [X: 4  Y: 4]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 30: [X: 6  Y: 7]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 31: [X: 0  Y: 1]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 32: [X: 2  Y: 2]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 33: [X: 13  Y: 10]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 34: [X: 9  Y: 1]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 35: [X: 10  Y: 2]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 36: [X: 9  Y: 2]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 37: [X: 13  Y: 6]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 38: [X: 12  Y: 3]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 39: [X: 7  Y: 1]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 40: [X: 1  Y: 2]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 41: [X: 3  Y: 2]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 42: [X: 3  Y: 1]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 43: [X: 0  Y: 4]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 44: [X: 3  Y: 1]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 45: [X: 12  Y: 2]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 46: [X: 6  Y: 3]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 47: [X: 12  Y: 2]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 48: [X: 0  Y: 3]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 49: [X: 7  Y: 5]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 50: [X: 1  Y: 4]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 51: [X: 0  Y: 3]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 52: [X: 13  Y: 4]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 53: [X: 5  Y: 3]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 54: [X: 0  Y: 2]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 55: [X: 7  Y: 2]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 56: [X: 7  Y: 0]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 57: [X: 3  Y: 0]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 58: [X: 2  Y: 0]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 59: [X: 1  Y: 0]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 60: [X: 2  Y: 0]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 61: [X: 1  Y: 0]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 62: [X: 0  Y: 2]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 63: [X: 0  Y: 1]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 64: [X: 0  Y: 0]
+2/24/2018 - 10:35:05 PM  :  Level 5 - move 65: [X: 0  Y: 0]
+2/24/2018 - 10:35:05 PM  :  Partial score : 13661 on 5 levels
+2/24/2018 - 10:35:28 PM  :  Completed run 1/1 of level 6. New top score found: 3439
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 0: [X: 8  Y: 2]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 1: [X: 4  Y: 0]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 2: [X: 5  Y: 9]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 3: [X: 10  Y: 5]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 4: [X: 13  Y: 2]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 5: [X: 7  Y: 4]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 6: [X: 6  Y: 3]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 7: [X: 10  Y: 3]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 8: [X: 14  Y: 7]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 9: [X: 6  Y: 0]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 10: [X: 5  Y: 5]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 11: [X: 9  Y: 10]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 12: [X: 0  Y: 13]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 13: [X: 3  Y: 11]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 14: [X: 0  Y: 8]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 15: [X: 5  Y: 3]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 16: [X: 0  Y: 9]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 17: [X: 0  Y: 2]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 18: [X: 13  Y: 6]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 19: [X: 10  Y: 10]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 20: [X: 2  Y: 11]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 21: [X: 2  Y: 2]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 22: [X: 8  Y: 3]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 23: [X: 8  Y: 4]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 24: [X: 11  Y: 10]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 25: [X: 2  Y: 9]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 26: [X: 2  Y: 2]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 27: [X: 3  Y: 2]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 28: [X: 8  Y: 1]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 29: [X: 0  Y: 1]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 30: [X: 10  Y: 6]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 31: [X: 12  Y: 2]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 32: [X: 13  Y: 6]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 33: [X: 12  Y: 0]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 34: [X: 4  Y: 4]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 35: [X: 10  Y: 1]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 36: [X: 7  Y: 0]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 37: [X: 12  Y: 5]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 38: [X: 0  Y: 2]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 39: [X: 7  Y: 0]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 40: [X: 8  Y: 1]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 41: [X: 1  Y: 2]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 42: [X: 0  Y: 2]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 43: [X: 3  Y: 2]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 44: [X: 5  Y: 0]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 45: [X: 6  Y: 1]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 46: [X: 6  Y: 0]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 47: [X: 8  Y: 0]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 48: [X: 9  Y: 1]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 49: [X: 4  Y: 0]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 50: [X: 9  Y: 0]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 51: [X: 8  Y: 0]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 52: [X: 1  Y: 0]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 53: [X: 3  Y: 0]
+2/24/2018 - 10:35:28 PM  :  Level 6 - move 54: [X: 0  Y: 0]
+2/24/2018 - 10:35:28 PM  :  Partial score : 17100 on 6 levels
+2/24/2018 - 10:35:53 PM  :  Completed run 1/1 of level 7. New top score found: 2293
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 0: [X: 12  Y: 11]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 1: [X: 8  Y: 0]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 2: [X: 7  Y: 2]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 3: [X: 6  Y: 13]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 4: [X: 7  Y: 1]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 5: [X: 3  Y: 5]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 6: [X: 1  Y: 4]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 7: [X: 1  Y: 3]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 8: [X: 2  Y: 6]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 9: [X: 12  Y: 4]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 10: [X: 5  Y: 11]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 11: [X: 10  Y: 5]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 12: [X: 7  Y: 8]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 13: [X: 3  Y: 0]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 14: [X: 5  Y: 5]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 15: [X: 13  Y: 2]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 16: [X: 2  Y: 9]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 17: [X: 0  Y: 8]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 18: [X: 10  Y: 4]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 19: [X: 10  Y: 4]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 20: [X: 13  Y: 8]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 21: [X: 3  Y: 4]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 22: [X: 3  Y: 6]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 23: [X: 3  Y: 5]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 24: [X: 1  Y: 4]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 25: [X: 12  Y: 10]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 26: [X: 6  Y: 1]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 27: [X: 6  Y: 1]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 28: [X: 5  Y: 2]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 29: [X: 7  Y: 0]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 30: [X: 1  Y: 3]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 31: [X: 14  Y: 7]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 32: [X: 0  Y: 6]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 33: [X: 0  Y: 4]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 34: [X: 11  Y: 8]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 35: [X: 0  Y: 1]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 36: [X: 2  Y: 1]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 37: [X: 13  Y: 2]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 38: [X: 0  Y: 5]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 39: [X: 7  Y: 0]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 40: [X: 7  Y: 2]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 41: [X: 9  Y: 6]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 42: [X: 2  Y: 2]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 43: [X: 13  Y: 6]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 44: [X: 11  Y: 5]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 45: [X: 9  Y: 4]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 46: [X: 2  Y: 0]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 47: [X: 7  Y: 5]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 48: [X: 9  Y: 1]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 49: [X: 1  Y: 1]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 50: [X: 3  Y: 1]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 51: [X: 8  Y: 1]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 52: [X: 1  Y: 0]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 53: [X: 0  Y: 1]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 54: [X: 8  Y: 0]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 55: [X: 7  Y: 0]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 56: [X: 1  Y: 0]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 57: [X: 4  Y: 0]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 58: [X: 3  Y: 3]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 59: [X: 3  Y: 0]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 60: [X: 2  Y: 1]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 61: [X: 2  Y: 0]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 62: [X: 1  Y: 0]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 63: [X: 0  Y: 1]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 64: [X: 0  Y: 1]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 65: [X: 1  Y: 0]
+2/24/2018 - 10:35:53 PM  :  Level 7 - move 66: [X: 0  Y: 0]
+2/24/2018 - 10:35:53 PM  :  Partial score : 19393 on 7 levels
+2/24/2018 - 10:36:17 PM  :  Completed run 1/1 of level 8. New top score found: 3559
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 0: [X: 0  Y: 4]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 1: [X: 3  Y: 5]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 2: [X: 0  Y: 11]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 3: [X: 12  Y: 1]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 4: [X: 8  Y: 2]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 5: [X: 6  Y: 11]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 6: [X: 11  Y: 7]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 7: [X: 12  Y: 7]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 8: [X: 12  Y: 4]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 9: [X: 0  Y: 8]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 10: [X: 14  Y: 13]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 11: [X: 3  Y: 7]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 12: [X: 4  Y: 7]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 13: [X: 13  Y: 8]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 14: [X: 2  Y: 7]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 15: [X: 0  Y: 7]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 16: [X: 11  Y: 3]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 17: [X: 12  Y: 3]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 18: [X: 10  Y: 3]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 19: [X: 11  Y: 10]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 20: [X: 0  Y: 0]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 21: [X: 6  Y: 1]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 22: [X: 6  Y: 8]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 23: [X: 1  Y: 1]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 24: [X: 2  Y: 2]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 25: [X: 6  Y: 5]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 26: [X: 5  Y: 0]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 27: [X: 0  Y: 7]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 28: [X: 6  Y: 4]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 29: [X: 5  Y: 2]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 30: [X: 6  Y: 0]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 31: [X: 13  Y: 2]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 32: [X: 4  Y: 6]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 33: [X: 10  Y: 6]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 34: [X: 4  Y: 8]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 35: [X: 2  Y: 1]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 36: [X: 1  Y: 5]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 37: [X: 7  Y: 4]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 38: [X: 2  Y: 4]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 39: [X: 7  Y: 7]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 40: [X: 2  Y: 4]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 41: [X: 5  Y: 4]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 42: [X: 8  Y: 4]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 43: [X: 5  Y: 3]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 44: [X: 12  Y: 1]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 45: [X: 0  Y: 3]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 46: [X: 0  Y: 2]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 47: [X: 13  Y: 2]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 48: [X: 10  Y: 0]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 49: [X: 0  Y: 1]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 50: [X: 5  Y: 0]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 51: [X: 3  Y: 2]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 52: [X: 9  Y: 0]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 53: [X: 4  Y: 0]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 54: [X: 3  Y: 1]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 55: [X: 4  Y: 0]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 56: [X: 1  Y: 0]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 57: [X: 1  Y: 0]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 58: [X: 0  Y: 0]
+2/24/2018 - 10:36:17 PM  :  Level 8 - move 59: [X: 0  Y: 0]
+2/24/2018 - 10:36:17 PM  :  Partial score : 22952 on 8 levels
+2/24/2018 - 10:36:36 PM  :  Completed run 1/1 of level 9. New top score found: 4221
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 0: [X: 2  Y: 11]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 1: [X: 5  Y: 3]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 2: [X: 4  Y: 3]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 3: [X: 11  Y: 7]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 4: [X: 2  Y: 1]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 5: [X: 12  Y: 4]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 6: [X: 6  Y: 2]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 7: [X: 2  Y: 9]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 8: [X: 2  Y: 3]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 9: [X: 1  Y: 7]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 10: [X: 0  Y: 9]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 11: [X: 8  Y: 7]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 12: [X: 8  Y: 10]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 13: [X: 13  Y: 7]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 14: [X: 0  Y: 7]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 15: [X: 6  Y: 0]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 16: [X: 12  Y: 3]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 17: [X: 11  Y: 3]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 18: [X: 8  Y: 6]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 19: [X: 13  Y: 1]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 20: [X: 8  Y: 0]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 21: [X: 9  Y: 0]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 22: [X: 4  Y: 1]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 23: [X: 10  Y: 10]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 24: [X: 9  Y: 4]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 25: [X: 9  Y: 2]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 26: [X: 12  Y: 8]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 27: [X: 9  Y: 2]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 28: [X: 6  Y: 2]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 29: [X: 3  Y: 2]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 30: [X: 1  Y: 5]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 31: [X: 10  Y: 4]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 32: [X: 11  Y: 5]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 33: [X: 11  Y: 6]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 34: [X: 4  Y: 4]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 35: [X: 0  Y: 2]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 36: [X: 5  Y: 4]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 37: [X: 11  Y: 2]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 38: [X: 0  Y: 4]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 39: [X: 13  Y: 2]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 40: [X: 0  Y: 0]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 41: [X: 9  Y: 0]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 42: [X: 0  Y: 0]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 43: [X: 3  Y: 0]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 44: [X: 2  Y: 0]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 45: [X: 3  Y: 0]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 46: [X: 4  Y: 2]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 47: [X: 1  Y: 0]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 48: [X: 0  Y: 0]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 49: [X: 0  Y: 1]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 50: [X: 1  Y: 0]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 51: [X: 0  Y: 0]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 52: [X: 2  Y: 0]
+2/24/2018 - 10:36:36 PM  :  Level 9 - move 53: [X: 0  Y: 0]
+2/24/2018 - 10:36:36 PM  :  Partial score : 27173 on 9 levels
+2/24/2018 - 10:36:57 PM  :  Completed run 1/1 of level 10. New top score found: 1787
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 0: [X: 8  Y: 2]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 1: [X: 5  Y: 7]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 2: [X: 12  Y: 0]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 3: [X: 11  Y: 4]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 4: [X: 2  Y: 6]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 5: [X: 10  Y: 8]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 6: [X: 5  Y: 10]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 7: [X: 6  Y: 7]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 8: [X: 4  Y: 10]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 9: [X: 14  Y: 13]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 10: [X: 7  Y: 5]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 11: [X: 2  Y: 8]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 12: [X: 12  Y: 1]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 13: [X: 6  Y: 5]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 14: [X: 13  Y: 7]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 15: [X: 10  Y: 3]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 16: [X: 12  Y: 1]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 17: [X: 5  Y: 1]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 18: [X: 0  Y: 8]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 19: [X: 9  Y: 4]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 20: [X: 13  Y: 2]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 21: [X: 13  Y: 2]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 22: [X: 10  Y: 5]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 23: [X: 1  Y: 3]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 24: [X: 1  Y: 4]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 25: [X: 11  Y: 5]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 26: [X: 2  Y: 8]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 27: [X: 0  Y: 4]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 28: [X: 5  Y: 7]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 29: [X: 1  Y: 1]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 30: [X: 4  Y: 3]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 31: [X: 9  Y: 5]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 32: [X: 13  Y: 2]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 33: [X: 0  Y: 6]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 34: [X: 4  Y: 0]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 35: [X: 8  Y: 3]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 36: [X: 5  Y: 2]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 37: [X: 8  Y: 2]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 38: [X: 4  Y: 7]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 39: [X: 0  Y: 6]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 40: [X: 2  Y: 2]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 41: [X: 0  Y: 5]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 42: [X: 11  Y: 3]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 43: [X: 13  Y: 4]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 44: [X: 9  Y: 0]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 45: [X: 9  Y: 0]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 46: [X: 10  Y: 1]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 47: [X: 8  Y: 0]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 48: [X: 9  Y: 0]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 49: [X: 0  Y: 3]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 50: [X: 0  Y: 3]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 51: [X: 2  Y: 0]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 52: [X: 9  Y: 0]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 53: [X: 6  Y: 0]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 54: [X: 1  Y: 0]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 55: [X: 0  Y: 3]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 56: [X: 1  Y: 0]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 57: [X: 2  Y: 0]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 58: [X: 0  Y: 0]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 59: [X: 0  Y: 0]
+2/24/2018 - 10:36:57 PM  :  Level 10 - move 60: [X: 0  Y: 0]
+2/24/2018 - 10:36:57 PM  :  Partial score : 28960 on 10 levels
+2/24/2018 - 10:37:26 PM  :  Completed run 1/1 of level 11. New top score found: 2049
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 0: [X: 13  Y: 4]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 1: [X: 0  Y: 4]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 2: [X: 13  Y: 2]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 3: [X: 5  Y: 9]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 4: [X: 7  Y: 5]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 5: [X: 2  Y: 10]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 6: [X: 13  Y: 8]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 7: [X: 14  Y: 3]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 8: [X: 6  Y: 8]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 9: [X: 11  Y: 4]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 10: [X: 8  Y: 10]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 11: [X: 9  Y: 7]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 12: [X: 1  Y: 1]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 13: [X: 0  Y: 10]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 14: [X: 12  Y: 2]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 15: [X: 0  Y: 9]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 16: [X: 4  Y: 12]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 17: [X: 1  Y: 7]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 18: [X: 11  Y: 10]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 19: [X: 9  Y: 1]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 20: [X: 11  Y: 8]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 21: [X: 8  Y: 6]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 22: [X: 4  Y: 0]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 23: [X: 11  Y: 5]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 24: [X: 6  Y: 7]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 25: [X: 5  Y: 2]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 26: [X: 13  Y: 6]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 27: [X: 8  Y: 2]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 28: [X: 14  Y: 5]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 29: [X: 11  Y: 0]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 30: [X: 1  Y: 0]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 31: [X: 14  Y: 2]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 32: [X: 11  Y: 3]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 33: [X: 13  Y: 0]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 34: [X: 2  Y: 1]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 35: [X: 0  Y: 2]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 36: [X: 6  Y: 9]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 37: [X: 2  Y: 0]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 38: [X: 3  Y: 3]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 39: [X: 4  Y: 4]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 40: [X: 7  Y: 9]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 41: [X: 4  Y: 3]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 42: [X: 3  Y: 4]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 43: [X: 7  Y: 5]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 44: [X: 5  Y: 3]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 45: [X: 9  Y: 5]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 46: [X: 3  Y: 6]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 47: [X: 12  Y: 5]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 48: [X: 3  Y: 5]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 49: [X: 0  Y: 4]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 50: [X: 9  Y: 1]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 51: [X: 7  Y: 4]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 52: [X: 10  Y: 0]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 53: [X: 5  Y: 2]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 54: [X: 1  Y: 1]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 55: [X: 7  Y: 1]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 56: [X: 6  Y: 1]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 57: [X: 0  Y: 2]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 58: [X: 0  Y: 1]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 59: [X: 0  Y: 1]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 60: [X: 7  Y: 0]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 61: [X: 7  Y: 0]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 62: [X: 4  Y: 0]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 63: [X: 5  Y: 0]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 64: [X: 2  Y: 0]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 65: [X: 1  Y: 0]
+2/24/2018 - 10:37:26 PM  :  Level 11 - move 66: [X: 0  Y: 0]
+2/24/2018 - 10:37:26 PM  :  Partial score : 31009 on 11 levels
+2/24/2018 - 10:37:53 PM  :  Completed run 1/1 of level 12. New top score found: 2013
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 0: [X: 9  Y: 10]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 1: [X: 3  Y: 9]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 2: [X: 10  Y: 4]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 3: [X: 12  Y: 6]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 4: [X: 7  Y: 5]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 5: [X: 5  Y: 11]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 6: [X: 5  Y: 1]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 7: [X: 6  Y: 8]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 8: [X: 0  Y: 1]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 9: [X: 0  Y: 11]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 10: [X: 12  Y: 8]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 11: [X: 4  Y: 6]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 12: [X: 0  Y: 0]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 13: [X: 4  Y: 1]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 14: [X: 10  Y: 7]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 15: [X: 10  Y: 4]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 16: [X: 3  Y: 4]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 17: [X: 3  Y: 6]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 18: [X: 13  Y: 6]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 19: [X: 0  Y: 4]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 20: [X: 6  Y: 7]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 21: [X: 11  Y: 1]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 22: [X: 8  Y: 10]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 23: [X: 0  Y: 0]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 24: [X: 2  Y: 9]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 25: [X: 10  Y: 2]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 26: [X: 0  Y: 6]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 27: [X: 5  Y: 1]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 28: [X: 4  Y: 6]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 29: [X: 8  Y: 10]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 30: [X: 5  Y: 3]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 31: [X: 8  Y: 3]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 32: [X: 1  Y: 9]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 33: [X: 9  Y: 2]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 34: [X: 1  Y: 7]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 35: [X: 9  Y: 4]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 36: [X: 4  Y: 1]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 37: [X: 1  Y: 4]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 38: [X: 12  Y: 5]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 39: [X: 8  Y: 4]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 40: [X: 4  Y: 3]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 41: [X: 0  Y: 4]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 42: [X: 13  Y: 8]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 43: [X: 12  Y: 1]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 44: [X: 13  Y: 4]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 45: [X: 7  Y: 1]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 46: [X: 7  Y: 0]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 47: [X: 6  Y: 1]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 48: [X: 7  Y: 3]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 49: [X: 13  Y: 2]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 50: [X: 13  Y: 0]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 51: [X: 7  Y: 0]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 52: [X: 0  Y: 0]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 53: [X: 10  Y: 0]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 54: [X: 1  Y: 3]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 55: [X: 1  Y: 0]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 56: [X: 9  Y: 0]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 57: [X: 3  Y: 2]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 58: [X: 6  Y: 0]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 59: [X: 6  Y: 0]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 60: [X: 5  Y: 1]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 61: [X: 0  Y: 1]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 62: [X: 0  Y: 0]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 63: [X: 0  Y: 0]
+2/24/2018 - 10:37:53 PM  :  Level 12 - move 64: [X: 0  Y: 0]
+2/24/2018 - 10:37:53 PM  :  Partial score : 33022 on 12 levels
+2/24/2018 - 10:38:20 PM  :  Completed run 1/1 of level 13. New top score found: 2199
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 0: [X: 7  Y: 0]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 1: [X: 1  Y: 7]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 2: [X: 3  Y: 3]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 3: [X: 2  Y: 3]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 4: [X: 5  Y: 8]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 5: [X: 4  Y: 7]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 6: [X: 0  Y: 8]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 7: [X: 3  Y: 0]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 8: [X: 0  Y: 2]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 9: [X: 0  Y: 3]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 10: [X: 9  Y: 11]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 11: [X: 3  Y: 3]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 12: [X: 9  Y: 10]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 13: [X: 4  Y: 7]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 14: [X: 13  Y: 9]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 15: [X: 13  Y: 6]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 16: [X: 0  Y: 0]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 17: [X: 9  Y: 7]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 18: [X: 5  Y: 4]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 19: [X: 7  Y: 3]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 20: [X: 10  Y: 2]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 21: [X: 7  Y: 0]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 22: [X: 8  Y: 4]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 23: [X: 10  Y: 8]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 24: [X: 14  Y: 9]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 25: [X: 11  Y: 12]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 26: [X: 11  Y: 6]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 27: [X: 6  Y: 5]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 28: [X: 7  Y: 8]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 29: [X: 8  Y: 1]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 30: [X: 8  Y: 1]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 31: [X: 8  Y: 0]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 32: [X: 10  Y: 7]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 33: [X: 1  Y: 5]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 34: [X: 10  Y: 7]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 35: [X: 12  Y: 8]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 36: [X: 5  Y: 0]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 37: [X: 9  Y: 1]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 38: [X: 5  Y: 0]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 39: [X: 12  Y: 2]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 40: [X: 6  Y: 1]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 41: [X: 12  Y: 0]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 42: [X: 1  Y: 0]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 43: [X: 12  Y: 0]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 44: [X: 0  Y: 3]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 45: [X: 0  Y: 2]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 46: [X: 1  Y: 2]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 47: [X: 11  Y: 7]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 48: [X: 5  Y: 3]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 49: [X: 1  Y: 2]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 50: [X: 12  Y: 2]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 51: [X: 9  Y: 2]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 52: [X: 6  Y: 4]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 53: [X: 4  Y: 1]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 54: [X: 12  Y: 2]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 55: [X: 13  Y: 4]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 56: [X: 13  Y: 3]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 57: [X: 5  Y: 0]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 58: [X: 13  Y: 3]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 59: [X: 0  Y: 0]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 60: [X: 1  Y: 0]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 61: [X: 8  Y: 0]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 62: [X: 7  Y: 0]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 63: [X: 5  Y: 0]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 64: [X: 1  Y: 0]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 65: [X: 0  Y: 0]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 66: [X: 1  Y: 0]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 67: [X: 0  Y: 0]
+2/24/2018 - 10:38:20 PM  :  Level 13 - move 68: [X: 0  Y: 0]
+2/24/2018 - 10:38:20 PM  :  Partial score : 35221 on 13 levels
+2/24/2018 - 10:38:41 PM  :  Completed run 1/1 of level 14. New top score found: 1789
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 0: [X: 11  Y: 3]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 1: [X: 8  Y: 12]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 2: [X: 3  Y: 0]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 3: [X: 5  Y: 3]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 4: [X: 6  Y: 8]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 5: [X: 4  Y: 10]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 6: [X: 13  Y: 9]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 7: [X: 3  Y: 8]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 8: [X: 8  Y: 5]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 9: [X: 2  Y: 0]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 10: [X: 5  Y: 6]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 11: [X: 4  Y: 8]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 12: [X: 4  Y: 5]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 13: [X: 2  Y: 5]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 14: [X: 5  Y: 3]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 15: [X: 1  Y: 1]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 16: [X: 9  Y: 1]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 17: [X: 7  Y: 7]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 18: [X: 9  Y: 4]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 19: [X: 2  Y: 1]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 20: [X: 7  Y: 2]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 21: [X: 12  Y: 8]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 22: [X: 3  Y: 3]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 23: [X: 8  Y: 6]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 24: [X: 14  Y: 2]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 25: [X: 12  Y: 10]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 26: [X: 11  Y: 6]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 27: [X: 9  Y: 6]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 28: [X: 0  Y: 1]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 29: [X: 10  Y: 2]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 30: [X: 1  Y: 1]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 31: [X: 6  Y: 3]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 32: [X: 0  Y: 10]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 33: [X: 7  Y: 2]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 34: [X: 1  Y: 7]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 35: [X: 0  Y: 6]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 36: [X: 1  Y: 1]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 37: [X: 0  Y: 6]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 38: [X: 14  Y: 7]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 39: [X: 1  Y: 0]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 40: [X: 9  Y: 3]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 41: [X: 10  Y: 1]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 42: [X: 8  Y: 5]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 43: [X: 13  Y: 4]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 44: [X: 0  Y: 3]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 45: [X: 5  Y: 0]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 46: [X: 13  Y: 5]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 47: [X: 13  Y: 4]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 48: [X: 1  Y: 2]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 49: [X: 1  Y: 0]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 50: [X: 1  Y: 0]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 51: [X: 4  Y: 0]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 52: [X: 4  Y: 6]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 53: [X: 0  Y: 0]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 54: [X: 2  Y: 0]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 55: [X: 0  Y: 1]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 56: [X: 1  Y: 0]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 57: [X: 0  Y: 0]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 58: [X: 1  Y: 1]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 59: [X: 0  Y: 1]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 60: [X: 0  Y: 0]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 61: [X: 0  Y: 0]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 62: [X: 1  Y: 0]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 63: [X: 0  Y: 0]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 64: [X: 0  Y: 0]
+2/24/2018 - 10:38:41 PM  :  Level 14 - move 65: [X: 0  Y: 0]
+2/24/2018 - 10:38:41 PM  :  Partial score : 37010 on 14 levels
+2/24/2018 - 10:39:01 PM  :  Completed run 1/1 of level 15. New top score found: 2157
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 0: [X: 12  Y: 2]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 1: [X: 3  Y: 11]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 2: [X: 1  Y: 9]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 3: [X: 9  Y: 13]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 4: [X: 3  Y: 7]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 5: [X: 6  Y: 10]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 6: [X: 4  Y: 0]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 7: [X: 12  Y: 8]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 8: [X: 7  Y: 4]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 9: [X: 1  Y: 1]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 10: [X: 1  Y: 7]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 11: [X: 11  Y: 1]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 12: [X: 0  Y: 4]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 13: [X: 3  Y: 1]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 14: [X: 4  Y: 10]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 15: [X: 13  Y: 5]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 16: [X: 9  Y: 11]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 17: [X: 7  Y: 4]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 18: [X: 10  Y: 5]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 19: [X: 1  Y: 4]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 20: [X: 7  Y: 6]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 21: [X: 10  Y: 6]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 22: [X: 6  Y: 6]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 23: [X: 8  Y: 4]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 24: [X: 5  Y: 6]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 25: [X: 9  Y: 3]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 26: [X: 12  Y: 7]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 27: [X: 4  Y: 5]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 28: [X: 9  Y: 0]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 29: [X: 0  Y: 2]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 30: [X: 3  Y: 0]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 31: [X: 6  Y: 0]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 32: [X: 11  Y: 1]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 33: [X: 2  Y: 1]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 34: [X: 4  Y: 5]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 35: [X: 5  Y: 7]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 36: [X: 7  Y: 1]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 37: [X: 3  Y: 2]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 38: [X: 12  Y: 2]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 39: [X: 4  Y: 3]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 40: [X: 1  Y: 2]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 41: [X: 4  Y: 1]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 42: [X: 1  Y: 1]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 43: [X: 0  Y: 3]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 44: [X: 8  Y: 0]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 45: [X: 0  Y: 1]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 46: [X: 0  Y: 1]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 47: [X: 0  Y: 0]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 48: [X: 1  Y: 0]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 49: [X: 0  Y: 2]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 50: [X: 0  Y: 1]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 51: [X: 0  Y: 0]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 52: [X: 5  Y: 0]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 53: [X: 4  Y: 0]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 54: [X: 3  Y: 0]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 55: [X: 3  Y: 0]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 56: [X: 1  Y: 0]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 57: [X: 1  Y: 0]
+2/24/2018 - 10:39:01 PM  :  Level 15 - move 58: [X: 0  Y: 0]
+2/24/2018 - 10:39:01 PM  :  Partial score : 39167 on 15 levels
