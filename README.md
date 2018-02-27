@@ -9,13 +9,13 @@
 
 **method format**  
 -for **sokoban MCTS**: mcts:iterations:const_C:const_D:rewardType:epsilon:terminateOnSolution:seed  
-example: *sokoban mcts:10000:1:100:InverseBM:0.2:true:1 ./Levels/sokoban.txt*  
+example: *`sokoban mcts:10000:1\:100\:InverseBM:0.2:true:1 ./Levels/sokoban.txt`*  
 
 -for **sokoban IDA\***: ida:maxDepth:rewardType  
-example: *sokoban ida:40:PositiveBM ./Levels/sokoban.txt*  
+example: *`sokoban ida:40:PositiveBM ./Levels/sokoban.txt`*  
 
 -for **samegame MCTS**: mcts:iterations:const_C:const_D:restarts:seed  
-example: *samegame mcts:10000:1:100:50:1*  
+example: *`samegame mcts:10000:1:100\:50:1 ./Levels/samegame.txt`*  
 
 -for **samegame IDA\***: to be implemented  
 
