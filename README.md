@@ -1,34 +1,40 @@
 # SP-MCTS
-To execute download the Release folder and run the sokoban.bat file
 
-bat file content in order of appearance:
+**EXECUTION**  
+**parameters**: game method levelsPath  
 
-**executable**
+**game values**:  
+-sokoban  
+-samegame  
 
-**type of test**: sokobanTuning for testing different parameters in sokoban, sokoban for solving a set of sokoban levels, samegame for solving a set of samegame levels, idastar for solving a set of sokoban levels using IDA*
+**method format**  
+-for **sokoban MCTS**: mcts:iterations:const_C:const_D:rewardType:epsilon:terminateOnSolution:seed  
+example: *sokoban mcts:10000:1:100:InverseBM:0.2:true:1 ./Levels/sokoban.txt*  
 
-**const_C**: UCT constant used for sokoban
+-for **sokoban IDA\***: ida:maxDepth:rewardType  
+example: *sokoban ida:40:PositiveBM ./Levels/sokoban.txt*  
 
-**const_D**: SP-MCTS constant (used only in samegame)
+-for **samegame MCTS**: mcts:iterations:const_C:const_D:restarts:seed  
+example: *samegame mcts:10000:1:100:50:1*  
 
-**maxIterations**: maximum number of iterations when using MCTS, maximum cost depth when using IDA*
+-for **samegame IDA\***: to be implemented  
 
-**restarts**: number of restarts in samegame, number of experiment repetitions in sokobanTuning
+**Parameters**:  
 
-**maxThreads**: maximum number of threads used (limited to those available in the machine)
+**const_C**: UCT constant used for sokoban  
 
-**seed**: seed used for rng
+**const_D**: SP-MCTS constant  
 
-**abstractSokoban**: boolean used to specify whether the sokoban representation is at the push level (true) or at the move level (false)
+**iterations**: maximum number of iterations when using MCTS  
 
-**rewardType**: sokoban reward type (R0 = 1 if solution found, 0 otherwise; InverseBM = 1/BM; NegativeBM = -BM; LogBM = -1/Log(BM)
+**maxDepth**: maximum cost depth when using IDA*  
 
-**terminateOnSolution**: boolan used to specify whether MCTS stops as soon as it finds a solution
+**restarts**: number of randomized restarts  
 
-**logfile**: path of the logfile; the file will be created if it doesn't exist
+**seed**: seed used for rng  
 
-**levelfile**: path of the file containing the levels
+**rewardType**: sokoban reward type ( R0 = 1 if solution found, 0 otherwise;  InverseBM = 1/BM;  NegativeBM = -BM;  LogBM = -1/Log(BM) )  
 
-**c_values file**: path of the csv file containing UCT constant values for sokobanTuning
+**terminateOnSolution**: boolan used to specify whether MCTS stops as soon as it finds a solution or if it continues execution to find a better solution  
 
-**epsilon_values file**: path of the csv file containing epsilon values for sokobanTuning
+**levelfile**: path of the file containing the levels  
