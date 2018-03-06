@@ -143,7 +143,7 @@ namespace MCTS2016.Puzzles.SameGame
             SamegameGameMove sgmove = move as SamegameGameMove;
             int value = board[sgmove.x][sgmove.y];
             HashSet<Position> toRemove = new HashSet<Position>();
-            CheckAdjacentBlocks(sgmove.x, sgmove.y, value, toRemove); //remove adjacent blocks
+            CheckAdjacentBlocks(sgmove.x, sgmove.y, value, ref toRemove); //remove adjacent blocks
             if(toRemove.Count > 0)
             {
                 board[sgmove.x][sgmove.y] = 1000;
@@ -166,14 +166,14 @@ namespace MCTS2016.Puzzles.SameGame
         /// <param name="y"></param>
         /// <param name="value"></param>
         /// <param name="toRemove"></param>
-        private void CheckAdjacentBlocks(int x, int y, int value, HashSet<Position> toRemove) //should I use "out" for toRemove?
+        private void CheckAdjacentBlocks(int x, int y, int value, ref HashSet<Position> toRemove)
         {
             if(x > 0 && board[x - 1].Count > y)
             {
                 if(board[x-1][y] == value && !toRemove.Contains(new Position(x - 1, y)))
                 {
                     toRemove.Add(new Position(x - 1, y));
-                    CheckAdjacentBlocks(x - 1, y, value, toRemove);
+                    CheckAdjacentBlocks(x - 1, y, value, ref toRemove);
                 }
             }
             if(x < board.Count -1 && board[x + 1].Count > y)
@@ -181,7 +181,7 @@ namespace MCTS2016.Puzzles.SameGame
                 if (board[x + 1][y] == value && !toRemove.Contains(new Position(x + 1, y)))
                 {
                     toRemove.Add(new Position(x + 1, y));
-                    CheckAdjacentBlocks(x + 1, y, value, toRemove);
+                    CheckAdjacentBlocks(x + 1, y, value, ref toRemove);
                 }
             }
             if (y > 0)
@@ -189,7 +189,7 @@ namespace MCTS2016.Puzzles.SameGame
                 if (board[x][y-1] == value && !toRemove.Contains(new Position(x, y - 1)))
                 {
                     toRemove.Add(new Position(x, y - 1));
-                    CheckAdjacentBlocks(x, y - 1, value, toRemove);
+                    CheckAdjacentBlocks(x, y - 1, value, ref toRemove);
                 }
             }
             if (y < board[x].Count -1)
@@ -197,7 +197,7 @@ namespace MCTS2016.Puzzles.SameGame
                 if (board[x][y + 1] == value && !toRemove.Contains(new Position(x, y + 1)))
                 {
                     toRemove.Add(new Position(x, y + 1));
-                    CheckAdjacentBlocks(x, y + 1, value, toRemove);
+                    CheckAdjacentBlocks(x, y + 1, value, ref toRemove);
                 }
             }
         }
@@ -234,7 +234,7 @@ namespace MCTS2016.Puzzles.SameGame
                     {
                         int previousCheckedCount = alreadyChecked.Count;
                         //HashSet<Position> group = new HashSet<Position>();
-                        CheckAdjacentBlocks(x, y, board[x][y], alreadyChecked); //group adjacent blocks together to have a single action for all of them
+                        CheckAdjacentBlocks(x, y, board[x][y], ref alreadyChecked); //group adjacent blocks together to have a single action for all of them
                         if (alreadyChecked.Count> previousCheckedCount)
                         {
                             moves.Add(new SamegameGameMove(x, y));
@@ -362,14 +362,29 @@ namespace MCTS2016.Puzzles.SameGame
             }
             if (board.Count > 0 && isTerminal()) //penalty of (number of blocks left -2)^2 if at the end the board is not empty
             {
-                int remainingBlocks = 0;
+                int[] colorGroups = new int[5];
                 for(int i = 0; i < board.Count; i++)
                 {
-                    remainingBlocks += board[i].Count;
+                    for(int j=0; j< board[i].Count; j++)
+                    {
+                        colorGroups[board[i][j]]++;
+                    }
                 }
-                if (remainingBlocks > 2)
+                //int remainingBlocks = 0;
+                //for(int i = 0; i < board.Count; i++)
+                //{
+                //    remainingBlocks += board[i].Count;
+                //}
+                //if (remainingBlocks > 2)
+                //{
+                //    finalScore -= (remainingBlocks - 2) * (remainingBlocks - 2);
+                //}
+                foreach(int count in colorGroups)
                 {
-                    finalScore -= (remainingBlocks - 2) * (remainingBlocks - 2);
+                    if(count > 2)
+                    {
+                        finalScore -= (count - 2) * (count - 2);
+                    }
                 }
             }
             return finalScore;
@@ -423,7 +438,7 @@ namespace MCTS2016.Puzzles.SameGame
         }
     }
 
-    class Position
+    public class Position
     {
         public int X { get; set; }
         public int Y { get; set; }

@@ -20,7 +20,7 @@ namespace MCTS2016.Puzzles.Sokoban
         public int PlayerY { get => playerY;}
         public int PlayerX { get => playerX;}
         public int[,] Board { get => board;}
-
+        public List<Position> BoxPositions { get => boxPositions; set => boxPositions = value; }
         private bool stateChanged = false;
 
         private bool isDeadlock = false;
@@ -51,6 +51,8 @@ namespace MCTS2016.Puzzles.Sokoban
         private int[,] board;
         private int[,] distanceBoard;
 
+        private List<Position> boxPositions = new List<Position>();
+
         private int playerX;
         private int playerY;
 
@@ -58,6 +60,7 @@ namespace MCTS2016.Puzzles.Sokoban
         private bool win;
         public HashSet<Position> simpleDeadlock;
 
+        //private List<GoalRoom> goalRooms;
         private Dictionary<Position, int> distancesFromClosestGoal = new Dictionary<Position, int>();
         private Dictionary<PositionGoalPair, int> distancesFromAllGoals = new Dictionary<PositionGoalPair, int>();
         private List<Position> goals = new List<Position>();
@@ -89,6 +92,10 @@ namespace MCTS2016.Puzzles.Sokoban
                     if(board[x,y] == GOAL || board[x, y] == PLAYER_ON_GOAL || board[x, y] == BOX_ON_GOAL)
                     {
                         goals.Add(new Position(x, y));
+                    }
+                    if(board[x,y]==BOX || board[x, y] == BOX_ON_GOAL)
+                    {
+                        boxPositions.Add(new Position(x, y));
                     }
                     x++;
                 }
@@ -129,7 +136,8 @@ namespace MCTS2016.Puzzles.Sokoban
                 distancesFromClosestGoal = distancesFromClosestGoal,
                 distancesFromAllGoals = distancesFromAllGoals,
                 goals = goals,
-                rewardType = rewardType
+                rewardType = rewardType,
+                boxPositions = new List<Position>( boxPositions),
             };
         }
                 
@@ -395,6 +403,10 @@ namespace MCTS2016.Puzzles.Sokoban
             }
             if (stateChanged)
             {
+                //update box position
+                Position currentBoxPosition = new Position(playerX + xDirection, playerY + yDirection);
+                boxPositions[boxPositions.IndexOf(currentBoxPosition)] = new Position(playerX + 2 * xDirection, playerY + 2 * yDirection); ;
+                
                 if (board[playerX + xDirection, playerY + yDirection] == BOX)
                 {
                     board[playerX + xDirection, playerY + yDirection] = PLAYER;
@@ -935,8 +947,10 @@ namespace MCTS2016.Puzzles.Sokoban
             {
                 if (board[playerX + 1, playerY] == BOX || board[playerX + 1, playerY] == BOX_ON_GOAL)
                 {
-                    if (board[playerX + 2, playerY] == EMPTY || board[playerX + 2, playerY] == GOAL)
-                        moves.Add(new SokobanGameMove("R"));
+                    if ((board[playerX + 2, playerY] == EMPTY || board[playerX + 2, playerY] == GOAL) && !simpleDeadlock.Contains(new Position(playerX +2, playerY)))
+                    {
+                        moves.Add(new SokobanGameMove("R") { BoxIndex = boxPositions.IndexOf(new Position(playerX + 1, playerY)) });
+                    }
                 }
                 else
                 {
@@ -948,8 +962,10 @@ namespace MCTS2016.Puzzles.Sokoban
             {
                 if (board[playerX - 1, playerY] == BOX || board[playerX - 1, playerY] == BOX_ON_GOAL)
                 {
-                    if (board[playerX - 2, playerY] == EMPTY || board[playerX - 2, playerY] == GOAL)
-                        moves.Add(new SokobanGameMove("L"));
+                    if ((board[playerX - 2, playerY] == EMPTY || board[playerX - 2, playerY] == GOAL) && !simpleDeadlock.Contains(new Position(playerX - 2, playerY)))
+                    {
+                        moves.Add(new SokobanGameMove("L") { BoxIndex = boxPositions.IndexOf(new Position(playerX - 1, playerY)) });
+                    }
                 }
                 else
                 {
@@ -961,8 +977,10 @@ namespace MCTS2016.Puzzles.Sokoban
             {
                 if (board[playerX, playerY + 1] == BOX || board[playerX, playerY + 1] == BOX_ON_GOAL)
                 {
-                    if (board[playerX, playerY + 2] == EMPTY || board[playerX, playerY + 2] == GOAL)
-                        moves.Add(new SokobanGameMove("D"));
+                    if ((board[playerX, playerY + 2] == EMPTY || board[playerX, playerY + 2] == GOAL) && !simpleDeadlock.Contains(new Position(playerX, playerY + 2)))
+                    {
+                        moves.Add(new SokobanGameMove("D") { BoxIndex = boxPositions.IndexOf(new Position(playerX, playerY + 1)) });
+                    }
                 }
                 else
                 {
@@ -974,8 +992,10 @@ namespace MCTS2016.Puzzles.Sokoban
             {
                 if (board[playerX, playerY - 1] == BOX || board[playerX, playerY - 1] == BOX_ON_GOAL)
                 {
-                    if (board[playerX, playerY - 2] == EMPTY || board[playerX, playerY - 2] == GOAL)
-                        moves.Add(new SokobanGameMove("U"));
+                    if ((board[playerX, playerY - 2] == EMPTY || board[playerX, playerY - 2] == GOAL) && !simpleDeadlock.Contains(new Position(playerX, playerY - 2)))
+                    {
+                        moves.Add(new SokobanGameMove("U") { BoxIndex = boxPositions.IndexOf(new Position(playerX, playerY - 1)) });
+                    }
                 }
                 else
                 {
@@ -985,6 +1005,81 @@ namespace MCTS2016.Puzzles.Sokoban
             CheckWinCondition();
             return moves;
         }
+
+
+
+
+        //void FindMacros()
+        //{
+        //    FindGoalRooms();
+        //}
+
+        //void FindGoalRooms()
+        //{
+        //    List<GoalRoom> rooms = new List<GoalRoom>();
+        //    foreach(Position goal in goals)
+        //    {
+        //        bool inserted = false;
+        //        foreach(GoalRoom room in rooms)
+        //        {
+        //            if (room.goals.Contains(goal))
+        //            {
+        //                inserted = true;
+        //            }
+        //        }
+        //        if (!inserted)
+        //        {
+        //            rooms.Add(CreateNewRoom(goal));
+        //        }
+        //    }
+        //}
+
+        //private GoalRoom CreateNewRoom(Position goal)
+        //{
+        //    List<Position> goalGroup = new List<Position>();
+        //    GetAdjacentGoals(goal, ref goalGroup);
+        //    if(goalGroup.Count() < 3)
+        //    {
+        //        return null;
+        //    }
+        //    GoalRoom room = new GoalRoom() { goals = goalGroup};
+        //    List<Position> entrances = PickUpEntrances(goal);
+        //    return room;
+        //}
+
+        //private List<Position> PickUpEntrances(Position goal)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //private void GetAdjacentGoals(Position current, ref List<Position> goalList)
+        //{
+        //    if(board[current.X,current.Y] != GOAL)
+        //    {
+        //        return;
+        //    }
+        //    goalList.Add(current);
+        //    Position nextPosition = new Position(current.X + 1, current.Y);
+        //    if(board[current.X + 1, current.Y] == GOAL && !goalList.Contains(nextPosition))
+        //    {
+        //        GetAdjacentGoals(nextPosition, ref goalList);
+        //    }
+        //    nextPosition = new Position(current.X - 1, current.Y);
+        //    if (board[nextPosition.X, nextPosition.Y] == GOAL && !goalList.Contains(nextPosition))
+        //    {
+        //        GetAdjacentGoals(nextPosition, ref goalList);
+        //    }
+        //    nextPosition = new Position(current.X, current.Y + 1);
+        //    if (board[nextPosition.X, nextPosition.Y] == GOAL && !goalList.Contains(nextPosition))
+        //    {
+        //        GetAdjacentGoals(nextPosition, ref goalList);
+        //    }
+        //    nextPosition = new Position(current.X, current.Y - 1);
+        //    if (board[nextPosition.X, nextPosition.Y] == GOAL && !goalList.Contains(nextPosition))
+        //    {
+        //        GetAdjacentGoals(nextPosition, ref goalList);
+        //    }
+        //}
     }
 
     class PositionGoalPair

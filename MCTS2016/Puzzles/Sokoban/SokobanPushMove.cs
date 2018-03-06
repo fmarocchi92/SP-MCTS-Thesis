@@ -11,16 +11,16 @@ namespace MCTS2016.Puzzles.Sokoban
     class SokobanPushMove : IPuzzleMove
     {
         private Position playerPosition;
-
-        private SokobanGameMove pushMove;
+        private int boxIndex;
 
         private List<SokobanGameMove> moveList;
 
         internal List<SokobanGameMove> MoveList { get => moveList; set => moveList = value; }
         internal Position PlayerPosition { get => playerPosition; set => playerPosition = value; }
 
-        public SokobanPushMove(List<SokobanGameMove> moves, Position playerPosition)
+        public SokobanPushMove(List<SokobanGameMove> moves, Position playerPosition, int boxIndex)
         {
+            this.boxIndex = boxIndex;
             MoveList = moves;
             PlayerPosition = playerPosition;
         }
@@ -32,7 +32,22 @@ namespace MCTS2016.Puzzles.Sokoban
             {
                 s += m;
             }
-            return playerPosition+":"+ s;
+            return playerPosition+"[box:"+boxIndex+"]:"+ s;
+        }
+
+        public override bool Equals(object obj)
+        {
+            var move = obj as SokobanPushMove;
+            return move != null && GetHashCode() == obj.GetHashCode();
+        }
+
+        public override int GetHashCode()
+        {
+            var hashCode = 808966213;
+            hashCode = hashCode * -1521134295 + playerPosition.GetHashCode();
+            hashCode = hashCode * -1521134295 + boxIndex.GetHashCode();
+            hashCode = hashCode * -1521134295 + moveList.Last<SokobanGameMove>().GetHashCode();
+            return hashCode;
         }
     }
 }

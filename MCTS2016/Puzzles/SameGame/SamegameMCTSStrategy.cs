@@ -4,6 +4,8 @@ using MCTS.Standard.Utils;
 using MCTS.Standard.Utils.UCT;
 using MCTS2016.Common.Abstract;
 using MCTS2016.SP_MCTS;
+using MCTS2016.SP_MCTS.Optimizations;
+using MCTS2016.SP_MCTS.Optimizations.UCT;
 using MCTS2016.SP_MCTS.SP_UCT;
 using System;
 using System.Collections.Generic;
@@ -15,21 +17,20 @@ namespace MCTS2016.Puzzles.SameGame
 {
     class SamegameMCTSStrategy : ISP_MCTSSimulationStrategy
     {
-        private SP_MCTSAlgorithm mcts;
+        private OptMCTSAlgorithm mcts;
         private MersenneTwister rng;
         private double maxTimeInMinutes;
 
         public int iterations { get; set; }
 
-        public SamegameMCTSStrategy(MersenneTwister rng,int iterations = 1000, double maxTimeInMinutes = 5, SP_MCTSAlgorithm mcts = null, double const_C = 4.31, double const_D = 96.67)
+        public SamegameMCTSStrategy(MersenneTwister rng, bool ucb1Tuned, bool rave, bool nodeRecycling, int memoryBudget, int iterations = 1000, OptMCTSAlgorithm mcts = null, double const_C = 4.31, double const_D = 96.67)
         {
             if (mcts == null)
             {
-                mcts = new SP_MCTSAlgorithm(new SP_UCTTreeNodeCreator(const_C, const_D, rng),false);
+                mcts = new OptMCTSAlgorithm(new Opt_SP_UCTTreeNodeCreator(const_C, const_D, rng, ucb1Tuned, rave, nodeRecycling ),iterations, memoryBudget ,false);
             }
             this.mcts = mcts;
             this.iterations = iterations;
-            this.maxTimeInMinutes = maxTimeInMinutes;
         }
 
         public string getFriendlyName()

@@ -12,6 +12,8 @@ namespace MCTS2016.Puzzles.Sokoban
     {
         private string moveString;
 
+        public int BoxIndex { get; set; }
+
         public SokobanGameMove(string moveString)
         {
             switch (moveString)

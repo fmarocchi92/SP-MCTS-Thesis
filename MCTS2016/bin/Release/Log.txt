@@ -1620,3 +1620,2179 @@ epsilon: 0.2level: ../Release/Levels/sokoban.txt
 2/24/2018 - 10:39:01 PM  :  Level 15 - move 57: [X: 1  Y: 0]
 2/24/2018 - 10:39:01 PM  :  Level 15 - move 58: [X: 0  Y: 0]
 2/24/2018 - 10:39:01 PM  :  Partial score : 39167 on 15 levels
+2/27/2018 - 5:30:19 PM  :  
+********************
+BEGIN TASK:
+Game:sokoban
+Method: IDA* 
+Maximum cost: 30
+Reward Type: PositiveBM
+level: ../Release/Levels/sokoban.txt
+********************
+2/27/2018 - 5:30:19 PM  :  Level1:
+####### 
+#     # 
+#@$$$ ##
+#  #...#
+##    ##
+ ###### 
+[1,1]
+[2,1]:urD[4,1]:urrrD
+2/27/2018 - 5:30:19 PM  :  Level 1 solved: True solution length:62/13
+2/27/2018 - 5:30:19 PM  :  Moves: urDurrDulldRurrdddlllUluurrdRurDllulldRRRllddrrURldlluururDurD
+2/27/2018 - 5:30:19 PM  :  Solved 1/1
+2/27/2018 - 5:30:19 PM  :  Level2:
+#######
+#     #
+# .$. #
+# $.$ #
+# .$. #
+# $.$ #
+#  @  #
+#######
+[1,1]
+[4,6]:rU[2,6]:lU[3,5]:uU[5,5]:rruL[1,5]:lluR[4,4]:rruulL[4,4]:rruulU[5,3]:rruuuL[2,4]:lluurR[2,4]:lluurU[1,3]:lluuuR[4,2]:rruuuulL[4,2]:rruuuulD[2,2]:lluuuurR[2,2]:lluuuurD[3,1]:rruuuululD
+2/27/2018 - 5:30:21 PM  :  Level 2 solved: True solution length:30/6
+2/27/2018 - 5:30:21 PM  :  Moves: rUruuululldRdDlUldddrUdrrruuuL
+2/27/2018 - 5:30:21 PM  :  Solved 2/2
+2/27/2018 - 5:30:21 PM  :  Level3:
+#######
+#. #  #
+#  $  #
+#. $#@#
+#  $  #
+#. #  #
+#######
+[4,1]
+[4,4]:dlL[4,2]:ulL
+2/27/2018 - 5:30:21 PM  :  Level 3 solved: True solution length:51/10
+2/27/2018 - 5:30:21 PM  :  Moves: dlLLulDrrrruulLrrddllUlluurDlddrrrruulLLrddlluUrrdL
+2/27/2018 - 5:30:21 PM  :  Solved 3/3
+2/27/2018 - 5:30:21 PM  :  Level4:
+ #######
+ #     #
+ # .$. #
+## $@$ #
+#  .$. #
+#      #
+########
+[4,3]
+[4,3]:L
+2/27/2018 - 5:30:21 PM  :  Level 4 solved: True solution length:27/6
+2/27/2018 - 5:30:21 PM  :  Moves: LulDruurrdLrrddlUlldRldlluR
+2/27/2018 - 5:30:21 PM  :  Solved 4/4
+2/27/2018 - 5:30:21 PM  :  Level5:
+#######
+#     #
+#. .  #
+# ## ##
+#  $ # 
+###$ # 
+  #@ # 
+  #  # 
+  #### 
+[1,1]
+[4,4]:ruuL[2,4]:ruuuulllddrR
+2/27/2018 - 5:30:21 PM  :  Level 5 solved: True solution length:79/13
+2/27/2018 - 5:30:21 PM  :  Moves: ruuuulllddrRDrUUddddlUruullluurrurrdLLrddddlUruuululldddrRdrUUdllluuurrdLrurrdL
+2/27/2018 - 5:30:21 PM  :  Solved 5/5
+2/27/2018 - 5:30:21 PM  :  Level6:
+  ####   
+###  ####
+#       #
+#@$***. #
+#       #
+#########
+[3,1]
+[2,4]:drU[3,4]:drrU[4,4]:drrrU[5,4]:drrrrU
+2/27/2018 - 5:30:21 PM  :  Level 6 solved: True solution length:41/8
+2/27/2018 - 5:30:21 PM  :  Moves: drUdrrURldlluRRluurDldlluRdrdrrrruulllulD
+2/27/2018 - 5:30:21 PM  :  Solved 6/6
+2/27/2018 - 5:30:21 PM  :  Level7:
+   ###   
+   #@#   
+ ###$### 
+##  .  ##
+#  # #  #
+# #   # #
+# #   # #
+# #   # #
+#  # #  #
+## $ $ ##
+ ##. .## 
+  #   #  
+  #   #  
+  #####  
+[4,1]
+[4,1]:D
+2/27/2018 - 5:30:27 PM  :  Level 7 solved: True solution length:93/15
+2/27/2018 - 5:30:27 PM  :  Moves: DDDDuurrdrddddldLruruuuulullddrddldDDrdLuuuuruuluulldlddddrdRluluuuururrddrddlUUUddddDldRddlU
+2/27/2018 - 5:30:27 PM  :  Solved 7/7
+2/27/2018 - 5:30:27 PM  :  Level8:
+#######  
+#     ###
+#  @$$..#
+#### ## #
+  #     #
+  #  ####
+  #  #   
+  ####   
+[1,1]
+[4,1]:urD
+2/27/2018 - 5:30:28 PM  :  Level 8 solved: True solution length:58/18
+2/27/2018 - 5:30:28 PM  :  Moves: urDRlDDlddrUUrrruuLLLLrrrrddlllUdrrruullulldRRRlllulldRRRR
+2/27/2018 - 5:30:28 PM  :  Solved 8/8
+2/27/2018 - 5:30:28 PM  :  Level9:
+  ###### 
+  #    # 
+  # ##@##
+### # $ #
+# ..# $ #
+#       #
+#  ######
+####     
+[3,1]
+[7,4]:ulllddddrrrruL
+2/27/2018 - 5:30:31 PM  :  Level 9 solved: True solution length:96/26
+2/27/2018 - 5:30:31 PM  :  Moves: ulllddddrrrruLUlDrdLLLulldRRRRlluuuurrrDDrdLrdLLLLullddrUluRdrUdrrruulDrdLLLullddrUrrrruuuullldD
+2/27/2018 - 5:30:31 PM  :  Solved 9/9
+2/27/2018 - 5:30:31 PM  :  Level10:
+  ######
+  # ..@#
+  # $$ #
+  ## ###
+   # #  
+   # #  
+#### #  
+#    ## 
+# #   # 
+#   # # 
+###   # 
+  ##### 
+[3,1]
+[4,1]:llD
+2/27/2018 - 5:30:31 PM  :  Level 10 solved: True solution length:97/32
+2/27/2018 - 5:30:31 PM  :  Moves: llDDDDDDldddrruuLuuuuuuurrdLulDDDDDDlllddrrUdlluurRdddrruuLUUUUUUluRddddddlllddrrUdlluurRdrUUUUUU
+2/27/2018 - 5:30:31 PM  :  Solved 10/10
+2/27/2018 - 5:30:31 PM  :  Level11:
+      ###
+##### #.#
+#   ###.#
+#   $ #.#
+# $  $  #
+#####@# #
+    #   #
+    #####
+[7,1]
+[6,4]:drruulL
+2/27/2018 - 5:30:31 PM  :  Level 11 solved: True solution length:75/25
+2/27/2018 - 5:30:31 PM  :  Moves: drruulLuLLdRRRlddrruUUUUddlllluulldRldRRRRRlddrruUUUdllllluurDldRRRRlddrruU
+2/27/2018 - 5:30:31 PM  :  Solved 11/11
+2/27/2018 - 5:30:31 PM  :  Level12:
+####   
+#. ##  
+#.@ #  
+#. $#  
+##$ ###
+ # $  #
+ #    #
+ #  ###
+ ####  
+[1,1]
+[3,2]:rD[2,3]:dD
+2/27/2018 - 5:30:31 PM  :  Level 12 solved: True solution length:55/21
+2/27/2018 - 5:30:31 PM  :  Moves: rDlDDRddlUUUUruLdlUrdddrdrruLLdlUUUrDuuLddddrruLdlUUruL
+2/27/2018 - 5:30:31 PM  :  Solved 12/12
+2/27/2018 - 5:30:31 PM  :  Level13:
+ #####
+ # @ #
+ #   #
+###$ #
+# ...#
+# $$ #
+###  #
+  ####
+[2,1]
+[3,2]:dD[3,4]:rdddlU[3,6]:rdddddlU
+2/27/2018 - 5:30:31 PM  :  Level 13 solved: True solution length:41/10
+2/27/2018 - 5:30:31 PM  :  Moves: rdddlUrdddlUUlldRurrddlUruLruuulldRDuurDD
+2/27/2018 - 5:30:31 PM  :  Solved 13/13
+2/27/2018 - 5:30:31 PM  :  Level14:
+########
+#   .. #
+#  @$$ #
+##### ##
+   #  # 
+   #  # 
+   #  # 
+   #### 
+[1,1]
+[5,1]:urrD
+2/27/2018 - 5:30:32 PM  :  Level 14 solved: True solution length:61/24
+2/27/2018 - 5:30:32 PM  :  Moves: urrDLLrrDDuullulldRRurrdddlddrUUUUruLLLdRurDDDlddrUUUUlllluRR
+2/27/2018 - 5:30:32 PM  :  Solved 14/14
+2/27/2018 - 5:30:32 PM  :  Level15:
+     #####
+   ###   #
+####.....#
+# @$$$$$ #
+#     # ##
+#####   # 
+    ##### 
+[1,3]
+[4,4]:drrU[5,4]:drrrU[7,4]:drrrdrruU
+2/27/2018 - 5:30:41 PM  :  Level 15 solved: True solution length:71/16
+2/27/2018 - 5:30:41 PM  :  Moves: drrrdrruUruulldRllDulDLrrurrdddllUURlluRdddrruUlllldRllluRRdrUrrrddllUU
+2/27/2018 - 5:30:41 PM  :  Solved 15/15
+2/27/2018 - 5:30:41 PM  :  Level16:
+ ####  
+##  ###
+#     #
+#.**$@#
+#   ###
+##  #  
+ ####  
+[2,1]
+[3,2]:ullD[2,2]:ulllD[2,4]:ullllddrU[3,4]:ullllddrrU
+2/27/2018 - 5:30:41 PM  :  Level 16 solved: True solution length:41/11
+2/27/2018 - 5:30:41 PM  :  Moves: ullDurrdLulllddrURurrdLLLddrUluRuulDrrrdL
+2/27/2018 - 5:30:41 PM  :  Solved 16/16
+2/27/2018 - 5:30:41 PM  :  Level17:
+  ####  
+  #  #  
+  #@ #  
+  #  #  
+### ####
+#    * #
+#  $   #
+#####. #
+    ####
+[3,1]
+[4,6]:dddrdL[2,6]:dddldR[6,5]:dddrdrruL
+2/27/2018 - 5:30:43 PM  :  Level 17 solved: True solution length:66/23
+2/27/2018 - 5:30:43 PM  :  Moves: dddrdLrrruLLdlUUUddlldRRRluuuruulDDDDldRurrrddlUruLLLdRurDlllluRRR
+2/27/2018 - 5:30:43 PM  :  Solved 17/17
+2/27/2018 - 5:30:43 PM  :  Level18:
+######  
+#  @ #  
+#  # ## 
+# .#  ##
+# .$$$ #
+# .#   #
+####   #
+   #####
+[1,1]
+[4,3]:rddD[5,3]:rddrD
+2/27/2018 - 5:30:44 PM  :  Level 18 solved: True solution length:75/14
+2/27/2018 - 5:30:44 PM  :  Moves: rddDLrurDrddlUruLuluulllddddrUUluurrrddrdLLrrddlUruLuuulllddrDluuurDurrdddL
+2/27/2018 - 5:30:44 PM  :  Solved 18/18
+2/27/2018 - 5:30:44 PM  :  Level19:
+#####  
+#   ###
+#. .  #
+#   # #
+## #  #
+ #@$$ #
+ #    #
+ #  ###
+ ####  
+[1,1]
+[4,4]:drrruulD
+2/27/2018 - 5:30:44 PM  :  Level 19 solved: True solution length:47/15
+2/27/2018 - 5:30:44 PM  :  Moves: drrruulDLdlUUUluRRldddrrrdLLdlUUUUruLdddrrruuuL
+2/27/2018 - 5:30:44 PM  :  Solved 19/19
+2/27/2018 - 5:30:44 PM  :  Level20:
+ #########
+ #    #  #
+## $#$#  #
+#  .$.@  #
+#  .#    #
+##########
+[7,1]
+[5,3]:lL
+2/27/2018 - 5:30:45 PM  :  Level 20 solved: True solution length:56/18
+2/27/2018 - 5:30:45 PM  :  Moves: lLLdlluRRRRRdrUllllluurDDuurrDullddrRdrruLLLrrrruulDrdLL
+2/27/2018 - 5:30:45 PM  :  Solved 20/20
+2/27/2018 - 5:30:45 PM  :  Level21:
+#####     
+#   ####  
+# # # .#  
+#    $ ###
+### #$.  #
+#   #@   #
+# # ######
+#   #     
+#####     
+[5,2]
+[6,3]:ruuL
+2/27/2018 - 5:30:47 PM  :  Level 21 solved: True solution length:93/27
+2/27/2018 - 5:30:47 PM  :  Moves: ruuLLLuullddRluurrdDDDuurrrddlUruLLLuullddRRRRurDldRlullddllddrrUUUUlluurrDullddrRRRdrUddrruL
+2/27/2018 - 5:30:47 PM  :  Solved 21/21
+2/27/2018 - 5:30:47 PM  :  Level22:
+  ####    
+###  #####
+#  $  @..#
+# $    # #
+### #### #
+  #      #
+  ########
+[3,1]
+[4,2]:llL[3,1]:llulD
+2/27/2018 - 5:30:47 PM  :  Level 22 solved: True solution length:80/17
+2/27/2018 - 5:30:47 PM  :  Moves: llulDDulldRRurrrrrdddlllllUUluRRldddrrrrruuulldlLrrurrdddllllluUruRRRllldlluRRRR
+2/27/2018 - 5:30:47 PM  :  Solved 22/22
+2/27/2018 - 5:30:47 PM  :  Level23:
+     ##### 
+     #   ##
+     #    #
+ ######   #
+##     #. #
+# $ $ @  ##
+# ######.# 
+#        # 
+########## 
+[6,1]
+[5,5]:lL[3,5]:lulldR[1,5]:rrddllllllluuR
+2/27/2018 - 5:30:52 PM  :  Level 23 solved: False solution length:0/0
+2/27/2018 - 5:30:52 PM  :  Moves: 
+2/27/2018 - 5:30:52 PM  :  Solved 22/23
+2/27/2018 - 5:30:52 PM  :  Level24:
+#######
+#  *  #
+#     #
+## # ##
+ #$@.# 
+ #   # 
+ ##### 
+[1,1]
+[2,5]:dlU[4,1]:ruuuL[2,1]:ruulluR
+2/27/2018 - 5:30:52 PM  :  Level 24 solved: True solution length:58/10
+2/27/2018 - 5:30:52 PM  :  Moves: dlUrruulluRdrddllUdrruululldRddrruuruLLrdddlluuRurDDullluR
+2/27/2018 - 5:30:52 PM  :  Solved 23/24
+2/27/2018 - 5:30:52 PM  :  Level25:
+#####   ####       
+#   ##### .#       
+#       $  ########
+###  #### .$    @ #
+  #  #  #  ####   #
+  ####  ####  #####
+[12,3]
+[12,3]:llllL
+2/27/2018 - 5:30:54 PM  :  Level 25 solved: False solution length:0/0
+2/27/2018 - 5:30:54 PM  :  Moves: 
+2/27/2018 - 5:30:54 PM  :  Solved 23/25
+2/27/2018 - 5:30:54 PM  :  Level26:
+     ####
+     # @#
+     #  #
+###### .#
+#   $  .#
+#  $$# .#
+#    ####
+###  #   
+  ####   
+[6,1]
+[5,4]:ldddlL
+2/27/2018 - 5:31:07 PM  :  Level 26 solved: True solution length:68/24
+2/27/2018 - 5:31:07 PM  :  Moves: ldddlLLrDLddrUUluRRRdrUUldlllddlluRRdrUluRRRurDluuurDlddllldlluRRRRR
+2/27/2018 - 5:31:07 PM  :  Solved 24/26
+2/27/2018 - 5:31:07 PM  :  Level27:
+########  
+# @ #  #  
+#      #  
+#####$ #  
+    #  ###
+ ## #$ ..#
+ ## #  ###
+    ####  
+[1,1]
+[5,2]:rdrrD[5,4]:rdrrrddlU[5,6]:rdrrrddddlU
+2/27/2018 - 5:31:08 PM  :  Level 27 solved: True solution length:77/28
+2/27/2018 - 5:31:08 PM  :  Moves: rdrrrddlUruLLLrrrddddlUUruulllulldRRRRurDDDlUruLLLulldRRRRurDDlddRRRlluurDldR
+2/27/2018 - 5:31:08 PM  :  Solved 25/27
+2/27/2018 - 5:31:08 PM  :  Level28:
+###### #####
+#    ###   #
+# $$     #@#
+# $ #...   #
+#   ########
+#####       
+[1,1]
+[3,1]:dlllllululD[1,3]:dlllllululllddR
+2/27/2018 - 5:31:08 PM  :  Level 28 solved: True solution length:121/29
+2/27/2018 - 5:31:08 PM  :  Moves: dlllllululDulldRRRRRRdrrruullDurrddlLLLulllllddrUluRRRRRRlllllddrUluurrdrrrdrrruullDurrddlLLulllulldRRRRRdrrruullDurrddlL
+2/27/2018 - 5:31:08 PM  :  Solved 26/28
+2/27/2018 - 5:31:08 PM  :  Level29:
+####    
+#  #####
+# $$ $ #
+#      #
+## ## ##
+#...#@# 
+# ### ##
+#      #
+#  #   #
+########
+[1,1]
+[6,2]:uuruL[2,1]:uulllluurD
+2/27/2018 - 5:31:31 PM  :  Level 29 solved: True solution length:118/29
+2/27/2018 - 5:31:31 PM  :  Moves: uulllluurDDDurruLrdrruLLdllluurDRRllldRurrdrruLLrdddddlllluuRuuRRuLrrDDDDuuulllddlddrrrdrruLLLLdlUUdrrrruuuulllluurDDD
+2/27/2018 - 5:31:31 PM  :  Solved 27/29
+2/27/2018 - 5:31:31 PM  :  Level30:
+   ####
+   #  #
+   #@ #
+####$.#
+#   $.#
+# # $.#
+#    ##
+###### 
+[4,1]
+[5,4]:rddL[5,5]:rdddL
+2/27/2018 - 5:31:34 PM  :  Level 30 solved: True solution length:56/17
+2/27/2018 - 5:31:34 PM  :  Moves: rddLLrUdlddrUluRuruulDDDlddrUrUUlDldRuuuurDlddlddlluuRRR
+2/27/2018 - 5:31:34 PM  :  Solved 28/30
+2/27/2018 - 5:31:36 PM  :  
+********************
+BEGIN TASK:
+Game:sokoban
+Method: IDA* 
+Maximum cost: 50
+Reward Type: PositiveBM
+level: ../Release/Levels/test.txt
+********************
+2/27/2018 - 5:31:36 PM  :  Level1:
+    #####          
+    #   #          
+    #$  #          
+  ###  $##         
+  #  $ $ #         
+### # ## #   ######
+#   # ## #####  ..#
+# $  $          ..#
+##### ### #@##  ..#
+    #     #########
+    #######        
+[8,4]
+[6,7]:ulllllL[8,4]:ullluuuL[5,8]:ullddlllluU
+2/27/2018 - 5:31:36 PM  :  Level 1 solved: False solution length:0/0
+2/27/2018 - 5:31:36 PM  :  Moves: 
+2/27/2018 - 5:31:36 PM  :  Solved 0/1
+2/27/2018 - 5:31:36 PM  :  Level2:
+       ########### 
+       #         # 
+       #    $ $  # 
+###### # $ ##### # 
+#    ##### $  ##$# 
+#       $ $      # 
+#          ## ## # 
+#    ##@##### ## # 
+#    ####   # ## ##
+#....#      # $   #
+#....#      #     #
+######      #######
+[1,4]
+[7,5]:uuR[10,6]:urrrU[9,5]:urruR[9,5]:urruL
+2/27/2018 - 5:31:37 PM  :  Level 2 solved: False solution length:0/0
+2/27/2018 - 5:31:37 PM  :  Moves: 
+2/27/2018 - 5:31:37 PM  :  Solved 0/2
+2/27/2018 - 5:31:48 PM  :  
+********************
+BEGIN TASK:
+Game:sokoban
+Method: IDA* 
+Maximum cost: 60
+Reward Type: PositiveBM
+level: ../Release/Levels/test.txt
+********************
+2/27/2018 - 5:31:48 PM  :  Level1:
+    #####          
+    #   #          
+    #$  #          
+  ###  $##         
+  #  $ $ #         
+### # ## #   ######
+#   # ## #####  ..#
+# $  $          ..#
+##### ### #@##  ..#
+    #     #########
+    #######        
+[8,4]
+[6,7]:ulllllL[8,4]:ullluuuL[5,8]:ullddlllluU
+2/27/2018 - 5:31:48 PM  :  Level 1 solved: False solution length:0/0
+2/27/2018 - 5:31:48 PM  :  Moves: 
+2/27/2018 - 5:31:48 PM  :  Solved 0/1
+2/27/2018 - 5:31:48 PM  :  Level2:
+       ########### 
+       #         # 
+       #    $ $  # 
+###### # $ ##### # 
+#    ##### $  ##$# 
+#       $ $      # 
+#          ## ## # 
+#    ##@##### ## # 
+#    ####   # ## ##
+#....#      # $   #
+#....#      #     #
+######      #######
+[1,4]
+[7,5]:uuR[10,6]:urrrU[9,5]:urruR[9,5]:urruL
+2/27/2018 - 5:31:49 PM  :  Level 2 solved: False solution length:0/0
+2/27/2018 - 5:31:49 PM  :  Moves: 
+2/27/2018 - 5:31:49 PM  :  Solved 0/2
+2/27/2018 - 5:31:57 PM  :  
+********************
+BEGIN TASK:
+Game:sokoban
+Method: IDA* 
+Maximum cost: 100
+Reward Type: PositiveBM
+level: ../Release/Levels/test.txt
+********************
+2/27/2018 - 5:31:58 PM  :  Level1:
+    #####          
+    #   #          
+    #$  #          
+  ###  $##         
+  #  $ $ #         
+### # ## #   ######
+#   # ## #####  ..#
+# $  $          ..#
+##### ### #@##  ..#
+    #     #########
+    #######        
+[8,4]
+[6,7]:ulllllL[8,4]:ullluuuL[5,8]:ullddlllluU
+2/27/2018 - 5:32:19 PM  :  Level 1 solved: True solution length:323/114
+2/27/2018 - 5:32:19 PM  :  Moves: ullluuuLUllDDDuuruurDldldlldddrRRRRRRRRRRRRdrUllllllllluuulLLruuulDrddrrdddllllluuuRlddlldRRRRRRRRRRRRRRRllllllllllllluuurRdDuulldddrRRRRRRRRRRRdrUlllllllluuulUlulDDDDuuurrdLulDDDuruuurDDlldlldddrRRRRRRRRRRRllllllllllUUddrrruuuLullDDDuuurrdLulDDDulldddrRRRRRRRRRRurDldRRllulllllllllUUddrrruuullulDDDuulldddrRRRRRRRRRRurDldR
+2/27/2018 - 5:32:19 PM  :  Solved 1/1
+2/27/2018 - 5:32:19 PM  :  Level2:
+       ########### 
+       #         # 
+       #    $ $  # 
+###### # $ ##### # 
+#    ##### $  ##$# 
+#       $ $      # 
+#          ## ## # 
+#    ##@##### ## # 
+#    ####   # ## ##
+#....#      # $   #
+#....#      #     #
+######      #######
+[1,4]
+[7,5]:uuR[10,6]:urrrU[9,5]:urruR[9,5]:urruL
+2/27/2018 - 5:32:20 PM  :  Level 2 solved: False solution length:0/0
+2/27/2018 - 5:32:20 PM  :  Moves: 
+2/27/2018 - 5:32:20 PM  :  Solved 1/2
+2/27/2018 - 5:41:25 PM  :  
+********************
+BEGIN TASK:
+Game:sokoban
+Method: IDA* 
+Maximum cost: 137
+Reward Type: PositiveBM
+level: ../Release/Levels/test.txt
+********************
+2/27/2018 - 5:41:25 PM  :  Level1:
+    #####          
+    #   #          
+    #$  #          
+  ###  $##         
+  #  $ $ #         
+### # ## #   ######
+#   # ## #####  ..#
+# $  $          ..#
+##### ### #@##  ..#
+    #     #########
+    #######        
+[8,4]
+[6,7]:ulllllL[8,4]:ullluuuL[5,8]:ullddlllluU
+2/27/2018 - 5:41:47 PM  :  Level 1 solved: True solution length:323/114
+2/27/2018 - 5:41:47 PM  :  Moves: ullluuuLUllDDDuuruurDldldlldddrRRRRRRRRRRRRdrUllllllllluuulLLruuulDrddrrdddllllluuuRlddlldRRRRRRRRRRRRRRRllllllllllllluuurRdDuulldddrRRRRRRRRRRRdrUlllllllluuulUlulDDDDuuurrdLulDDDuruuurDDlldlldddrRRRRRRRRRRRllllllllllUUddrrruuuLullDDDuuurrdLulDDDulldddrRRRRRRRRRRurDldRRllulllllllllUUddrrruuullulDDDuulldddrRRRRRRRRRRurDldR
+2/27/2018 - 5:41:47 PM  :  Solved 1/1
+2/27/2018 - 5:41:47 PM  :  Level2:
+       ########### 
+       #         # 
+       #    $ $  # 
+###### # $ ##### # 
+#    ##### $  ##$# 
+#       $ $      # 
+#          ## ## # 
+#    ##@##### ## # 
+#    ####   # ## ##
+#....#      # $   #
+#....#      #     #
+######      #######
+[1,4]
+[7,5]:uuR[10,6]:urrrU[9,5]:urruR[9,5]:urruL
+2/27/2018 - 10:08:30 PM  :  
+********************
+BEGIN TASK:
+Game:sokoban
+Method: IDA* 
+Maximum cost: 137
+Reward Type: PositiveBM
+level: ../Release/Levels/test.txt
+********************
+2/27/2018 - 10:08:30 PM  :  Level1:
+    #####          
+    #   #          
+    #$  #          
+  ###  $##         
+  #  $ $ #         
+### # ## #   ######
+#   # ## #####  ..#
+# $  $          ..#
+##### ### #@##  ..#
+    #     #########
+    #######        
+[8,4]
+[6,7]:ulllllL[8,4]:ullluuuL[5,8]:ullddlllluU
+2/27/2018 - 10:08:30 PM  :  Level 1 solved: False solution length:0/0
+2/27/2018 - 10:08:30 PM  :  Moves: 
+2/27/2018 - 10:08:30 PM  :  Solved 0/1
+2/27/2018 - 10:08:30 PM  :  Level2:
+       ########### 
+       #         # 
+       #    $ $  # 
+###### # $ ##### # 
+#    ##### $  ##$# 
+#       $ $      # 
+#          ## ## # 
+#    ##@##### ## # 
+#    ####   # ## ##
+#....#      # $   #
+#....#      #     #
+######      #######
+[1,4]
+[7,5]:uuR[10,6]:urrrU[9,5]:urruR[9,5]:urruL
+2/27/2018 - 10:08:30 PM  :  Level 2 solved: False solution length:0/0
+2/27/2018 - 10:08:30 PM  :  Moves: 
+2/27/2018 - 10:08:30 PM  :  Solved 0/2
+2/27/2018 - 10:08:48 PM  :  
+********************
+BEGIN TASK:
+Game:sokoban
+Method: IDA* 
+Maximum cost: 200
+Reward Type: PositiveBM
+level: ../Release/Levels/test.txt
+********************
+2/27/2018 - 10:08:48 PM  :  Level1:
+    #####          
+    #   #          
+    #$  #          
+  ###  $##         
+  #  $ $ #         
+### # ## #   ######
+#   # ## #####  ..#
+# $  $          ..#
+##### ### #@##  ..#
+    #     #########
+    #######        
+[8,4]
+[6,7]:ulllllL[8,4]:ullluuuL[5,8]:ullddlllluU
+2/27/2018 - 10:09:02 PM  :  Level 1 solved: True solution length:386/147
+2/27/2018 - 10:09:02 PM  :  Moves: ullluuuLUllDDDuuruurDldldlldddrRRRRRRRRRRRRdrUllllllllllllUUddllulldRRRRRRRRRRRRRRRlllllllluuulUllDRlDDDrrruuuLLLruuurDDluulDrddldddrrruuuLululDDDDuuurrdLulDDDurrrdddllLLLrrUUUUddddlluuuRRRuuulDDDDDuulldddrRRRRRRRRRRRdrUlllllllluuuLLLdddllulldRRRRRRRRRRRRRRllllllddllllUUUUUUddddlluuuRRRuuulDDDDDDrrruuuLLulDDDuulldddrRRRRRRRRRRurDldRRllulllllddllllUdrrrruuluuullllldddrRRRRRRRRRRurDldR
+2/27/2018 - 10:09:02 PM  :  Solved 1/1
+2/27/2018 - 10:09:02 PM  :  Level2:
+       ########### 
+       #         # 
+       #    $ $  # 
+###### # $ ##### # 
+#    ##### $  ##$# 
+#       $ $      # 
+#          ## ## # 
+#    ##@##### ## # 
+#    ####   # ## ##
+#....#      # $   #
+#....#      #     #
+######      #######
+[1,4]
+[7,5]:uuR[10,6]:urrrU[9,5]:urruR[9,5]:urruL
+2/27/2018 - 10:09:02 PM  :  Level 2 solved: False solution length:0/0
+2/27/2018 - 10:09:02 PM  :  Moves: 
+2/27/2018 - 10:09:02 PM  :  Solved 1/2
+2/27/2018 - 10:09:31 PM  :  
+********************
+BEGIN TASK:
+Game:sokoban
+Method: IDA* 
+Maximum cost: 300
+Reward Type: PositiveBM
+level: ../Release/Levels/test.txt
+********************
+2/27/2018 - 10:09:31 PM  :  Level1:
+    #####          
+    #   #          
+    #$  #          
+  ###  $##         
+  #  $ $ #         
+### # ## #   ######
+#   # ## #####  ..#
+# $  $          ..#
+##### ### #@##  ..#
+    #     #########
+    #######        
+[8,4]
+[6,7]:ulllllL[8,4]:ullluuuL[5,8]:ullddlllluU
+2/27/2018 - 10:09:45 PM  :  Level 1 solved: True solution length:386/147
+2/27/2018 - 10:09:45 PM  :  Moves: ullluuuLUllDDDuuruurDldldlldddrRRRRRRRRRRRRdrUllllllllllllUUddllulldRRRRRRRRRRRRRRRlllllllluuulUllDRlDDDrrruuuLLLruuurDDluulDrddldddrrruuuLululDDDDuuurrdLulDDDurrrdddllLLLrrUUUUddddlluuuRRRuuulDDDDDuulldddrRRRRRRRRRRRdrUlllllllluuuLLLdddllulldRRRRRRRRRRRRRRllllllddllllUUUUUUddddlluuuRRRuuulDDDDDDrrruuuLLulDDDuulldddrRRRRRRRRRRurDldRRllulllllddllllUdrrrruuluuullllldddrRRRRRRRRRRurDldR
+2/27/2018 - 10:09:45 PM  :  Solved 1/1
+2/27/2018 - 10:09:45 PM  :  Level2:
+       ########### 
+       #         # 
+       #    $ $  # 
+###### # $ ##### # 
+#    ##### $  ##$# 
+#       $ $      # 
+#          ## ## # 
+#    ##@##### ## # 
+#    ####   # ## ##
+#....#      # $   #
+#....#      #     #
+######      #######
+[1,4]
+[7,5]:uuR[10,6]:urrrU[9,5]:urruR[9,5]:urruL
+2/28/2018 - 11:59:46 AM  :  
+********************
+BEGIN TASK:
+Game:sokoban
+Method: IDA* 
+Maximum cost: 300
+Reward Type: PositiveBM
+level: ../Release/Levels/test.txt
+********************
+2/28/2018 - 11:59:46 AM  :  Level1:
+    #####          
+    #   #          
+    #$  #          
+  ###  $##         
+  #  $ $ #         
+### # ## #   ######
+#   # ## #####  ..#
+# $  $          ..#
+##### ### #@##  ..#
+    #     #########
+    #######        
+[8,4]
+[6,7]:ulllllL[8,4]:ullluuuL[5,8]:ullddlllluU
+2/28/2018 - 12:00:02 PM  :  Level 1 solved: True solution length:386/147
+2/28/2018 - 12:00:02 PM  :  Moves: ullluuuLUllDDDuuruurDldldlldddrRRRRRRRRRRRRdrUllllllllllllUUddllulldRRRRRRRRRRRRRRRlllllllluuulUllDRlDDDrrruuuLLLruuurDDluulDrddldddrrruuuLululDDDDuuurrdLulDDDurrrdddllLLLrrUUUUddddlluuuRRRuuulDDDDDuulldddrRRRRRRRRRRRdrUlllllllluuuLLLdddllulldRRRRRRRRRRRRRRllllllddllllUUUUUUddddlluuuRRRuuulDDDDDDrrruuuLLulDDDuulldddrRRRRRRRRRRurDldRRllulllllddllllUdrrrruuluuullllldddrRRRRRRRRRRurDldR
+2/28/2018 - 12:00:02 PM  :  Solved 1/1
+2/28/2018 - 12:00:02 PM  :  Level2:
+       ########### 
+       #         # 
+       #    $ $  # 
+###### # $ ##### # 
+#    ##### $  ##$# 
+#       $ $      # 
+#          ## ## # 
+#    ##@##### ## # 
+#    ####   # ## ##
+#....#      # $   #
+#....#      #     #
+######      #######
+[1,4]
+[7,5]:uuR[10,6]:urrrU[9,5]:urruR[9,5]:urruL
+3/2/2018 - 5:35:39 PM  :  
+********************
+BEGIN TASK:
+Game:sokoban
+Method: IDA* 
+Maximum cost: 300
+Reward Type: PositiveBM
+level: ../Release/Levels/test.txt
+********************
+3/2/2018 - 5:35:39 PM  :  Level1:
+    #####          
+    #   #          
+    #$  #          
+  ###  $##         
+  #  $ $ #         
+### # ## #   ######
+#   # ## #####  ..#
+# $  $          ..#
+##### ### #@##  ..#
+    #     #########
+    #######        
+[8,4]
+[6,7]:ulllllL[8,4]:ullluuuL[5,8]:ullddlllluU
+3/2/2018 - 5:35:55 PM  :  Level 1 solved: True solution length:386/147
+3/2/2018 - 5:35:55 PM  :  Moves: ullluuuLUllDDDuuruurDldldlldddrRRRRRRRRRRRRdrUllllllllllllUUddllulldRRRRRRRRRRRRRRRlllllllluuulUllDRlDDDrrruuuLLLruuurDDluulDrddldddrrruuuLululDDDDuuurrdLulDDDurrrdddllLLLrrUUUUddddlluuuRRRuuulDDDDDuulldddrRRRRRRRRRRRdrUlllllllluuuLLLdddllulldRRRRRRRRRRRRRRllllllddllllUUUUUUddddlluuuRRRuuulDDDDDDrrruuuLLulDDDuulldddrRRRRRRRRRRurDldRRllulllllddllllUdrrrruuluuullllldddrRRRRRRRRRRurDldR
+3/2/2018 - 5:35:55 PM  :  Solved 1/1
+3/2/2018 - 5:35:55 PM  :  Level2:
+       ##### 
+ #######   ##
+## # @## $$ #
+#    $      #
+#  $  ###   #
+### #####$###
+# $  ### ..# 
+# $ $ $ ...# 
+#    ###...# 
+# $$ # #...# 
+#  ### ##### 
+####         
+[2,2]
+[4,3]:ldR[3,3]:ldlD[4,4]:lddL[2,4]:ldlldR
+3/2/2018 - 6:59:55 PM  :  
+********************
+BEGIN TASK:
+Game:sokoban
+Method: IDA* 
+Maximum cost: 300
+Reward Type: PositiveBM
+level: ../Release/Levels/test.txt
+********************
+3/2/2018 - 6:59:55 PM  :  Level1:
+    #####          
+    #   #          
+    #$  #          
+  ###  $##         
+  #  $ $ #         
+### # ## #   ######
+#   # ## #####  ..#
+# $  $          ..#
+##### ### #@##  ..#
+    #     #########
+    #######        
+[8,4]
+[6,7]:ulllllL[8,4]:ullluuuL[5,8]:ullddlllluU
+3/2/2018 - 7:00:14 PM  :  Level 1 solved: True solution length:386/147
+3/2/2018 - 7:00:14 PM  :  Moves: ullluuuLUllDDDuuruurDldldlldddrRRRRRRRRRRRRdrUllllllllllllUUddllulldRRRRRRRRRRRRRRRlllllllluuulUllDRlDDDrrruuuLLLruuurDDluulDrddldddrrruuuLululDDDDuuurrdLulDDDurrrdddllLLLrrUUUUddddlluuuRRRuuulDDDDDuulldddrRRRRRRRRRRRdrUlllllllluuuLLLdddllulldRRRRRRRRRRRRRRllllllddllllUUUUUUddddlluuuRRRuuulDDDDDDrrruuuLLulDDDuulldddrRRRRRRRRRRurDldRRllulllllddllllUdrrrruuluuullllldddrRRRRRRRRRRurDldR
+3/2/2018 - 7:00:14 PM  :  Solved 1/1
+3/2/2018 - 7:00:14 PM  :  Level2:
+      #### 
+####### @# 
+#     $  # 
+#   $## $# 
+##$#...# # 
+ # $...  # 
+ # #. .# ##
+ #   # #$ #
+ #$  $    #
+ #  #######
+ ####      
+           
+[7,1]
+[8,2]:dD[7,2]:ldLL
+3/4/2018 - 5:33:37 PM  :  
+********************
+BEGIN TASK:
+Game:sokoban
+Method: IDA* 
+Maximum cost: 300
+Reward Type: PositiveBM
+level: ../Release/Levels/test.txt
+********************
+3/4/2018 - 5:33:37 PM  :  Level1:
+    #####          
+    #   #          
+    #$  #          
+  ###  $##         
+  #  $ $ #         
+### # ## #   ######
+#   # ## #####  ..#
+# $  $          ..#
+##### ### #@##  ..#
+    #     #########
+    #######        
+[8,4]
+[6,7]:ulllllL[8,4]:ullluuuL[5,8]:ullddlllluU
+3/4/2018 - 5:33:53 PM  :  Level 1 solved: True solution length:386/147
+3/4/2018 - 5:33:53 PM  :  Moves: ullluuuLUllDDDuuruurDldldlldddrRRRRRRRRRRRRdrUllllllllllllUUddllulldRRRRRRRRRRRRRRRlllllllluuulUllDRlDDDrrruuuLLLruuurDDluulDrddldddrrruuuLululDDDDuuurrdLulDDDurrrdddllLLLrrUUUUddddlluuuRRRuuulDDDDDuulldddrRRRRRRRRRRRdrUlllllllluuuLLLdddllulldRRRRRRRRRRRRRRllllllddllllUUUUUUddddlluuuRRRuuulDDDDDDrrruuuLLulDDDuulldddrRRRRRRRRRRurDldRRllulllllddllllUdrrrruuluuullllldddrRRRRRRRRRRurDldR
+3/4/2018 - 5:33:53 PM  :  Solved 1/1
+3/4/2018 - 5:33:53 PM  :  Level2:
+      #### 
+####### @# 
+#     $  # 
+#   $## $# 
+##$#...# # 
+ # $...  # 
+ # #. .# ##
+ #   # #$ #
+ #$  $    #
+ #  #######
+ ####      
+           
+[7,1]
+[8,2]:dD[7,2]:ldLL
+3/4/2018 - 5:43:37 PM  :  
+********************
+BEGIN TASK:
+Game:sokoban
+Method: IDA* 
+Maximum cost: 300
+Reward Type: PositiveBM
+level: ../Release/Levels/test.txt
+********************
+3/4/2018 - 5:43:37 PM  :  Level1:
+    #####          
+    #   #          
+    #$  #          
+  ###  $##         
+  #  $ $ #         
+### # ## #   ######
+#   # ## #####  ..#
+# $  $          ..#
+##### ### #@##  ..#
+    #     #########
+    #######        
+[8,4]
+[6,7]:ulllllL[8,4]:ullluuuL[5,8]:ullddlllluU
+3/4/2018 - 5:43:54 PM  :  bTot=640 count=243 avgb=2.63374485596708
+3/4/2018 - 5:43:54 PM  :  Level 1 solved: True solution length:386/147
+3/4/2018 - 5:43:54 PM  :  Moves: ullluuuLUllDDDuuruurDldldlldddrRRRRRRRRRRRRdrUllllllllllllUUddllulldRRRRRRRRRRRRRRRlllllllluuulUllDRlDDDrrruuuLLLruuurDDluulDrddldddrrruuuLululDDDDuuurrdLulDDDurrrdddllLLLrrUUUUddddlluuuRRRuuulDDDDDuulldddrRRRRRRRRRRRdrUlllllllluuuLLLdddllulldRRRRRRRRRRRRRRllllllddllllUUUUUUddddlluuuRRRuuulDDDDDDrrruuuLLulDDDuulldddrRRRRRRRRRRurDldRRllulllllddllllUdrrrruuluuullllldddrRRRRRRRRRRurDldR
+3/4/2018 - 5:43:54 PM  :  Solved 1/1
+3/4/2018 - 5:43:54 PM  :  Level2:
+      #### 
+####### @# 
+#     $  # 
+#   $## $# 
+##$#...# # 
+ # $...  # 
+ # #. .# ##
+ #   # #$ #
+ #$  $    #
+ #  #######
+ ####      
+           
+[7,1]
+[8,2]:dD[7,2]:ldLL
+3/4/2018 - 5:49:04 PM  :  
+********************
+BEGIN TASK:
+Game:sokoban
+Method: IDA* 
+Maximum cost: 300
+Reward Type: PositiveBM
+level: ../Release/Levels/test.txt
+********************
+3/4/2018 - 5:49:04 PM  :  Level1:
+    #####          
+    #   #          
+    #$  #          
+  ###  $##         
+  #  $ $ #         
+### # ## #   ######
+#   # ## #####  ..#
+# $  $          ..#
+##### ### #@##  ..#
+    #     #########
+    #######        
+[8,4]
+[6,7]:ulllllL[8,4]:ullluuuL[5,8]:ullddlllluU
+3/4/2018 - 5:49:04 PM  :  bTot=0 count=0 avgb=NaN
+3/4/2018 - 5:49:04 PM  :  bTot=0 count=0 avgb=NaN
+3/4/2018 - 5:49:04 PM  :  bTot=0 count=0 avgb=NaN
+3/4/2018 - 5:49:21 PM  :  Level 1 solved: True solution length:386/147
+3/4/2018 - 5:49:21 PM  :  Moves: ullluuuLUllDDDuuruurDldldlldddrRRRRRRRRRRRRdrUllllllllllllUUddllulldRRRRRRRRRRRRRRRlllllllluuulUllDRlDDDrrruuuLLLruuurDDluulDrddldddrrruuuLululDDDDuuurrdLulDDDurrrdddllLLLrrUUUUddddlluuuRRRuuulDDDDDuulldddrRRRRRRRRRRRdrUlllllllluuuLLLdddllulldRRRRRRRRRRRRRRllllllddllllUUUUUUddddlluuuRRRuuulDDDDDDrrruuuLLulDDDuulldddrRRRRRRRRRRurDldRRllulllllddllllUdrrrruuluuullllldddrRRRRRRRRRRurDldR
+3/4/2018 - 5:49:21 PM  :  Solved 1/1
+3/4/2018 - 5:49:21 PM  :  Level2:
+  #########  
+  #*.*#*.*#  
+  #.*.*.*.#  
+  #*.*.*.*#  
+  #.*.*.*.#  
+  #*.*.*.*#  
+  ###   ###  
+    #   #    
+###### ######
+#           #
+# $ $ $ $ $ #
+## $ $ $ $ ##
+ #$ $ $ $ $# 
+ #   $@$   # 
+ #  #####  # 
+ ####   #### 
+             
+[6,13]
+[6,13]:R[6,13]:L[6,13]:U
+3/4/2018 - 5:49:21 PM  :  bTot=0 count=0 avgb=NaN
+3/4/2018 - 5:49:21 PM  :  Level 2 solved: False solution length:0/0
+3/4/2018 - 5:49:21 PM  :  Moves: 
+3/4/2018 - 5:49:21 PM  :  Solved 1/2
+3/4/2018 - 5:49:21 PM  :  Level3:
+   ##########   
+   #..  #   #   
+   #..      #   
+   #..  #  #### 
+  #######  #  ##
+  #            #
+  #  #  ##  #  #
+#### ##  #### ##
+#  $  ##### #  #
+# # $  $  # $  #
+# @$  $   #   ##
+#### ## ####### 
+   #    #       
+   ######       
+[1,8]
+[2,10]:R[2,8]:luurR
+3/4/2018 - 5:49:21 PM  :  bTot=0 count=0 avgb=NaN
+3/4/2018 - 5:49:21 PM  :  bTot=0 count=0 avgb=NaN
+3/4/2018 - 5:49:21 PM  :  bTot=0 count=0 avgb=NaN
+3/4/2018 - 5:50:01 PM  :  
+********************
+BEGIN TASK:
+Game:sokoban
+Method: IDA* 
+Maximum cost: 3000
+Reward Type: PositiveBM
+level: ../Release/Levels/test.txt
+********************
+3/4/2018 - 5:50:01 PM  :  Level1:
+    #####          
+    #   #          
+    #$  #          
+  ###  $##         
+  #  $ $ #         
+### # ## #   ######
+#   # ## #####  ..#
+# $  $          ..#
+##### ### #@##  ..#
+    #     #########
+    #######        
+[8,4]
+[6,7]:ulllllL[8,4]:ullluuuL[5,8]:ullddlllluU
+3/4/2018 - 5:50:01 PM  :  bTot=0 count=0 avgb=NaN
+3/4/2018 - 5:50:01 PM  :  bTot=6 count=2 avgb=3
+3/4/2018 - 5:50:17 PM  :  bTot=640 count=243 avgb=2.63374485596708
+3/4/2018 - 5:50:17 PM  :  Level 1 solved: True solution length:386/147
+3/4/2018 - 5:50:17 PM  :  Moves: ullluuuLUllDDDuuruurDldldlldddrRRRRRRRRRRRRdrUllllllllllllUUddllulldRRRRRRRRRRRRRRRlllllllluuulUllDRlDDDrrruuuLLLruuurDDluulDrddldddrrruuuLululDDDDuuurrdLulDDDurrrdddllLLLrrUUUUddddlluuuRRRuuulDDDDDuulldddrRRRRRRRRRRRdrUlllllllluuuLLLdddllulldRRRRRRRRRRRRRRllllllddllllUUUUUUddddlluuuRRRuuulDDDDDDrrruuuLLulDDDuulldddrRRRRRRRRRRurDldRRllulllllddllllUdrrrruuluuullllldddrRRRRRRRRRRurDldR
+3/4/2018 - 5:50:17 PM  :  Solved 1/1
+3/4/2018 - 5:50:17 PM  :  Level2:
+  #########  
+  #*.*#*.*#  
+  #.*.*.*.#  
+  #*.*.*.*#  
+  #.*.*.*.#  
+  #*.*.*.*#  
+  ###   ###  
+    #   #    
+###### ######
+#           #
+# $ $ $ $ $ #
+## $ $ $ $ ##
+ #$ $ $ $ $# 
+ #   $@$   # 
+ #  #####  # 
+ ####   #### 
+             
+[6,13]
+[6,13]:R[6,13]:L[6,13]:U
+3/4/2018 - 5:50:17 PM  :  bTot=0 count=0 avgb=NaN
+3/4/2018 - 6:23:30 PM  :  
+********************
+BEGIN TASK:
+Game:sokoban
+Method: IDA* 
+Maximum cost: 3000
+Reward Type: PositiveBM
+level: ../Release/Levels/test.txt
+********************
+3/4/2018 - 6:23:30 PM  :  Level1:
+    #####          
+    #   #          
+    #$  #          
+  ###  $##         
+  #  $ $ #         
+### # ## #   ######
+#   # ## #####  ..#
+# $  $          ..#
+##### ### #@##  ..#
+    #     #########
+    #######        
+[8,4]
+[6,7]:ulllllL[8,4]:ullluuuL[5,8]:ullddlllluU
+3/4/2018 - 6:23:30 PM  :  bTot=0 count=0 avgb=NaN
+3/4/2018 - 6:23:30 PM  :  bTot=6 count=2 avgb=3
+3/4/2018 - 6:23:47 PM  :  bTot=640 count=243 avgb=2.63374485596708
+3/4/2018 - 6:23:47 PM  :  Level 1 solved: True solution length:384/145
+3/4/2018 - 6:23:47 PM  :  Moves: ullluuuLUllDDuuruurDldldlldddrRRRRRRRRRRRRdrUllllllllllllUUddllulldRRRRRRRRRRRRRRRlllllllluuulUllDRlDDDrrruuuLLLruuurDDluulDrddldddrrruuuLululDDDDuuurrdLulDDurrrdddllLLLrrUUUUddddlluuuRRRuuulDDDDDuulldddrRRRRRRRRRRRdrUlllllllluuuLLLdddllulldRRRRRRRRRRRRRRllllllddllllUUUUUUddddlluuuRRRuuulDDDDDDrrruuuLLulDDDuulldddrRRRRRRRRRRurDldRRllulllllddllllUdrrrruuluuullllldddrRRRRRRRRRRurDldR
+3/4/2018 - 6:23:47 PM  :  Solved 1/1
+3/4/2018 - 6:23:47 PM  :  Level2:
+  #########  
+  #*.*#*.*#  
+  #.*.*.*.#  
+  #*.*.*.*#  
+  #.*.*.*.#  
+  #*.*.*.*#  
+  ###   ###  
+    #   #    
+###### ######
+#           #
+# $ $ $ $ $ #
+## $ $ $ $ ##
+ #$ $ $ $ $# 
+ #   $@$   # 
+ #  #####  # 
+ ####   #### 
+             
+[6,13]
+[6,13]:R[6,13]:L[6,13]:U
+3/4/2018 - 6:23:47 PM  :  bTot=0 count=0 avgb=NaN
+3/4/2018 - 6:26:24 PM  :  
+********************
+BEGIN TASK:
+Game:sokoban
+Method: IDA* 
+Maximum cost: 3000
+Reward Type: PositiveBM
+level: ../Release/Levels/test.txt
+********************
+3/4/2018 - 6:26:24 PM  :  Level1:
+    #####          
+    #   #          
+    #$  #          
+  ###  $##         
+  #  $ $ #         
+### # ## #   ######
+#   # ## #####  ..#
+# $  $          ..#
+##### ### #@##  ..#
+    #     #########
+    #######        
+[8,4]
+[6,7]:ulllllL[8,4]:ullluuuL[5,8]:ullddlllluU
+3/4/2018 - 6:26:24 PM  :  Initial treshold: 95
+3/4/2018 - 6:26:24 PM  :  bTot=0 count=0 avgb=NaN
+3/4/2018 - 6:26:24 PM  :  bTot=6 count=2 avgb=3
+3/4/2018 - 6:26:40 PM  :  bTot=640 count=243 avgb=2.63374485596708
+3/4/2018 - 6:26:40 PM  :  Level 1 solved: True solution length:384/145
+3/4/2018 - 6:26:40 PM  :  Moves: ullluuuLUllDDuuruurDldldlldddrRRRRRRRRRRRRdrUllllllllllllUUddllulldRRRRRRRRRRRRRRRlllllllluuulUllDRlDDDrrruuuLLLruuurDDluulDrddldddrrruuuLululDDDDuuurrdLulDDurrrdddllLLLrrUUUUddddlluuuRRRuuulDDDDDuulldddrRRRRRRRRRRRdrUlllllllluuuLLLdddllulldRRRRRRRRRRRRRRllllllddllllUUUUUUddddlluuuRRRuuulDDDDDDrrruuuLLulDDDuulldddrRRRRRRRRRRurDldRRllulllllddllllUdrrrruuluuullllldddrRRRRRRRRRRurDldR
+3/4/2018 - 6:26:40 PM  :  Solved 1/1
+3/4/2018 - 6:26:40 PM  :  Level2:
+  #########  
+  #*.*#*.*#  
+  #.*.*.*.#  
+  #*.*.*.*#  
+  #.*.*.*.#  
+  #*.*.*.*#  
+  ###   ###  
+    #   #    
+###### ######
+#           #
+# $ $ $ $ $ #
+## $ $ $ $ ##
+ #$ $ $ $ $# 
+ #   $@$   # 
+ #  #####  # 
+ ####   #### 
+             
+[6,13]
+[6,13]:R[6,13]:L[6,13]:U
+3/4/2018 - 6:26:40 PM  :  Initial treshold: 200
+3/4/2018 - 6:26:40 PM  :  bTot=0 count=0 avgb=NaN
+3/4/2018 - 6:27:17 PM  :  
+********************
+BEGIN TASK:
+Game:sokoban
+Method: IDA* 
+Maximum cost: 3000
+Reward Type: PositiveBM
+level: ../Release/Levels/test.txt
+********************
+3/4/2018 - 6:27:17 PM  :  Level1:
+    #####          
+    #   #          
+    #$  #          
+  ###  $##         
+  #  $ $ #         
+### # ## #   ######
+#   # ## #####  ..#
+# $  $          ..#
+##### ### #@##  ..#
+    #     #########
+    #######        
+[8,4]
+[6,7]:ulllllL[8,4]:ullluuuL[5,8]:ullddlllluU
+3/4/2018 - 6:27:18 PM  :  Initial treshold: 95
+3/4/2018 - 6:27:18 PM  :  treshold: 95
+3/4/2018 - 6:27:18 PM  :  bTot=0 count=0 avgb=NaN
+3/4/2018 - 6:27:18 PM  :  treshold: 171
+3/4/2018 - 6:27:18 PM  :  bTot=6 count=2 avgb=3
+3/4/2018 - 6:27:18 PM  :  treshold: 173
+3/4/2018 - 6:27:34 PM  :  bTot=640 count=243 avgb=2.63374485596708
+3/4/2018 - 6:27:34 PM  :  Level 1 solved: True solution length:384/145
+3/4/2018 - 6:27:34 PM  :  Moves: ullluuuLUllDDuuruurDldldlldddrRRRRRRRRRRRRdrUllllllllllllUUddllulldRRRRRRRRRRRRRRRlllllllluuulUllDRlDDDrrruuuLLLruuurDDluulDrddldddrrruuuLululDDDDuuurrdLulDDurrrdddllLLLrrUUUUddddlluuuRRRuuulDDDDDuulldddrRRRRRRRRRRRdrUlllllllluuuLLLdddllulldRRRRRRRRRRRRRRllllllddllllUUUUUUddddlluuuRRRuuulDDDDDDrrruuuLLulDDDuulldddrRRRRRRRRRRurDldRRllulllllddllllUdrrrruuluuullllldddrRRRRRRRRRRurDldR
+3/4/2018 - 6:27:34 PM  :  Solved 1/1
+3/4/2018 - 6:27:34 PM  :  Level2:
+  #########  
+  #*.*#*.*#  
+  #.*.*.*.#  
+  #*.*.*.*#  
+  #.*.*.*.#  
+  #*.*.*.*#  
+  ###   ###  
+    #   #    
+###### ######
+#           #
+# $ $ $ $ $ #
+## $ $ $ $ ##
+ #$ $ $ $ $# 
+ #   $@$   # 
+ #  #####  # 
+ ####   #### 
+             
+[6,13]
+[6,13]:R[6,13]:L[6,13]:U
+3/4/2018 - 6:27:34 PM  :  Initial treshold: 200
+3/4/2018 - 6:27:34 PM  :  treshold: 200
+3/4/2018 - 6:27:34 PM  :  bTot=0 count=0 avgb=NaN
+3/4/2018 - 6:27:34 PM  :  treshold: 360
+3/5/2018 - 4:25:00 PM  :  
+********************
+BEGIN TASK:
+Game:sokoban
+Method: MCTS 
+iterations: 10000
+UCT constant: 1
+SP_UCT constant: 10
+Reward Type: InverseBM
+epsilon: 0.2level: ../Release/Levels/microban.txt
+********************
+3/5/2018 - 4:25:00 PM  :  Level 1 solved: True in 78 rollouts - solution length (moves/pushes): 33/8
+3/5/2018 - 4:25:00 PM  :  Moves: dlUrrrdLullddrUluRuulDrddrruLdlUU
+3/5/2018 - 4:25:00 PM  :  Level 2 solved: True in 0 rollouts - solution length (moves/pushes): 16/3
+3/5/2018 - 4:25:00 PM  :  Moves: rddLruulDuullddR
+3/5/2018 - 4:25:00 PM  :  Level 3 solved: True in 94 rollouts - solution length (moves/pushes): 41/13
+3/5/2018 - 4:25:00 PM  :  Moves: ruuLLLulDrrrrddlUruLLLddllluurRDrdLuuurDD
+3/5/2018 - 4:25:00 PM  :  Level 4 solved: True in 5 rollouts - solution length (moves/pushes): 51/11
+3/5/2018 - 4:25:00 PM  :  Moves: ullDullddrRuurrdLulDLrrrddlUruLLulllddrrRurrddlUruL
+3/5/2018 - 4:25:00 PM  :  Level 5 solved: True in 9 rollouts - solution length (moves/pushes): 187/38
+3/5/2018 - 4:25:00 PM  :  Moves: LulDruurrdLrrdLddlluRUlddlluRdrrrUlLdlluRuuurrrdDuulDullddrRuulDrrrdLrddlUruullDurDrddlUUlLulDrrrddllUdrruululldRddrruuLrddlluRldlluRdrrrruLruuLulldRurDldLrurrddlUddllURuullDurrddlUddlluR
+3/5/2018 - 4:25:01 PM  :  Level 6 solved: False in 10000 rollouts - solution length (moves/pushes): 125/30
+3/5/2018 - 4:25:01 PM  :  Moves: dlllllululDulldddrrUdlluRluurDRRlllddrrUdlUluurrrdRRRdrrruullDurrddlLLLullulDulldRRRRlllddrUluurrdrRRdrrruullDllllulldRRRRRdR
+3/5/2018 - 4:25:01 PM  :  Level 7 solved: True in 34 rollouts - solution length (moves/pushes): 78/14
+3/5/2018 - 4:25:01 PM  :  Moves: rruuuLuulldRllddddrrrUldlluRuUddRdrruLLdlluRdrrruuulDLrrddlllluuurDrrrddlUdllU
+3/5/2018 - 4:25:01 PM  :  Level 8 solved: True in 14 rollouts - solution length (moves/pushes): 113/32
+3/5/2018 - 4:25:01 PM  :  Moves: llDDDDDDldddrruuLuuuuuuurrdLulDDDDDDlllddrrUddrruuLrddllulluurRllddrrdrruulUUUUUUluRddddddlllddrrUdlluurRdrUUUUUU
+3/5/2018 - 4:25:01 PM  :  Level 9 solved: True in 0 rollouts - solution length (moves/pushes): 30/10
+3/5/2018 - 4:25:01 PM  :  Moves: urrDulldRdRluurDrDDlUruLdlUruL
+3/5/2018 - 4:25:02 PM  :  Level 10 solved: True in 683 rollouts - solution length (moves/pushes): 127/21
+3/5/2018 - 4:25:02 PM  :  Moves: rddrruuLLrrddrruuuuurrdddLruuullddDLLddlluuRlddrrrrUdlllluurRllddlluuRRddrrrruUUUddddlluuRlddlluuRlddrrrruUUdddlllluurRRlddrruU
+3/5/2018 - 4:25:02 PM  :  Level 11 solved: True in 13 rollouts - solution length (moves/pushes): 82/18
+3/5/2018 - 4:25:02 PM  :  Moves: ulllddddrrrruLUlDrdLLLullddrUruuuurrrDDlddlllluRdrrruurDrdLLLLUllddrUrrrruuuullldD
+3/5/2018 - 4:25:02 PM  :  Level 12 solved: True in 10 rollouts - solution length (moves/pushes): 49/11
+3/5/2018 - 4:25:02 PM  :  Moves: uululldRdRluurDrDDrddlluRuuulldRurDDrrrddllUdlluR
+3/5/2018 - 4:25:02 PM  :  Level 13 solved: True in 15 rollouts - solution length (moves/pushes): 67/23
+3/5/2018 - 4:25:02 PM  :  Moves: dDDuuurDlddRdrruLdldlUUUUruLdlUrddddrruLdlUUUrDldRdrruLLdlUUruuLrdL
+3/5/2018 - 4:25:02 PM  :  Level 14 solved: False in 10000 rollouts - solution length (moves/pushes): 19/2
+3/5/2018 - 4:25:02 PM  :  Moves: uullllddrdrUlluurrD
+3/5/2018 - 4:25:02 PM  :  Level 15 solved: True in 20 rollouts - solution length (moves/pushes): 43/12
+3/5/2018 - 4:25:02 PM  :  Moves: DrdddllUUddrruuulLLLdlluRRRRdddrruuLrddlluU
+3/5/2018 - 4:25:04 PM  :  Level 16 solved: False in 10000 rollouts - solution length (moves/pushes): 18/7
+3/5/2018 - 4:25:04 PM  :  Moves: lddrUUddrruLLdlUUU
+3/5/2018 - 4:25:04 PM  :  Level 17 solved: True in 10 rollouts - solution length (moves/pushes): 34/9
+3/5/2018 - 4:25:04 PM  :  Moves: rdDullDRddlUrdrruLdlluUddrruUddlUU
+3/5/2018 - 4:25:04 PM  :  Level 18 solved: True in 109 rollouts - solution length (moves/pushes): 99/15
+3/5/2018 - 4:25:04 PM  :  Moves: ruuuulllddrRDrUUddddlUruullluurrurrdLddddlUruuuulldRllddrRlluurrurrdLLulldddrrdrUUdllluuurrdLrurrdL
+3/5/2018 - 4:25:04 PM  :  Level 19 solved: True in 1821 rollouts - solution length (moves/pushes): 58/22
+3/5/2018 - 4:25:04 PM  :  Moves: urrDDDlddrUUUUruLLLdlluRdrRuLdlluRdrrurDllluRdrrDDlddrUUUU
+3/5/2018 - 4:25:04 PM  :  Level 20 solved: True in 299 rollouts - solution length (moves/pushes): 52/18
+3/5/2018 - 4:25:04 PM  :  Moves: urDRlDDrrruuLLLLrddlddrUUUdrrruullulldRRRlllulldRRRR
+3/5/2018 - 4:25:04 PM  :  Level 21 solved: True in 2 rollouts - solution length (moves/pushes): 17/5
+3/5/2018 - 4:25:04 PM  :  Moves: dllUdlUluurDRddlU
+3/5/2018 - 4:25:05 PM  :  Level 22 solved: True in 365 rollouts - solution length (moves/pushes): 107/27
+3/5/2018 - 4:25:05 PM  :  Moves: drrruulDLdlUrrrdLullUddRurruuulllDrurrddldllUUluRdddrrrdLullddrUruLdlUUUluurDDDuuRlddDrddlUUUUruLdddrrruuuL
+3/5/2018 - 4:25:05 PM  :  Level 23 solved: True in 1545 rollouts - solution length (moves/pushes): 56/10
+3/5/2018 - 4:25:05 PM  :  Moves: ruulluRdrddldlUUdrruululldRddrruuruLLrdddlluuRurDDullluR
+3/5/2018 - 4:25:05 PM  :  Level 24 solved: True in 69 rollouts - solution length (moves/pushes): 39/11
+3/5/2018 - 4:25:05 PM  :  Moves: ullDDlddrruLuuurrdLulDDDrdLuullddRRuulD
+3/5/2018 - 4:25:05 PM  :  Level 25 solved: True in 0 rollouts - solution length (moves/pushes): 29/7
+3/5/2018 - 4:25:05 PM  :  Moves: urrdLulluurDldRlddrUrruuLLulD
+3/5/2018 - 4:25:05 PM  :  Level 26 solved: True in 867 rollouts - solution length (moves/pushes): 43/10
+3/5/2018 - 4:25:05 PM  :  Moves: rdddlUrdddlUUlldRurrddlUruLruuulldRurDlDurD
+3/5/2018 - 4:25:05 PM  :  Level 27 solved: True in 255 rollouts - solution length (moves/pushes): 59/12
+3/5/2018 - 4:25:05 PM  :  Moves: dlldlluuuurrrdDLLrddlluUrrrrdLulllddrrUruuulllDDrRdrUUdlllD
+3/5/2018 - 4:25:05 PM  :  Level 28 solved: True in 48 rollouts - solution length (moves/pushes): 35/11
+3/5/2018 - 4:25:05 PM  :  Moves: rDulldRddrruLUddlUUluurrDDldRuuulDD
+3/5/2018 - 4:25:07 PM  :  Level 29 solved: True in 1735 rollouts - solution length (moves/pushes): 134/24
+3/5/2018 - 4:25:07 PM  :  Moves: lulldRurrdrrddllllllluuRurrdRRllulldRRurrdRlulldRllllddrrrrrrruUUUddddllllllluurrrrRRllllllddrrrrrrruUUruuLDuulldRdrruLdDDuuuulldRurDD
+3/5/2018 - 4:25:07 PM  :  Level 30 solved: True in 0 rollouts - solution length (moves/pushes): 21/5
+3/5/2018 - 4:25:07 PM  :  Moves: luuurDlddrdrUruuLLulD
+3/5/2018 - 4:25:07 PM  :  Level 31 solved: True in 5 rollouts - solution length (moves/pushes): 23/8
+3/5/2018 - 4:25:07 PM  :  Moves: DldRuRluRlddRdrruuLLulD
+3/5/2018 - 4:25:07 PM  :  Level 32 solved: True in 107 rollouts - solution length (moves/pushes): 36/9
+3/5/2018 - 4:25:07 PM  :  Moves: ullDullddrUrurrdLLLddrUluRurrdLululD
+3/5/2018 - 4:25:07 PM  :  Level 33 solved: True in 110 rollouts - solution length (moves/pushes): 59/12
+3/5/2018 - 4:25:07 PM  :  Moves: dlLLulDruuRlddrrruuLLrrddlllluuurDlddrrUdrruulLLrddlluUrrdL
+3/5/2018 - 4:25:07 PM  :  Level 34 solved: True in 12 rollouts - solution length (moves/pushes): 93/14
+3/5/2018 - 4:25:07 PM  :  Moves: drrrUdrruulLdRldllluurRurDrddllURldlluurRdrdrrruullLdldlluRuRlddrrrrruullLddlluRdrrrruulllulD
+3/5/2018 - 4:25:08 PM  :  Level 35 solved: True in 2968 rollouts - solution length (moves/pushes): 128/31
+3/5/2018 - 4:25:08 PM  :  Moves: llluuuRDrDullddrUluuuurDldddrddrruLulluuurrDulldddrrddlUruLdlUUUUrrdLrDLrDlddrruLuluuuuurDlddrddddlUruLuuuurDDDDlddrruLdlUUUUruL
+3/5/2018 - 4:25:14 PM  :  Level 36 solved: False in 10000 rollouts - solution length (moves/pushes): 178/50
+3/5/2018 - 4:25:14 PM  :  Moves: ldlllllllllluurDldRRRRRRlluLLdlluRdrrrrrRlllluLdlluurDrrrdrruLLdllulldRRRRurrdLulLLdlluurDldRRurrrrdrRuLrdRlluLLLLLdlluurDldRurrrrrrrdrRurrdLulLLLLLLLrrrrrrrrdLLLulllllLrrrrrrdLL
+3/5/2018 - 4:25:14 PM  :  Level 37 solved: True in 32 rollouts - solution length (moves/pushes): 83/27
+3/5/2018 - 4:25:14 PM  :  Moves: drruulLuLLulldRRdRRRlllulldRRRRddrruUUUddddlluuuLrdRlddrruUUdllluLulDldRRRRRlddrruU
+3/5/2018 - 4:25:15 PM  :  Level 38 solved: False in 10000 rollouts - solution length (moves/pushes): 58/11
+3/5/2018 - 4:25:15 PM  :  Moves: llluuurrrdDRluurrrrddlLLrrrddlllULLrURddrrruulLrrddllluluR
+3/5/2018 - 4:25:15 PM  :  Level 39 solved: True in 240 rollouts - solution length (moves/pushes): 89/27
+3/5/2018 - 4:25:15 PM  :  Moves: ruuLLLuullddRluurrdDDDuurrrddlUruLLLuullddRRRRurDlllddllddrrUUUUlluurrDullddrRRRdRUddrruL
+3/5/2018 - 4:25:15 PM  :  Level 40 solved: True in 12 rollouts - solution length (moves/pushes): 22/7
+3/5/2018 - 4:25:15 PM  :  Moves: UdrruLuulldDuRurDlDurD
+3/5/2018 - 4:25:15 PM  :  Level 41 solved: True in 23 rollouts - solution length (moves/pushes): 82/15
+3/5/2018 - 4:25:15 PM  :  Moves: urDurrDulldRurrdddlllUluurrdRurDllullddrdrrUdlluluRurrDulldRRllddrrURldlluururDurD
+3/5/2018 - 4:25:17 PM  :  Level 42 solved: True in 4716 rollouts - solution length (moves/pushes): 98/23
+3/5/2018 - 4:25:17 PM  :  Moves: rdddLdllluurrRddlUruLrUruulDDDlddrUrUdlldlluuRlddrrruruUluurDldDrUluurDlddLdRurUluurDlddlddlluuRRR
+3/5/2018 - 4:25:19 PM  :  Level 43 solved: True in 3714 rollouts - solution length (moves/pushes): 109/26
+3/5/2018 - 4:25:19 PM  :  Moves: ldddlLDLdlluurRlldRdrdrUlluurRDuRlllddrdrUlluurrrRllDullddrUrurrdrUUldlldlluRdddrUluuRRRurDllllddrUluRRRuuurD
+3/5/2018 - 4:25:19 PM  :  Level 44 solved: True in 0 rollouts - solution length (moves/pushes): 1/1
+3/5/2018 - 4:25:19 PM  :  Moves: R
+3/5/2018 - 4:25:19 PM  :  Level 45 solved: True in 36 rollouts - solution length (moves/pushes): 55/11
+3/5/2018 - 4:25:19 PM  :  Moves: ruLdlluuururrdLullddddrruUdLdlUUdrruUruLdddlluURlddrruU
+3/5/2018 - 4:25:19 PM  :  Level 46 solved: True in 105 rollouts - solution length (moves/pushes): 47/8
+3/5/2018 - 4:25:19 PM  :  Moves: dlluuRuRDrUlldlddrrUdlluururrdLddlluuluururrrDD
+3/5/2018 - 4:25:19 PM  :  Level 47 solved: True in 821 rollouts - solution length (moves/pushes): 135/24
+3/5/2018 - 4:25:19 PM  :  Moves: rrruuulldRRddlllluuRRRurDDullllddrrrRRluuurrdLullldllddrrrrrRlllllluurrrurDllllddrrrrrrdrruLLLLLrUdlLdlluuurrrurDDulllldddrrurRlldlluRR
+3/5/2018 - 4:25:20 PM  :  Level 48 solved: True in 1821 rollouts - solution length (moves/pushes): 91/16
+3/5/2018 - 4:25:20 PM  :  Moves: rddDLruuulllddddrUrrurDrddlUruLuluulldDlddrUUluurrrddrdLLruuulllddrDrrrddlUruLuuullDurrdddL
+3/5/2018 - 4:25:22 PM  :  Level 49 solved: True in 6366 rollouts - solution length (moves/pushes): 118/23
+3/5/2018 - 4:25:22 PM  :  Moves: ldddRluuurrrddlDlluRdrDDldRuuulluuurrrddLddddRluuulluRluurDDldRuuurrddLDDDlddrruLuuulluurDrddddrdrruLdlluuuuulldRurDDD
+3/5/2018 - 4:25:23 PM  :  Level 50 solved: False in 10000 rollouts - solution length (moves/pushes): 65/10
+3/5/2018 - 4:25:23 PM  :  Moves: llulDDulldRRurrrrrdddlllllUUddrrrrruuullldLuLrrrrrdddllllluUruulD
+3/5/2018 - 4:25:23 PM  :  Level 51 solved: True in 3 rollouts - solution length (moves/pushes): 46/8
+3/5/2018 - 4:25:23 PM  :  Moves: rddllluURuLrdddrruuLrddllluulluurDldRurrDulldR
+3/5/2018 - 4:25:23 PM  :  Level 52 solved: True in 2 rollouts - solution length (moves/pushes): 30/8
+3/5/2018 - 4:25:23 PM  :  Moves: ddLruulDllddrUluRRurDlldddRdrU
+3/5/2018 - 4:25:23 PM  :  Level 53 solved: True in 100 rollouts - solution length (moves/pushes): 49/14
+3/5/2018 - 4:25:23 PM  :  Moves: rUruuLDuullDlddRUUdddrrUUdLdlUrruUddllluurRllddrU
+3/5/2018 - 4:25:27 PM  :  Level 54 solved: False in 10000 rollouts - solution length (moves/pushes): 93/28
+3/5/2018 - 4:25:27 PM  :  Moves: drURuulDrddlUruRRRdrUUdllllddrUluRRRdrUllllulDrddlluRlluRdrRlluRdrdrUlluurDldRuRRRlllddrUluRR
+3/5/2018 - 4:25:27 PM  :  Level 55 solved: True in 6 rollouts - solution length (moves/pushes): 92/33
+3/5/2018 - 4:25:27 PM  :  Moves: rdrrrddlUruLLLrrrddddlUUUruulDllulldRRRRurDDDlddrUluUrDldRRluuuulDrddlUruLLLulldRRRRurDDDldR
+3/5/2018 - 4:25:27 PM  :  Level 56 solved: True in 5 rollouts - solution length (moves/pushes): 23/6
+3/5/2018 - 4:25:27 PM  :  Moves: luuLulldRurDrddllURuulD
+3/5/2018 - 4:25:27 PM  :  Level 57 solved: True in 1019 rollouts - solution length (moves/pushes): 70/23
+3/5/2018 - 4:25:27 PM  :  Moves: dddrdLrrruLLdlUUdlldRRuuUdddRluuuruulDDDDldRurrrddlUruLLLdRurDlllluRRR
+3/5/2018 - 4:25:27 PM  :  Level 58 solved: True in 14 rollouts - solution length (moves/pushes): 65/13
+3/5/2018 - 4:25:27 PM  :  Moves: luluurDRDulldRddrruLrruuLLrrddlldlUrrruullLrDurrddldlluUddrruLdlU
+3/5/2018 - 4:25:31 PM  :  Level 59 solved: False in 10000 rollouts - solution length (moves/pushes): 90/8
+3/5/2018 - 4:25:31 PM  :  Moves: ldllllldddlUruRurrrruullllllllddddRRdrUllluuuurrrrrrrrddllllllDurrrrdLrruruullllllllddddrR
+3/5/2018 - 4:25:31 PM  :  Level 60 solved: True in 14 rollouts - solution length (moves/pushes): 227/46
+3/5/2018 - 4:25:31 PM  :  Moves: urrrrrrdddLLulldRRRllDDrddlUUUddLLdlluRRRllUUluurDuuurrrrrrddDDDuullulldRRRllddrddlUUUddllluUluurDDDuuuuurrrrrrddDDullulldRRRlldddlldlluRuuuuuurrrrrrddDuuullllllddddddRRlluuuuuurrrrrrdddlllddrddlUUUddllluuuuuurrrrrrdddllulldRRR
+3/5/2018 - 4:25:33 PM  :  Level 61 solved: True in 3513 rollouts - solution length (moves/pushes): 122/23
+3/5/2018 - 4:25:33 PM  :  Moves: lDDlDDrrULdlUruuuruullllldddddrRuRldRdrruLUUdlldlluuuuurrrrrddLLrddddlUrrruLdlUUddlluRldlluuuuurrrrrddLruullllldddddrrrrUU
+3/5/2018 - 4:25:40 PM  :  Level 62 solved: False in 10000 rollouts - solution length (moves/pushes): 74/31
+3/5/2018 - 4:25:40 PM  :  Moves: LLLLullDRdLruRRRlllldLLrruulDLddlluRluRRRRRRlllllddrUluRRRRldLullddrUluRRR
+3/5/2018 - 4:25:40 PM  :  Level 63 solved: True in 330 rollouts - solution length (moves/pushes): 113/50
+3/5/2018 - 4:25:40 PM  :  Moves: llllLLulLLLLLLulldRurDrrrrrrrddlUruLLLLLLLulldRRRRRRRllllddlUrurrrrRurDldRlulllllLulldRRRRRRRRdrUdRRRRRdrruLLLLLL
+3/5/2018 - 4:25:41 PM  :  Level 64 solved: False in 10000 rollouts - solution length (moves/pushes): 49/14
+3/5/2018 - 4:25:41 PM  :  Moves: ldlluulUluurDurrdLDDDuuuullddRluurDrDDuLulldRRurD
+3/5/2018 - 4:25:44 PM  :  Level 65 solved: False in 10000 rollouts - solution length (moves/pushes): 161/39
+3/5/2018 - 4:25:44 PM  :  Moves: uuuuLrddddlluuRUrDDullddrdrruLuuuuulDrddlldlluRRRlddRdrruLLLuurUdllldddrUruururuulDrdDDuuulDuulldRRurDDDLLddrdrruLLLLruLLrrurrDulldlddlUrrrdrruLLruulldldRuurrddL
+3/5/2018 - 4:25:44 PM  :  Level 66 solved: True in 33 rollouts - solution length (moves/pushes): 133/17
+3/5/2018 - 4:25:44 PM  :  Moves: DDDulldlddddrdRluluuuururrdDrddldDldRuuuruuluurrdrddddldLruruuuulullddrddldDuuUUUdddddrruruuuululLddddddlluluuuuruRldlddddrdrrrDLddrU
+3/5/2018 - 4:25:44 PM  :  Level 67 solved: True in 10 rollouts - solution length (moves/pushes): 57/12
+3/5/2018 - 4:25:44 PM  :  Moves: uurrdrddrddllUluRddrruuLLruulDuullddRRDrrddllUlURuuullddR
+3/5/2018 - 4:25:49 PM  :  Level 68 solved: False in 10000 rollouts - solution length (moves/pushes): 51/17
+3/5/2018 - 4:25:49 PM  :  Moves: luuurrrRdrruLLLLLrdRlululDDlddrrrUUrurrdLLuLLulDrrD
+3/5/2018 - 4:26:08 PM  :  Level 69 solved: False in 10000 rollouts - solution length (moves/pushes): 135/31
+3/5/2018 - 4:26:08 PM  :  Moves: rurrrurrDrrddllUUrrdLdlUruULuurDDlLLulDrdLLrrddlllluuurDrrrurrrDulllldllDurrrurrrdrddlUlUdrruLuLLLdllllddRuurrruulDrrrrddlUruLLLdLruulD
+3/5/2018 - 4:26:09 PM  :  Level 70 solved: True in 1347 rollouts - solution length (moves/pushes): 100/34
+3/5/2018 - 4:26:09 PM  :  Moves: rdrrrddlUruLLLdRluullddRDuRldDDuuuruulDDDDldRurDluuururrrddlULLrrruLLLulldRDuRldDDldRuuurrruLLulDDDD
+3/5/2018 - 4:26:09 PM  :  Level 71 solved: True in 269 rollouts - solution length (moves/pushes): 292/33
+3/5/2018 - 4:26:09 PM  :  Moves: ulldRurrDDuulllddddddrrrrrrrrrruuuuulllddllldlluRuuLrddRRRllluululldRurrdddrrrdrUUdlllluuulllddddddrrrrrrrrrruuuuullulldRddlllluuulldRurDDullldddddrrrrrrrrrruuuuulLulldRddllldlluRRluullldddddrrrrrrrrrruuuuulLrrdddddlllllllllluuuuurrrddrRlluullldddddrrrrrrrrrruuuuullulldRRRllddLLLdlluRRRRdrUU
+3/5/2018 - 4:26:12 PM  :  Level 72 solved: True in 956 rollouts - solution length (moves/pushes): 139/40
+3/5/2018 - 4:26:12 PM  :  Moves: llLDlluRdrDuluRRlddDrrddlUruLdLLdlluurDDldRururUUUluurDDDuurRllddDrdLLdlluurDrruuuurrdrruLLLLulDrddddllDruruuuulldRurDDDrdLLdllddrUluRluurD
+3/5/2018 - 4:26:21 PM  :  Level 73 solved: True in 7768 rollouts - solution length (moves/pushes): 140/25
+3/5/2018 - 4:26:21 PM  :  Moves: uulllluurDDDurrrddddlllluuRuurruLrdrruLLdllluurDldRRRurDDDDuuulllddlddrrrdrruLLruuuuluLrrdddddlLLrrruuuulllluurDDrrrddddllldlUUdrrrruuuulllD
+3/5/2018 - 4:26:25 PM  :  Level 74 solved: False in 10000 rollouts - solution length (moves/pushes): 75/19
+3/5/2018 - 4:26:25 PM  :  Moves: lulDDDRRlluurrDRRRurrddlUllllullddrddrruUddlluuRllldRurruRRurRlldRllDurrurD
+3/5/2018 - 4:26:26 PM  :  Level 75 solved: True in 3339 rollouts - solution length (moves/pushes): 190/40
+3/5/2018 - 4:26:26 PM  :  Moves: ddlluLuRlLLulldRRdRRuLdlUrrddrrruuLLrrddlllulluUdrdrdrrruullLdlluluuRRRllddRdrdrrruullLLrddrUdrruLuLrddllullUrdrdrruulLdRllluUluRRldddrrrdrUlluLdlUrrrdrruLdlllluUdrrdrruLLdlluluuRdddrruLdlUU
+3/5/2018 - 4:26:32 PM  :  Level 76 solved: False in 10000 rollouts - solution length (moves/pushes): 278/46
+3/5/2018 - 4:26:32 PM  :  Moves: rddrddrrrrUUlDrdLLLdlUUdrrruuuuurrdLulDDDrddlllluluuuuurrddddLdlUrddrrrruuUdddlllluluUUddrddrrrruulDrdLLLdlUUdrrruuuuurrdLdldddllluluuuUddddrdrrrruuuuulDDDrddllllululuuuuRurrdddddLddrrrUdlllulUrddrrrruuulDrddllllululuuruuRllddddrUluurururDllldddrUddrddrrrruulDrdLLLdlUUluuuUluRR
+3/5/2018 - 4:26:34 PM  :  Level 77 solved: False in 10000 rollouts - solution length (moves/pushes): 73/14
+3/5/2018 - 4:26:34 PM  :  Moves: ddddrruLdlUUdrrrrruLrdrruLdlllllluUrurrrrrDDrdLLLrruuullllldlluRRldddrruR
+3/5/2018 - 4:26:39 PM  :  Level 78 solved: False in 10000 rollouts - solution length (moves/pushes): 105/21
+3/5/2018 - 4:26:39 PM  :  Moves: uUrRuurrdDDuuullddllddrrrRRllllluurrRluurDldllddrrrrrRlllllluurruulDulDrrrrDDuulldRurDllullDRRRurrdLulldR
+3/5/2018 - 4:26:39 PM  :  Level 79 solved: True in 588 rollouts - solution length (moves/pushes): 76/20
+3/5/2018 - 4:26:39 PM  :  Moves: lLLdlluRRRlluurDDrRRdrUruulDrddlllulluurrDullddrRdrrULrruulDrddlluLLrrdrruLL
+3/5/2018 - 4:26:40 PM  :  Level 80 solved: False in 10000 rollouts - solution length (moves/pushes): 46/10
+3/5/2018 - 4:26:40 PM  :  Moves: lddrUdrruLUUdddlluRdrruuluUllluUddrrrddrddlUUU
+3/5/2018 - 4:26:40 PM  :  Level 81 solved: True in 88 rollouts - solution length (moves/pushes): 80/20
+3/5/2018 - 4:26:40 PM  :  Moves: luuurrdLDldddrruLdlUrUUlldRurUruulldDDrDuluuurDlddrUldldRddrruLUUdddlUruulldRdrU
+3/5/2018 - 4:26:40 PM  :  Level 82 solved: True in 41 rollouts - solution length (moves/pushes): 70/14
+3/5/2018 - 4:26:40 PM  :  Moves: drrruUlUdrruLuLLulldRDDlddrrrruuuulLrrddddlllUdrrruuuullulDrrrddlUruLL
+3/5/2018 - 4:26:42 PM  :  Level 83 solved: False in 10000 rollouts - solution length (moves/pushes): 153/37
+3/5/2018 - 4:26:42 PM  :  Moves: rruuuuuLullDRlDDDDrrruuuuLLrrddlUrdddllluuuRldddrrruuuuLrddddllluuurRuulDrddrddllluuuRldddrddlUUUUddrrruulUluurDrDulldRluulldRRurDllDDDDrddlUUUUUruulldRR
+3/5/2018 - 4:26:45 PM  :  Level 84 solved: False in 10000 rollouts - solution length (moves/pushes): 172/34
+3/5/2018 - 4:26:45 PM  :  Moves: uRlddRluurDrruLdDDuuuuullllddddddrrrRuuulluRdrdddlllluuuuuurrrrdDrddlddRluuruulDuuullllddddddrrrrrRdrruLLLLLLLdlUUUUUluurrrrrdddDDuulldRuruuulllllddrUluRddddddrrrRuUruulDDD
+3/5/2018 - 4:26:50 PM  :  Level 85 solved: False in 10000 rollouts - solution length (moves/pushes): 276/56
+3/5/2018 - 4:26:50 PM  :  Moves: luuuurrurrdRlulldRllluRdrrurrdLrurrdLulldLrRllLrrrurrdLullldlLuRdrrurrdLulLdllulDDDDuuuruRRlllddddldRRlddrrrruuuulldDlluuuurrruRlllldddddrrDullddrRlluuuuuurrrurRdLLrrrruulDllldLLulDDDDldRuuuurrrrrurrdLLLulllldddddRluuuurrurrdLLLulDDDDldRddrruUrruullDDrrddLLUdrruuuulldDrrddllU
+3/5/2018 - 4:26:51 PM  :  Level 86 solved: True in 477 rollouts - solution length (moves/pushes): 169/35
+3/5/2018 - 4:26:51 PM  :  Moves: drrrUUlDrdLLrrurruululDrrddllldldlluurDldRurrruUlddlluuRlddrrruuLrdrruululDrrddllldlluuRuRDDrdLLruulldDrruuuRlddrrruuLLDurrddlLulluRdrdrruululDDlDururrddlLdLLrUruulDDrdL
+3/5/2018 - 4:26:54 PM  :  Level 87 solved: False in 10000 rollouts - solution length (moves/pushes): 33/11
+3/5/2018 - 4:26:54 PM  :  Moves: lululuRdrddrruLdlUluuUUluRRRRRurD
+3/5/2018 - 4:27:08 PM  :  Level 88 solved: False in 10000 rollouts - solution length (moves/pushes): 317/49
+3/5/2018 - 4:27:08 PM  :  Moves: rrruulDrdLruuuulDruuulDrddddldLdlluRRRuruuuuuurrdddddddldlUUUddrruuuuuuulldddDlDDuuruulDruuurrdddddddlluUddrruuuuuuullldddDDrddLLrruuluurDuuuurrdddddddlluUddlldlluRRRRuuUluuruurrdddddddLruuuuuuulllddddrUUluurrrdddddddldlUrruuuuuuullldddddDuuuuuurrrdddddddllLuuruuuUluRRurDllldddddddrUldLrruUUUlddddldlluRRRuruuuUUluRR
+3/5/2018 - 4:27:13 PM  :  Level 89 solved: False in 10000 rollouts - solution length (moves/pushes): 113/27
+3/5/2018 - 4:27:13 PM  :  Moves: urrddLruulldDDDDlluuuuRlddddrrrdLLuluuuululldRRRddddrrrUluurruullDDDDrdLLruuurDlddrUUluuurrddLruulldDDDrddlUruulD
+3/5/2018 - 4:27:14 PM  :  Level 90 solved: True in 361 rollouts - solution length (moves/pushes): 101/22
+3/5/2018 - 4:27:14 PM  :  Moves: rrrdLLullDurrrddDuululldRurrdddrdLulldlluRUdRRRuuulllDDururrdddlldlluRuururrdLLrrdddrruLLuullulDDDldR
+3/5/2018 - 4:27:14 PM  :  Level 91 solved: True in 28 rollouts - solution length (moves/pushes): 58/14
+3/5/2018 - 4:27:14 PM  :  Moves: rrdrrruulDrdLLruLLLullllddrrUdlluurRdRluRllldRurrdRlulldRR
+3/5/2018 - 4:27:59 PM  :  Level 92 solved: False in 10000 rollouts - solution length (moves/pushes): 123/40
+3/5/2018 - 4:27:59 PM  :  Moves: uuullllLLrrddllULLdlluRRRURlUluurDDDrRRRRRRllllddllUdrruurrrrddrruuLruulldDllllddlluLuRRRRRRlllllldLdlluRRRurrrddllUluRRRRR
+3/5/2018 - 4:28:36 PM  :  Level 93 solved: False in 10000 rollouts - solution length (moves/pushes): 81/23
+3/5/2018 - 4:28:36 PM  :  Moves: lUrddLddlluuRDldRuuRldddrUluuruulluurDldRRluurDDDrrULrrruulDrdLLdDrrddllUUddrUruL
+3/5/2018 - 4:28:38 PM  :  Level 94 solved: True in 1165 rollouts - solution length (moves/pushes): 97/31
+3/5/2018 - 4:28:38 PM  :  Moves: rdRRurDlllulldRDuRRRurrdLDDllldlluRRluurrRurrdLddrddlUluLrdrruLuuLrddLruulLLulldRRRRurDDDrddlUruL
+3/5/2018 - 4:28:38 PM  :  Level 95 solved: True in 12 rollouts - solution length (moves/pushes): 45/8
+3/5/2018 - 4:28:38 PM  :  Moves: ddRuurrrrdddLruululllddDuuurrDLrrrddlUdddllUR
+3/5/2018 - 4:29:13 PM  :  Level 96 solved: False in 10000 rollouts - solution length (moves/pushes): 57/24
+3/5/2018 - 4:29:13 PM  :  Moves: RRdrruLLLrrdddLLdlluRuuULLulldRRRRRRdrruLLLrrdddlLdlluRRR
+3/5/2018 - 4:29:26 PM  :  Level 97 solved: False in 10000 rollouts - solution length (moves/pushes): 191/26
+3/5/2018 - 4:29:26 PM  :  Moves: urrRlllddrRlDluuurrrRddddldllUUluuurrruurDrRRRRRllllllldllldddrddrrruuuuUluRldllldddrruRldlluRRldddrrruuUddldlluuluuurrrruRlldlllddrdddrrruuuUdddldlluuruRllluurrrurrRRRRlllllldlllddrdddrrruuU
+3/5/2018 - 4:29:58 PM  :  Level 98 solved: False in 10000 rollouts - solution length (moves/pushes): 171/56
+3/5/2018 - 4:29:58 PM  :  Moves: lldlluuuullLLLuLulldRDRRlluurDrdRRRRurDlllllLDurrrrrrDDuullllllulldRRRRRRRurDDulllllldDrddlUUUddlluRUddrUluUluRdRRRRRRurDllllllluurDldRRRRRlllllddrUluurrdrrrRllllulldRRRRR
+3/5/2018 - 4:30:34 PM  :  Level 99 solved: False in 10000 rollouts - solution length (moves/pushes): 209/51
+3/5/2018 - 4:30:34 PM  :  Moves: rrdrrrrrddrrrrrruRldllURlUUddrdrrrrruulDrdLLLuRdrruulDlldLLLrrrrurrdLullLdlluRluuluRdddrdrrurrdLulLdlluuuuRlddddLruuurrruruulldDrdLLulDDDldLLdlUUdrrrurRdLLLLrrrrrRurrdLulLdllllldlUrrrrrruLrrrdLLLLLuRdrruLdllLL
+3/5/2018 - 4:30:35 PM  :  Level 100 solved: False in 10000 rollouts - solution length (moves/pushes): 82/24
+3/5/2018 - 4:30:35 PM  :  Moves: lddrDluuurDrrrDldddrruLdlUUUruLLLulDrrrdddrruLululllDDrUluurDrrrdddlUUruLLLulDDurD
+3/5/2018 - 4:30:35 PM  :  Level 101 solved: True in 7 rollouts - solution length (moves/pushes): 221/29
+3/5/2018 - 4:30:35 PM  :  Moves: ruulllldDuurrrrddrruUddlluullllddllddrrUrrUrrrruurruullDlldddllUdddrRddrruuLuullldllUdrrurruuuulLuullddRddlDurRRldddllUdrruuullDurrddrrrruUrruullDllulLrrdDDuuulluullddRddrdddllUdrruuullDuruuRlddrrruuLrddllddddrRddrruuLuuL
+3/5/2018 - 4:30:37 PM  :  Level 102 solved: False in 10000 rollouts - solution length (moves/pushes): 14/2
+3/5/2018 - 4:30:37 PM  :  Moves: rrururrrddddLU
+3/5/2018 - 4:30:37 PM  :  Level 103 solved: True in 567 rollouts - solution length (moves/pushes): 45/12
+3/5/2018 - 4:30:37 PM  :  Moves: dllddlluRdrUllluurrDDuuuurrdLulDDllddrrURUUdL
+3/5/2018 - 4:30:42 PM  :  Level 104 solved: True in 9012 rollouts - solution length (moves/pushes): 179/43
+3/5/2018 - 4:30:42 PM  :  Moves: ulLLLrrDullDlluRRRRurrdddldlllUUddrrrruuuulldlLrrdDuulldddrRurruuLulDlldlluRdrddrrurruullDDrDLddrUUluuulLdlluRRRldddRRlluuurRurrdddLruuullddDrruuLulDDurrddlDLUdddrUluuUdrruululDDD
+3/5/2018 - 4:30:48 PM  :  Level 105 solved: True in 729 rollouts - solution length (moves/pushes): 97/24
+3/5/2018 - 4:30:48 PM  :  Moves: rddRllluuuuLulldRRRdrruLrRlddddrdrruLLLuurDlllulUrrrururrdLLDlddrUlllddRurruUllldddLdlluRRUruulDD
+3/5/2018 - 4:30:56 PM  :  Level 106 solved: False in 10000 rollouts - solution length (moves/pushes): 149/26
+3/5/2018 - 4:30:56 PM  :  Moves: ddrdRluluurrrurrdLulllldddldRuuurrurrdLullldddrrrrUruulldLLrrurrddldlldLrurruruLddllllldRurrrruuullllDDurrurrdLLLulDrrrrddDrrddllUUUUruLddlldRuruuLLL
+3/5/2018 - 4:30:56 PM  :  Level 107 solved: True in 395 rollouts - solution length (moves/pushes): 66/10
+3/5/2018 - 4:30:56 PM  :  Moves: lllUdrrruuuuullDurrddddldlluRdrruuuuulldDDulDruuulllddRRdrUllluurD
+3/5/2018 - 4:31:00 PM  :  Level 108 solved: False in 10000 rollouts - solution length (moves/pushes): 207/30
+3/5/2018 - 4:31:00 PM  :  Moves: rrrrdrrrrrUldlluRdrruruuLullDDDuuurrdrddlLdLrruruulLrrddlUruLddldlLLrrrruuuullDurrdddldlllLrruRdrruuuulldDuurrddddlllllLLrrrrrrruuuullddDldllllulllddrrUrrrrruruuurrddddlLLrrruLdllLrrrruuuulldRldDrrruuLddldLL
+3/5/2018 - 4:31:24 PM  :  Level 109 solved: False in 10000 rollouts - solution length (moves/pushes): 232/43
+3/5/2018 - 4:31:24 PM  :  Moves: ldddrdrdDuululuuurrRllldddrdrddlUrrruuuuUddddddddllUdrruuuuuuuulllldddrDuluuurruurrDulllldddddrdrdrrdddlluUlURRldddrruuUllllUUddrruLulUUdlldRdRluurDrDulldRdRRuLrdRlluulldRurDluuuUrruullDDrruurrdDDDuullllDDlddrdRluluurDldRurDrDulldRR
+3/5/2018 - 4:31:24 PM  :  Level 110 solved: True in 90 rollouts - solution length (moves/pushes): 59/14
+3/5/2018 - 4:31:24 PM  :  Moves: uuuurrdLullluurDldRlddlluRdrrrddlUruLLUlldRurUruulDrdRDrruL
+3/5/2018 - 4:31:27 PM  :  Level 111 solved: False in 10000 rollouts - solution length (moves/pushes): 214/45
+3/5/2018 - 4:31:27 PM  :  Moves: DluuurDRllddrRUdlUrrUUUdddrdddlllUdrrruuLullDurruuuUddddrdddlllUUluRdddrrruuluuuruuuLdddddrdddllluuuRldddrrruulUUUUUddddllluurDldRuRlddddrrruuluUUdlldRuruUddllddddrrruulUUUruuLrddlUddddLrrddllUlUdrUlUluRdRdrUUdlluR
+3/5/2018 - 4:31:43 PM  :  Level 112 solved: False in 10000 rollouts - solution length (moves/pushes): 153/45
+3/5/2018 - 4:31:43 PM  :  Moves: rrruuuruuuLLLDlddrUlulluururrDulldRDRRRllDulDrurrurDDDrdLulDDDDrddlUluRuuuruuulllluurDldRRRurDDDuuluLdlluurDldRRurrdddrdLulDruuuulldRurDDDldDDuuurrdLulDD
+3/5/2018 - 4:32:11 PM  :  Level 113 solved: False in 10000 rollouts - solution length (moves/pushes): 91/24
+3/5/2018 - 4:32:11 PM  :  Moves: rRRdrdRDrUllluuurDrDLdlUrddrruruLdLruLLuLrrdddlUruullLLrrrrddlUddddrUluurrdLullUrrdddlUUruL
+3/5/2018 - 4:32:17 PM  :  Level 114 solved: False in 10000 rollouts - solution length (moves/pushes): 123/27
+3/5/2018 - 4:32:17 PM  :  Moves: luullddRlddldRuuurRllddddrrULdlUUUUdddrrrurrdLLrrurrdLullldLdlluuuuluurDldRRlddddrrurrurrdLulldlLrrurrdLLLdllUUUdddrruLdlUU
+3/5/2018 - 4:32:27 PM  :  Level 115 solved: False in 10000 rollouts - solution length (moves/pushes): 180/27
+3/5/2018 - 4:32:27 PM  :  Moves: drrUdllllUdrrrruUddlluRldlluUddrrrrUlldlluuUddRluuluRddrddrruLdlluRluuuRRllddrdRlluuurrdrRRuullDurrddlLulllddrdrdrruUddlllluuuurrrurrddRddLruulLrrurrdLullulldlllddrdrdrrUUddlluRdrU
+3/5/2018 - 4:32:27 PM  :  Level 116 solved: True in 35 rollouts - solution length (moves/pushes): 71/14
+3/5/2018 - 4:32:27 PM  :  Moves: drrrdrruUruulldRlllDurrrdddlluUluRdRlddrruUlllLdlluRdrRlluRdrUrrrddllUU
+3/5/2018 - 4:32:32 PM  :  Level 117 solved: False in 10000 rollouts - solution length (moves/pushes): 234/35
+3/5/2018 - 4:32:32 PM  :  Moves: llllllddldddrRlluurrurrrdrddlUdlLuRUddrruLruLuLrdddlluRdrruululLLuurrrrrrddddLruulululllldddlUldddrRRurUruLLrddlddrUUldllluurrUlldddrrrruUddrUlldllluurruUdlldddrrrrruRllldllluuruUdldddrrrrrruuLuLLrrddlUdldllluuruurDlldddrrrrruuuLLLulD
+3/5/2018 - 4:32:33 PM  :  Level 118 solved: True in 43 rollouts - solution length (moves/pushes): 396/80
+3/5/2018 - 4:32:33 PM  :  Moves: uuUdddrrruuluuululldRDRluurDldDDDuuuurrDLulDrrrddddlldlluRRRlluuUdddrrRuuuullulDrrrddlUrddddrUlllluuUdddrrruurrdLdlUruuluLrdrddlUluuullDDDDuuuurrdLrddrddlldlluRRluuuUddddrRlluuuuruulDDDDDuuuulldRurrrdddrrdddlUruulluululDDDuurrddrruLdlUrrdddllldlluRRRRUruuluLddRddlllUUUdddrrrurruLdlUdddrUluuluuullDDDDuuuurrdddrddrUruLdldlldlluRuuuuurrdLulldRddddRRlluuuuurrdLulDDDDuuurrddRdrddlUruruLddllldlluRRR
+3/5/2018 - 4:32:34 PM  :  Level 119 solved: False in 10000 rollouts - solution length (moves/pushes): 128/20
+3/5/2018 - 4:32:34 PM  :  Moves: UddrruLdlluurDrdddrruruuuululllDDlddRluurDrDruuLdlldRurrdLulluRdrdDuulldRurDluuuurrrdrddddldlLrruruuuulullldddrdDuruuLdlluRdrruL
+3/5/2018 - 4:32:41 PM  :  Level 120 solved: False in 10000 rollouts - solution length (moves/pushes): 107/44
+3/5/2018 - 4:32:41 PM  :  Moves: lluuRRRRRRurDDDuulllllllddrUluRRRRRRurDDrddLLLulDrrrruulDrdLLLrruuullllllddddldRlddrUUUUUUluRRRRRRurDDDrdLL
+3/5/2018 - 4:32:55 PM  :  Level 121 solved: False in 10000 rollouts - solution length (moves/pushes): 106/25
+3/5/2018 - 4:32:55 PM  :  Moves: rdrrrruLdlllullluuUruUUdlldRdrUUldddddrrrdrrULrrruullDurrddldlluLLLrrrdrruLdllulldlUUUUdddrrrdrruLLLLdlUUU
+3/5/2018 - 4:33:05 PM  :  Level 122 solved: False in 10000 rollouts - solution length (moves/pushes): 314/55
+3/5/2018 - 4:33:05 PM  :  Moves: lluuuuurrDulldddRDluuuurrdrrdddlUruullulldddrdDuuRUdlddDuluuuuurrDDurrdLululldddrdddDldRRRRllluuuluuuuurrdrrdddlUruullulldddrddddrrrdRRurDlllllluuuluuuuurrdrrddlLrruullDurDluullddRDDDDDldRRRRRRRurDllllllluuuuuuRurrdLrddlULrruulDulullddrDluuurrdrrddLuulullddrdDDluuuuurrdrddLruulDllddrdDuluuurDDuurrdLullddrDluuurDD
+3/5/2018 - 4:33:09 PM  :  Level 123 solved: False in 10000 rollouts - solution length (moves/pushes): 89/15
+3/5/2018 - 4:33:09 PM  :  Moves: ddlDDuuruulDruuulDrddrdddlddlUruruuluuululldRRurDlllulldRurrrrdDDlUruulldRurDlddrrdddldlU
+3/5/2018 - 4:33:10 PM  :  Level 124 solved: False in 10000 rollouts - solution length (moves/pushes): 65/13
+3/5/2018 - 4:33:10 PM  :  Moves: urrDDuulldRurDllulldRRRlldddddrrrrrrrrrruuuuulllddllldlluRRRRdrUU
+3/5/2018 - 4:33:21 PM  :  Level 125 solved: False in 10000 rollouts - solution length (moves/pushes): 147/39
+3/5/2018 - 4:33:21 PM  :  Moves: ululDDDuurrddLrrddllULLLLLLLrrrrrrrdrruuluulldDuurrddLdLLLLLulDrrrrrruruulldDrdLLLLLrruRldllLulDrrrrrrruruulldDlldllllulDrrrrrrurrdLLLLLLulldRurrdL
+3/5/2018 - 4:33:21 PM  :  Level 126 solved: True in 118 rollouts - solution length (moves/pushes): 115/25
+3/5/2018 - 4:33:21 PM  :  Moves: ullllllDurrrrrrdddlluUddrruuulLdRlddrruUruLdllddlluULrRlddrruUlllullDRlldddrruUUlldRlddrruUluuRlddrURRddrruuLLLLdlU
+3/5/2018 - 4:33:26 PM  :  Level 127 solved: False in 10000 rollouts - solution length (moves/pushes): 80/24
+3/5/2018 - 4:33:26 PM  :  Moves: uRRRdrruLuulluRdrddLLLdlluRRluuuRRllddrdRlluuurrurDldRlullddrdrRdrruLLLLdlluRRRR
+3/5/2018 - 4:33:39 PM  :  Level 128 solved: False in 10000 rollouts - solution length (moves/pushes): 44/10
+3/5/2018 - 4:33:39 PM  :  Moves: rrurruullldLruulldRRRRurrdLddlldllUUruulldRR
+3/5/2018 - 4:33:48 PM  :  Level 129 solved: False in 10000 rollouts - solution length (moves/pushes): 41/12
+3/5/2018 - 4:33:48 PM  :  Moves: rdRRllulldRRlldlluRRurrdLrRllLdlluRRurrdL
+3/5/2018 - 4:33:59 PM  :  Level 130 solved: False in 10000 rollouts - solution length (moves/pushes): 80/20
+3/5/2018 - 4:33:59 PM  :  Moves: lulluurrDRRRllDLrurrRllllulldRRdddrUluulldRurRRRdrrUdlluRRllllDurrrrdrUllllllldR
+3/5/2018 - 4:34:06 PM  :  Level 131 solved: False in 10000 rollouts - solution length (moves/pushes): 74/28
+3/5/2018 - 4:34:06 PM  :  Moves: ddldRDRddlUUUUUUruLulDrdddRlddrUrrdLLdlUUUUUdddrrruulDLrrdLdlluUUdrrdLdlUU
+3/5/2018 - 4:34:11 PM  :  Level 132 solved: False in 10000 rollouts - solution length (moves/pushes): 104/21
+3/5/2018 - 4:34:11 PM  :  Moves: DrrDDllUdrruulLrrddrruLdlllddrrUdlluurRlluurrDDurrdLLLruulldDrrrrrruLdllllluuulDrrrdrdrruLLdllluurrDrdLL
+3/5/2018 - 4:34:19 PM  :  Level 133 solved: False in 10000 rollouts - solution length (moves/pushes): 175/38
+3/5/2018 - 4:34:19 PM  :  Moves: uurrrrrdddLLulLrrdrruLdldllURuRldRllLUdrruLLUUrrrrrdddLruuulllllluRdrrrrrddLLLddrUluLdlUrrdrrruuullllluRdrrrrddldlllluUdrrdrruLrruulllluRllldRRRRlllddrdrruLLdlUUUluRdrruLdlluR
+3/5/2018 - 4:34:43 PM  :  Level 134 solved: False in 10000 rollouts - solution length (moves/pushes): 228/47
+3/5/2018 - 4:34:43 PM  :  Moves: rurrdLLrrrruUUUddddllllLrrrrruuuuruulDDDDDrdLLLulluuulLrrruRRlldlddddldlUrruuuullulldRRRRddddllUUUdddrrurrdLrrruuuuruulDDDDuuulllDlddrddLuuuururrrdddDuuuullldlddrruLulDruurrrddddrdLuuuuulllddddldLdlUUUddrrruuuuurrrdddddLLLLLdlUU
+3/5/2018 - 4:34:50 PM  :  Level 135 solved: False in 10000 rollouts - solution length (moves/pushes): 153/30
+3/5/2018 - 4:34:50 PM  :  Moves: dlddRRRRlluuluulllldddrRlluuurrDurrddrddllUllluuurrdDuulldddrRuRRRllldlluuRurDDrrrRlddrruruulDDullddllUdrruuluullddRlullddrRurRRddllUdrruuRRllluullddRRRR
+3/5/2018 - 4:34:56 PM  :  Level 136 solved: False in 10000 rollouts - solution length (moves/pushes): 159/20
+3/5/2018 - 4:34:56 PM  :  Moves: rddLLrruullllLdlddrrrUdllluuruuurrrrDulllldddlddrrrurrruuLLLLrrrrddlllUdrrruullLrruulllldDuurrrrddrddlUdlluuLrddrrruuLddlldllluuRlddrrrurruuuulllldDrrddrruuLLL
+3/5/2018 - 4:35:05 PM  :  Level 137 solved: False in 10000 rollouts - solution length (moves/pushes): 208/42
+3/5/2018 - 4:35:05 PM  :  Moves: rrUdlluuurRDLulDDDlldddrruUUUdrrUUlulDDurrdrruLdldlLrruruLddllLrrruuLulDDurrddlLdddlluuUdddrruuuuuruurDlldddLLrrrruUluurDlldddrrurruuLddldlllldddllluuuurrDrrrrruruuLrdLLruulDlDDuurrdLulDrrddlLLrrruullDurrddlL
+3/5/2018 - 4:35:18 PM  :  Level 138 solved: False in 10000 rollouts - solution length (moves/pushes): 157/28
+3/5/2018 - 4:35:18 PM  :  Moves: rrrdddrRddlUrdrruUruLullDLrurrddddllluUdrUllUUddrrddrruuLrddllluuluuUruLddddrdrdrruulLrruulDulDLrrrdddlluUddrruuLrddllluUlUUUdddrdrdrruulLruulDLrrrdddlluUruL
+3/5/2018 - 4:35:47 PM  :  Level 139 solved: False in 10000 rollouts - solution length (moves/pushes): 175/46
+3/5/2018 - 4:35:47 PM  :  Moves: rDDurrrDrdLruRllullldDuurrrdrrRllddrrUrruulDLddlluluulllddrddlUUUdddlluRdrUUrRRuullLrrrddlllUlUUUUddddrdrrruullLuluuluRdddrddlUUUUddrdrrrdrRRddlUruLdLruLdLLLdlUUluurDrrrDrdLLL
+3/5/2018 - 4:36:00 PM  :  Level 140 solved: False in 10000 rollouts - solution length (moves/pushes): 214/58
+3/5/2018 - 4:36:00 PM  :  Moves: rddrRuRuRuRurrdLdLdLdLLrrururuulDlDlDldLLulldRluuullddddrdrrruUUdrrurururrdLdLdLLLruRldlLuUllddRluuullddddrdrrruUUluuurrdLLLLulDDDDuuurrrddrUluurrdLLLLulDDDuurrrrdddrrruuRurrdLdLruulDlDurrdLdLLLrrruulDldlLrrurrdLLL
+3/5/2018 - 4:36:07 PM  :  Level 141 solved: False in 10000 rollouts - solution length (moves/pushes): 61/21
+3/5/2018 - 4:36:07 PM  :  Moves: luurrrddrruuLrddlUULLLUUluRRldddLddlluuRRddlUruRRRllldlluRRRR
+3/5/2018 - 4:36:23 PM  :  Level 142 solved: False in 10000 rollouts - solution length (moves/pushes): 32/7
+3/5/2018 - 4:36:23 PM  :  Moves: ddrUlulldRuruulDrdLdlluRdrUruulD
+3/5/2018 - 4:36:35 PM  :  Level 143 solved: False in 10000 rollouts - solution length (moves/pushes): 133/24
+3/5/2018 - 4:36:35 PM  :  Moves: ldlUrrrdrruLLLLrrruulLuuuullUdrrddddDurrddlddlluuRRluurrdDrdLullldlluRRRRluurrdDlluuuuuullluuuRDlddrrruuuLrdddllluurDluuurDlddrUluurD
+3/5/2018 - 4:37:49 PM  :  Level 144 solved: False in 10000 rollouts - solution length (moves/pushes): 203/21
+3/5/2018 - 4:37:49 PM  :  Moves: rddrUluurruurruLdlluullldlddlldRRuuurrurrddrruLdddlldlldllUdrrurrurrrddLLrruullldlldlluUruuurrurrurrDulldllldldddlddrrurrurrrddllUllldlluuruuurrurrurrdLrDldddrddllullldlluRuuuurruuulDrddllluuRDuRDuurDldR
+3/5/2018 - 4:37:50 PM  :  Level 145 solved: True in 124 rollouts - solution length (moves/pushes): 69/24
+3/5/2018 - 4:37:50 PM  :  Moves: rdDulDLddLDlluurRlldRRdrrrRllDRddlUlUdrUruuUdRUrrddLruLdLruLulUluurDD
+3/5/2018 - 4:37:51 PM  :  Level 146 solved: True in 80 rollouts - solution length (moves/pushes): 93/16
+3/5/2018 - 4:37:51 PM  :  Moves: luLulDruurrrrdrdddLruuLuulllldldDRurrddlUluuurrrrdrdddlddllllulURurrrRlluUdddDLruuuuRlLrddddR
+3/5/2018 - 4:38:22 PM  :  Level 147 solved: False in 10000 rollouts - solution length (moves/pushes): 123/29
+3/5/2018 - 4:38:22 PM  :  Moves: lllllldddRRuLdlUUluRRRRRRdrrruullDldRRdrUllllullllddrrrDrddldlluUddrruUruLdddlluuUdddrruuuulLrrdLrdddlluuUlUUluRdddrruLdlUU
+3/5/2018 - 4:38:29 PM  :  Level 148 solved: False in 10000 rollouts - solution length (moves/pushes): 311/41
+3/5/2018 - 4:38:29 PM  :  Moves: lllullddrdrdrrrrUUdldlllululuurrrrdrRdddrruLdlUrrdrruLdlllllllululuurrrrdrrurrdLLLLullllddrdrdrrrruUdrdrrrrruLdlluLrdrruLdllllllllululuurrrDlullddrdrdrrrrrruLdlUrrdrruLLLdlllllululuurrrrdrRurrdLLLLLulllddrdrdrrruRUdldlllululuurrrrdrRurrdLLLrdddrruLdlUldlllululuurrrrDlulllddrdrdrrrruUdldlllululuurrrrdrRurrdLLLL
+3/5/2018 - 4:38:43 PM  :  Level 149 solved: False in 10000 rollouts - solution length (moves/pushes): 118/33
+3/5/2018 - 4:38:43 PM  :  Moves: RurDDDlddrdDldRuuuluurDRlDDDuuurRRRlllldddlddrUUUUluRRRRllluuurrdLulDDldRRRddddLruuuulldddlddrUUdrruuuulldDuurrddddllU
+3/5/2018 - 4:39:13 PM  :  Level 150 solved: False in 10000 rollouts - solution length (moves/pushes): 198/37
+3/5/2018 - 4:39:13 PM  :  Moves: lldlllUUrrDullddlluRdrUlldlluRRdrrrRuuluLrdrddllllluuurRRlllddrdrrrrdrUluRldllllluuurrrDrrdrRRRRlllllullDuulllddrRlluurrrdrrdrrrrrdrUllllllullulllddrrdRRRdrUluRRllullDldRuurrdrrRRllllullddRRdrUluRRR
+3/5/2018 - 4:39:16 PM  :  Level 151 solved: False in 10000 rollouts - solution length (moves/pushes): 166/35
+3/5/2018 - 4:39:16 PM  :  Moves: llulUdrruuuLrdddlluRdddlUrruUllDrruUUluurDDDDDldRRRRurrddlUluRlldllldlUlluuuruRRlldldddrrruulDrruuUluurDldlDururDlldDuurrDullddrddLruuluurrdDllulldddRRlluuurrdrrDlulD
+3/5/2018 - 4:39:37 PM  :  Level 152 solved: False in 10000 rollouts - solution length (moves/pushes): 268/24
+3/5/2018 - 4:39:37 PM  :  Moves: uurrrrrdrdLLLLLLLruurruurrrrdrdrddrruuululululllDurrrdrdrdrdddllLruulululLLrrrdrdrddlLululllllddrrrrRRlllllluuululuurrrrdDululllddrrddrrrrrdrdRllllllluuululuurrrrddDuululllddrrddddrrrrruullLLruuululllddrrdDDurrrrrdrdrRuulululluurrrdrdrdrdddLruuululululllddllddrrrdrdrR
+3/5/2018 - 4:39:46 PM  :  Level 153 solved: False in 10000 rollouts - solution length (moves/pushes): 27/14
+3/5/2018 - 4:39:46 PM  :  Moves: lDRlDDDrUUlddDDrUddLLrruuUU
+3/5/2018 - 4:39:46 PM  :  Level 154 solved: True in 0 rollouts - solution length (moves/pushes): 429/2
+3/5/2018 - 4:39:46 PM  :  Moves: ruuuuuuuuuuuurrrrrrrrrrrrrrrrrrrrrddddddddddllllllllllllllllluuuuuurrrrrrrrrrrrrddlllllllllllddrrrrrrrrrrrrruuuuuulllllllllllllllllddddddddddrrrrrrrrrrrrrrrrrrrrruuuuuuuuuuuuuulllllllllllllllllllllllllddddddddddddDuuuuuuuuuuuuurrrrrrrrrrrrrrrrrrrrrrrrrddddddddddddddllllllllllllllllllllluuuuuuuuuurrrrrrrrrrrrrrrrrddddddllllllllllllluurrrrrrrrrrruulllllllllllllddddddrrrrrrrrrrrrrrrrruuuuuuuuuulllllllllllllllllllllddddddddddddlL
+3/5/2018 - 4:39:47 PM  :  Level 155 solved: True in 0 rollouts - solution length (moves/pushes): 282/175
+3/5/2018 - 4:39:47 PM  :  Moves: uulldRRRRRRRRdrUUUruLLLLLLLLLLLLulDDDrdLLLLLLLLLLLulllddrrUdlluurRluurrdDldRRRRRRRRRRdrUUUluRRRRRRRRRdrUUUUUUruLLLulDDDrdLLLdlUUUruLLLulDDDrdLLLLdlUUUUdrruulLLrddlluUUluRRRRRRRRRRRRRRRRRRRurDDDDDDlddrUUUUUUruLLLLLLLLLLLLLLLLLLLLulDrdLLLLLulldRurDDDDDrddlluRdrUluRRurDDDDrrddllUUUUUU
+3/5/2018 - 4:39:47 PM  :  Level 1 solved: True in 78
+3/5/2018 - 4:39:47 PM  :  Level 2 solved: True in 0
+3/5/2018 - 4:39:47 PM  :  Level 3 solved: True in 94
+3/5/2018 - 4:39:47 PM  :  Level 4 solved: True in 5
+3/5/2018 - 4:39:47 PM  :  Level 5 solved: True in 9
+3/5/2018 - 4:39:47 PM  :  Level 6 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 7 solved: True in 34
+3/5/2018 - 4:39:47 PM  :  Level 8 solved: True in 14
+3/5/2018 - 4:39:47 PM  :  Level 9 solved: True in 0
+3/5/2018 - 4:39:47 PM  :  Level 10 solved: True in 683
+3/5/2018 - 4:39:47 PM  :  Level 11 solved: True in 13
+3/5/2018 - 4:39:47 PM  :  Level 12 solved: True in 10
+3/5/2018 - 4:39:47 PM  :  Level 13 solved: True in 15
+3/5/2018 - 4:39:47 PM  :  Level 14 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 15 solved: True in 20
+3/5/2018 - 4:39:47 PM  :  Level 16 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 17 solved: True in 10
+3/5/2018 - 4:39:47 PM  :  Level 18 solved: True in 109
+3/5/2018 - 4:39:47 PM  :  Level 19 solved: True in 1821
+3/5/2018 - 4:39:47 PM  :  Level 20 solved: True in 299
+3/5/2018 - 4:39:47 PM  :  Level 21 solved: True in 2
+3/5/2018 - 4:39:47 PM  :  Level 22 solved: True in 365
+3/5/2018 - 4:39:47 PM  :  Level 23 solved: True in 1545
+3/5/2018 - 4:39:47 PM  :  Level 24 solved: True in 69
+3/5/2018 - 4:39:47 PM  :  Level 25 solved: True in 0
+3/5/2018 - 4:39:47 PM  :  Level 26 solved: True in 867
+3/5/2018 - 4:39:47 PM  :  Level 27 solved: True in 255
+3/5/2018 - 4:39:47 PM  :  Level 28 solved: True in 48
+3/5/2018 - 4:39:47 PM  :  Level 29 solved: True in 1735
+3/5/2018 - 4:39:47 PM  :  Level 30 solved: True in 0
+3/5/2018 - 4:39:47 PM  :  Level 31 solved: True in 5
+3/5/2018 - 4:39:47 PM  :  Level 32 solved: True in 107
+3/5/2018 - 4:39:47 PM  :  Level 33 solved: True in 110
+3/5/2018 - 4:39:47 PM  :  Level 34 solved: True in 12
+3/5/2018 - 4:39:47 PM  :  Level 35 solved: True in 2968
+3/5/2018 - 4:39:47 PM  :  Level 36 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 37 solved: True in 32
+3/5/2018 - 4:39:47 PM  :  Level 38 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 39 solved: True in 240
+3/5/2018 - 4:39:47 PM  :  Level 40 solved: True in 12
+3/5/2018 - 4:39:47 PM  :  Level 41 solved: True in 23
+3/5/2018 - 4:39:47 PM  :  Level 42 solved: True in 4716
+3/5/2018 - 4:39:47 PM  :  Level 43 solved: True in 3714
+3/5/2018 - 4:39:47 PM  :  Level 44 solved: True in 0
+3/5/2018 - 4:39:47 PM  :  Level 45 solved: True in 36
+3/5/2018 - 4:39:47 PM  :  Level 46 solved: True in 105
+3/5/2018 - 4:39:47 PM  :  Level 47 solved: True in 821
+3/5/2018 - 4:39:47 PM  :  Level 48 solved: True in 1821
+3/5/2018 - 4:39:47 PM  :  Level 49 solved: True in 6366
+3/5/2018 - 4:39:47 PM  :  Level 50 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 51 solved: True in 3
+3/5/2018 - 4:39:47 PM  :  Level 52 solved: True in 2
+3/5/2018 - 4:39:47 PM  :  Level 53 solved: True in 100
+3/5/2018 - 4:39:47 PM  :  Level 54 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 55 solved: True in 6
+3/5/2018 - 4:39:47 PM  :  Level 56 solved: True in 5
+3/5/2018 - 4:39:47 PM  :  Level 57 solved: True in 1019
+3/5/2018 - 4:39:47 PM  :  Level 58 solved: True in 14
+3/5/2018 - 4:39:47 PM  :  Level 59 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 60 solved: True in 14
+3/5/2018 - 4:39:47 PM  :  Level 61 solved: True in 3513
+3/5/2018 - 4:39:47 PM  :  Level 62 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 63 solved: True in 330
+3/5/2018 - 4:39:47 PM  :  Level 64 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 65 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 66 solved: True in 33
+3/5/2018 - 4:39:47 PM  :  Level 67 solved: True in 10
+3/5/2018 - 4:39:47 PM  :  Level 68 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 69 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 70 solved: True in 1347
+3/5/2018 - 4:39:47 PM  :  Level 71 solved: True in 269
+3/5/2018 - 4:39:47 PM  :  Level 72 solved: True in 956
+3/5/2018 - 4:39:47 PM  :  Level 73 solved: True in 7768
+3/5/2018 - 4:39:47 PM  :  Level 74 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 75 solved: True in 3339
+3/5/2018 - 4:39:47 PM  :  Level 76 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 77 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 78 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 79 solved: True in 588
+3/5/2018 - 4:39:47 PM  :  Level 80 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 81 solved: True in 88
+3/5/2018 - 4:39:47 PM  :  Level 82 solved: True in 41
+3/5/2018 - 4:39:47 PM  :  Level 83 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 84 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 85 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 86 solved: True in 477
+3/5/2018 - 4:39:47 PM  :  Level 87 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 88 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 89 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 90 solved: True in 361
+3/5/2018 - 4:39:47 PM  :  Level 91 solved: True in 28
+3/5/2018 - 4:39:47 PM  :  Level 92 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 93 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 94 solved: True in 1165
+3/5/2018 - 4:39:47 PM  :  Level 95 solved: True in 12
+3/5/2018 - 4:39:47 PM  :  Level 96 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 97 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 98 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 99 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 100 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 101 solved: True in 7
+3/5/2018 - 4:39:47 PM  :  Level 102 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 103 solved: True in 567
+3/5/2018 - 4:39:47 PM  :  Level 104 solved: True in 9012
+3/5/2018 - 4:39:47 PM  :  Level 105 solved: True in 729
+3/5/2018 - 4:39:47 PM  :  Level 106 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 107 solved: True in 395
+3/5/2018 - 4:39:47 PM  :  Level 108 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 109 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 110 solved: True in 90
+3/5/2018 - 4:39:47 PM  :  Level 111 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 112 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 113 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 114 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 115 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 116 solved: True in 35
+3/5/2018 - 4:39:47 PM  :  Level 117 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 118 solved: True in 43
+3/5/2018 - 4:39:47 PM  :  Level 119 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 120 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 121 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 122 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 123 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 124 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 125 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 126 solved: True in 118
+3/5/2018 - 4:39:47 PM  :  Level 127 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 128 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 129 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 130 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 131 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 132 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 133 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 134 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 135 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 136 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 137 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 138 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 139 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 140 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 141 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 142 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 143 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 144 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 145 solved: True in 124
+3/5/2018 - 4:39:47 PM  :  Level 146 solved: True in 80
+3/5/2018 - 4:39:47 PM  :  Level 147 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 148 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 149 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 150 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 151 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 152 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 153 solved: False in 10000
+3/5/2018 - 4:39:47 PM  :  Level 154 solved: True in 0
+3/5/2018 - 4:39:47 PM  :  Level 155 solved: True in 0
+3/5/2018 - 4:39:47 PM  :  Solved 82/155
+3/5/2018 - 5:31:46 PM  :  
+********************
+BEGIN TASK:
+Game:sokoban
+Method: MCTS 
+iterations: 10000
+UCT constant: 1
+SP_UCT constant: 10
+Reward Type: InverseBM
+epsilon: 0.2level: ../Release/Levels/microban.txt
+********************
+3/5/2018 - 5:31:46 PM  :  Level 1 solved: True in 59 rollouts - solution length (moves/pushes): 33/8
+3/5/2018 - 5:31:46 PM  :  Moves: dlUrrrdLullddrUluRuulDrddrruLdlUU
+3/5/2018 - 5:31:46 PM  :  Level 2 solved: True in 0 rollouts - solution length (moves/pushes): 16/3
+3/5/2018 - 5:31:46 PM  :  Moves: rddLruulDuullddR
+3/5/2018 - 5:31:46 PM  :  Level 3 solved: True in 15 rollouts - solution length (moves/pushes): 41/13
+3/5/2018 - 5:31:46 PM  :  Moves: ruuLLLulDrrrrddlUruLLLddllluurRDrdLuuurDD
+3/5/2018 - 5:31:46 PM  :  Level 4 solved: True in 0 rollouts - solution length (moves/pushes): 65/15
+3/5/2018 - 5:31:46 PM  :  Moves: ulDrddlUruulllDldRRluurrrddLruulDLLrrrddlUruLLulllddrrRurrddlUruL
+3/5/2018 - 5:31:46 PM  :  Level 5 solved: True in 0 rollouts - solution length (moves/pushes): 325/66
+3/5/2018 - 5:31:46 PM  :  Moves: LuurrdLrrddlUluulDlDurrdrddlluUddlluRurrrruLulDullddrRurrddlUruulDldlluRurrdLdllddrUdrUrruullDurrddlUddlluRlluuRDuurDlldddrruUlldRuuurrDLrrdLrddllluuRlddrUlluuRurrdLrrdddlluUddrruuLLdlluRdrdrUUdlluRlluurDDrddlUruLulDrddlluRRdrruLuluurDlldddrruUdrruLdlLuRdrruLdlldlUruulDrddlluRdrUluurDlddrrruuLdLdlluRuururrDDuulldRddLUddlluR
+3/5/2018 - 5:31:46 PM  :  Level 6 solved: True in 13 rollouts - solution length (moves/pushes): 183/39
+3/5/2018 - 5:31:46 PM  :  Moves: dlllllululDulldRRRlllddrrUdlUluurrrdRRRdrrruullDurrddlLLLullullDlddrUluurrDulldRRRRlllddrUluurDrrRllllddrUluurrdLrrrRlllldlluRurrdrrrdrrruullDurrddlLLulllulldRRRRRdrrruullDldRuurrddLL
+3/5/2018 - 5:31:46 PM  :  Level 7 solved: True in 15 rollouts - solution length (moves/pushes): 74/10
+3/5/2018 - 5:31:46 PM  :  Moves: lluuuurRurrdLrddlLrruulLddddlluRdrrruulUluullddRluurrrrddlLrrdddlUdllluuuR
+3/5/2018 - 5:31:46 PM  :  Level 8 solved: True in 5 rollouts - solution length (moves/pushes): 123/34
+3/5/2018 - 5:31:46 PM  :  Moves: llDDDDDDuuuuuurrdLulldRdddddldddrruuLuuuuuuurrdLulDDDDDDlllddrrUddrruuLrddllulluurRllddrrUrUUUUUUluRdddddddldlluurRdrUUUUUU
+3/5/2018 - 5:31:46 PM  :  Level 9 solved: True in 0 rollouts - solution length (moves/pushes): 30/10
+3/5/2018 - 5:31:46 PM  :  Moves: urrDulldRdRluurDrDDlUruLdlUruL
+3/5/2018 - 5:31:47 PM  :  Level 10 solved: True in 285 rollouts - solution length (moves/pushes): 139/21
+3/5/2018 - 5:31:47 PM  :  Moves: rddrruuLLrrddrruuuuurrdddLruuullddDLLddrrUdlllluuRRllddlluuRlddrrrrrruUUUddddlllllluurRddrruuRlddrruUllddlluuRlddrrrruuUdddlllluurRRlddrruU
+3/5/2018 - 5:31:47 PM  :  Level 11 solved: True in 3 rollouts - solution length (moves/pushes): 122/22
+3/5/2018 - 5:31:47 PM  :  Moves: ulllddddrrrruLUlDrdLLLuuuurrrDullldddlldRuruuurrrdDrdLdllLrrruulDruuullldddllddrUrrRlllluRdrrrurrdLLLLUllddrUrrrruuuullldD
+3/5/2018 - 5:31:47 PM  :  Level 12 solved: True in 6 rollouts - solution length (moves/pushes): 57/13
+3/5/2018 - 5:31:47 PM  :  Moves: uululldRdRluurDrDDrddlluRdrUluuulldRurDDRddrruuLrddlllluR
+3/5/2018 - 5:31:47 PM  :  Level 13 solved: True in 72 rollouts - solution length (moves/pushes): 59/21
+3/5/2018 - 5:31:47 PM  :  Moves: rDlDDRdrruLdldlUUUUruLdlUrddddrruLdlUUUrDuuLddddrruLdlUUruL
+3/5/2018 - 5:31:47 PM  :  Level 14 solved: True in 11 rollouts - solution length (moves/pushes): 51/10
+3/5/2018 - 5:31:47 PM  :  Moves: uullllddrdrUlluurrrrddLLLrrruullDurrddlLdllURRuullD
+3/5/2018 - 5:31:47 PM  :  Level 15 solved: True in 12 rollouts - solution length (moves/pushes): 43/12
+3/5/2018 - 5:31:47 PM  :  Moves: DrdddllUUddrruuulLLLdlluRRRRdddrruuLrddlluU
+3/5/2018 - 5:32:05 PM  :  Level 16 solved: True in 6311 rollouts - solution length (moves/pushes): 290/57
+3/5/2018 - 5:32:05 PM  :  Moves: lddrUdrruLLdlUUUruLrdDldRluuuLrrddddrruLdlluuuulLulDDurrrddddrUluuullldDuurrrrdrDullulllddldRdrUluuurrrrdrdLddrruLdlluUruulDrrdddlluRuulDrddlUUUruLrddddrruLdlluRluuuLrrddddrruLdlUluRurDlluulLrrrddddrruLdlUruLulullulDDurrrdDuullldDuurrrrddddlUruululllddlddrruLdlUruuurrrrdddlUUruLLLulDDDDldR
+3/5/2018 - 5:32:05 PM  :  Level 17 solved: True in 6 rollouts - solution length (moves/pushes): 26/9
+3/5/2018 - 5:32:05 PM  :  Moves: rdDullDRddrruLUddlUdlUUdrU
+3/5/2018 - 5:32:06 PM  :  Level 18 solved: True in 65 rollouts - solution length (moves/pushes): 87/17
+3/5/2018 - 5:32:06 PM  :  Moves: ruuLDrddlUruuuulllddRRDrUUddddlUruullluurrurrdLddddlUruuuLulldddrRdrUUdllluuurrdLrurrdL
+3/5/2018 - 5:32:06 PM  :  Level 19 solved: True in 232 rollouts - solution length (moves/pushes): 147/38
+3/5/2018 - 5:32:06 PM  :  Moves: urrDLrDulLulldRurrrddDuululldRurrdddlddrUUUUruLLLdlluRdrRuLdlluRdrrurDluLdlluRRdrruLrdDullluRdrruLLdlluRdrrrdDuullluRdrruLLdlluRdrrrddlddrUUUUllluR
+3/5/2018 - 5:32:06 PM  :  Level 20 solved: True in 239 rollouts - solution length (moves/pushes): 96/24
+3/5/2018 - 5:32:06 PM  :  Moves: urDRlDDlddrUUrrruuLLLDDuuLrddlddrUUUdrrruullulldRRllulldRurrdddrrruuLrddllluuRlulldRurrdRlulldRR
+3/5/2018 - 5:32:06 PM  :  Level 21 solved: True in 3 rollouts - solution length (moves/pushes): 17/5
+3/5/2018 - 5:32:06 PM  :  Moves: dllUdlUluurDRddlU
+3/5/2018 - 5:32:07 PM  :  Level 22 solved: True in 451 rollouts - solution length (moves/pushes): 133/33
+3/5/2018 - 5:32:07 PM  :  Moves: drrruulDLdlUUdrrrdLullddrUluuUruulDDrurrddlddlluUdRluUrurrddlDlluuluRRldddrrrdLLrruuuuLrddldlddlUUUUluurDDuRldDDrddlUUUUruLdddrrruuuL
+3/5/2018 - 5:32:07 PM  :  Level 23 solved: True in 932 rollouts - solution length (moves/pushes): 70/12
+3/5/2018 - 5:32:07 PM  :  Moves: dlUrruulluRdrddllUdrruululldRddrruuruLLrdddlluuRurDllluRdrruLrdDullluR
+3/5/2018 - 5:32:07 PM  :  Level 24 solved: True in 78 rollouts - solution length (moves/pushes): 35/9
+3/5/2018 - 5:32:07 PM  :  Moves: ullDDlddrruLuuurrdLulDDDullddrRuulD
+3/5/2018 - 5:32:07 PM  :  Level 25 solved: True in 4 rollouts - solution length (moves/pushes): 39/9
+3/5/2018 - 5:32:07 PM  :  Moves: urrdLulluurDldRlddrUUluurDlddrrruuLLulD
+3/5/2018 - 5:32:08 PM  :  Level 26 solved: True in 273 rollouts - solution length (moves/pushes): 45/10
+3/5/2018 - 5:32:08 PM  :  Moves: rdddlUrdddlUUlldRurruuulldRDrdLrddlUruuluurDD
+3/5/2018 - 5:32:08 PM  :  Level 27 solved: True in 60 rollouts - solution length (moves/pushes): 60/12
+3/5/2018 - 5:32:08 PM  :  Moves: dlldlluuuurrrdDLLrddlluUrrrrdLulllddrrUruuulllDDrRllDurrdrUU
+3/5/2018 - 5:32:08 PM  :  Level 28 solved: True in 18 rollouts - solution length (moves/pushes): 37/11
+3/5/2018 - 5:32:08 PM  :  Moves: rDulldRddrruLdlUrUdlUluurrDDldRuuulDD
+3/5/2018 - 5:32:08 PM  :  Level 29 solved: True in 181 rollouts - solution length (moves/pushes): 186/24
+3/5/2018 - 5:32:08 PM  :  Moves: lulldRurrdrrddllllllluuRurrdRRRlllulldlddrrrrrrruUUUddllllulldRRRllllddrrrrrrruuuuluurDrddldddllllllluurrrrRlllllddrrrrrrruuuUddddllllllluurrrrrRllllllddrrrrrrruUUruuLDuulldRdrDDuuluurDD
+3/5/2018 - 5:32:08 PM  :  Level 30 solved: True in 0 rollouts - solution length (moves/pushes): 21/5
+3/5/2018 - 5:32:08 PM  :  Moves: luuurDlddrdrUruuLLulD
+3/5/2018 - 5:32:08 PM  :  Level 31 solved: True in 2 rollouts - solution length (moves/pushes): 21/8
+3/5/2018 - 5:32:08 PM  :  Moves: RDulDruurDDrddllUUluR
+3/5/2018 - 5:32:08 PM  :  Level 32 solved: True in 328 rollouts - solution length (moves/pushes): 54/15
+3/5/2018 - 5:32:08 PM  :  Moves: ullDurrdLulllddrURurrdLLLddrUluRuulDDrddlUUrurrdLululD
+3/5/2018 - 5:32:08 PM  :  Level 33 solved: True in 19 rollouts - solution length (moves/pushes): 49/10
+3/5/2018 - 5:32:08 PM  :  Moves: dlLLrrruulLrrddllUllDuuurDlddrrrruulLLrddlluUrrdL
+3/5/2018 - 5:32:08 PM  :  Level 34 solved: True in 82 rollouts - solution length (moves/pushes): 69/12
+3/5/2018 - 5:32:08 PM  :  Moves: drrUdrrruullulDrrrddllURldllURRdrrruullLulDrddlluRlluRdrdrrrruulllulD
+3/5/2018 - 5:32:08 PM  :  Level 35 solved: True in 439 rollouts - solution length (moves/pushes): 139/37
+3/5/2018 - 5:32:08 PM  :  Moves: llluuuRDluuurDlddrrDulluurDurDDulldddrdrruLULrddlUlUUUdddrruLdlUUdrrULuurDDluuuurDlddrdDlddrruLuluuuurDlddrdddlUruuluurDDDLddrruLdlUUUUUruL
+3/5/2018 - 5:32:18 PM  :  Level 36 solved: False in 10000 rollouts - solution length (moves/pushes): 153/48
+3/5/2018 - 5:32:18 PM  :  Moves: ldlllllluLdllluurDldRuRldRRRuLLrrdRRlllllluurDldRRurrdrruLLLLdRllluurDldRRurrrrdRRuLLLLLrrrrrRllllllLdlluurDldRurrrrrrrrRdrruLLdLLrruLdlLrruLdlLrruLLLLLL
+3/5/2018 - 5:32:18 PM  :  Level 37 solved: True in 24 rollouts - solution length (moves/pushes): 83/27
+3/5/2018 - 5:32:18 PM  :  Moves: drruulLuLLulldRRdRRRluLrdddrruUUUddllluLulldRldRRRRRlddrruUUdllllluurDldRRRRlddrruU
+3/5/2018 - 5:32:33 PM  :  Level 38 solved: False in 10000 rollouts - solution length (moves/pushes): 81/9
+3/5/2018 - 5:32:33 PM  :  Moves: llluuurrrdDuurrrrddllLrrrddlllULLrUdrdrrruullLrrruullllllldddRluuurrrrrrrddllldlL
+3/5/2018 - 5:32:34 PM  :  Level 39 solved: True in 116 rollouts - solution length (moves/pushes): 135/39
+3/5/2018 - 5:32:34 PM  :  Moves: ruuLLrrddlUruulDlLrrrddlUruulDlluullddRluurrdDDDuurrrddlUruLLLuullddRRddllddrrUUUUlluurrDDRRurDlllDDllddrrUUUUlluurrDullddrRRRdRUddrruL
+3/5/2018 - 5:32:34 PM  :  Level 40 solved: True in 5 rollouts - solution length (moves/pushes): 36/11
+3/5/2018 - 5:32:34 PM  :  Moves: lUdrUdrruLLdlluRdrruuullDRDulDruurDD
+3/5/2018 - 5:32:34 PM  :  Level 41 solved: True in 11 rollouts - solution length (moves/pushes): 79/17
+3/5/2018 - 5:32:34 PM  :  Moves: urDurrDrddlUdllUluurrrDullDRurrdddlllUluurrdRurDllulldRRRllddrrURldlluururrDulD
+3/5/2018 - 5:32:34 PM  :  Level 42 solved: True in 427 rollouts - solution length (moves/pushes): 109/23
+3/5/2018 - 5:32:34 PM  :  Moves: rdddLdllluurrRUruulDDDlllddrrrUdlUrrUUlDuuurDlddrUddLdllluurRllddrrruruuluurDldDrUldlllddrrUdlluurRdRluRuuurD
+3/5/2018 - 5:32:39 PM  :  Level 43 solved: True in 7036 rollouts - solution length (moves/pushes): 86/26
+3/5/2018 - 5:32:39 PM  :  Moves: ldddlLLrDLdlluRdrdrUUdlluRuRRRdrUUldllldlluRRRDuRlldddrUluurrRurDluuurDlddlllddrUluRRR
+3/5/2018 - 5:32:39 PM  :  Level 44 solved: True in 0 rollouts - solution length (moves/pushes): 1/1
+3/5/2018 - 5:32:39 PM  :  Moves: R
+3/5/2018 - 5:32:39 PM  :  Level 45 solved: True in 8 rollouts - solution length (moves/pushes): 57/11
+3/5/2018 - 5:32:39 PM  :  Moves: ruLdlluuururrdLullddddrruLrUUddldlUrruuruLdddllUURlddrruU
+3/5/2018 - 5:32:39 PM  :  Level 46 solved: True in 78 rollouts - solution length (moves/pushes): 57/10
+3/5/2018 - 5:32:39 PM  :  Moves: uLrruuullldlddRRuRDrUlldlddrrUdlluururrdLddlluuluururrrDD
+3/5/2018 - 5:32:40 PM  :  Level 47 solved: True in 259 rollouts - solution length (moves/pushes): 185/32
+3/5/2018 - 5:32:40 PM  :  Moves: rrruuulldRRddlllluuRRurrrrdLulDDuulldRlllddrrrRlllluurrrurrdLLrddlllluurRRlllddrrrrRllllluurrrurDllllddrrrrUdlllluurrrRurrdLLulldRlllddrrrrrRdrruLLLLLLdlluuurrrurDDulllldddrrurRlldlluRR
+3/5/2018 - 5:32:40 PM  :  Level 48 solved: True in 82 rollouts - solution length (moves/pushes): 89/16
+3/5/2018 - 5:32:40 PM  :  Moves: rddDuuulldddRluuurrddrDLLruuulllddddrUUdrrrrddllUdrruLuLLruuulllddrDluuurDlddrrrrddlUruLL
+3/5/2018 - 5:32:42 PM  :  Level 49 solved: True in 1718 rollouts - solution length (moves/pushes): 122/25
+3/5/2018 - 5:32:42 PM  :  Moves: ldddRluuurrrddlDDDldRRdrruLdlluuuulluRdrdddRluuulluuurrrddLdlluRluurDDldRuuurrddLruulldDrDDDlddrruLrdrruLdlluuuuulldRurDDD
+3/5/2018 - 5:32:42 PM  :  Level 50 solved: True in 122 rollouts - solution length (moves/pushes): 118/23
+3/5/2018 - 5:32:42 PM  :  Moves: llulDDulldRRRurrrrdddlllllUdrrrrruuulllllDrurrdLrurrdddlllllUUluRRldddrrrrruuulldlLulDrrrurrdddlllllUUruRRRllldlluRRRR
+3/5/2018 - 5:32:42 PM  :  Level 51 solved: True in 0 rollouts - solution length (moves/pushes): 46/8
+3/5/2018 - 5:32:42 PM  :  Moves: rddllluURuLdlluurDrrdddrruuLrddllluuurDlulldRR
+3/5/2018 - 5:32:42 PM  :  Level 52 solved: True in 1 rollouts - solution length (moves/pushes): 40/12
+3/5/2018 - 5:32:42 PM  :  Moves: ddddLruuLruulDlDRllddRUdRUlluurDldRdrdrU
+3/5/2018 - 5:32:42 PM  :  Level 53 solved: True in 74 rollouts - solution length (moves/pushes): 113/20
+3/5/2018 - 5:32:42 PM  :  Moves: rUruuLullDlddRluururrdLrrddldlluRlluuRurrdLrrddLdlluluuRlddrdrruUddlluUddrruuUdddlluuUddRdrUlluuRlddrrruuLLrrddlU
+3/5/2018 - 5:33:07 PM  :  Level 54 solved: False in 10000 rollouts - solution length (moves/pushes): 77/26
+3/5/2018 - 5:33:07 PM  :  Moves: drURuRRRRdrUUldllllddrUluRRRdrruuruLdddlUllllulDrddlluRdrUluRRRRlllldlluRRRRR
+3/5/2018 - 5:33:07 PM  :  Level 55 solved: True in 4 rollouts - solution length (moves/pushes): 108/35
+3/5/2018 - 5:33:07 PM  :  Moves: rdrrrddlUruLrddddlUUruulDuLrrdddlUUruulDlLrrrddlUruulDllulldRRRRurDDDlUddRRluuuulDrddlUruLLLulldRRRRurDDDldR
+3/5/2018 - 5:33:07 PM  :  Level 56 solved: True in 9 rollouts - solution length (moves/pushes): 23/6
+3/5/2018 - 5:33:07 PM  :  Moves: luuLulldRurDrddllURuulD
+3/5/2018 - 5:33:08 PM  :  Level 57 solved: True in 760 rollouts - solution length (moves/pushes): 74/25
+3/5/2018 - 5:33:08 PM  :  Moves: dddrdrruLdlLuRdrruLLdlUUUddlldRRRluuuruulDDDDldRurrrddlUruLLLdRurDlllluRRR
+3/5/2018 - 5:33:08 PM  :  Level 58 solved: True in 19 rollouts - solution length (moves/pushes): 56/11
+3/5/2018 - 5:33:08 PM  :  Moves: luluurDRDulldRddrruLrruuLrddlldlUrrruulLLrrrddllUdrruulL
+3/5/2018 - 5:33:51 PM  :  Level 59 solved: False in 10000 rollouts - solution length (moves/pushes): 272/20
+3/5/2018 - 5:33:51 PM  :  Moves: ldllllldddlUruRurrrruullllllllddddRluuuurrrrrrrrddlllldRurrruullllllllddddrRlluuuurrrrrrrrddldLruruullllllllddddrrdrUllluuuurrrrrrrrddllllllDurrdRurrruullllllllddddrRuRlddrUUldlluuuurrrrrrrrddllldLrurrdLLrruruullllllllddddrruuRRllddlluuuurrrrrrrrddllLrrruullllllllddddrrrU
+3/5/2018 - 5:33:52 PM  :  Level 60 solved: True in 766 rollouts - solution length (moves/pushes): 251/48
+3/5/2018 - 5:33:52 PM  :  Moves: urrrrrrdddLLulldRDuRRlldDrddlUUUddLLdlluRUdRRlluUluurDuuurrrrrrddDDDuullulldRRRllddrddlUUUddllluUluuruurrrrrrddDuuullllllddDuuurrrrrrdddDullulldRRRlldddllluUluurDDDuuuuurrrrrrddDllldddlldlluRRRlluuuuuurrrrrrdddlllddrddlUUUddllluuuuuurrrrrrdddllulldRRR
+3/5/2018 - 5:33:55 PM  :  Level 61 solved: True in 2731 rollouts - solution length (moves/pushes): 162/29
+3/5/2018 - 5:33:55 PM  :  Moves: lDDlDDrrULdlUruuuruullllldddddrRuRldRdrruLUlldRurUdlldlluuuuurrrrrddLLrddlddrruLulldRdrruruLLrdLuuuruullllldddddrrRdrUUUddlluRldlluuuuurrrrrddLruullllldddddrrrrUU
+3/5/2018 - 5:34:06 PM  :  Level 62 solved: False in 10000 rollouts - solution length (moves/pushes): 88/31
+3/5/2018 - 5:34:06 PM  :  Moves: LLLLullDRRldLrurRRlllldLLrruulDLddlluRluRRRRRllllddrUluRRurrddlLrruRldlluRRllllddrUluRRR
+3/5/2018 - 5:34:06 PM  :  Level 63 solved: True in 48 rollouts - solution length (moves/pushes): 119/52
+3/5/2018 - 5:34:06 PM  :  Moves: llllLLdlUruulDLLLLLLulldRurDrrrrrrrddlUruLLLLLLLulldRRRRRRRllllddlUrurrrrRurDldRlulllllLulldRRRRRRRRdrUdRRRRRdrruLLLLLL
+3/5/2018 - 5:34:10 PM  :  Level 64 solved: True in 2865 rollouts - solution length (moves/pushes): 121/32
+3/5/2018 - 5:34:10 PM  :  Moves: ldlluulUluurrrddLLrruullDurrdLddddrrurrdLLLdlUUUUruulDDDDuuuulldRurrddlddDuuuruulDDDDulUruulldRlldRRuurrdLDlluRdrDluuurDD
+3/5/2018 - 5:34:25 PM  :  Level 65 solved: False in 10000 rollouts - solution length (moves/pushes): 225/50
+3/5/2018 - 5:34:25 PM  :  Moves: uuuuLrddddlluuRUrDuuulDrddDullddrdrruLLruulldlluRRlddRuuRlddRdrruLLLullddrUluRurrUrDDulllddrrdrruLLLLdlUruLrurrruuulDDuulldRurrdddddllluurRuruLrdDDuluuulldRRurDlddllddrrdrruLuuluurDDlllddrRdrruLLLLuurrrDulllddrrdrruLLLrruullD
+3/5/2018 - 5:34:26 PM  :  Level 66 solved: True in 76 rollouts - solution length (moves/pushes): 145/19
+3/5/2018 - 5:34:26 PM  :  Moves: DDlldlddddrdRluluuuururrDDrddlUddDldRlululuuuururrrrdrddddldLDururuuuululldDrddlUUdddDuuuuUdddddrdLrururuuuululLddddddlluluuuuruRldlddddrdrrdddrU
+3/5/2018 - 5:34:26 PM  :  Level 67 solved: True in 5 rollouts - solution length (moves/pushes): 53/10
+3/5/2018 - 5:34:26 PM  :  Moves: uurrdrddrddllUdrruulLruulDuullddRRDrrddllUlURuuullddR
+3/5/2018 - 5:34:38 PM  :  Level 68 solved: False in 10000 rollouts - solution length (moves/pushes): 59/17
+3/5/2018 - 5:34:38 PM  :  Moves: luuurrrRdrruLLLLdRluLulDDlddrrrUUruLrrrdLullLrrrdLullulDrrD
+3/5/2018 - 5:35:16 PM  :  Level 69 solved: False in 10000 rollouts - solution length (moves/pushes): 111/29
+3/5/2018 - 5:35:16 PM  :  Moves: rurrrurrDrrddlUdlUUdrruLULLLulDrdLLrrddlllluuurDDldRuurrrurrrddlUruLLLulDrrruurDDlddrruLullldLrurrrddlUruLLLulD
+3/5/2018 - 5:35:21 PM  :  Level 70 solved: True in 5292 rollouts - solution length (moves/pushes): 116/30
+3/5/2018 - 5:35:21 PM  :  Moves: rdrrrddlUruLLLdRluullddRDuRldDldRuuuruulDDDDrDuluururrrddlULulldddDuuuurrdrruLdlLulDrrruLdllDurruLdldDldRuuuruulDDDD
+3/5/2018 - 5:35:23 PM  :  Level 71 solved: True in 362 rollouts - solution length (moves/pushes): 166/25
+3/5/2018 - 5:35:23 PM  :  Moves: urDDululldRldddddrrrrrrrrrruuuuulllddllldlluRuuLrddRRlluululldRurrdLrddrrRllluululldRurrdddrrrdrUUdlllluuulldRurDDullldddddrrrrrrrrrruuuuullulldRRRllddllldlluRRRRdrUU
+3/5/2018 - 5:35:24 PM  :  Level 72 solved: True in 439 rollouts - solution length (moves/pushes): 167/48
+3/5/2018 - 5:35:24 PM  :  Moves: llLDlluRdrDDrrddlULuuuluRRlddddrruLdlLdlluurDrddlUluRRRUrrdLLLdlluurDDldRururuUUluurDDDuurRllddDrdLLruuuurrdrruLLLLdlluRdrdddldlluurDDruruuuluurDDDDrdLLdlluurDldRlddrU
+3/5/2018 - 5:35:31 PM  :  Level 73 solved: True in 3434 rollouts - solution length (moves/pushes): 143/25
+3/5/2018 - 5:35:31 PM  :  Moves: uulllluurDDDurrrddddlllluuRuurruLdlluurDldRRlddlddrrrruuuuruLLrdddddlllluuruurRurDluLrrdDDDuuulllddlddrrrdrruLLLrruuuulllluurDDDurrrddddllLdlUU
+3/5/2018 - 5:35:38 PM  :  Level 74 solved: False in 10000 rollouts - solution length (moves/pushes): 134/34
+3/5/2018 - 5:35:38 PM  :  Moves: lulDDDRRlluurrDRRRurrddlUllllullddrddrruUddlluuluurrdRRRuRDllllullddrRlddrruUluRldllldRurrruRRRllldddllUdrruulLdlluRRRurDllddrrUUluRRR
+3/5/2018 - 5:35:44 PM  :  Level 75 solved: False in 10000 rollouts - solution length (moves/pushes): 178/34
+3/5/2018 - 5:35:44 PM  :  Moves: ddlluLuLrdrdrruLdlluuRllLrrdRdrruuLrddllluullulldRRdRRuLdlUrrddrrruulLrrddlllulluUdrdrdrrruullLdlluluuRRRlldddrruLdlUUdrrddrUdrruulLLrrrdLullLrrrdLdlUllUluuRlddrrdrruLdlluluurDuR
+3/5/2018 - 5:36:15 PM  :  Level 76 solved: False in 10000 rollouts - solution length (moves/pushes): 254/49
+3/5/2018 - 5:36:15 PM  :  Moves: rddrddrrrrUUlDuuuurrdLulDDDrUluurDlddrddLLLdlUUluuuuurrddddLdlUrddrrrruulDrdLLrruuUldddlLrruuuuurDlddrUldddlldlUrrruuuuurrdLulDDDrddllllUluUluururrddddLruuuullldddrUluurrrddddlddrrrruulDrdLLLdlUUlUluurUluRlddddrUUluururrdddddLruuuuulldRllddrUluRurrDulldR
+3/5/2018 - 5:36:21 PM  :  Level 77 solved: False in 10000 rollouts - solution length (moves/pushes): 100/13
+3/5/2018 - 5:36:21 PM  :  Moves: ddddrrurrruLrdrruLdlllldlluuururrrrrDDrdLuuullllllddddrrurruRldllLdlUrruRldllUdrrruRlldlluUrurrrrrdD
+3/5/2018 - 5:36:28 PM  :  Level 78 solved: False in 10000 rollouts - solution length (moves/pushes): 167/27
+3/5/2018 - 5:36:28 PM  :  Moves: uUrRuurrdDDuuullddllddrrrRuuuulldRldllddrrrrRllllluurrururDllullDurrrrdDDuullulldldRddrrrdrruRlLuuulldRluullddddrrdrruuUlluullddRluRurrrDlulldRRlldRllddrrdrruLdlluRRRR
+3/5/2018 - 5:36:28 PM  :  Level 79 solved: True in 73 rollouts - solution length (moves/pushes): 62/18
+3/5/2018 - 5:36:28 PM  :  Moves: lLLdlluRRluurDDRRRllluurrDullddrRdrrULLrrruulDrddllluLrrdrruLL
+3/5/2018 - 5:36:43 PM  :  Level 80 solved: False in 10000 rollouts - solution length (moves/pushes): 137/30
+3/5/2018 - 5:36:43 PM  :  Moves: lddrUdrruLUddlluuRldRdrruuLUdrddllluuRddrruuLuUllluUddrrrUdllluuluurDrrdRRRurDlllddddrddllluuRddrruLUddlUruUUUdllluUluRdddrrrdddlluRdrUUU
+3/5/2018 - 5:36:43 PM  :  Level 81 solved: True in 325 rollouts - solution length (moves/pushes): 52/14
+3/5/2018 - 5:36:43 PM  :  Moves: luuurrdLDlUddddrruLUUUruullDDrddlluRdrddlUruUlldRdrU
+3/5/2018 - 5:36:43 PM  :  Level 82 solved: True in 48 rollouts - solution length (moves/pushes): 104/20
+3/5/2018 - 5:36:43 PM  :  Moves: drrruUlUdrruLuLLulldRDuRldDlddrrrruuuuLrddddlllUdrrruuuulLulldRdDlddrrrruuuulLulDrrrddddlllUdrrruulUruLL
+3/5/2018 - 5:36:57 PM  :  Level 83 solved: False in 10000 rollouts - solution length (moves/pushes): 325/64
+3/5/2018 - 5:36:57 PM  :  Moves: rruuuuuLullDRlDDDDrrruuuuLulldRlddddrddlUrrruuuuuLLulldRdddDrrruulUrdddllluuuRRlldddrddlUrrruuululluurDurDrDDDDuulUrdddlldlUUUddrrrrdLullluuUdddrrruuluLuurDldRluulldRurrdddrdddLruuuluurDluulldDuRdrrDDDldRlulldRluuUUruurDlulDrrrddddllluuUruulldRdrRurDDlulluRurDrddDuuulldRurDllldddrrRllluuurrrDlulldddrrrdLullddrUluRluuurrrdDD
+3/5/2018 - 5:37:11 PM  :  Level 84 solved: False in 10000 rollouts - solution length (moves/pushes): 218/48
+3/5/2018 - 5:37:11 PM  :  Moves: dRluuRDrDulldRurruLrddLDuuuuullllddddddrrrRRRlluuulluRdrdddlllluuuuuurrrrdDDuuullllddddddrrrrrrdrruLLLLLLdlluuuuuuurrrrdddDuuuulllldddddddrruLdlUUUUUluurrrrrddddDuulldRurDuuuulllllddrUluRddddddrrrRRRdrruLLLLLLLdlUUUUUU
+3/5/2018 - 5:37:32 PM  :  Level 85 solved: False in 10000 rollouts - solution length (moves/pushes): 466/60
+3/5/2018 - 5:37:32 PM  :  Moves: luuuurrurrdRlulldlluRdrRurrdLLrrurrdLullldLLrrrurrdLulldllulDDDuuruRlldddDuuurruRlllddddldRRlddrruUlluuuurrruRlllldddddrrrruullDurrddddlllluuuuuurrrurRllllldddddrRlluuuurrrurrdLLLLulDDDuurrrrrrruLdlluRdrruulDrdLulllllldddDuuurrrrRllllldddldRuuuurrrrrurrdLulllllldddddddrruuRlddlluuuuuurrrrurrdLullllldddddddrrrruUllddlluuuuuurrrurrdLulllldddddddrrrruuUdllddlluuuuuurrRlllddddRRlluuuurrrurrdLLullldddddrrddrruuuruLddddlllluuuuuururrdLLulDDDDldRRlddrruUddrruuLLddlluuR
+3/5/2018 - 5:37:32 PM  :  Level 86 solved: True in 135 rollouts - solution length (moves/pushes): 159/29
+3/5/2018 - 5:37:32 PM  :  Moves: drrrUUddllluuRlddrrruuLDrdLLdlluuruRldlddrrurrurruululDrrddllldldlluurDuuruRDDulldlddRuuurrdrdLLruulldDrrrurruulLDurrddlLulDuluRdrdrruululDDurrddlLdLLrruulDrdL
+3/5/2018 - 5:37:55 PM  :  Level 87 solved: False in 10000 rollouts - solution length (moves/pushes): 205/35
+3/5/2018 - 5:37:55 PM  :  Moves: luRluurDllluRUUluRddddrruLdlluRuuuRRRdrruulDrdLullllddddrruLdlUUUddrdddrUlluuuuluRRldddrrDlluuuruRRllldddrdddrUlluuuurrurRlllldddrddrdrruLdlluluuuurrurrurDllllldddrdddrruLdlUluurrDullddrdrruLuLrddlUlUdrruL
+3/5/2018 - 5:38:30 PM  :  Level 88 solved: False in 10000 rollouts - solution length (moves/pushes): 395/53
+3/5/2018 - 5:38:30 PM  :  Moves: rrruuuulUruulDrddddlDrdLLdlluRRRuruuulUrdddlUruulDDruuuurrdddddddldlUrruuuuuuullddlddDruuuuulDrurrdddddddllUdrruuuuuuullldDrddldDrdLruUddrruuuuuuulllddDDuruuurrdddddddlllLrruuUlDrddlldlluRRRUruuUluururrdddddddldlUUdrruuuuuuullldddrUluurrrdddddddlluUddrruuuuuuulllddddDDuuuruUluRldddddrUluuruuRllddddrdddLuuuuuruururDlllddddrUddddrruuuuuUddddddllluuuuuurururDllldddrUUluRldddddddLdlluRRRuruuuuuuR
+3/5/2018 - 5:38:42 PM  :  Level 89 solved: False in 10000 rollouts - solution length (moves/pushes): 137/35
+3/5/2018 - 5:38:42 PM  :  Moves: ddrDlddrUUluuuurrddLruulldDDDrddllluuuuuRllulldRRRddddrdrruLuuurruullDDDDrUluuurrddLruulldLrDrddlDLdlUrrrdLLrruuuulDDrdLLruuuulLLulldRRRR
+3/5/2018 - 5:38:44 PM  :  Level 90 solved: True in 628 rollouts - solution length (moves/pushes): 127/24
+3/5/2018 - 5:38:44 PM  :  Moves: lDrrurrdLLLrrdDrdLulldRluLrrrrdLullldlluRdrrurruullulldRurrrdddlldlluRRRRuululldDuurrrdddlldlluRuuurrdLulDrrrdddrruLLuulllDDldR
+3/5/2018 - 5:38:44 PM  :  Level 91 solved: True in 23 rollouts - solution length (moves/pushes): 52/14
+3/5/2018 - 5:38:44 PM  :  Moves: rrdrrruulDrdLuLrdLuLLullllddrrURldlluurRRdRlldlluRRR
+3/5/2018 - 5:39:44 PM  :  Level 92 solved: False in 10000 rollouts - solution length (moves/pushes): 137/40
+3/5/2018 - 5:39:44 PM  :  Moves: uuullllLLrrddllULLrUdldlluRRRuUluurDDDRRRRRRlllddllUdrruurrrRllllddlluLLrrdrruurrrrddrruuLruulldDllllddllulldlluRRRuRRRRRRlllddllUluRRRRR
+3/5/2018 - 5:40:21 PM  :  Level 93 solved: False in 10000 rollouts - solution length (moves/pushes): 69/17
+3/5/2018 - 5:40:21 PM  :  Moves: uLrRdDlulDllddrUdrUUrrrrddllUdrruLuLuuuurrddLruulDlDlluulldRldRRluurD
+3/5/2018 - 5:40:23 PM  :  Level 94 solved: True in 1645 rollouts - solution length (moves/pushes): 91/31
+3/5/2018 - 5:40:23 PM  :  Moves: rdRRurDDulllulldRDuRRRurrdLdDrddlUlulldlluRuurrRurrdLdDrddlUruLLruuLLLulldRRRRurDDDrddlUruL
+3/5/2018 - 5:40:23 PM  :  Level 95 solved: True in 0 rollouts - solution length (moves/pushes): 105/16
+3/5/2018 - 5:40:23 PM  :  Moves: ddddrdrUlluuururrDrrddLruullLullddddrrUddrruuUdddlluRllluRdrrdrruLdlluRdrruuuuulDrddlUruullllldRDDuuurrdL
+3/5/2018 - 5:41:05 PM  :  Level 96 solved: False in 10000 rollouts - solution length (moves/pushes): 75/26
+3/5/2018 - 5:41:05 PM  :  Moves: RRdrruLLLrrdddLLdlluRuuULLulldRRRRRldddRluuurRdrruLdddLruuuLLrrdddlLdlluRRR
+3/5/2018 - 5:41:25 PM  :  Level 97 solved: False in 10000 rollouts - solution length (moves/pushes): 128/23
+3/5/2018 - 5:41:25 PM  :  Moves: drDuRlluurrRRddddldllUUluuurrruurDrRRRRRllllllldllldddrddrrruuuuUlllldddrruRldlluuurrruRldlllddRdddrrruuUUUllllddrRRlldddrrruuUU
+3/5/2018 - 5:42:11 PM  :  Level 98 solved: False in 10000 rollouts - solution length (moves/pushes): 193/56
+3/5/2018 - 5:42:11 PM  :  Moves: lldlluuuullLLLuLulldRDRRRRRRurDDullllluLdlluRdrrrrrrrdDuullllllluurDldRRRRRRlllllDurrrrrurDDulllllldDrddlUUUddlluRdrUlUURRRRRRllllluulDrrdrrrrurDllllllulldRRRRRRlllllddrUluurrdrrrRllllulldRRRRR
+3/5/2018 - 5:43:37 PM  :  Level 99 solved: False in 10000 rollouts - solution length (moves/pushes): 278/62
+3/5/2018 - 5:43:37 PM  :  Moves: rrdrrrrrddrrrrUdrrrrrruulDrdLLLLuLrRldLLrrruRdrruulDlllldlLLrrrrrrurrdLulllldlllLrruRdrrrRurrdLLulldlluRlldlldlUUdrrrruUdrdrRurrdLulLdlluRlldllluUddrrrruuUluRdddldllluuruulDrdLddrrrruuuuRdrruruulldDlldddrRlluururrdLLulDDDrdLLrrruRlllldLLdlUUdrrrrrrurRdrruLLLrdLuLrdLuLrdLLLLLdlU
+3/5/2018 - 5:43:43 PM  :  Level 100 solved: False in 10000 rollouts - solution length (moves/pushes): 146/42
+3/5/2018 - 5:43:43 PM  :  Moves: lddrDluuurDrrrDldddrruLdlUUUruLrdDrdLdlUruuluLLulDDurrrrdddlUruulllldDrUluRRRDuurDDlDurDrddllUUrrdLulUrdddlUruuuLrdddlUruulLLulDDrurrrddlUruLLLulD
+3/5/2018 - 5:43:43 PM  :  Level 101 solved: True in 23 rollouts - solution length (moves/pushes): 206/29
+3/5/2018 - 5:43:43 PM  :  Moves: ruullluuRlddldDllddrrUrrUUdrruuuuLrddddlldllUdrrurruuuulLuullddRddRllDurrRlluuRlddrddrrrruUrruullDlluLrdDDulllldDuurrrrurrDulldllllddllddrrUrrdrRllullUdrruuullDurrddddrrddrruuLuuLuullluuRlddrrrddrrUdlluuuuL
+3/5/2018 - 5:44:11 PM  :  Level 102 solved: False in 10000 rollouts - solution length (moves/pushes): 249/45
+3/5/2018 - 5:44:11 PM  :  Moves: rrururrrddddLruulDruuulDLLrrrddlUruulDllLrrrrddlUruLulldldllluurrDrrurrdLLrrrddddlUUUruullldLrrurrddldddlluRdrruuuuullldldLLdlluururrDrdLdllUdrruLrrurrurrdLLrrddddlUruululLrrrdddlUruulllLdlldlluuurrrDrddlluLUdrdrruLLdllUUdRdrrruurrrrddlUruLLLLdlLdlU
+3/5/2018 - 5:44:11 PM  :  Level 103 solved: True in 3 rollouts - solution length (moves/pushes): 101/16
+3/5/2018 - 5:44:11 PM  :  Moves: ululldRldllddrdrruurruuLrddllddlluRlluurrDuuRlddrrruuLullddllddrdrrUdlluluurrdRlDuuuurrdLulDrDLddrUUU
+3/5/2018 - 5:44:11 PM  :  Level 104 solved: True in 22 rollouts - solution length (moves/pushes): 221/49
+3/5/2018 - 5:44:11 PM  :  Moves: ulLLLDurrDulldlluRRRRurrdddldlllUUddrrrruuuullddDrdLrruuuLulDDDrddlUrruuulllLrrdDrddlUrruuulllldddRluulluRdrddrRlluuluRRRurrdLLdDrDLddrUluurDluuuLLrrdddddrUluuuulldlluRRRldddRluuurRurrdLrddlDruuululDrrddldLddrUluurruullDD
+3/5/2018 - 5:46:21 PM  :  Level 105 solved: False in 10000 rollouts - solution length (moves/pushes): 75/20
+3/5/2018 - 5:46:21 PM  :  Moves: lddLrrruuuuRurrdLLLdlldddldlluRRRuuuuRdrdrUllldlDrrrdLrRdrruLLUluurDDDrddlU
+3/5/2018 - 5:46:35 PM  :  Level 106 solved: False in 10000 rollouts - solution length (moves/pushes): 122/29
+3/5/2018 - 5:46:35 PM  :  Moves: rrrurrdLLLulldddrdRurrUdllllldRuuuurrdLrrurrdLLulllDDururrdLLulDrrrrddDrrddllUUUlldRurUruLLrddldRddrruuLrddlluUllLrrrUUruL
+3/5/2018 - 5:46:37 PM  :  Level 107 solved: True in 5247 rollouts - solution length (moves/pushes): 90/14
+3/5/2018 - 5:46:37 PM  :  Moves: uuuuulllDulldddRRllddrrrrruuuLDrddllllluurrUdRluRldllddrrrUdllluurrurDllluuurrDDrdLuuulldR
+3/5/2018 - 5:46:55 PM  :  Level 108 solved: False in 10000 rollouts - solution length (moves/pushes): 331/60
+3/5/2018 - 5:46:55 PM  :  Moves: rrrrdrrrrrUldlluRdrruruuLullDDDuuurrdrddlUdLdLLLLLLulllddrrUruLLruulldDrrrrrdrruRuuurrDrddlLrruulullddDrrruulDuLrrddLdlLLrrruLdllLLLulldRldllUUrrrrrdLrrrrrruuululDrrddldlllllLulllddrrUruLLLrruullldDuurDurrddddlluUUluurDrrddrrrdrruRdrruuullDurrdddlllllllluuullDDrrrrrdrrrrruuulldDuurrdddlLrruLdlUrruullDurrddldlLrrruuulldDldLrurrdLL
+3/5/2018 - 5:47:31 PM  :  Level 109 solved: False in 10000 rollouts - solution length (moves/pushes): 286/33
+3/5/2018 - 5:47:31 PM  :  Moves: ldddrdrdrrdddlluUddrruuuuuuuuuulllldddddrdrDululuuurrRllldddrdrdrrdddlluUlUdrddrruuuuuuuUddddddddlluuluRdddrruuuuuuuulllldddrDululldRuruurrrrddddddddlluuuRluluLuuurruurrDulllldddddrdrddddrruuUllulululldRdRdRRlluluuruurruurrdDDDuullllddlddrdrruLrdRlluuLulldRdRluurDrDulldRdRluurDrDulldRR
+3/5/2018 - 5:47:31 PM  :  Level 110 solved: True in 21 rollouts - solution length (moves/pushes): 109/30
+3/5/2018 - 5:47:31 PM  :  Moves: uulllluRdrrrddlUruuurrdLulDulluurDldRRdDurruLdldLddrUUlLUlldRRuUruulDrdRDrruLdlDuruLddLLrddrUlululldRurURuulD
+3/5/2018 - 5:47:59 PM  :  Level 111 solved: False in 10000 rollouts - solution length (moves/pushes): 270/58
+3/5/2018 - 5:47:59 PM  :  Moves: DRlluuurDRllddrUdrUrUdrdddlllUUddrUdrruuullDuruUUdddrdLuuuruuLddddrdddllluuluRdddrrruuluuuuuLrddddrdddllluuuRldddrrruulUUUruullulldRurrrdddlUUruLdddddlldRuruuuuuLrdddddrdLullluurDRllddrUluRdrrUUUUruLdddddlluRdrUUUUdddllddRlddrUUUrrdLrddlluUluuRldRdrruLUlldRurUUddlddrUUU
+3/5/2018 - 5:48:25 PM  :  Level 112 solved: False in 10000 rollouts - solution length (moves/pushes): 175/50
+3/5/2018 - 5:48:25 PM  :  Moves: rrruuuruuuLLLDlddrUlulluururrDulldRDDuRDuRlluurDlddrUrRurDDDrdLulDDDuuruuulllluurDldRRRurDluLdlluRdrrrDuluLdlluurDrrrddDldddDrddlUruLLruuuurrdLulDDDuuruuullulldRRRurDDDrdLulDD
+3/5/2018 - 5:50:02 PM  :  Level 113 solved: False in 10000 rollouts - solution length (moves/pushes): 224/51
+3/5/2018 - 5:50:02 PM  :  Moves: rRRdrdRDluluuurDlddrrdrUllluurrDLddrUllUruLLrrdddddrUluurDluuurDllulLrrrdddrruLrruLdldlUUlulldlUrrrdrdrruLdldddrUluuluulluLrdrrddrruLruLLrddlUrrdDlddrUUruLdlUruululDLLrrrDullldlUrrrrdDlUrrdddlUUruulLrrdLdlUruulDLLrrrddlUruLL
+3/5/2018 - 5:50:12 PM  :  Level 114 solved: False in 10000 rollouts - solution length (moves/pushes): 135/29
+3/5/2018 - 5:50:12 PM  :  Moves: ddrrdLuluuluullddRlddldRdrrUdlluuuurRllddddrruLdlUUUUluurDldRRldddrrRurrdLLLLdlUrrrrrurrdLullldlllUdrrrrurrdLulldllluUddrrrurrdLLLLdlUU
+3/5/2018 - 5:50:24 PM  :  Level 115 solved: False in 10000 rollouts - solution length (moves/pushes): 176/27
+3/5/2018 - 5:50:24 PM  :  Moves: drrUUddlluRdrUlldllURlUUdrdRlluuluRddrdrdrruLdllluuuuRRllddrdRlluuurrdrRRuullDurrddlLulllddrdrdrruUddlllluuuurrrurrddLdddlluRdrUUdlllluuurrrurrddRddLruuurrdLullulldlllddrdrrdrU
+3/5/2018 - 5:50:24 PM  :  Level 116 solved: True in 114 rollouts - solution length (moves/pushes): 93/16
+3/5/2018 - 5:50:24 PM  :  Moves: drrrdrruUruulldlDururrddlddllUdrruuruulldRlllDurrrdddlluUluRdRlddrruUlllLdRllluRRdrUrrrddllUU
+3/5/2018 - 5:50:57 PM  :  Level 117 solved: False in 10000 rollouts - solution length (moves/pushes): 565/60
+3/5/2018 - 5:50:57 PM  :  Moves: lllllddrrrdrddlUdlluRUddrruLruLuLLLdllddrRlluurUldddrrRllluurruuurrrrrrddddLLdlUrrruululullllddlUruulDrddlldddrrrRlllluurruuurrrrrrddddlldLrurruululullllddrrrDullllUrdrrrdrddlUrrruulululllldldldddrrruRldllluurruuurrrrrrddddlldlLuUddrruuLrdrruulululllldldldddrrRllluurruuuulDrrrrrrrddddlluluLrdrdLuulLLdllddrrruRRllddrUruuullluurrrrrrddddlLdlllllluuuRdrUrrrdrddlUrrruulululllllDurrrrrrrddddllldllllluurUldddrrrrrrurruululullllDDlldddrrruRUddrruuLuLrdrdLuulLrrdddlluRldllluuruUdldddrrrrrruulullLrrrdrddlluUruLrdrdLuluLrrdddlUUrrdrruulululllldlDuruulDrrrrrrrddddllluuL
+3/5/2018 - 5:51:17 PM  :  Level 118 solved: True in 3374 rollouts - solution length (moves/pushes): 268/66
+3/5/2018 - 5:51:17 PM  :  Moves: rrruuluuululldRdDDDuuuRlulldRururDlDDDuuurrDrddlUrdddlldlluRUUUdddRRRdrUUruLdlUddllluuuUluurDDDDDuuuurrDLulDDDuurrrDDlUruLrdrdddllldlluRRRRUruulluulldddDuuuurrdrdrddlddrUluUddrUldlldlluRuuuuurrdLulldRurrdddrdrruLdldlLdlluRRRlluuuuurrdLulDDDDuuurrddRdrruLdddlUlldlluRRR
+3/5/2018 - 5:51:21 PM  :  Level 119 solved: True in 2723 rollouts - solution length (moves/pushes): 213/24
+3/5/2018 - 5:51:21 PM  :  Moves: drddrruruuuulullldDlddrrruuLDDDulluRluRuurrrdrddddldlLuuruuLrddlddLrrruruuuulullldDrDDDuuuluurrrdrddddldldlllluRdrrUrruruuuululllddDuuurrrdrddddldllLrrruruuuululllddrddDuuluuurrrdrddddldldlluRldlluRdrruuuulldRurDD
+3/5/2018 - 5:51:33 PM  :  Level 120 solved: False in 10000 rollouts - solution length (moves/pushes): 291/66
+3/5/2018 - 5:51:33 PM  :  Moves: lluuRRRRRRurDlllllllddrddldRuuuluurrrrrrrDDrdLuuulllllllddrddldddrUluuruuluurrrrrrrdddLLrruuulllllllddrUluRRRRRRlllllddddlddrUUUUluurrrrrrurDDrddllldlldLrurrurrruulDrdLLruuulllllllddrUdddlddrUUUUluuRDuRRRRRurDlllllldDDuuurrrrrrDulllllldddDuuuurrrrrrdDrdLuuullllllddddDlddrUUUUUUluRRRRRRurDDD
+3/5/2018 - 5:52:01 PM  :  Level 121 solved: False in 10000 rollouts - solution length (moves/pushes): 116/27
+3/5/2018 - 5:52:01 PM  :  Moves: lluuUruUlldRurUdldddddrrrdrruLrdrruLdlluLLrrdrruLdllulLdlUrrrRllllUUUdddrrrrdrruLdllullluuuUddddrrrdrruLLLLdlUUUUrUU
+3/5/2018 - 5:52:36 PM  :  Level 122 solved: False in 10000 rollouts - solution length (moves/pushes): 600/92
+3/5/2018 - 5:52:36 PM  :  Moves: lluuRDluuuurrDulldddrdDluuuuurrdrrdddlULrruullullddddrdDuluuuuurrdrDulDuullddddrddDuuluuuRlddrdddldRRluuuluuurDlddrddrdRRRRurDlllllluuuUluurRurrdLulullddrDDDDuluuuuurrdrrdddlULrruullullddrDlddrdDuuUUrrruulDulDuullddRdddddldRRRRRlllluuuluuuuurrdrrdddlUruulDulullddrdddddrrrrdRRurDllllllluuuluuuuurrdrrdddlULrruullullddrDrUdrruulDllldddrUluurrrrdLullDlddrUluuuurrDullddrDDDuuuRurrddlLuurDlllddrdDuluuurDrurrdLLulldddrdDldRRRlluuuluuRlddrddrrdRllluuuluurDDDuuuurrdLullddrUdddDrrrdRurrdLulllllldRuuuluuuRddddddRluuuuurUlluurrDrddllddddrrrdRlullluuuurruulDldddddrdRurrdRlulldRllluuuuuurrdLulDlddrddrrrrrdR
+3/5/2018 - 5:52:48 PM  :  Level 123 solved: False in 10000 rollouts - solution length (moves/pushes): 143/37
+3/5/2018 - 5:52:48 PM  :  Moves: ddlDDuuruulDruuulDulldRRurDDDlUruulldRdrdrdddlluUUdddrddlUruruuulldRluUrdrDDulldDrRRRlllddlUUUUUrrdddrrRuurrddLdlUUdrruululldRRlddrruUUruLdlluR
+3/5/2018 - 5:53:11 PM  :  Level 124 solved: False in 10000 rollouts - solution length (moves/pushes): 65/13
+3/5/2018 - 5:53:11 PM  :  Moves: urrDDuulldRurDllulldRRRlldddddrrrrrrrrrruuuuulllddllldlluRRRRdrUU
+3/5/2018 - 5:53:30 PM  :  Level 125 solved: False in 10000 rollouts - solution length (moves/pushes): 148/46
+3/5/2018 - 5:53:30 PM  :  Moves: ululDDDuurrddLrrddllULLLLLLulDrrrrrrrdrruuluulldDuurrddLdLLLLLLLrrrrrrruruulldDrdLLLLruRdrruruulldDlldlLulllDrurrdLrrrrurrdLLLLLulDulldRRRRRurrdLLLL
+3/5/2018 - 5:53:36 PM  :  Level 126 solved: True in 3547 rollouts - solution length (moves/pushes): 121/27
+3/5/2018 - 5:53:36 PM  :  Moves: ullllllDulDrurrrrrrdddlluURuLdddlluULrddrrrruUruLdllddlluuRlddrruUlllulldRDulldddrrUUUlldRlddrruUluuRlddrURRddrruuLLLLdlU
+3/5/2018 - 5:53:50 PM  :  Level 127 solved: False in 10000 rollouts - solution length (moves/pushes): 78/18
+3/5/2018 - 5:53:50 PM  :  Moves: uRRRdrruLuulluurDrdddLLLdlluRuuuRldddRRlluuurRdRluurDlllddrdrRllluuurrrrDulldR
+3/5/2018 - 5:54:07 PM  :  Level 128 solved: False in 10000 rollouts - solution length (moves/pushes): 44/10
+3/5/2018 - 5:54:07 PM  :  Moves: rrurruulllulldRRdLruRRurrdLddlldllUUruulldRR
+3/5/2018 - 5:54:20 PM  :  Level 129 solved: False in 10000 rollouts - solution length (moves/pushes): 31/11
+3/5/2018 - 5:54:20 PM  :  Moves: rdRRllulldRRRllldlluRRRRdLulldR
+3/5/2018 - 5:54:35 PM  :  Level 130 solved: False in 10000 rollouts - solution length (moves/pushes): 84/22
+3/5/2018 - 5:54:35 PM  :  Moves: lulluurrDRRRRRlllllulldRRRRRllDurrdrrrUldllulldLrurrRdrUllllldddrUluulldRurrDLulldRR
+3/5/2018 - 5:54:37 PM  :  Level 131 solved: True in 1193 rollouts - solution length (moves/pushes): 128/39
+3/5/2018 - 5:54:37 PM  :  Moves: ddldRDRddlUUUURDrruLdllddrUluuUUruulDldRddRlddrUrrdLLdlUUUUUluurrdLulDrddddrrruulDDuLrrddLullUrrddLdlUruulUdrddlUluRuUdddrruLdlU
+3/5/2018 - 5:54:46 PM  :  Level 132 solved: False in 10000 rollouts - solution length (moves/pushes): 84/17
+3/5/2018 - 5:54:46 PM  :  Moves: DrrDDllUdrruulLrrddrruLdllluuulDrrrDrdLrrrruLdlllLrrrruLdlluulldDrrrruLdllluurrDrdLL
+3/5/2018 - 5:55:03 PM  :  Level 133 solved: False in 10000 rollouts - solution length (moves/pushes): 194/41
+3/5/2018 - 5:55:03 PM  :  Moves: RluurrrrrdddLLuLLrrdrruLdldllURuRldlLrrRlllUUUddlldRuruurrrrrdddLLdlluLrdrruLuLrddlUrrrruuulllllluRRRdrrrddLdllllUUddrrrrruuullllulldRdddrruLdlUrrdrruLdlllulldRRuUUluRdddrRlluuRRllddrrdrruLdldlU
+3/5/2018 - 5:55:31 PM  :  Level 134 solved: False in 10000 rollouts - solution length (moves/pushes): 284/56
+3/5/2018 - 5:55:31 PM  :  Moves: rurrdrruUUdddllLrrruuuUddddllluluuulLrrrddddLrrrruuuuruulDDDDDrdLLLuluuuuRRlldlllulldRRRRdrrdddrruuuuruulDlllDldRldddLruruuuurrrDDDuuullldlddddldlUUUUdddrrurrdLuuuuurrrdddDuuuullldddddLLdlUUUddrrruuuuurrrddddrdLLLLLuuuulLulldRRRRdrdrddrruuuuulllDDlddrruLdldLruUddldlUrrruuuulDrddldllU
+3/5/2018 - 5:55:50 PM  :  Level 135 solved: False in 10000 rollouts - solution length (moves/pushes): 155/30
+3/5/2018 - 5:55:50 PM  :  Moves: ullDurrddlddRRuuluulllldddrRlluuurrdDrrrddRRllllUdrruuluulllldRurDllddrRlluurrDRRRRlddrruruulDDullddllUdrruuluullddRRllullddrRurrRddllUdrruuRRllluullddRRRR
+3/5/2018 - 5:56:01 PM  :  Level 136 solved: False in 10000 rollouts - solution length (moves/pushes): 133/20
+3/5/2018 - 5:56:01 PM  :  Moves: rddLruullllLrrrrrddlLrUruLLLdlluuurrrrDulllldddrruLdllddrrrUrrruuLuulllldDuurrrrddddlldllluuRuuurrrrddLLLrrruulllldDrrrrddllUdrruulLL
+3/5/2018 - 5:56:26 PM  :  Level 137 solved: False in 10000 rollouts - solution length (moves/pushes): 272/44
+3/5/2018 - 5:56:26 PM  :  Moves: uuurRdLulDDDlldddrruUUrrUUllDurrddlLLrdddlluuluRdddrruuurrurruLLddllLrdddlluuluurDDurrrruuLulDrrddlldddllUdrruuurruullDurrddlLuuruurDlldddLrrrurruuLdLddlllLrruuururDlldddllulDrrrrruULulDDurrddlLLrrruruuLulDlddddddllllluuuurrdRlullddddrrrrruuurruuLulDrrddllLrrruullDurrddlL
+3/5/2018 - 5:56:57 PM  :  Level 138 solved: False in 10000 rollouts - solution length (moves/pushes): 244/38
+3/5/2018 - 5:56:57 PM  :  Moves: rrrdddrRddlUrdrruUruLullDLrurrddddllluUdrUddrruuuullDurrddddllluulUdrdrUlluUUruLddddrrddrruuLrddllluuRlluuulUluurDlddrrdddrrddrruuuullDLdlUrrurrdLrdddllluuuRllUdrrurrdLLrrdddlluUlluuUdddrrddrruuLLruulDDrrddllUdrruululLrrrdddllluUlUdrdrdrruulLuL
+3/5/2018 - 5:57:34 PM  :  Level 139 solved: False in 10000 rollouts - solution length (moves/pushes): 233/38
+3/5/2018 - 5:57:34 PM  :  Moves: ddrdrrrruRldlllluluurDrrrDulllDurrrdrrRlllullldDuurrrdrddrUlululllddrddlUUUdddlluRdrUUrrRuullLrrrddlllUlUUddrdrrruullLulUUddrdrrrdrRllullluluuluRdddrdrrrdrrdLLuullldlUrrrrddLruullllUrdrrrddlLdlUUdrrrrrRlllllluluuUUddddrdrrruullLdlUUU
+3/5/2018 - 5:58:08 PM  :  Level 140 solved: False in 10000 rollouts - solution length (moves/pushes): 211/56
+3/5/2018 - 5:58:08 PM  :  Moves: rddrRuRuRuRurrdLdLdLdLLLrrrururuulDlDlDldlLulldRluuullddddrdrrruUrrurururrdLdLdLLLLUUllddRluuullddddrdrrruUUdrruRldllluuuurrdLLLrddrUlluLulDDDDuuurrrurrdLLLLulDDDuurrrrdddrrruuRurrdLdLruulDlDurrdLdLLLrrruulDrdLL
+3/5/2018 - 5:58:15 PM  :  Level 141 solved: False in 10000 rollouts - solution length (moves/pushes): 63/21
+3/5/2018 - 5:58:15 PM  :  Moves: luurUdrrddrruuLrddlUULLLuUluRRldddLddlluuRldRuRRRRllllddrUluRRR
+3/5/2018 - 5:58:40 PM  :  Level 142 solved: False in 10000 rollouts - solution length (moves/pushes): 33/8
+3/5/2018 - 5:58:40 PM  :  Moves: ddrUlulldRurDuuulDrddrddlUUUdlluR
+3/5/2018 - 5:59:21 PM  :  Level 143 solved: False in 10000 rollouts - solution length (moves/pushes): 137/21
+3/5/2018 - 5:59:21 PM  :  Moves: ldlluRRddrrurUlddlluluuurRuuuullUdrrddddllddrRRllluurrDullddrddrruuLLruulldDldRurrrdrruLLLLruulldDrruuuuuullluuuRDlddrrruuuLrdddllluuuurD
+3/5/2018 - 6:01:02 PM  :  Level 144 solved: False in 10000 rollouts - solution length (moves/pushes): 163/22
+3/5/2018 - 6:01:02 PM  :  Moves: luluuurruuulDrddllddlldRurrddrrruruurruLdlluulldllddldRuuurruulDrrrddrruLdddlldlldllUdrrurrddrUlulldlluRuuuuluuRlddrddlldRuruuluurDuRdrrrurrDDuLddddrddLLrUdldlUrUL
+3/5/2018 - 6:01:02 PM  :  Level 145 solved: True in 0 rollouts - solution length (moves/pushes): 79/26
+3/5/2018 - 6:01:02 PM  :  Moves: dDLrurDllddLDlluRRluRddrrruUddllDurrRllDRddlUdlUrUdlUrruuRUrrddLLrruLLulUluurDD
+3/5/2018 - 6:01:04 PM  :  Level 146 solved: True in 151 rollouts - solution length (moves/pushes): 119/14
+3/5/2018 - 6:01:04 PM  :  Moves: luUllddddrdrrrruruLddlllluluRddrrrruruuuululDrrdddlddlllluluuuRuuRldldddrddrrrruruuuullLddrRlluuLrdddDLruurrUdlllLrrddR
+3/5/2018 - 6:01:47 PM  :  Level 147 solved: False in 10000 rollouts - solution length (moves/pushes): 197/31
+3/5/2018 - 6:01:47 PM  :  Moves: lllllldddRRuLdlUUluRddrdDluuuuRRRRllllddrrrDllluuurrrrRlllllddrrrdrddlUruLdddllUdrruuuLLuluurrrrrdrrruullDldRRlllullllddrrrddddlluUddrruuululluurrrrrrdrdrUllllullllddrrrddddlluuUdlUUUluRdddrruLdlUU
+3/5/2018 - 6:02:14 PM  :  Level 148 solved: False in 10000 rollouts - solution length (moves/pushes): 261/41
+3/5/2018 - 6:02:14 PM  :  Moves: lllullddrdrdrrrrUUdldlllululuurrrrdrRurrdLLLrdddrruLrdrruLdlllUrdrruLdlluUdldlllululuurrrrDllullddrdrdrrrrrrrrrruLdllluLdlUrrrdrruLLLLdlluRldlllululuurrrrdrRurrdLLLLLulllddrdrdrrrruUddrruLdlUldlllululuurrrrdrRurrdLLLLullllddrdrdrrrruUdldlllululuurrrDrrRurrdLLLL
+3/5/2018 - 6:02:30 PM  :  Level 149 solved: True in 7819 rollouts - solution length (moves/pushes): 102/35
+3/5/2018 - 6:02:30 PM  :  Moves: RurDDDlddrdDldRuuuluurDRlDurRRRlllldDuuuuurrdLulDDldRRRRlllddDlddrUUUUluRRRddddLruuuulldddlddrUUUUluRR
+3/5/2018 - 6:03:18 PM  :  Level 150 solved: False in 10000 rollouts - solution length (moves/pushes): 174/37
+3/5/2018 - 6:03:18 PM  :  Moves: lldlllUUddlluRldlluRRluurrRdrrDullulllddrdrrrRdrUluRRRlllullDLdlluRdrRuurrdrrrRllllullddRluurrdrrrrRdrUllllllulldLdlluRdrrrRlllluRdrrrdrUluullDldRuurrdRRRRllllullddRRdrUluRRR
+3/5/2018 - 6:03:32 PM  :  Level 151 solved: False in 10000 rollouts - solution length (moves/pushes): 252/60
+3/5/2018 - 6:03:32 PM  :  Moves: luuuuLrdddllURdddlUruulDrrUUUluurDDDDldddlUlluuuruRldldddrrruurDldllluuururRlldldddrrrRlllluuururrurDllldldddrrruulDrrdRRRRdrUllllluuUdlddLuuUlldddRRRRlluuuluRddrrddRRRRlllluuuULuurDDDDlluluRddrruuLrddDldRRRlllluuuluRddrrddrrRurDlllllluuuuRurDDDDldRRRR
+3/5/2018 - 6:04:21 PM  :  Level 152 solved: False in 10000 rollouts - solution length (moves/pushes): 201/21
+3/5/2018 - 6:04:21 PM  :  Moves: uurrrrrdrdLLLLLLuurruurrrrdrdrddrruuululululllDurrrdrdrdrdddlluulululLrrdrdrddLruululullLrrrdrdrddlLululllllddrrrrRllllluuululuurrrrdDDuululllddrrddddrrrrrRRlluullLLruuululllddrrdDrrrrrdrdrRllluulllllD
+3/5/2018 - 6:04:35 PM  :  Level 153 solved: False in 10000 rollouts - solution length (moves/pushes): 31/14
+3/5/2018 - 6:04:35 PM  :  Moves: lDRlDDDrUldDuruUldddDrdLLrruUUU
+3/5/2018 - 6:04:35 PM  :  Level 154 solved: True in 1 rollouts - solution length (moves/pushes): 429/2
+3/5/2018 - 6:04:35 PM  :  Moves: ruuuuuuuuuuuurrrrrrrrrrrrrrrrrrrrrddddddddddllllllllllllllllluuuuuurrrrrrrrrrrrrddlllllllllllddrrrrrrrrrrrrruuuuuulllllllllllllllllddddddddddrrrrrrrrrrrrrrrrrrrrruuuuuuuuuuuuuulllllllllllllllllllllllllddddddddddddDuuuuuuuuuuuuurrrrrrrrrrrrrrrrrrrrrrrrrddddddddddddddllllllllllllllllllllluuuuuuuuuurrrrrrrrrrrrrrrrrddddddllllllllllllluurrrrrrrrrrruulllllllllllllddddddrrrrrrrrrrrrrrrrruuuuuuuuuulllllllllllllllllllllddddddddddddlL
+3/5/2018 - 6:04:39 PM  :  Level 155 solved: True in 11 rollouts - solution length (moves/pushes): 282/175
+3/5/2018 - 6:04:39 PM  :  Moves: uulldRRRRRRRRdrUUUruLLLLLLLLLLLLulDDDrdLLLLLLLLLLLulllddrrUdlluurRluurrdDldRRRRRRRRRRdrUUUluRRRRRRRRRdrUUUUUUruLLLulDDDrdLLLdlUUUruLLLulDDDrdLLLLdlUUUUdrruulLLrddlluUUluRRRRRRRRRRRRRRRRRRRurDDDDDDlddrUUUUUUruLLLLLLLLLLLLLLLLLLLLulDrdLLLLLulldRurDDDDDrddlluRdrUluRRurDDDDrrddllUUUUUU
+3/5/2018 - 6:04:39 PM  :  Level 1 solved: True in 59
+3/5/2018 - 6:04:39 PM  :  Level 2 solved: True in 0
+3/5/2018 - 6:04:39 PM  :  Level 3 solved: True in 15
+3/5/2018 - 6:04:39 PM  :  Level 4 solved: True in 0
+3/5/2018 - 6:04:39 PM  :  Level 5 solved: True in 0
+3/5/2018 - 6:04:39 PM  :  Level 6 solved: True in 13
+3/5/2018 - 6:04:39 PM  :  Level 7 solved: True in 15
+3/5/2018 - 6:04:39 PM  :  Level 8 solved: True in 5
+3/5/2018 - 6:04:39 PM  :  Level 9 solved: True in 0
+3/5/2018 - 6:04:39 PM  :  Level 10 solved: True in 285
+3/5/2018 - 6:04:39 PM  :  Level 11 solved: True in 3
+3/5/2018 - 6:04:39 PM  :  Level 12 solved: True in 6
+3/5/2018 - 6:04:39 PM  :  Level 13 solved: True in 72
+3/5/2018 - 6:04:39 PM  :  Level 14 solved: True in 11
+3/5/2018 - 6:04:39 PM  :  Level 15 solved: True in 12
+3/5/2018 - 6:04:39 PM  :  Level 16 solved: True in 6311
+3/5/2018 - 6:04:39 PM  :  Level 17 solved: True in 6
+3/5/2018 - 6:04:39 PM  :  Level 18 solved: True in 65
+3/5/2018 - 6:04:39 PM  :  Level 19 solved: True in 232
+3/5/2018 - 6:04:39 PM  :  Level 20 solved: True in 239
+3/5/2018 - 6:04:39 PM  :  Level 21 solved: True in 3
+3/5/2018 - 6:04:39 PM  :  Level 22 solved: True in 451
+3/5/2018 - 6:04:39 PM  :  Level 23 solved: True in 932
+3/5/2018 - 6:04:39 PM  :  Level 24 solved: True in 78
+3/5/2018 - 6:04:39 PM  :  Level 25 solved: True in 4
+3/5/2018 - 6:04:39 PM  :  Level 26 solved: True in 273
+3/5/2018 - 6:04:39 PM  :  Level 27 solved: True in 60
+3/5/2018 - 6:04:39 PM  :  Level 28 solved: True in 18
+3/5/2018 - 6:04:39 PM  :  Level 29 solved: True in 181
+3/5/2018 - 6:04:39 PM  :  Level 30 solved: True in 0
+3/5/2018 - 6:04:39 PM  :  Level 31 solved: True in 2
+3/5/2018 - 6:04:39 PM  :  Level 32 solved: True in 328
+3/5/2018 - 6:04:39 PM  :  Level 33 solved: True in 19
+3/5/2018 - 6:04:39 PM  :  Level 34 solved: True in 82
+3/5/2018 - 6:04:39 PM  :  Level 35 solved: True in 439
+3/5/2018 - 6:04:39 PM  :  Level 36 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 37 solved: True in 24
+3/5/2018 - 6:04:39 PM  :  Level 38 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 39 solved: True in 116
+3/5/2018 - 6:04:39 PM  :  Level 40 solved: True in 5
+3/5/2018 - 6:04:39 PM  :  Level 41 solved: True in 11
+3/5/2018 - 6:04:39 PM  :  Level 42 solved: True in 427
+3/5/2018 - 6:04:39 PM  :  Level 43 solved: True in 7036
+3/5/2018 - 6:04:39 PM  :  Level 44 solved: True in 0
+3/5/2018 - 6:04:39 PM  :  Level 45 solved: True in 8
+3/5/2018 - 6:04:39 PM  :  Level 46 solved: True in 78
+3/5/2018 - 6:04:39 PM  :  Level 47 solved: True in 259
+3/5/2018 - 6:04:39 PM  :  Level 48 solved: True in 82
+3/5/2018 - 6:04:39 PM  :  Level 49 solved: True in 1718
+3/5/2018 - 6:04:39 PM  :  Level 50 solved: True in 122
+3/5/2018 - 6:04:39 PM  :  Level 51 solved: True in 0
+3/5/2018 - 6:04:39 PM  :  Level 52 solved: True in 1
+3/5/2018 - 6:04:39 PM  :  Level 53 solved: True in 74
+3/5/2018 - 6:04:39 PM  :  Level 54 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 55 solved: True in 4
+3/5/2018 - 6:04:39 PM  :  Level 56 solved: True in 9
+3/5/2018 - 6:04:39 PM  :  Level 57 solved: True in 760
+3/5/2018 - 6:04:39 PM  :  Level 58 solved: True in 19
+3/5/2018 - 6:04:39 PM  :  Level 59 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 60 solved: True in 766
+3/5/2018 - 6:04:39 PM  :  Level 61 solved: True in 2731
+3/5/2018 - 6:04:39 PM  :  Level 62 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 63 solved: True in 48
+3/5/2018 - 6:04:39 PM  :  Level 64 solved: True in 2865
+3/5/2018 - 6:04:39 PM  :  Level 65 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 66 solved: True in 76
+3/5/2018 - 6:04:39 PM  :  Level 67 solved: True in 5
+3/5/2018 - 6:04:39 PM  :  Level 68 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 69 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 70 solved: True in 5292
+3/5/2018 - 6:04:39 PM  :  Level 71 solved: True in 362
+3/5/2018 - 6:04:39 PM  :  Level 72 solved: True in 439
+3/5/2018 - 6:04:39 PM  :  Level 73 solved: True in 3434
+3/5/2018 - 6:04:39 PM  :  Level 74 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 75 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 76 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 77 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 78 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 79 solved: True in 73
+3/5/2018 - 6:04:39 PM  :  Level 80 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 81 solved: True in 325
+3/5/2018 - 6:04:39 PM  :  Level 82 solved: True in 48
+3/5/2018 - 6:04:39 PM  :  Level 83 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 84 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 85 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 86 solved: True in 135
+3/5/2018 - 6:04:39 PM  :  Level 87 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 88 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 89 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 90 solved: True in 628
+3/5/2018 - 6:04:39 PM  :  Level 91 solved: True in 23
+3/5/2018 - 6:04:39 PM  :  Level 92 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 93 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 94 solved: True in 1645
+3/5/2018 - 6:04:39 PM  :  Level 95 solved: True in 0
+3/5/2018 - 6:04:39 PM  :  Level 96 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 97 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 98 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 99 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 100 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 101 solved: True in 23
+3/5/2018 - 6:04:39 PM  :  Level 102 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 103 solved: True in 3
+3/5/2018 - 6:04:39 PM  :  Level 104 solved: True in 22
+3/5/2018 - 6:04:39 PM  :  Level 105 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 106 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 107 solved: True in 5247
+3/5/2018 - 6:04:39 PM  :  Level 108 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 109 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 110 solved: True in 21
+3/5/2018 - 6:04:39 PM  :  Level 111 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 112 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 113 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 114 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 115 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 116 solved: True in 114
+3/5/2018 - 6:04:39 PM  :  Level 117 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 118 solved: True in 3374
+3/5/2018 - 6:04:39 PM  :  Level 119 solved: True in 2723
+3/5/2018 - 6:04:39 PM  :  Level 120 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 121 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 122 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 123 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 124 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 125 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 126 solved: True in 3547
+3/5/2018 - 6:04:39 PM  :  Level 127 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 128 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 129 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 130 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 131 solved: True in 1193
+3/5/2018 - 6:04:39 PM  :  Level 132 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 133 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 134 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 135 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 136 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 137 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 138 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 139 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 140 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 141 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 142 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 143 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 144 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 145 solved: True in 0
+3/5/2018 - 6:04:39 PM  :  Level 146 solved: True in 151
+3/5/2018 - 6:04:39 PM  :  Level 147 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 148 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 149 solved: True in 7819
+3/5/2018 - 6:04:39 PM  :  Level 150 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 151 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 152 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 153 solved: False in 10000
+3/5/2018 - 6:04:39 PM  :  Level 154 solved: True in 1
+3/5/2018 - 6:04:39 PM  :  Level 155 solved: True in 11
+3/5/2018 - 6:04:39 PM  :  Solved 88/155
