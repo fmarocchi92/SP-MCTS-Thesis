@@ -5,6 +5,8 @@ using MCTS.Standard.Utils;
 using Common;
 using MCTS2016.SP_MCTS;
 using MCTS2016.Common.Abstract;
+using MCTS2016.Optimizations.UCT;
+using MCTS2016.SP_MCTS.Optimizations.Utils;
 
 namespace MCTS2016.SP_MCTS.SP_UCT
 {
@@ -72,6 +74,11 @@ namespace MCTS2016.SP_MCTS.SP_UCT
             return n;
         }
 
+        public ISPTreeNode AddChild(ObjectPool objectPool, IPuzzleMove move, IPuzzleState state)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Update(double result)
         {
             visits++;
@@ -79,6 +86,11 @@ namespace MCTS2016.SP_MCTS.SP_UCT
             score += result;
             squaredReward += result * result;
             topScore = Math.Max(topScore, result);
+        }
+
+        public void Update(double result, List<IPuzzleMove> moveSet)
+        {
+            throw new NotImplementedException();
         }
 
         public IPuzzleMove SelectUntriedMove()
@@ -155,5 +167,13 @@ namespace MCTS2016.SP_MCTS.SP_UCT
         {
             childNodes.Remove((SP_UCTTreeNode) child);
         }
+
+        public void ChildRecycle()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Opt_SP_UCTTreeNode NextLRUElem { get; set; }
+        public Opt_SP_UCTTreeNode PrevLRUElem { get; set; }
     }
 }

@@ -53,6 +53,11 @@
     <Compile Include="SP_MCTS\ISPTreeNode.cs" />
     <Compile Include="SP_MCTS\ISPTreeNodeCreator.cs" />
     <Compile Include="SP_MCTS\ISP_MCTSSimulationStrategy.cs" />
+    <Compile Include="SP_MCTS\Optimizations\OptMCTSAlgorithm.cs" />
+    <Compile Include="SP_MCTS\Optimizations\UCT\Opt_SP_UCTTreeNode.cs" />
+    <Compile Include="SP_MCTS\Optimizations\UCT\Opt_SP_UCTTreeNodeCreator.cs" />
+    <Compile Include="SP_MCTS\Optimizations\Utils\LRUQueueManager.cs" />
+    <Compile Include="SP_MCTS\Optimizations\Utils\ObjectPool.cs" />
     <Compile Include="SP_MCTS\SP_MCTSAlgorithm.cs" />
     <Compile Include="SP_MCTS\SP_UCT\SP_UCTTreeNode.cs" />
     <Compile Include="SP_MCTS\SP_UCT\SP_UCTTreeNodeCreator.cs" />
@@ -146,6 +151,5 @@
     <Compile Include="TrueSkill\Layers\TeamDifferencesComparisonLayer.cs" />
     <Compile Include="TrueSkill\Layers\TeamPerformancesToTeamPerformanceDifferencesLayer.cs" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
