@@ -27,8 +27,8 @@ namespace MCTS2016.SP_MCTS.Optimizations
         {
             this.treeCreator = treeCreator;
             this.stopOnResult = stopOnResult;
-            this.memoryBudget = memoryBudget;
-            objectPool = new ObjectPool(iterations, iterations, ((Opt_SP_UCTTreeNodeCreator)treeCreator).NodeRecycling, memoryBudget);
+            bool nodeRecycling = ((Opt_SP_UCTTreeNodeCreator)treeCreator).NodeRecycling;
+            objectPool = new ObjectPool(iterations, iterations, nodeRecycling, this.memoryBudget);
         }
         
         public List<IPuzzleMove> Solve(IPuzzleState rootState, int iterations, double maxTimeInMinutes = 5)
@@ -43,6 +43,7 @@ namespace MCTS2016.SP_MCTS.Optimizations
 
         public IPuzzleMove Search(IPuzzleState rootState, int iterations, double maxTimeInMinutes = 5)
         {
+
             int nodeCount = 0;
             bool looped;
             if (!search)
@@ -161,23 +162,7 @@ namespace MCTS2016.SP_MCTS.Optimizations
                         state.Pass();
                     }
                 }
-                
-                //if a node is a dead end remove it from the tree
-                if(!node.HasChildren() && !node.HasMovesToTry() && !state.EndState())
-                {
-                    if(node.Parent == null)//unsolvable level. The tree has been completely explored. Return current best score
-                    {
-                        break;
-                    }
-                    node.Parent.RemoveChild(node);
-                    nodeCount--;
-
-                    if (!node.Parent.HasChildren())
-                    {
-                        var tempNode = node.Parent;
-                        LRUQueueManager.LRURemoveElement(ref tempNode, ref head, ref tail);    
-                    }
-                }  
+                 
 
                 // Rollout
                 while (!state.isTerminal() && !looped)
@@ -232,23 +217,39 @@ namespace MCTS2016.SP_MCTS.Optimizations
                     {
                         //TODO penalize score for loops?
                     }
-                    
+                    ISPTreeNode parent = node.Parent;
+                    //if a node is a dead end remove it from the tree
+                    if (!node.HasChildren() && !node.HasMovesToTry() && !state.EndState())
+                    {
+                        if (node.Parent == null)//unsolvable level. The tree has been completely explored. Return current best score
+                        {
+                            break;
+                        }
+                        node.Parent.RemoveChild(node);
+                        nodeCount--;
+                    }
+
                     // RAVE Optimization
                     node.Update(result, currentRollout);
-                    node = node.Parent;
+                    node = parent;
 
                     // Node Recycling Optimization
-                    if (((Opt_SP_UCTTreeNode)node).NodeRecycling)
+                    if (((Opt_SP_UCTTreeNode)rootNode).NodeRecycling)
                     {
                         // Non-leaf node pushed back to LRU queue when updated
-                        if (node != rootNode && node != null)
+                        if (node != rootNode && node != null && node.HasChildren())
                         {
                             LRUQueueManager.LRUAddLast(ref node, ref head, ref tail);
                         }
                     }
                 }
 
-                if (!search)
+                if (!rootNode.HasChildren() && !rootNode.HasMovesToTry())
+                {
+                    break;
+                }
+
+                    if (!search)
                 {
                     search = true;
                     return null;
@@ -299,6 +300,8 @@ namespace MCTS2016.SP_MCTS.Optimizations
         {
             get { return treeCreator; }
         }
+
+        public List<IPuzzleMove> BestRollout { get => bestRollout; set => bestRollout = value; }
 
         public void Abort()
         {

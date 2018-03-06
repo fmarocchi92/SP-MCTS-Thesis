@@ -147,8 +147,32 @@ namespace MCTS2016
                                 PrintInputError("seed requires an unsigned integer value");
                                 return;
                             }
+                            if(!bool.TryParse(commands[6] ,out bool ucb1Tuned))
+                            {
+                                PrintInputError("seed requires an unsigned integer value");
+                                return;
+                            }
+                            if (!bool.TryParse(commands[7], out bool rave))
+                            {
+                                PrintInputError("seed requires an unsigned integer value");
+                                return;
+                            }
+                            if (!bool.TryParse(commands[8], out bool nodeRecycling))
+                            {
+                                PrintInputError("seed requires an unsigned integer value");
+                                return;
+                            }
+                            if (!int.TryParse(commands[9], out int memoryBudget))
+                            {
+                                PrintInputError("restarts requires an integer value");
+                                return;
+                            }
+                            if(nodeRecycling && (memoryBudget <= 0 || memoryBudget >= iterations)){
+                                PrintInputError("Memory budget value not compatible with node recycling");
+                                return;
+                            }
                             Log("\n********************\nBEGIN TASK:\nGame:" + game + "\nMethod: MCTS \niterations: " + iterations + "\nUCT constant: " + const_C + "\nSP_UCT constant: " + const_D + "\nrestarts: " + restarts + "level: " + level + "\n********************");
-                            MultiThreadSamegameTest(const_C, const_D, iterations, restarts, level, 1, seed);
+                            MultiThreadSamegameTest(const_C, const_D, iterations, restarts, level, 1, seed, ucb1Tuned, rave, nodeRecycling, memoryBudget);
                             break;
                         case "ida":
                             throw new NotImplementedException("IDA* for samegame not implemented");
@@ -492,7 +516,7 @@ namespace MCTS2016
             }
         }
 
-        private static void MultiThreadSamegameTest(double const_C, double const_D, int iterations, int restarts, string levelPath, int threadNumber, uint seed)
+        private static void MultiThreadSamegameTest(double const_C, double const_D, int iterations, int restarts, string levelPath, int threadNumber, uint seed, bool ucb1Tuned, bool rave, bool nodeRecycling, int memoryBudget)
         {
             string[] levels = ReadSamegameLevels(levelPath);
             taskTaken = new int[levels.Length];
@@ -507,7 +531,7 @@ namespace MCTS2016
             Thread[] threads = new Thread[threadCount];
             for (int i = 0; i < threadCount; i++)
             {
-                threads[i] = new Thread(() => SamegameTest(const_C, const_D, iterations, restarts, levels, seed));
+                threads[i] = new Thread(() => SamegameTest(const_C, const_D, iterations, restarts, levels, seed, ucb1Tuned,rave,nodeRecycling,memoryBudget));
                 threads[i].Start();
             }
             for (int i = 0; i < threadCount; i++)
@@ -526,7 +550,7 @@ namespace MCTS2016
             textWriter.Close();
         }
 
-        private static void SamegameTest(double const_C, double const_D, int iterations, int restarts, string[] levels, uint seed)
+        private static void SamegameTest(double const_C, double const_D, int iterations, int restarts, string[] levels, uint seed, bool ucb1Tuned, bool rave, bool nodeRecycling, int memoryBudget)
         {
             uint threadIndex = GetThreadIndex();
             Console.WriteLine("Thread "+ threadIndex +" started");
@@ -538,7 +562,7 @@ namespace MCTS2016
                 //Console.Write("\rRun " + (restartN + 1) + " of " + restarts + "  ");
                 SamegameGameState s = new SamegameGameState(levels[currentLevelIndex], rnd, simulationStrategy);
                 IPuzzleMove move;
-                ISPSimulationStrategy player = new SamegameMCTSStrategy(rnd,iterations, 600, null, const_C, const_D);
+                ISPSimulationStrategy player = new SamegameMCTSStrategy(rnd,ucb1Tuned, rave, nodeRecycling, memoryBudget, iterations, null, const_C, const_D);
                 string moveString = string.Empty;
                 List<IPuzzleMove> moveList = new List<IPuzzleMove>();
                 while (!s.isTerminal())
