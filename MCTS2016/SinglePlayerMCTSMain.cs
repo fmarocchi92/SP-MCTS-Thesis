@@ -113,7 +113,7 @@ namespace MCTS2016
                                 PrintInputError("reward type requires an valid RewardType");
                                 return;
                             }
-                            if (!int.TryParse(commands[1], out int maxTableSize))
+                            if (!int.TryParse(commands[3], out int maxTableSize))
                             {
                                 PrintInputError("maxTableSize requires an integer value");
                                 return;
