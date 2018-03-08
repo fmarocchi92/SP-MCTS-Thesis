@@ -283,8 +283,9 @@ namespace MCTS2016.Puzzles.Sokoban
             if(boxToPush.X == pushTarget.X &&
                 state.Board[boxToPush.X + 1, boxToPush.Y] == SokobanGameState.WALL && state.Board[boxToPush.X -1, boxToPush.Y] == SokobanGameState.WALL) //Vertical push
             {
-                while((state.Board[pushTarget.X, pushTarget.Y] == SokobanGameState.EMPTY || state.Board[pushTarget.X, pushTarget.Y] == SokobanGameState.GOAL) &&
-                    state.Board[boxToPush.X + 1, boxToPush.Y] == SokobanGameState.WALL && state.Board[boxToPush.X -1, boxToPush.Y] == SokobanGameState.WALL)//keep pushing until the end of the tunnel
+                while((state.Board[pushTarget.X, pushTarget.Y] == SokobanGameState.EMPTY || state.Board[pushTarget.X, pushTarget.Y] == SokobanGameState.GOAL) && //keep pushing if possible
+                    state.Board[boxToPush.X + 1, boxToPush.Y] == SokobanGameState.WALL && state.Board[boxToPush.X -1, boxToPush.Y] == SokobanGameState.WALL && //check if still inside tunnel walls
+                        !(state.Board[boxToPush.X, boxToPush.Y] == SokobanGameState.GOAL && state.Board[pushTarget.X, pushTarget.Y] == SokobanGameState.EMPTY)) //Stop tunnel macro if goal followed by empty
                 {
                     SokobanGameMove move;
                     if (pushTarget.Y > boxToPush.Y)
@@ -304,8 +305,9 @@ namespace MCTS2016.Puzzles.Sokoban
             }
             else if (state.Board[boxToPush.X, boxToPush.Y + 1] == SokobanGameState.WALL && state.Board[boxToPush.X, boxToPush.Y - 1] == SokobanGameState.WALL)//horizontal push
             {
-                while ((state.Board[pushTarget.X, pushTarget.Y] == SokobanGameState.EMPTY || state.Board[pushTarget.X, pushTarget.Y] == SokobanGameState.GOAL) &&
-                    state.Board[boxToPush.X, boxToPush.Y + 1] == SokobanGameState.WALL && state.Board[boxToPush.X, boxToPush.Y - 1] == SokobanGameState.WALL)//keep pushing until the end of the tunnel
+                while ((state.Board[pushTarget.X, pushTarget.Y] == SokobanGameState.EMPTY || state.Board[pushTarget.X, pushTarget.Y] == SokobanGameState.GOAL) && //keep pushing if possible
+                    state.Board[boxToPush.X, boxToPush.Y + 1] == SokobanGameState.WALL && state.Board[boxToPush.X, boxToPush.Y - 1] == SokobanGameState.WALL && //check if still inside tunnel walls
+                        !(state.Board[boxToPush.X, boxToPush.Y] == SokobanGameState.GOAL && state.Board[pushTarget.X, pushTarget.Y] == SokobanGameState.EMPTY))//Stop tunnel macro if goal followed by empty
                 {
                     SokobanGameMove move;
                     if (pushTarget.X > boxToPush.X)
