@@ -30,6 +30,11 @@ namespace MCTS2016.SP_MCTS.Optimizations.Utils
             return null;
         }
 
+        public TranspositionTableEntry GetAnyEntryWithIndex(int hashkey)
+        {
+            return table[(uint)hashkey % table.Length];
+        }
+
         public void Store(TranspositionTableEntry entry)
         {
             if(table[(uint)entry.HashKey % table.Length] !=null && entry.HashKey != table[(uint)entry.HashKey % table.Length].HashKey)

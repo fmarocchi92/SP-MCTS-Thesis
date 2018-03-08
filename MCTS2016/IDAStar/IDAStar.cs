@@ -53,6 +53,11 @@ namespace MCTS2016.IDAStar
             double value = cost + node.state.GetResult();
             int currentHash = node.state.GetHashCode();
             TranspositionTableEntry entry;
+            if (node.state.EndState())
+            {
+                result = node;
+                return RESULT;
+            }
             if (value > threshold)
             {
                 entry = RetrieveFromTables(currentHash);
@@ -63,39 +68,33 @@ namespace MCTS2016.IDAStar
                 //visited.RemoveAt(visited.Count() - 1);
                 return value;
             }
-            if (node.state.EndState())
-            {
-                result = node;
-                return RESULT;
-            }
             double minValue = double.MaxValue;
             List<IPuzzleMove> moves = node.state.GetMoves();
             foreach(IPuzzleMove move in moves)
             {
                 IPuzzleState clone = node.state.Clone();
+                //Debug.WriteLine(clone.PrettyPrint());
                 clone.DoMove(move);
                 currentHash = clone.GetHashCode();
+                //Debug.WriteLine(move);
                 //Debug.WriteLine(clone.PrettyPrint());
                 entry = RetrieveFromTables(currentHash);
-                if (entry == null || !entry.Visited)
-                //if (!visited.Contains(clone))
-                {
-                    //visited.Add(clone);
-                    if (entry != null)
-                    {
-                        if (threshold - cost <= entry.Depth)
-                        {
-                            entry.Visited = false;
-                            return entry.Score;
-                        }
-                    }
-                    StoreInTranspositionTable(currentHash, clone.GetResult()+cost+move.GetCost(), (int)(threshold - (cost+move.GetCost())), true, threshold, cost+1, entry);
-                    value = Search(new AStarNode(clone, move, node), cost + move.GetCost(), threshold);
-                }
-                else
-                {
+                if (entry != null && entry.Visited)//loop
                     continue;
+                
+                //if (!visited.Contains(clone))
+                    //visited.Add(clone);
+
+                if (entry != null)
+                {
+                    if (threshold - cost <= entry.Depth)
+                    {
+                        return entry.Score;
+                    }
                 }
+                StoreInTranspositionTable(currentHash, clone.GetResult() + cost + move.GetCost(), (int)(threshold - (cost + move.GetCost())), true);
+                value = Search(new AStarNode(clone, move, node), cost + move.GetCost(), threshold);
+                
                 if (value == RESULT)
                 {
                     return RESULT;
@@ -105,17 +104,15 @@ namespace MCTS2016.IDAStar
                     minValue = value;
                 }
             }
-            entry = RetrieveFromTables(node.state.GetHashCode());
 
-            if (entry != null)
-            {
-                if (minValue < double.MaxValue)
-                    entry.Visited = false;
-                entry.Score = minValue;
+            entry = RetrieveFromTables(node.state.GetHashCode());
+            if (entry == null /*|| minValue < double.MaxValue*/) //TODO deadlock backpropagation
+            {//valid state
+                StoreInTranspositionTable(currentHash, minValue, (int)(threshold - (cost)), false);
             }
             else
             {
-                StoreInTranspositionTable(currentHash, minValue, (int)(threshold - (cost)), false, threshold, cost, entry);
+                entry.Visited = false;
             }
             return minValue;
         }
@@ -146,15 +143,15 @@ namespace MCTS2016.IDAStar
             return entry;
         }
 
-        void StoreInTranspositionTable(int hashKey, double h, int depth, bool visited, double threshold, double cost, TranspositionTableEntry entry)
+        void StoreInTranspositionTable(int hashKey, double score, int depth, bool visited)
         {
-            TranspositionTableEntry newEntry = new TranspositionTableEntry(hashKey, h, depth, visited);
-           int newDepth = (int)Math.Floor(threshold - cost);
+            TranspositionTableEntry entry = firstLevelTable.GetAnyEntryWithIndex(hashKey);
+            TranspositionTableEntry newEntry = new TranspositionTableEntry(hashKey, score, depth, visited);
             if (entry == null)
             {
                 firstLevelTable.Store(newEntry);
             }
-            else if (entry.Depth < newDepth)
+            else if (depth > entry.Depth)
             {
                 firstLevelTable.Store(newEntry);
                 secondLevelTable.Store(entry);
