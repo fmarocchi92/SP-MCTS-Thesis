@@ -41,7 +41,7 @@ namespace MCTS2016.SP_MCTS
 
         void Update(double result);
         
-        void Update(double result, List<IPuzzleMove> moveSet);
+        void Update(double result, HashSet<IPuzzleMove> moveSet);
 
         void RemoveChild(ISPTreeNode child);
         

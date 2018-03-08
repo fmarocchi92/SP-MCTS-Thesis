@@ -183,7 +183,7 @@ namespace MCTS2016.Optimizations.UCT
             throw new NotImplementedException();
         }
 
-        public void Update(double result, List<IPuzzleMove> moveSet)
+        public void Update(double result, HashSet<IPuzzleMove> moveSet)
         {
             visits++;
             wins += result;
@@ -209,7 +209,7 @@ namespace MCTS2016.Optimizations.UCT
         
         public IPuzzleMove SelectUntriedMove()
         {
-            return untriedMoves[random.Next(untriedMoves.Count)];
+            return untriedMoves[rnd.Next(untriedMoves.Count)];
         }
 
         public IPuzzleMove GetBestMove()

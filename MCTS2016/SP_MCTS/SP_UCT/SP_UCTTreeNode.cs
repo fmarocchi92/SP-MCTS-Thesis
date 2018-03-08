@@ -88,7 +88,7 @@ namespace MCTS2016.SP_MCTS.SP_UCT
             topScore = Math.Max(topScore, result);
         }
 
-        public void Update(double result, List<IPuzzleMove> moveSet)
+        public void Update(double result, HashSet<IPuzzleMove> moveSet)
         {
             throw new NotImplementedException();
         }

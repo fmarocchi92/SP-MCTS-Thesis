@@ -81,6 +81,7 @@ namespace MCTS2016.SP_MCTS.Optimizations
                 
                 // Clear lists of moves used for RAVE updates && best rollout
                 currentRollout.Clear();
+                allFirstMoves.Clear();
 
                 // Select
                 while (!node.HasMovesToTry() && node.HasChildren())
@@ -91,6 +92,7 @@ namespace MCTS2016.SP_MCTS.Optimizations
                     visitedStatesInRollout.Add(state.Clone());
                     // RAVE Optimization && best rollout
                     currentRollout.Add(node.Move);
+                    allFirstMoves.Add(node.Move);
 
                     // Node Recycling Optimization
                     if (((Opt_SP_UCTTreeNode)node).NodeRecycling)
@@ -153,6 +155,7 @@ namespace MCTS2016.SP_MCTS.Optimizations
                             node = node.AddChild(objectPool, move, state);
                             // RAVE Optimization && best rollout
                             currentRollout.Add(move);
+                            allFirstMoves.Add(move);
                             nodeCount++;
                         }
                         visitedStatesInRollout.Add(state.Clone());
@@ -190,6 +193,7 @@ namespace MCTS2016.SP_MCTS.Optimizations
                         }
                         // RAVE Optimization && best rollout
                         currentRollout.Add(move);
+                        allFirstMoves.Add(move);
                         visitedStatesInRollout.Add(state.Clone());
                     }
                     else
@@ -230,7 +234,7 @@ namespace MCTS2016.SP_MCTS.Optimizations
                     }
 
                     // RAVE Optimization
-                    node.Update(result, currentRollout);
+                    node.Update(result, allFirstMoves);
                     node = parent;
 
                     // Node Recycling Optimization
