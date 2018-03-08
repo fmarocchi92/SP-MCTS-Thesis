@@ -113,8 +113,13 @@ namespace MCTS2016
                                 PrintInputError("reward type requires an valid RewardType");
                                 return;
                             }
+                            if (!int.TryParse(commands[1], out int maxTableSize))
+                            {
+                                PrintInputError("maxTableSize requires an integer value");
+                                return;
+                            }
                             Log("\n********************\nBEGIN TASK:\nGame:" + game + "\nMethod: IDA* \nMaximum cost: " + maxCost + "\nReward Type: " + rewardType + "\nlevel: "+level+"\n********************");
-                            IDAStarTest(level, maxCost);
+                            IDAStarTest(level, maxCost, rewardType, maxTableSize);
                             break;
                     }
                     break;
@@ -225,17 +230,17 @@ namespace MCTS2016
             }
         }
 
-        private static void IDAStarTest(string levelPath, int maxCost)
+        private static void IDAStarTest(string levelPath, int maxCost, RewardType rewardType, int maxTableSize)
         {
             string[] levels = ReadSokobanLevels(levelPath);
             IPuzzleState[] states = new IPuzzleState[levels.Length];
             int solvedLevels = 0;
             for(int i = 0; i < states.Length; i++)
             {
-                states[i] = new AbstractSokobanState(levels[i], RewardType.PositiveBM, false, null);
+                states[i] = new AbstractSokobanState(levels[i], rewardType, false, null);
                 IDAStarSearch idaStar = new IDAStarSearch();
                 Log("Level" + (i + 1) + ":\n" + states[i].PrettyPrint());
-                List<IPuzzleMove> solution = idaStar.Solve(states[i],maxCost, 20000000, 700);
+                List<IPuzzleMove> solution = idaStar.Solve(states[i],maxCost, maxTableSize, 700);
                 string moves = "";
                 int pushCount = 0;
                 if (solution != null)

@@ -25,6 +25,21 @@ namespace MCTS2016.Puzzles.Sokoban
             PlayerPosition = playerPosition;
         }
 
+        public override double GetCost()
+        {
+            int pushCount = 0;
+            for(int i=moveList.Count-1; i >= 0; i--)
+            {
+                if(moveList[i]>3)
+                    pushCount++;
+                else
+                {
+                    break;
+                }
+            }
+            return pushCount;
+        }
+
         public override string ToString()
         {
             string s = "";

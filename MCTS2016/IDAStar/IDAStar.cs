@@ -80,21 +80,17 @@ namespace MCTS2016.IDAStar
                 if (entry == null || !entry.Visited)
                 //if (!visited.Contains(clone))
                 {
-                    //TODO prune
                     //visited.Add(clone);
                     if (entry != null)
                     {
                         if (threshold - cost <= entry.Depth)
                         {
+                            entry.Visited = false;
                             return entry.Score;
                         }
-                        entry.Visited = true;
                     }
-                    else
-                    {
-                        StoreInTranspositionTable(currentHash, clone.GetResult()+cost+1, (int)(threshold - (cost+1)), true, threshold, cost+1, entry);
-                    }
-                    value = Search(new AStarNode(clone, move, node), cost + 1, threshold);
+                    StoreInTranspositionTable(currentHash, clone.GetResult()+cost+move.GetCost(), (int)(threshold - (cost+move.GetCost())), true, threshold, cost+1, entry);
+                    value = Search(new AStarNode(clone, move, node), cost + move.GetCost(), threshold);
                 }
                 else
                 {
@@ -108,12 +104,18 @@ namespace MCTS2016.IDAStar
                 {
                     minValue = value;
                 }
-
             }
             entry = RetrieveFromTables(node.state.GetHashCode());
+
             if (entry != null)
             {
-                entry.Visited = false;
+                if (minValue < double.MaxValue)
+                    entry.Visited = false;
+                entry.Score = minValue;
+            }
+            else
+            {
+                StoreInTranspositionTable(currentHash, minValue, (int)(threshold - (cost)), false, threshold, cost, entry);
             }
             return minValue;
         }

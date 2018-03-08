@@ -19,6 +19,10 @@ namespace MCTS2016.Common.Abstract
             this.move = move;
         }
 
+        public virtual double GetCost() {
+            return 1;
+        }
+
         public static implicit operator int(IPuzzleMove move)
         {
             return move.move;

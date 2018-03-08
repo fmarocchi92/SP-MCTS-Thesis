@@ -170,10 +170,10 @@ namespace MCTS2016.Puzzles.Sokoban
                 }
             }
             
-            Debug.WriteLine(PrettyPrint());
-            Debug.WriteLine(PrettyPrintDistance());
+            //Debug.WriteLine(PrettyPrint());
+            //Debug.WriteLine(PrettyPrintDistance());
             board = backupBoard;
-            Debug.WriteLine(this);
+            //Debug.WriteLine(this);
             playerX = backupPlayer.X;
             playerY = backupPlayer.Y;
             return deadlockPositions;

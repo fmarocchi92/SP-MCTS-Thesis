@@ -25,13 +25,15 @@ namespace MCTS2016.SP_MCTS.Optimizations.Utils
             }
             else if(entry != null)
             {
-                Debug.WriteLine("Hahs Conflict");
+                Debug.WriteLine("Hash Retrieve Conflict");
             }
             return null;
         }
 
         public void Store(TranspositionTableEntry entry)
         {
+            if(table[(uint)entry.HashKey % table.Length] !=null && entry.HashKey != table[(uint)entry.HashKey % table.Length].HashKey)
+                Debug.WriteLine("Hash Store Conflict");
             table[(uint)entry.HashKey % table.Length] = entry;
         }
     }
