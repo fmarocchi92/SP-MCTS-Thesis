@@ -117,14 +117,16 @@ namespace MCTS2016.Puzzles.SameGame
 
         public IPuzzleState Clone()
         {
-            List<List<int>> boardCopy = new List<List<int>>(); ;
+            List<List<int>> boardCopy = new List<List<int>>();
+
             foreach(List<int> column in board)
             {
-                List<int> newColumn = new List<int>();
-                foreach(int value in column)
-                {
-                    newColumn.Add(value);
-                }
+                //List<int> newColumn = new List<int>();
+                List <int> newColumn = new List<int>(column);
+                //foreach(int value in column)
+                //{
+                //    newColumn.Add(value);
+                //}
                 boardCopy.Add(newColumn);
             }
             return new SamegameGameState()
@@ -141,16 +143,17 @@ namespace MCTS2016.Puzzles.SameGame
         {
             stateChanged = false;
             SamegameGameMove sgmove = move as SamegameGameMove;
-            int value = board[sgmove.x][sgmove.y];
-            HashSet<Position> toRemove = new HashSet<Position>();
-            CheckAdjacentBlocks(sgmove.x, sgmove.y, value, ref toRemove); //remove adjacent blocks
-            if(toRemove.Count > 0)
+            //int value = board[sgmove.X][sgmove.Y];
+            //HashSet<Position> visited = new HashSet<Position>();
+            //List<Position> toRemove = new List<Position>();
+            //CheckAdjacentBlocks(sgmove.X, sgmove.Y, value, ref visited, ref toRemove); //remove adjacent blocks
+            if(sgmove.Blocks.Count > 0)
             {
-                board[sgmove.x][sgmove.y] = 1000;
-                score += (int) Math.Pow((toRemove.Count() - 2) ,2);
+                board[sgmove.X][sgmove.Y] = 1000;
+                score += (int) Math.Pow((sgmove.Blocks.Count() - 2) ,2);
                 stateChanged = true;
             }
-            foreach (Position position in toRemove) { 
+            foreach (Position position in sgmove.Blocks) { 
                 board[position.X][position.Y] = 1000;
             }
             for(int i = 0; i < board.Count; i++)
@@ -165,39 +168,48 @@ namespace MCTS2016.Puzzles.SameGame
         /// <param name="x"></param>
         /// <param name="y"></param>
         /// <param name="value"></param>
-        /// <param name="toRemove"></param>
-        private void CheckAdjacentBlocks(int x, int y, int value, ref HashSet<Position> toRemove)
+        /// <param name="visited"></param>
+        private void CheckAdjacentBlocks(int x, int y, int value,  HashSet<Position> visited,  List<Position> toRemove)
         {
-            if(x > 0 && board[x - 1].Count > y)
+            Position newPosition;
+            if (x > 0 && board[x - 1].Count > y && board[x - 1][y] == value)
             {
-                if(board[x-1][y] == value && !toRemove.Contains(new Position(x - 1, y)))
+                newPosition = new Position(x - 1, y);
+                if (!visited.Contains(newPosition))
                 {
-                    toRemove.Add(new Position(x - 1, y));
-                    CheckAdjacentBlocks(x - 1, y, value, ref toRemove);
+                    visited.Add(newPosition);
+                    toRemove.Add(newPosition);
+                    CheckAdjacentBlocks(x - 1, y, value,  visited,  toRemove);
                 }
             }
-            if(x < board.Count -1 && board[x + 1].Count > y)
+            if(x < board.Count -1 && board[x + 1].Count > y && board[x + 1][y] == value)
             {
-                if (board[x + 1][y] == value && !toRemove.Contains(new Position(x + 1, y)))
+                newPosition = new Position(x + 1, y);
+                if (!visited.Contains(newPosition))
                 {
-                    toRemove.Add(new Position(x + 1, y));
-                    CheckAdjacentBlocks(x + 1, y, value, ref toRemove);
+                    visited.Add(newPosition);
+                    toRemove.Add(newPosition);
+                    CheckAdjacentBlocks(x + 1, y, value,  visited,  toRemove);
                 }
             }
-            if (y > 0)
+            if (y > 0 && board[x][y - 1] == value)
             {
-                if (board[x][y-1] == value && !toRemove.Contains(new Position(x, y - 1)))
+                newPosition = new Position(x, y - 1);
+                if (!visited.Contains(newPosition))
                 {
-                    toRemove.Add(new Position(x, y - 1));
-                    CheckAdjacentBlocks(x, y - 1, value, ref toRemove);
+                    visited.Add(newPosition);
+                    toRemove.Add(newPosition);
+                    CheckAdjacentBlocks(x, y - 1, value, visited, toRemove);
                 }
             }
-            if (y < board[x].Count -1)
+            if (y < board[x].Count -1 && board[x][y + 1] == value)
             {
-                if (board[x][y + 1] == value && !toRemove.Contains(new Position(x, y + 1)))
+                newPosition = new Position(x, y + 1);
+                if (!visited.Contains(newPosition))
                 {
-                    toRemove.Add(new Position(x, y + 1));
-                    CheckAdjacentBlocks(x, y + 1, value, ref toRemove);
+                    visited.Add(newPosition);
+                    toRemove.Add(newPosition);
+                    CheckAdjacentBlocks(x, y + 1, value, visited, toRemove);
                 }
             }
         }
@@ -225,6 +237,7 @@ namespace MCTS2016.Puzzles.SameGame
         public List<IPuzzleMove> GetMoves()
         {
             List<IPuzzleMove> moves  = new List<IPuzzleMove>();
+            List<Position> blocks;
             HashSet<Position> alreadyChecked = new HashSet<Position>();
             for (int x = 0; x < board.Count; x++)
             {
@@ -234,10 +247,11 @@ namespace MCTS2016.Puzzles.SameGame
                     {
                         int previousCheckedCount = alreadyChecked.Count;
                         //HashSet<Position> group = new HashSet<Position>();
-                        CheckAdjacentBlocks(x, y, board[x][y], ref alreadyChecked); //group adjacent blocks together to have a single action for all of them
+                        blocks = new List<Position>();
+                        CheckAdjacentBlocks(x, y, board[x][y],  alreadyChecked, blocks); //group adjacent blocks together to have a single action for all of them
                         if (alreadyChecked.Count> previousCheckedCount)
                         {
-                            moves.Add(new SamegameGameMove(x, y));
+                            moves.Add(new SamegameGameMove(blocks, board[x][y]));
                             //alreadyChecked.UnionWith(group);
                         }
                     }
@@ -287,7 +301,7 @@ namespace MCTS2016.Puzzles.SameGame
         }
         //it's slower than the recursive version
         //void CheckAdjacentBlocksIterative(int x, int y, int value, HashSet<Position> toRemove)
-        //{
+        //{g
         //    List<Position> frontier = new List<Position>();
         //    frontier.Add(new Position(x, y));
         //    while (frontier.Count > 0)
