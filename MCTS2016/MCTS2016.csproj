@@ -58,6 +58,7 @@
     <Compile Include="SP_MCTS\Optimizations\UCT\Opt_SP_UCTTreeNodeCreator.cs" />
     <Compile Include="SP_MCTS\Optimizations\Utils\LRUQueueManager.cs" />
     <Compile Include="SP_MCTS\Optimizations\Utils\ObjectPool.cs" />
+    <Compile Include="SP_MCTS\Optimizations\Utils\TranspositionTable.cs" />
     <Compile Include="SP_MCTS\SP_MCTSAlgorithm.cs" />
     <Compile Include="SP_MCTS\SP_UCT\SP_UCTTreeNode.cs" />
     <Compile Include="SP_MCTS\SP_UCT\SP_UCTTreeNodeCreator.cs" />

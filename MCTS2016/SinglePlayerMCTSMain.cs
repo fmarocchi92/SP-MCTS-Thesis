@@ -202,9 +202,9 @@ namespace MCTS2016
             for (int i = 0; i < states.Length; i++)
             {
                 states[i] = new SamegameGameState(levels[i], null, null);
-                IDAStarSearch idaStar = new IDAStarSearch(states[i]);
+                IDAStarSearch idaStar = new IDAStarSearch();
                 Log("Level" + (i + 1) + ":\n" + states[i].PrettyPrint());
-                List<IPuzzleMove> solution = idaStar.Solve(maxCost);
+                List<IPuzzleMove> solution = idaStar.Solve(states[i],maxCost,200000,100);
                 string moves = "";
                 if (solution != null)
                 {
@@ -233,9 +233,9 @@ namespace MCTS2016
             for(int i = 0; i < states.Length; i++)
             {
                 states[i] = new AbstractSokobanState(levels[i], RewardType.PositiveBM, false, null);
-                IDAStarSearch idaStar = new IDAStarSearch(states[i]);
+                IDAStarSearch idaStar = new IDAStarSearch();
                 Log("Level" + (i + 1) + ":\n" + states[i].PrettyPrint());
-                List<IPuzzleMove> solution = idaStar.Solve(maxCost);
+                List<IPuzzleMove> solution = idaStar.Solve(states[i],maxCost, 20000000, 700);
                 string moves = "";
                 int pushCount = 0;
                 if (solution != null)
