@@ -21,18 +21,20 @@ namespace MCTS2016.Puzzles.Sokoban
         private RewardType rewardType;
         private bool useNormalizedPosition;
         private MersenneTwister rng;
+        private bool useTunnelMacro;
+        private bool useGoalMacro;
 
-        public AbstractSokobanState(SokobanGameState state, RewardType rewardType, bool useNormalizedPosition, ISPSimulationStrategy simulationStrategy = null, MersenneTwister rng = null)
+        public AbstractSokobanState(SokobanGameState state, RewardType rewardType, bool useNormalizedPosition, bool useGoalMacro, bool useTunnelMacro, ISPSimulationStrategy simulationStrategy = null, MersenneTwister rng = null)
         {
-            Init(state, rewardType, useNormalizedPosition, simulationStrategy, rng);
+            Init(state, rewardType, useNormalizedPosition, useGoalMacro, useTunnelMacro, simulationStrategy, rng);
         }   
 
-        public AbstractSokobanState(String level, RewardType rewardType, bool useNormalizedPosition, ISPSimulationStrategy simulationStrategy = null, MersenneTwister rng = null)
+        public AbstractSokobanState(String level, RewardType rewardType, bool useNormalizedPosition, bool useGoalMacro, bool useTunnelMacro, ISPSimulationStrategy simulationStrategy = null, MersenneTwister rng = null)
         {
-            Init(new SokobanGameState(level, rewardType, simulationStrategy), rewardType, useNormalizedPosition, simulationStrategy, rng);
+            Init(new SokobanGameState(level, rewardType, simulationStrategy), rewardType, useNormalizedPosition, useGoalMacro, useTunnelMacro, simulationStrategy, rng);
         }
 
-        private void Init (SokobanGameState state, RewardType rewardType, bool useNormalizedPosition, ISPSimulationStrategy simulationStrategy, MersenneTwister rng = null)
+        private void Init (SokobanGameState state, RewardType rewardType, bool useNormalizedPosition, bool useGoalMacro, bool useTunnelMacro, ISPSimulationStrategy simulationStrategy, MersenneTwister rng = null)
         {
             this.useNormalizedPosition = useNormalizedPosition;
             this.state = (SokobanGameState)state;
@@ -55,7 +57,7 @@ namespace MCTS2016.Puzzles.Sokoban
 
         public IPuzzleState Clone()
         {
-            IPuzzleState clone = new AbstractSokobanState((SokobanGameState)state.Clone(), rewardType, useNormalizedPosition, simulationStrategy, rng);
+            IPuzzleState clone = new AbstractSokobanState((SokobanGameState)state.Clone(), rewardType, useNormalizedPosition,useGoalMacro,useTunnelMacro, simulationStrategy, rng);
             return clone;
         }
 

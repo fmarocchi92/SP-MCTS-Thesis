@@ -16,6 +16,7 @@ namespace MCTS2016.Puzzles.Sokoban
 {
     class SokobanGameState : IPuzzleState
     {
+
         public int size { get; set; }//board width
         public int PlayerY { get => playerY;}
         public int PlayerX { get => playerX;}
@@ -1009,77 +1010,106 @@ namespace MCTS2016.Puzzles.Sokoban
 
 
 
-        //void FindMacros()
-        //{
-        //    FindGoalRooms();
-        //}
+        void FindMacros()
+        {
+            FindGoalRooms();
+        }
 
-        //void FindGoalRooms()
-        //{
-        //    List<GoalRoom> rooms = new List<GoalRoom>();
-        //    foreach(Position goal in goals)
-        //    {
-        //        bool inserted = false;
-        //        foreach(GoalRoom room in rooms)
-        //        {
-        //            if (room.goals.Contains(goal))
-        //            {
-        //                inserted = true;
-        //            }
-        //        }
-        //        if (!inserted)
-        //        {
-        //            rooms.Add(CreateNewRoom(goal));
-        //        }
-        //    }
-        //}
+        void FindGoalRooms()
+        {
+            int[,] groomIndex = new int[board.GetLength(0),board.GetLength(1)];
+            for(int x = 0; x < groomIndex.GetLength(0); x++)
+            {
+                for (int y = 0; y < groomIndex.GetLength(1); y++)
+                {
+                    groomIndex[x, y] = -2;
+                }
+            }
+            List<GoalRoom> rooms = new List<GoalRoom>();
+            for(int index = 0; index < goals.Count; index++)
+            {
+                if(groomIndex[goals[index].X,goals[index].Y] < -1 ) //goal not yet evaluated for macros
+                {
+                    GoalRoom newRoom = CreateNewRoom(goals[index], index, groomIndex);
+                    if (newRoom != null)
+                    {
+                        rooms.Add(newRoom);
+                    }
+                }
+            }
+            //TODO select best room
+            //TODO grow tree
+        }
 
-        //private GoalRoom CreateNewRoom(Position goal)
-        //{
-        //    List<Position> goalGroup = new List<Position>();
-        //    GetAdjacentGoals(goal, ref goalGroup);
-        //    if(goalGroup.Count() < 3)
-        //    {
-        //        return null;
-        //    }
-        //    GoalRoom room = new GoalRoom() { goals = goalGroup};
-        //    List<Position> entrances = PickUpEntrances(goal);
-        //    return room;
-        //}
+        private GoalRoom CreateNewRoom(Position goal, int roomIndex,int[,] groomIndex)
+        {
+            List<Position> goalGroup = new List<Position>();
+            GetAdjacentGoals(goal, ref goalGroup);
+            if (goalGroup.Count() < 3)
+            {
+                return null;
+            }
+            GoalRoom room = new GoalRoom(goalGroup, roomIndex);
+            List<Position> entrances = PickUpEntrances(goal, room, groomIndex);
+            return room;
+        }
 
-        //private List<Position> PickUpEntrances(Position goal)
-        //{
-        //    throw new NotImplementedException();
-        //}
+        private List<Position> PickUpEntrances(Position goal, GoalRoom room, int[,] groomIndex)
+        {
+            foreach(Position p in room.Squares)
+            {
+                Position nextPosition = new Position(p.X + 1, p.Y);
+                //if (board[p.X + 1, p.Y] != GOAL && !p.Contains(nextPosition))
+                //{
+                //    //GetAdjacentGoals(nextPosition, ref goalList);
+                //}
+                //nextPosition = new Position(p.X - 1, p.Y);
+                //if (board[nextPosition.X, nextPosition.Y] == GOAL && !goalList.Contains(nextPosition))
+                //{
+                //    GetAdjacentGoals(nextPosition, ref goalList);
+                //}
+                //nextPosition = new Position(p.X, p.Y + 1);
+                //if (board[nextPosition.X, nextPosition.Y] == GOAL && !goalList.Contains(nextPosition))
+                //{
+                //    GetAdjacentGoals(nextPosition, ref goalList);
+                //}
+                //nextPosition = new Position(p.X, p.Y - 1);
+                //if (board[nextPosition.X, nextPosition.Y] == GOAL && !goalList.Contains(nextPosition))
+                //{
+                //    GetAdjacentGoals(nextPosition, ref goalList);
+                //}
+            }
+            return null;
+        }
 
-        //private void GetAdjacentGoals(Position current, ref List<Position> goalList)
-        //{
-        //    if(board[current.X,current.Y] != GOAL)
-        //    {
-        //        return;
-        //    }
-        //    goalList.Add(current);
-        //    Position nextPosition = new Position(current.X + 1, current.Y);
-        //    if(board[current.X + 1, current.Y] == GOAL && !goalList.Contains(nextPosition))
-        //    {
-        //        GetAdjacentGoals(nextPosition, ref goalList);
-        //    }
-        //    nextPosition = new Position(current.X - 1, current.Y);
-        //    if (board[nextPosition.X, nextPosition.Y] == GOAL && !goalList.Contains(nextPosition))
-        //    {
-        //        GetAdjacentGoals(nextPosition, ref goalList);
-        //    }
-        //    nextPosition = new Position(current.X, current.Y + 1);
-        //    if (board[nextPosition.X, nextPosition.Y] == GOAL && !goalList.Contains(nextPosition))
-        //    {
-        //        GetAdjacentGoals(nextPosition, ref goalList);
-        //    }
-        //    nextPosition = new Position(current.X, current.Y - 1);
-        //    if (board[nextPosition.X, nextPosition.Y] == GOAL && !goalList.Contains(nextPosition))
-        //    {
-        //        GetAdjacentGoals(nextPosition, ref goalList);
-        //    }
-        //}
+        private void GetAdjacentGoals(Position current, ref List<Position> goalList)
+        {
+            if (board[current.X, current.Y] != GOAL)
+            {
+                return;
+            }
+            goalList.Add(current);
+            Position nextPosition = new Position(current.X + 1, current.Y);
+            if (board[current.X + 1, current.Y] == GOAL && !goalList.Contains(nextPosition))
+            {
+                GetAdjacentGoals(nextPosition, ref goalList);
+            }
+            nextPosition = new Position(current.X - 1, current.Y);
+            if (board[nextPosition.X, nextPosition.Y] == GOAL && !goalList.Contains(nextPosition))
+            {
+                GetAdjacentGoals(nextPosition, ref goalList);
+            }
+            nextPosition = new Position(current.X, current.Y + 1);
+            if (board[nextPosition.X, nextPosition.Y] == GOAL && !goalList.Contains(nextPosition))
+            {
+                GetAdjacentGoals(nextPosition, ref goalList);
+            }
+            nextPosition = new Position(current.X, current.Y - 1);
+            if (board[nextPosition.X, nextPosition.Y] == GOAL && !goalList.Contains(nextPosition))
+            {
+                GetAdjacentGoals(nextPosition, ref goalList);
+            }
+        }
     }
 
     class PositionGoalPair

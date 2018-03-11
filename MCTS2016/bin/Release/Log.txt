@@ -6449,3 +6449,529 @@ restarts: 1level: ./Levels/samegame.txt
 3/7/2018 - 1:26:46 PM  :  Level 20 - move 51: {[1,1][0,1]}
 3/7/2018 - 1:26:46 PM  :  Level 20 - move 52: {[1,0][0,0]}
 3/7/2018 - 1:26:46 PM  :  Total score:44728
+3/10/2018 - 12:05:59 AM  :  
+********************
+BEGIN TASK:
+Game:sokoban
+Method: IDA* 
+Maximum cost: 5000000
+Reward Type: PositiveBM
+level: ../Release/Levels/test.txt
+********************
+3/10/2018 - 12:05:59 AM  :  Level1:
+    #####          
+    #   #          
+    #$  #          
+  ###  $##         
+  #  $ $ #         
+### # ## #   ######
+#   # ## #####  ..#
+# $  $          ..#
+##### ### #@##  ..#
+    #     #########
+    #######        
+[8,4]
+[5,7][box:5]:ulllllL[7,4][box:3]:ullluuuL[5,7][box:5]:ullddlllluU
+3/10/2018 - 12:06:00 AM  :  Level 1 solved: True solution length:262/97
+3/10/2018 - 12:06:00 AM  :  Moves: ullluuuLUllDDuuruurDldldlldddrRRRRRRRRRRRRdrUllllllllllllllulldRRRRRRRRRRRRRRRllllllllllllluuurrdDuuuruulDDDDulldddrRRRRRRRRRRRdrUllllllllllllluuurrdDuulldddrRRRRRRRRRRRllllllluuulLulDDDuuruurDlldlldddrRRRRRRRRRRurDldRRllulllllluuuLLulDDDuulldddrRRRRRRRRRRurDldR
+3/10/2018 - 12:06:00 AM  :  Solved 1/1
+3/10/2018 - 12:06:00 AM  :  Level2:
+      #### 
+####### @# 
+#     $  # 
+#   $## $# 
+##$#...# # 
+ # $...  # 
+ # #. .# ##
+ #   # #$ #
+ #$  $    #
+ #  #######
+ ####      
+           
+[7,1]
+[8,3][box:2]:dD[6,2][box:0]:ldLL
+3/10/2018 - 12:10:55 AM  :  Level 2 solved: False solution length:0/0
+3/10/2018 - 12:10:55 AM  :  Moves: 
+3/10/2018 - 12:10:55 AM  :  Solved 1/2
+3/10/2018 - 12:10:55 AM  :  Level3:
+       ##### 
+ #######   ##
+## # @## $$ #
+#    $      #
+#  $  ###   #
+### #####$###
+# $  ### ..# 
+# $ $ $ ...# 
+#    ###...# 
+# $$ # #...# 
+#  ### ##### 
+####         
+[2,2]
+[5,3][box:2]:ldR[3,4][box:3]:ldlD[3,4][box:3]:lddL[3,4][box:3]:ldlldR
+3/10/2018 - 12:19:54 AM  :  Level 3 solved: False solution length:0/0
+3/10/2018 - 12:19:54 AM  :  Moves: 
+3/10/2018 - 12:19:54 AM  :  Solved 1/3
+3/10/2018 - 12:19:54 AM  :  Level4:
+   ##########   
+   #..  #   #   
+   #..      #   
+   #..  #  #### 
+  #######  #  ##
+  #            #
+  #  #  ##  #  #
+#### ##  #### ##
+#  $  ##### #  #
+# # $  $  # $  #
+# @$  $   #   ##
+#### ## ####### 
+   #    #       
+   ######       
+[1,8]
+[3,10][box:4]:R[3,8][box:0]:luurR
+3/10/2018 - 12:28:32 AM  :  Level 4 solved: False solution length:0/0
+3/10/2018 - 12:28:32 AM  :  Moves: 
+3/10/2018 - 12:28:32 AM  :  Solved 1/4
+3/10/2018 - 12:28:32 AM  :  Level5:
+       ########### 
+       #         # 
+       #    $ $  # 
+###### # $ ##### # 
+#    ##### $  ##$# 
+#       $ $      # 
+#          ## ## # 
+#    ##@##### ## # 
+#    ####   # ## ##
+#....#      # $   #
+#....#      #     #
+######      #######
+[1,4]
+[8,5][box:5]:uuR[10,5][box:6]:urrrU[10,5][box:6]:urruR[8,5][box:5]:urruL
+3/10/2018 - 12:42:49 AM  :  Level 5 solved: False solution length:0/0
+3/10/2018 - 12:42:49 AM  :  Moves: 
+3/10/2018 - 12:42:49 AM  :  Solved 1/5
+3/10/2018 - 12:42:49 AM  :  Level6:
+############  
+#..  #     ###
+#..  # $  $  #
+#..  #$####  #
+#..    @ ##  #
+#..  # #  $ ##
+###### ##$ $ #
+  # $  $ $ $ #
+  #    #     #
+  ############
+[1,1]
+[6,3][box:0]:lU[10,5][box:3]:rdrR[7,7][box:0]:ldddR[4,7][box:6]:ldddldlluR
+3/10/2018 - 12:56:47 AM  :  
+********************
+BEGIN TASK:
+Game:sokoban
+Method: IDA* 
+Maximum cost: 10000000
+Reward Type: PositiveBM
+level: ../Release/Levels/test.txt
+********************
+3/10/2018 - 12:56:47 AM  :  Level1:
+    #####          
+    #   #          
+    #$  #          
+  ###  $##         
+  #  $ $ #         
+### # ## #   ######
+#   # ## #####  ..#
+# $  $          ..#
+##### ### #@##  ..#
+    #     #########
+    #######        
+[8,4]
+[5,7][box:5]:ulllllL[7,4][box:3]:ullluuuL[5,7][box:5]:ullddlllluU
+3/10/2018 - 12:56:48 AM  :  Level 1 solved: True solution length:262/97
+3/10/2018 - 12:56:48 AM  :  Moves: ullluuuLUllDDuuruurDldldlldddrRRRRRRRRRRRRdrUllllllllllllllulldRRRRRRRRRRRRRRRllllllllllllluuurrdDuuuruulDDDDulldddrRRRRRRRRRRRdrUllllllllllllluuurrdDuulldddrRRRRRRRRRRRllllllluuulLulDDDuuruurDlldlldddrRRRRRRRRRRurDldRRllulllllluuuLLulDDDuulldddrRRRRRRRRRRurDldR
+3/10/2018 - 12:56:48 AM  :  Solved 1/1
+3/10/2018 - 12:56:48 AM  :  Level2:
+      #### 
+####### @# 
+#     $  # 
+#   $## $# 
+##$#...# # 
+ # $...  # 
+ # #. .# ##
+ #   # #$ #
+ #$  $    #
+ #  #######
+ ####      
+           
+[7,1]
+[8,3][box:2]:dD[6,2][box:0]:ldLL
+3/10/2018 - 1:06:24 AM  :  Level 2 solved: False solution length:0/0
+3/10/2018 - 1:06:24 AM  :  Moves: 
+3/10/2018 - 1:06:24 AM  :  Solved 1/2
+3/10/2018 - 1:06:24 AM  :  Level3:
+       ##### 
+ #######   ##
+## # @## $$ #
+#    $      #
+#  $  ###   #
+### #####$###
+# $  ### ..# 
+# $ $ $ ...# 
+#    ###...# 
+# $$ # #...# 
+#  ### ##### 
+####         
+[2,2]
+[5,3][box:2]:ldR[3,4][box:3]:ldlD[3,4][box:3]:lddL[3,4][box:3]:ldlldR
+3/10/2018 - 1:24:33 AM  :  Level 3 solved: False solution length:0/0
+3/10/2018 - 1:24:33 AM  :  Moves: 
+3/10/2018 - 1:24:33 AM  :  Solved 1/3
+3/10/2018 - 1:24:33 AM  :  Level4:
+   ##########   
+   #..  #   #   
+   #..      #   
+   #..  #  #### 
+  #######  #  ##
+  #            #
+  #  #  ##  #  #
+#### ##  #### ##
+#  $  ##### #  #
+# # $  $  # $  #
+# @$  $   #   ##
+#### ## ####### 
+   #    #       
+   ######       
+[1,8]
+[3,10][box:4]:R[3,8][box:0]:luurR
+3/10/2018 - 1:41:51 AM  :  Level 4 solved: False solution length:0/0
+3/10/2018 - 1:41:51 AM  :  Moves: 
+3/10/2018 - 1:41:51 AM  :  Solved 1/4
+3/10/2018 - 1:41:51 AM  :  Level5:
+       ########### 
+       #         # 
+       #    $ $  # 
+###### # $ ##### # 
+#    ##### $  ##$# 
+#       $ $      # 
+#          ## ## # 
+#    ##@##### ## # 
+#    ####   # ## ##
+#....#      # $   #
+#....#      #     #
+######      #######
+[1,4]
+[8,5][box:5]:uuR[10,5][box:6]:urrrU[10,5][box:6]:urruR[8,5][box:5]:urruL
+3/10/2018 - 2:10:35 AM  :  Level 5 solved: False solution length:0/0
+3/10/2018 - 2:10:35 AM  :  Moves: 
+3/10/2018 - 2:10:35 AM  :  Solved 1/5
+3/10/2018 - 2:10:35 AM  :  Level6:
+############  
+#..  #     ###
+#..  # $  $  #
+#..  #$####  #
+#..    @ ##  #
+#..  # #  $ ##
+###### ##$ $ #
+  # $  $ $ $ #
+  #    #     #
+  ############
+[1,1]
+[6,3][box:0]:lU[10,5][box:3]:rdrR[7,7][box:0]:ldddR[4,7][box:6]:ldddldlluR
+3/10/2018 - 2:42:18 AM  :  Level 6 solved: False solution length:0/0
+3/10/2018 - 2:42:18 AM  :  Moves: 
+3/10/2018 - 2:42:18 AM  :  Solved 1/6
+3/10/2018 - 2:42:18 AM  :  Level7:
+                 
+        ######## 
+        #     @# 
+        # $#$ ## 
+        # $  $#  
+        ##$ $ #  
+######### $ # ###
+#....  ## $  $  #
+##...    $  $   #
+#....  ##########
+########         
+[9,2]
+[12,3][box:1]:llD[13,4][box:3]:ldD[10,4][box:2]:lllllddR
+3/10/2018 - 3:04:35 AM  :  Level 7 solved: False solution length:0/0
+3/10/2018 - 3:04:35 AM  :  Moves: 
+3/10/2018 - 3:04:35 AM  :  Solved 1/7
+3/10/2018 - 3:04:35 AM  :  Level8:
+                   
+           ########
+           #  ....#
+############  ....#
+#    #  $ $   ....#
+# $$$#$  $ #  ....#
+#  $     $ #  ....#
+# $$ #$ $ $########
+#  $ #     #       
+## #########       
+#    #    ##       
+#     $   ##       
+#  $$#$$  @#       
+#    #    ##       
+###########        
+[6,10]
+[7,12][box:19]:lldlU[6,11][box:15]:llulL
+3/10/2018 - 3:34:15 AM  :  Level 8 solved: False solution length:0/0
+3/10/2018 - 3:34:15 AM  :  Moves: 
+3/10/2018 - 3:34:15 AM  :  Solved 1/8
+3/10/2018 - 3:34:15 AM  :  Level9:
+            
+######  ### 
+#..  # ##@##
+#..  ###   #
+#..     $$ #
+#..  # # $ #
+#..### # $ #
+#### $ #$  #
+   #  $# $ #
+   # $  $  #
+   #  ##   #
+   #########
+[9,2]
+[8,4][box:0]:dlD[9,5][box:2]:drddL[9,6][box:3]:drdddL[9,8][box:7]:drddddlD[9,8][box:7]:drdddddL[8,9][box:9]:drddddddlL[9,8][box:7]:drddddddlU[8,9][box:9]:drddddddldlU
+3/10/2018 - 4:11:42 AM  :  Level 9 solved: False solution length:0/0
+3/10/2018 - 4:11:42 AM  :  Moves: 
+3/10/2018 - 4:11:42 AM  :  Solved 1/9
+3/10/2018 - 4:11:42 AM  :  Level10:
+                   
+  #################
+###@##         ...#
+#    #         ...#
+# $  #         ...#
+# $$ #         ...#
+## $ ###$##########
+ # ###  $ #        
+##   $  $ #        
+#  $ #  $ #        
+# $  #    #        
+#  $ #    #        
+#    #    #        
+###########        
+[3,2]
+[2,4][box:0]:dlldR[3,6][box:3]:drdddL
+3/10/2018 - 4:32:47 AM  :  Level 10 solved: False solution length:0/0
+3/10/2018 - 4:32:47 AM  :  Moves: 
+3/10/2018 - 4:32:47 AM  :  Solved 1/10
+3/10/2018 - 4:32:47 AM  :  Level11:
+                 
+    ######       
+ ####    #       
+ #    ## #       
+ # $     #       
+### #### ########
+#  $   $ ##  ...#
+#   $$ $$    ...#
+#    $  $##  ...#
+##@## ## ##  ...#
+ ###  $  ########
+ #   $$  #       
+ #    #  #       
+ #########       
+[1,6]
+[5,8][box:7]:urrR[4,7][box:3]:urrU[3,6][box:1]:uruU[3,6][box:1]:uuuR
+3/10/2018 - 4:50:56 AM  :  Level 11 solved: False solution length:0/0
+3/10/2018 - 4:50:56 AM  :  Moves: 
+3/10/2018 - 4:50:56 AM  :  Solved 1/11
+3/10/2018 - 4:50:56 AM  :  Level12:
+                 
+####### #########
+#     # #   ##  #
+# ### # #   $   #
+# # $ ###   $   #
+#   $$      ##$ #
+#    ####   ##  #
+#@############ ##
+###..    #####$ #
+  #..    ####   #
+  #..       $$  #
+  #..    #### $ #
+  #..    #  #   #
+  ########  #####
+                 
+[1,2]
+[4,4][box:1]:urruuR
+3/10/2018 - 5:12:30 AM  :  Level 12 solved: False solution length:0/0
+3/10/2018 - 5:12:30 AM  :  Moves: 
+3/10/2018 - 5:12:30 AM  :  Solved 1/12
+3/10/2018 - 10:41:19 AM  :  
+********************
+BEGIN TASK:
+Game:sokoban
+Method: IDA* 
+Maximum cost: 60000000
+Reward Type: PositiveBM
+level: ../Release/Levels/test.txt
+********************
+3/10/2018 - 10:41:19 AM  :  Level1:
+    #####          
+    #   #          
+    #$  #          
+  ###  $##         
+  #  $ $ #         
+### # ## #   ######
+#   # ## #####  ..#
+# $  $          ..#
+##### ### #@##  ..#
+    #     #########
+    #######        
+[8,4]
+[5,7][box:5]:ulllllL[7,4][box:3]:ullluuuL[5,7][box:5]:ullddlllluU
+3/10/2018 - 10:41:19 AM  :  Level 1 solved: True solution length:262/97
+3/10/2018 - 10:41:19 AM  :  Moves: ullluuuLUllDDuuruurDldldlldddrRRRRRRRRRRRRdrUllllllllllllllulldRRRRRRRRRRRRRRRllllllllllllluuurrdDuuuruulDDDDulldddrRRRRRRRRRRRdrUllllllllllllluuurrdDuulldddrRRRRRRRRRRRllllllluuulLulDDDuuruurDlldlldddrRRRRRRRRRRurDldRRllulllllluuuLLulDDDuulldddrRRRRRRRRRRurDldR
+3/10/2018 - 10:41:19 AM  :  Solved 1/1
+3/10/2018 - 10:41:19 AM  :  Level2:
+      #### 
+####### @# 
+#     $  # 
+#   $## $# 
+##$#...# # 
+ # $...  # 
+ # #. .# ##
+ #   # #$ #
+ #$  $    #
+ #  #######
+ ####      
+           
+[7,1]
+[8,3][box:2]:dD[6,2][box:0]:ldLL
+3/10/2018 - 11:49:17 PM  :  
+********************
+BEGIN TASK:
+Game:sokoban
+Method: IDA* 
+Maximum cost: 60000000
+Reward Type: PositiveBM
+level: ../Release/Levels/test.txt
+********************
+3/10/2018 - 11:50:38 PM  :  
+********************
+BEGIN TASK:
+Game:sokoban
+Method: IDA* 
+Maximum cost: 60000000
+Reward Type: PositiveBM
+level: ../Release/Levels/test.txt
+********************
+3/10/2018 - 11:50:38 PM  :  Level1:
+    #####          
+    #   #          
+    #$  #          
+  ###  $##         
+  #  $ $ #         
+### # ## #   ######
+#   # ## #####  ..#
+# $  $          ..#
+##### ### #@##  ..#
+    #     #########
+    #######        
+[8,4]
+[5,7][box:5]:ulllllL[7,4][box:3]:ullluuuL[5,7][box:5]:ullddlllluU
+3/10/2018 - 11:50:39 PM  :  Level 1 solved: True solution length:262/97
+3/10/2018 - 11:50:39 PM  :  Moves: ullluuuLUllDDuuruurDldldlldddrRRRRRRRRRRRRdrUllllllllllllllulldRRRRRRRRRRRRRRRllllllllllllluuurrdDuuuruulDDDDulldddrRRRRRRRRRRRdrUllllllllllllluuurrdDuulldddrRRRRRRRRRRRllllllluuulLulDDDuuruurDlldlldddrRRRRRRRRRRurDldRRllulllllluuuLLulDDDuulldddrRRRRRRRRRRurDldR
+3/10/2018 - 11:50:39 PM  :  Solved 1/1
+3/10/2018 - 11:50:39 PM  :  Level2:
+      #### 
+####### @# 
+#     $  # 
+#   $## $# 
+##$#...# # 
+ # $...  # 
+ # #. .# ##
+ #   # #$ #
+ #$  $    #
+ #  #######
+ ####      
+           
+[7,1]
+[8,3][box:2]:dD[6,2][box:0]:ldLL
+3/11/2018 - 12:52:12 AM  :  Level 2 solved: False solution length:0/0
+3/11/2018 - 12:52:12 AM  :  Moves: 
+3/11/2018 - 12:52:12 AM  :  Solved 1/2
+3/11/2018 - 12:52:12 AM  :  Level3:
+       ##### 
+ #######   ##
+## # @## $$ #
+#    $      #
+#  $  ###   #
+### #####$###
+# $  ### ..# 
+# $ $ $ ...# 
+#    ###...# 
+# $$ # #...# 
+#  ### ##### 
+####         
+[2,2]
+[5,3][box:2]:ldR[3,4][box:3]:ldlD[3,4][box:3]:lddL[3,4][box:3]:ldlldR
+3/11/2018 - 2:45:55 AM  :  Level 3 solved: False solution length:0/0
+3/11/2018 - 2:45:55 AM  :  Moves: 
+3/11/2018 - 2:45:55 AM  :  Solved 1/3
+3/11/2018 - 2:45:55 AM  :  Level4:
+   ##########   
+   #..  #   #   
+   #..      #   
+   #..  #  #### 
+  #######  #  ##
+  #            #
+  #  #  ##  #  #
+#### ##  #### ##
+#  $  ##### #  #
+# # $  $  # $  #
+# @$  $   #   ##
+#### ## ####### 
+   #    #       
+   ######       
+[1,8]
+[3,10][box:4]:R[3,8][box:0]:luurR
+3/11/2018 - 4:36:22 AM  :  Level 4 solved: False solution length:0/0
+3/11/2018 - 4:36:22 AM  :  Moves: 
+3/11/2018 - 4:36:22 AM  :  Solved 1/4
+3/11/2018 - 4:36:22 AM  :  Level5:
+       ########### 
+       #         # 
+       #    $ $  # 
+###### # $ ##### # 
+#    ##### $  ##$# 
+#       $ $      # 
+#          ## ## # 
+#    ##@##### ## # 
+#    ####   # ## ##
+#....#      # $   #
+#....#      #     #
+######      #######
+[1,4]
+[8,5][box:5]:uuR[10,5][box:6]:urrrU[10,5][box:6]:urruR[8,5][box:5]:urruL
+3/11/2018 - 7:39:46 AM  :  Level 5 solved: False solution length:0/0
+3/11/2018 - 7:39:46 AM  :  Moves: 
+3/11/2018 - 7:39:46 AM  :  Solved 1/5
+3/11/2018 - 7:39:46 AM  :  Level6:
+############  
+#..  #     ###
+#..  # $  $  #
+#..  #$####  #
+#..    @ ##  #
+#..  # #  $ ##
+###### ##$ $ #
+  # $  $ $ $ #
+  #    #     #
+  ############
+[1,1]
+[6,3][box:0]:lU[10,5][box:3]:rdrR[7,7][box:0]:ldddR[4,7][box:6]:ldddldlluR
+3/11/2018 - 11:01:19 AM  :  Level 6 solved: False solution length:0/0
+3/11/2018 - 11:01:19 AM  :  Moves: 
+3/11/2018 - 11:01:19 AM  :  Solved 1/6
+3/11/2018 - 11:01:19 AM  :  Level7:
+                 
+        ######## 
+        #     @# 
+        # $#$ ## 
+        # $  $#  
+        ##$ $ #  
+######### $ # ###
+#....  ## $  $  #
+##...    $  $   #
+#....  ##########
+########         
+[9,2]
+[12,3][box:1]:llD[13,4][box:3]:ldD[10,4][box:2]:lllllddR

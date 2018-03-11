@@ -235,7 +235,8 @@ namespace MCTS2016
             string[] levels = ReadSokobanLevels(levelPath);
             IPuzzleState[] states = new IPuzzleState[levels.Length];
             int solvedLevels = 0;
-            for(int i = 0; i < states.Length; i++)
+            //GoalMacroWrapper.MacroTree();
+            for (int i = 0; i < states.Length; i++)
             {
                 states[i] = new AbstractSokobanState(levels[i], rewardType, false, null);
                 IDAStarSearch idaStar = new IDAStarSearch();

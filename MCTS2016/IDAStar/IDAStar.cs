@@ -20,10 +20,12 @@ namespace MCTS2016.IDAStar
         double NOT_FOUND = -1;
         int nodeCount;
         int maxDepth;
+        int maxNodes;
 
         public List<IPuzzleMove> Solve(IPuzzleState rootState, int maxNodes, int tableSize, int maxDepth)
         {
             this.maxDepth = maxDepth;
+            this.maxNodes = maxNodes;
             nodeCount = 0;
             firstLevelTable = new TranspositionTable(tableSize);
             secondLevelTable = new TranspositionTable(tableSize);
@@ -50,6 +52,10 @@ namespace MCTS2016.IDAStar
         private double Search(AStarNode node, double cost, double threshold)
         {
             nodeCount++;
+            if (nodeCount > maxNodes)
+            {
+                return NOT_FOUND;
+            }
             double value = cost + node.state.GetResult();
             int currentHash = node.state.GetHashCode();
             TranspositionTableEntry entry;
