@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MCTS2016.Puzzles.Sokoban
 {
-    class SokobanGameMove : IPuzzleMove
+    public class SokobanGameMove : IPuzzleMove
     {
         private string moveString;
 

@@ -8,12 +8,15 @@ using System.Threading.Tasks;
 
 namespace MCTS2016.Puzzles.Sokoban
 {
+
     public class GoalMacroTree
     {
 
         GoalMacroNode[] roots;
 
-        // declare [JsonIgnore] when a member should not be de/serialized
+        [JsonIgnore]
+        public HashSet<Position> GoalsInRoom { get; set; }
+
         public GoalMacroNode[] Roots { get => roots; set => roots = value; }
     }
 
@@ -40,6 +43,16 @@ namespace MCTS2016.Puzzles.Sokoban
             }
             return boxes;
         }
+
+        public int ComputeHashKey()
+        {
+            hashkey = 27;
+            foreach(Position box in GetBoxPositions())
+            {
+                hashkey = (hashkey * 13) + box.GetHashCode();
+            }
+            return hashkey;
+        }
     }
 
     public class GoalMacroEntry
@@ -47,6 +60,9 @@ namespace MCTS2016.Puzzles.Sokoban
         int goalPosition;
         int entrancePosition;
         GoalMacroNode next;
+
+        [JsonIgnore]
+        public List<GoalMacro> GoalMacros { get; set; }
 
         public int GoalPosition { get => goalPosition; set => goalPosition = value; }
         public int EntrancePosition { get => entrancePosition; set => entrancePosition = value; }
@@ -60,6 +76,17 @@ namespace MCTS2016.Puzzles.Sokoban
         {
             return new Position(entrancePosition / 16, (15 - entrancePosition % 16));
         }
-        
+    }
+
+    public class GoalMacro
+    {
+        public Position PlayerPosition { get; set; }
+        public SokobanPushMove MacroMove { get; set; }
+
+        public GoalMacro(Position playerPosition, SokobanPushMove macroMove)
+        {
+            PlayerPosition = playerPosition;
+            MacroMove = macroMove;
+        }
     }
 }

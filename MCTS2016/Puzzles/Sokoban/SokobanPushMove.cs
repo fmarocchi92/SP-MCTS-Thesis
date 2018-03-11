@@ -8,22 +8,33 @@ using System.Threading.Tasks;
 
 namespace MCTS2016.Puzzles.Sokoban
 {
-    class SokobanPushMove : IPuzzleMove
+    public class SokobanPushMove : IPuzzleMove
     {
         private Position playerPosition;
         private int boxIndex;
 
         private List<SokobanGameMove> moveList;
 
+        private bool isGoalMacro;
+
         internal List<SokobanGameMove> MoveList { get => moveList; set => moveList = value; }
         internal Position PlayerPosition { get => playerPosition; set => playerPosition = value; }
+        public bool IsGoalMacro { get => isGoalMacro; set => isGoalMacro = value; }
 
         public SokobanPushMove(List<SokobanGameMove> moves, Position playerPosition, int boxIndex)
         {
             this.boxIndex = boxIndex;
             MoveList = moves;
             PlayerPosition = playerPosition;
+            isGoalMacro = false;
         }
+
+        //public SokobanPushMove(List<IPuzzleMove> moves, Position position, int boxIndex)
+        //{
+
+        //    this.position = position;
+        //    this.boxIndex = boxIndex;
+        //}
 
         public override double GetCost()
         {
@@ -34,7 +45,7 @@ namespace MCTS2016.Puzzles.Sokoban
                     pushCount++;
                 else
                 {
-                    break;
+                    //break;
                 }
             }
             return pushCount;

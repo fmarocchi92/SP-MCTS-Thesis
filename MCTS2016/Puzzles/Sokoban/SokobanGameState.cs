@@ -18,8 +18,8 @@ namespace MCTS2016.Puzzles.Sokoban
     {
 
         public int size { get; set; }//board width
-        public int PlayerY { get => playerY;}
-        public int PlayerX { get => playerX;}
+        public int PlayerY { get => playerY; set => playerY = value; }
+        public int PlayerX { get => playerX; set => playerX = value; }
         public int[,] Board { get => board;}
         public List<Position> BoxPositions { get => boxPositions; set => boxPositions = value; }
         private bool stateChanged = false;
@@ -60,6 +60,7 @@ namespace MCTS2016.Puzzles.Sokoban
         private double  score;
         private bool win;
         public HashSet<Position> simpleDeadlock;
+        private HashSet<Position> lockedBoxes;
 
         //private List<GoalRoom> goalRooms;
         private Dictionary<Position, int> distancesFromClosestGoal = new Dictionary<Position, int>();
@@ -111,7 +112,7 @@ namespace MCTS2016.Puzzles.Sokoban
             {
                 this.simulationStrategy = new SokobanRandomStrategy();
             }
-
+            lockedBoxes = new HashSet<Position>();
             simpleDeadlock = FindDeadlockPositions();
         }
 
@@ -138,7 +139,8 @@ namespace MCTS2016.Puzzles.Sokoban
                 distancesFromAllGoals = distancesFromAllGoals,
                 goals = goals,
                 rewardType = rewardType,
-                boxPositions = new List<Position>( boxPositions),
+                boxPositions = new List<Position>(boxPositions),
+                lockedBoxes = lockedBoxes
             };
         }
                 
@@ -257,8 +259,7 @@ namespace MCTS2016.Puzzles.Sokoban
                 }
             }
         }
-
-
+        
 
         void Explore(int x, int y, int depth)
         {
@@ -391,6 +392,12 @@ namespace MCTS2016.Puzzles.Sokoban
         private void PushBox(int xDirection, int yDirection)
         {
             score -= 0.1;
+            if(board[playerX + xDirection, playerY + yDirection] != BOX && board[playerX + xDirection, playerY + yDirection] != BOX_ON_GOAL)
+            {
+                Debug.WriteLine("Push Error: player["+playerX+","+playerY+"]; box["+ (playerX + xDirection) +","+ (playerY + yDirection)+"]");
+                Debug.WriteLine(this);
+                return;
+            }
             if (board[playerX + 2 * xDirection, playerY + 2 * yDirection] == EMPTY)
             {
                 board[playerX + 2 * xDirection, playerY + 2 * yDirection] = BOX;
@@ -406,6 +413,7 @@ namespace MCTS2016.Puzzles.Sokoban
             {
                 //update box position
                 Position currentBoxPosition = new Position(playerX + xDirection, playerY + yDirection);
+               
                 boxPositions[boxPositions.IndexOf(currentBoxPosition)] = new Position(playerX + 2 * xDirection, playerY + 2 * yDirection); ;
                 
                 if (board[playerX + xDirection, playerY + yDirection] == BOX)
@@ -935,6 +943,17 @@ namespace MCTS2016.Puzzles.Sokoban
             return hc;
         }
 
+        public int GetGoalMacroHash(HashSet<Position> goalsInRoom)
+        {
+            int h = 27;
+            foreach (Position p in boxPositions)
+            {
+                if(board[p.X,p.Y] == BOX_ON_GOAL && goalsInRoom.Contains(p))
+                    h = 13 * h + p.GetHashCode();
+            }
+            return h;
+        }
+
         public override bool Equals(object obj)
         {
             return GetHashCode()==obj.GetHashCode();
@@ -942,13 +961,17 @@ namespace MCTS2016.Puzzles.Sokoban
 
         private List<IPuzzleMove> GetBasicMoves()
         {
+            Position targetPosition = null;
             List<IPuzzleMove> moves = new List<IPuzzleMove>();
             if (playerX < board.GetLength(0) - 1 &&
                 board[playerX + 1, playerY] != WALL)
             {
                 if (board[playerX + 1, playerY] == BOX || board[playerX + 1, playerY] == BOX_ON_GOAL)
                 {
-                    if ((board[playerX + 2, playerY] == EMPTY || board[playerX + 2, playerY] == GOAL) && !simpleDeadlock.Contains(new Position(playerX +2, playerY)))
+                    targetPosition = new Position(playerX + 2, playerY);
+                    if ((board[playerX + 2, playerY] == EMPTY || board[playerX + 2, playerY] == GOAL) 
+                        && !simpleDeadlock.Contains(targetPosition)
+                        && !lockedBoxes.Contains(targetPosition))
                     {
                         moves.Add(new SokobanGameMove("R") { BoxIndex = boxPositions.IndexOf(new Position(playerX + 1, playerY)) });
                     }
@@ -963,7 +986,10 @@ namespace MCTS2016.Puzzles.Sokoban
             {
                 if (board[playerX - 1, playerY] == BOX || board[playerX - 1, playerY] == BOX_ON_GOAL)
                 {
-                    if ((board[playerX - 2, playerY] == EMPTY || board[playerX - 2, playerY] == GOAL) && !simpleDeadlock.Contains(new Position(playerX - 2, playerY)))
+                    targetPosition = new Position(playerX - 2, playerY);
+                    if ((board[playerX - 2, playerY] == EMPTY || board[playerX - 2, playerY] == GOAL) 
+                        && !simpleDeadlock.Contains(targetPosition)
+                        && !lockedBoxes.Contains(targetPosition))
                     {
                         moves.Add(new SokobanGameMove("L") { BoxIndex = boxPositions.IndexOf(new Position(playerX - 1, playerY)) });
                     }
@@ -978,7 +1004,10 @@ namespace MCTS2016.Puzzles.Sokoban
             {
                 if (board[playerX, playerY + 1] == BOX || board[playerX, playerY + 1] == BOX_ON_GOAL)
                 {
-                    if ((board[playerX, playerY + 2] == EMPTY || board[playerX, playerY + 2] == GOAL) && !simpleDeadlock.Contains(new Position(playerX, playerY + 2)))
+                    targetPosition = new Position(playerX, playerY + 2);
+                    if ((board[playerX, playerY + 2] == EMPTY || board[playerX, playerY + 2] == GOAL) 
+                        && !simpleDeadlock.Contains(targetPosition)
+                        && !lockedBoxes.Contains(targetPosition))
                     {
                         moves.Add(new SokobanGameMove("D") { BoxIndex = boxPositions.IndexOf(new Position(playerX, playerY + 1)) });
                     }
@@ -993,7 +1022,10 @@ namespace MCTS2016.Puzzles.Sokoban
             {
                 if (board[playerX, playerY - 1] == BOX || board[playerX, playerY - 1] == BOX_ON_GOAL)
                 {
-                    if ((board[playerX, playerY - 2] == EMPTY || board[playerX, playerY - 2] == GOAL) && !simpleDeadlock.Contains(new Position(playerX, playerY - 2)))
+                    targetPosition = new Position(playerX, playerY - 2);
+                    if ((board[playerX, playerY - 2] == EMPTY || board[playerX, playerY - 2] == GOAL) 
+                        && !simpleDeadlock.Contains(targetPosition)
+                        && !lockedBoxes.Contains(targetPosition))
                     {
                         moves.Add(new SokobanGameMove("U") { BoxIndex = boxPositions.IndexOf(new Position(playerX, playerY - 1)) });
                     }
@@ -1008,6 +1040,10 @@ namespace MCTS2016.Puzzles.Sokoban
         }
 
 
+        public void LockBox(Position boxPosition)
+        {
+            lockedBoxes.Add(boxPosition);
+        }
 
 
         void FindMacros()

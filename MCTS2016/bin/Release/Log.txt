@@ -6975,3 +6975,42 @@ level: ../Release/Levels/test.txt
 ########         
 [9,2]
 [12,3][box:1]:llD[13,4][box:3]:ldD[10,4][box:2]:lllllddR
+3/11/2018 - 2:07:35 PM  :  Level 7 solved: False solution length:0/0
+3/11/2018 - 2:07:35 PM  :  Moves: 
+3/11/2018 - 2:07:35 PM  :  Solved 1/7
+3/11/2018 - 2:07:35 PM  :  Level8:
+                   
+           ########
+           #  ....#
+############  ....#
+#    #  $ $   ....#
+# $$$#$  $ #  ....#
+#  $     $ #  ....#
+# $$ #$ $ $########
+#  $ #     #       
+## #########       
+#    #    ##       
+#     $   ##       
+#  $$#$$  @#       
+#    #    ##       
+###########        
+[6,10]
+[7,12][box:19]:lldlU[6,11][box:15]:llulL
+3/11/2018 - 5:25:22 PM  :  Level 8 solved: False solution length:0/0
+3/11/2018 - 5:25:22 PM  :  Moves: 
+3/11/2018 - 5:25:22 PM  :  Solved 1/8
+3/11/2018 - 5:25:22 PM  :  Level9:
+            
+######  ### 
+#..  # ##@##
+#..  ###   #
+#..     $$ #
+#..  # # $ #
+#..### # $ #
+#### $ #$  #
+   #  $# $ #
+   # $  $  #
+   #  ##   #
+   #########
+[9,2]
+[8,4][box:0]:dlD[9,5][box:2]:drddL[9,6][box:3]:drdddL[9,8][box:7]:drddddlD[9,8][box:7]:drdddddL[8,9][box:9]:drddddddlL[9,8][box:7]:drddddddlU[8,9][box:9]:drddddddldlU

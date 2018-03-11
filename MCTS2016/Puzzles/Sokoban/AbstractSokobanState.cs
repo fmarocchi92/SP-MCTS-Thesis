@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace MCTS2016.Puzzles.Sokoban
 {
-    class AbstractSokobanState:IPuzzleState
+    class AbstractSokobanState : IPuzzleState
     {
         private SokobanGameState state;
         private List<IPuzzleMove> availableMoves;
@@ -23,18 +23,23 @@ namespace MCTS2016.Puzzles.Sokoban
         private MersenneTwister rng;
         private bool useTunnelMacro;
         private bool useGoalMacro;
+        private bool useGoalCut;
+        private GoalMacroTree goalMacroTree;
+        private GoalMacroNode currentGoalMacroNode;
 
-        public AbstractSokobanState(SokobanGameState state, RewardType rewardType, bool useNormalizedPosition, bool useGoalMacro, bool useTunnelMacro, ISPSimulationStrategy simulationStrategy = null, MersenneTwister rng = null)
+        public AbstractSokobanState(SokobanGameState state, RewardType rewardType, bool useNormalizedPosition, bool useGoalMacro, bool useTunnelMacro, bool useGoalCut, ISPSimulationStrategy simulationStrategy = null, MersenneTwister rng = null)
         {
-            Init(state, rewardType, useNormalizedPosition, useGoalMacro, useTunnelMacro, simulationStrategy, rng);
-        }   
-
-        public AbstractSokobanState(String level, RewardType rewardType, bool useNormalizedPosition, bool useGoalMacro, bool useTunnelMacro, ISPSimulationStrategy simulationStrategy = null, MersenneTwister rng = null)
-        {
-            Init(new SokobanGameState(level, rewardType, simulationStrategy), rewardType, useNormalizedPosition, useGoalMacro, useTunnelMacro, simulationStrategy, rng);
+            Init(state, rewardType, useNormalizedPosition, useGoalMacro, useTunnelMacro, useGoalCut, simulationStrategy, rng);
         }
 
-        private void Init (SokobanGameState state, RewardType rewardType, bool useNormalizedPosition, bool useGoalMacro, bool useTunnelMacro, ISPSimulationStrategy simulationStrategy, MersenneTwister rng = null)
+        public AbstractSokobanState(String level, RewardType rewardType, bool useNormalizedPosition, bool useGoalMacro, bool useTunnelMacro, bool useGoalCut, ISPSimulationStrategy simulationStrategy = null, MersenneTwister rng = null)
+        {
+            Init(new SokobanGameState(level, rewardType, simulationStrategy), rewardType, useNormalizedPosition, useGoalMacro, useTunnelMacro, useGoalCut, simulationStrategy, rng);
+        }
+
+        private AbstractSokobanState() { }
+
+        private void Init(SokobanGameState state, RewardType rewardType, bool useNormalizedPosition, bool useGoalMacro, bool useTunnelMacro, bool useGoalCut, ISPSimulationStrategy simulationStrategy, MersenneTwister rng = null)
         {
             this.useNormalizedPosition = useNormalizedPosition;
             this.state = (SokobanGameState)state;
@@ -51,13 +56,71 @@ namespace MCTS2016.Puzzles.Sokoban
             this.simulationStrategy = simulationStrategy;
             normalizedPlayerPosition = new Position(int.MaxValue, int.MaxValue);
             availableMoves = null;
+            this.useGoalMacro = useGoalMacro;
+            this.useTunnelMacro = useTunnelMacro;
+            this.useGoalCut = useGoalCut;
+            if (useGoalMacro)
+            {
+                goalMacroTree = GoalMacroWrapper.BuildMacroTree(this);
+                if (goalMacroTree.Roots.Length > 0)
+                { 
+                    currentGoalMacroNode = GetInitialMacroNode(goalMacroTree.Roots[0], state.GetGoalMacroHash(goalMacroTree.GoalsInRoom));
+                    if(currentGoalMacroNode == null)
+                    {
+                        this.useGoalMacro = false;
+                    }
+                }
+                else
+                {
+                    this.useGoalMacro = false;
+                }
+            }
+
+        }
+
+        private GoalMacroNode GetInitialMacroNode(GoalMacroNode node, int hash)
+        {
+            if (node.Hashkey == hash)
+                return node;
+            GoalMacroNode newNode = null;
+            foreach (GoalMacroEntry entry in node.Entries)
+            {
+                newNode = GetInitialMacroNode(entry.Next, hash);
+                if (newNode != null)
+                {
+                    return node;
+                }
+            }
+            return null;
         }
 
         public int size => ((IPuzzleState)state).size;
 
+        internal SokobanGameState State { get => state; set => state = value; }
+        public bool UseGoalCut { get => useGoalCut; set => useGoalCut = value; }
+        public bool UseGoalMacro { get => useGoalMacro; set => useGoalMacro = value; }
+        public bool UseTunnelMacro { get => useTunnelMacro; set => useTunnelMacro = value; }
+        internal RewardType RewardType { get => rewardType; set => rewardType = value; }
+        public ISPSimulationStrategy SimulationStrategy { get => simulationStrategy; set => simulationStrategy = value; }
+        public MersenneTwister Rng { get => rng; set => rng = value; }
+
         public IPuzzleState Clone()
         {
-            IPuzzleState clone = new AbstractSokobanState((SokobanGameState)state.Clone(), rewardType, useNormalizedPosition,useGoalMacro,useTunnelMacro, simulationStrategy, rng);
+            IPuzzleState clone = new AbstractSokobanState()
+            {
+                state = (SokobanGameState)state.Clone(),
+                rewardType = rewardType,
+                useNormalizedPosition = useNormalizedPosition,
+                useGoalMacro = useGoalMacro,
+                useTunnelMacro = useTunnelMacro,
+                useGoalCut = useGoalCut,
+                simulationStrategy = simulationStrategy,
+                rng = rng,
+                normalizedPlayerPosition = new Position(int.MaxValue, int.MaxValue),
+                availableMoves = null,
+                goalMacroTree = goalMacroTree,
+                currentGoalMacroNode = currentGoalMacroNode
+            };//(SokobanGameState)state.Clone(), rewardType, useNormalizedPosition,useGoalMacro,useTunnelMacro, simulationStrategy, rng);
             return clone;
         }
 
@@ -75,7 +138,7 @@ namespace MCTS2016.Puzzles.Sokoban
         public override bool Equals(object obj)
         {
 
-            return obj!= null && obj.GetType().Equals(GetType()) && this.GetHashCode()==obj.GetHashCode();
+            return obj != null && obj.GetType().Equals(GetType()) && this.GetHashCode() == obj.GetHashCode();
         }
 
         public List<int> GetBoard()
@@ -141,7 +204,7 @@ namespace MCTS2016.Puzzles.Sokoban
 
         public bool isTerminal()
         {
-            if(GetMoves().Count() == 0)
+            if (GetMoves().Count() == 0)
             {
                 return true;
             }
@@ -190,10 +253,16 @@ namespace MCTS2016.Puzzles.Sokoban
         private void DoAbstractMove(IPuzzleMove move)
         {
             SokobanPushMove pushMove = (SokobanPushMove)move;
-            foreach(SokobanGameMove m in pushMove.MoveList)
+            foreach (SokobanGameMove m in pushMove.MoveList)
             {
                 state.DoMove(m);
             }
+            if (pushMove.IsGoalMacro)
+            {
+                SokobanGameMove lastMove = pushMove.MoveList[pushMove.MoveList.Count - 1];
+                state.LockBox(state.BoxPositions[lastMove.BoxIndex]);
+            }
+
         }
 
         private List<IPuzzleMove> GetAvailablePushes()
@@ -238,17 +307,42 @@ namespace MCTS2016.Puzzles.Sokoban
                             node = node.parent;
                         }
                         movesToPush.Reverse();
-                        
-                        List<SokobanGameMove> tunnel = GetTunnelMacro((SokobanGameState)s, move);
-                        if(tunnel.Count > 0)
+
+                        if (useGoalMacro)
                         {
-                            movesToPush.AddRange(tunnel);
+                            SokobanPushMove goalMacro = GetGoalMacro((SokobanGameState)sCopy, move);
+                            if (goalMacro != null)
+                            {
+                                movesToPush.Add(move);
+                                movesToPush.AddRange(goalMacro.MoveList);
+                                SokobanPushMove pushMove = new SokobanPushMove(movesToPush, goalMacro.PlayerPosition, movesToPush[movesToPush.Count - 1].BoxIndex);
+                                if (useGoalCut)
+                                {
+                                    return new List<IPuzzleMove>() { pushMove };
+                                }
+                                else
+                                {
+                                    pushes.Add(pushMove);
+                                }
+                            }
+                        }
+                        if (useTunnelMacro)
+                        {
+                            List<SokobanGameMove> tunnel = GetTunnelMacro((SokobanGameState)s, move);
+                            if (tunnel.Count > 0)
+                            {
+                                movesToPush.AddRange(tunnel);
+                            }
+                            else
+                            {
+                                movesToPush.Add(move);
+                            }
                         }
                         else
                         {
                             movesToPush.Add(move);
                         }
-                        
+
                         pushes.Add(new SokobanPushMove(movesToPush, new Position(sCopy.PlayerX, sCopy.PlayerY), movesToPush.Last<SokobanGameMove>().BoxIndex)); //add push move to available pushes
                     }
                 }
@@ -262,7 +356,7 @@ namespace MCTS2016.Puzzles.Sokoban
             List<SokobanGameMove> macro = new List<SokobanGameMove>();
             Position boxToPush = null;
             Position pushTarget = null;
-            
+
             switch (push.ToString())
             {
                 case "U":
@@ -282,11 +376,11 @@ namespace MCTS2016.Puzzles.Sokoban
                     pushTarget = new Position(state.PlayerX - 2, state.PlayerY);
                     break;
             }
-            if(boxToPush.X == pushTarget.X &&
-                state.Board[boxToPush.X + 1, boxToPush.Y] == SokobanGameState.WALL && state.Board[boxToPush.X -1, boxToPush.Y] == SokobanGameState.WALL) //Vertical push
+            if (boxToPush.X == pushTarget.X &&
+                state.Board[boxToPush.X + 1, boxToPush.Y] == SokobanGameState.WALL && state.Board[boxToPush.X - 1, boxToPush.Y] == SokobanGameState.WALL) //Vertical push
             {
-                while((state.Board[pushTarget.X, pushTarget.Y] == SokobanGameState.EMPTY || state.Board[pushTarget.X, pushTarget.Y] == SokobanGameState.GOAL) && //keep pushing if possible
-                    state.Board[boxToPush.X + 1, boxToPush.Y] == SokobanGameState.WALL && state.Board[boxToPush.X -1, boxToPush.Y] == SokobanGameState.WALL && //check if still inside tunnel walls
+                while ((state.Board[pushTarget.X, pushTarget.Y] == SokobanGameState.EMPTY || state.Board[pushTarget.X, pushTarget.Y] == SokobanGameState.GOAL) && //keep pushing if possible
+                    state.Board[boxToPush.X + 1, boxToPush.Y] == SokobanGameState.WALL && state.Board[boxToPush.X - 1, boxToPush.Y] == SokobanGameState.WALL && //check if still inside tunnel walls
                         !(state.Board[boxToPush.X, boxToPush.Y] == SokobanGameState.GOAL && state.Board[pushTarget.X, pushTarget.Y] == SokobanGameState.EMPTY)) //Stop tunnel macro if goal followed by empty
                 {
                     SokobanGameMove move;
@@ -326,9 +420,100 @@ namespace MCTS2016.Puzzles.Sokoban
                     }
                     macro.Add(move);
                 }
-
             }
             return macro;
+        }
+
+
+        private SokobanPushMove GetGoalMacro(SokobanGameState state, IPuzzleMove push)
+        {
+            Position boxToPush = null;
+
+            switch (push.ToString())
+            {
+                case "U":
+                    boxToPush = new Position(state.PlayerX, state.PlayerY - 1);
+                    break;
+                case "D":
+                    boxToPush = new Position(state.PlayerX, state.PlayerY + 1);
+                    break;
+                case "R":
+                    boxToPush = new Position(state.PlayerX + 1, state.PlayerY);
+                    break;
+                case "L":
+                    boxToPush = new Position(state.PlayerX - 1, state.PlayerY);
+                    break;
+            }
+            int stateHash = state.GetGoalMacroHash(goalMacroTree.GoalsInRoom);
+            if (stateHash == currentGoalMacroNode.Hashkey)
+            {
+                foreach (GoalMacroEntry entry in currentGoalMacroNode.Entries)
+                {
+                    if (boxToPush.Equals(entry.GetEntrancePosition()))
+                    {
+                        foreach(GoalMacro goalMacro in entry.GoalMacros)
+                        {
+                            if(state.PlayerX == goalMacro.PlayerPosition.X && state.PlayerY == goalMacro.PlayerPosition.Y)
+                            {
+                                foreach (IPuzzleMove move in goalMacro.MacroMove.MoveList)
+                                {
+                                    if (state.GetMoves().Contains(move))
+                                    {
+                                        state.DoMove(move);
+                                    }
+                                    else
+                                    {
+                                        return null;
+                                    }
+                                }
+                                goalMacro.MacroMove.IsGoalMacro = true;
+                                return goalMacro.MacroMove;
+                            }
+                        }
+                    }
+                }
+            }
+            return null;
+        }
+
+        public void ClearBoardForGoalMacro(List<Position> boxesInGoal, Position goal, Position entrance)
+        {
+            for (int x = 0; x < state.Board.GetLength(0); x++)
+            {
+                for (int y = 0; y < state.Board.GetLength(1); y++)
+                {
+                    if (state.Board[x, y] != SokobanGameState.WALL)
+                    {
+                        state.Board[x, y] = SokobanGameState.EMPTY;
+                    }
+                }
+            }
+            
+            state.Board[entrance.X, entrance.Y] = SokobanGameState.BOX;
+            state.Board[goal.X,goal.Y] = SokobanGameState.GOAL;
+            foreach(Position p in boxesInGoal)
+            {
+                state.Board[p.X, p.Y] = SokobanGameState.WALL;
+            }
+        }
+
+        public void SetPlayerPosition(Position player)
+        {
+            for (int x = 0; x < state.Board.GetLength(0); x++)
+            {
+                for (int y = 0; y < state.Board.GetLength(1); y++)
+                {
+                    if (x == player.X && y == player.Y)
+                    {
+                        if (state.Board[x, y] == SokobanGameState.GOAL)
+                            state.Board[x, y] = SokobanGameState.PLAYER_ON_GOAL;
+                        else if (state.Board[x, y] == SokobanGameState.EMPTY)
+                            state.Board[x, y] = SokobanGameState.PLAYER;
+                    }
+                }
+            }
+            state.PlayerX = player.X;
+            state.PlayerY = player.Y;
         }
     }
 }

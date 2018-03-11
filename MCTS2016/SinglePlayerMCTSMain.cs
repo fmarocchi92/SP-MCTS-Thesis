@@ -235,10 +235,10 @@ namespace MCTS2016
             string[] levels = ReadSokobanLevels(levelPath);
             IPuzzleState[] states = new IPuzzleState[levels.Length];
             int solvedLevels = 0;
-            //GoalMacroWrapper.MacroTree();
+            //GoalMacroWrapper.BuildMacroTree(null);
             for (int i = 0; i < states.Length; i++)
             {
-                states[i] = new AbstractSokobanState(levels[i], rewardType, false,true,true, null);
+                states[i] = new AbstractSokobanState(levels[i], rewardType,true,true,false,true, null);
                 IDAStarSearch idaStar = new IDAStarSearch();
                 Log("Level" + (i + 1) + ":\n" + states[i].PrettyPrint());
                 List<IPuzzleMove> solution = idaStar.Solve(states[i],maxCost, maxTableSize, 700);
@@ -329,7 +329,7 @@ namespace MCTS2016
                 }
                 if (abstractSokoban)
                 {
-                    states[i] = new AbstractSokobanState(levels[i], rewardType,false, true,true,simulationStrategy,rng);
+                    states[i] = new AbstractSokobanState(levels[i], rewardType,false, true,true,true,simulationStrategy,rng);
                 }
                 else
                 {
