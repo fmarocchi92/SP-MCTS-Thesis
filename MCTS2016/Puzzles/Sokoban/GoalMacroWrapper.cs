@@ -77,6 +77,10 @@ namespace MCTS2016.Puzzles.Sokoban
 
         static void CompressTree(GoalMacroNode node, Dictionary<int,GoalMacroNode> map,HashSet<Position> goals)
         {
+            if(node.GetBoxPositions == null)
+            {
+                node.GetBoxPositions = new List<Position>();
+            }
             int hash = node.ComputeHashKey();
             GoalMacroNode oldNode;
             if (map.TryGetValue(hash, out oldNode))
@@ -88,40 +92,53 @@ namespace MCTS2016.Puzzles.Sokoban
                 map.Add(hash, node);
                 foreach (GoalMacroEntry entry in node.Entries)
                 {
-                    goals.Add(entry.GetGoalPosition());
-                    entry.GoalMacros = BuildMacroMove(entry.GetEntrancePosition(), entry.GetGoalPosition(), node.GetBoxPositions());
+                    entry.ComputeEntrancePosition();
+                    entry.ComputeGoalPosition();
+                    goals.Add(entry.GetGoalPosition);
+                    entry.Next.GetBoxPositions = new List<Position>(node.GetBoxPositions);
+                    entry.Next.GetBoxPositions.Add(entry.GetGoalPosition);
+                    entry.Next.GetBoxPositions.Sort((x, y) => (x.X + 1000 * x.Y).CompareTo(y.X + 1000 * y.Y));
+                    entry.GoalMacros = BuildMacroMove(entry.GetEntrancePosition, entry.GetGoalPosition, node.GetBoxPositions);
                     CompressTree(entry.Next, map, goals);
                 }
             }
-            
         }
 
 
         static List<GoalMacro> BuildMacroMove(Position entrance, Position goal, List<Position> boxesInGoal)
         {
             List<GoalMacro> macros = new List<GoalMacro>();
-            AddToMacros(macros, new Position(entrance.X + 1, entrance.Y), goal, entrance, boxesInGoal);            
-            AddToMacros(macros, new Position(entrance.X - 1, entrance.Y), goal, entrance, boxesInGoal);            
-            AddToMacros(macros, new Position(entrance.X, entrance.Y + 1), goal, entrance, boxesInGoal);            
-            AddToMacros(macros, new Position(entrance.X, entrance.Y - 1), goal, entrance, boxesInGoal);
+            GoalMacro newMacro = GenerateGoalMacro(new Position(entrance.X + 1, entrance.Y), goal, entrance, boxesInGoal, state.State);
+            if (newMacro != null)
+                macros.Add(newMacro);
+            newMacro = GenerateGoalMacro(new Position(entrance.X - 1, entrance.Y), goal, entrance, boxesInGoal, state.State);
+            if (newMacro != null)
+                macros.Add(newMacro);
+            newMacro = GenerateGoalMacro(new Position(entrance.X, entrance.Y + 1), goal, entrance, boxesInGoal, state.State);
+            if (newMacro != null)
+                macros.Add(newMacro);
+            newMacro = GenerateGoalMacro(new Position(entrance.X, entrance.Y - 1), goal, entrance, boxesInGoal, state.State);
+            if (newMacro != null)
+                macros.Add(newMacro);
             return macros;
         }
 
-        static void AddToMacros(List<GoalMacro> macros, Position position, Position goal, Position entrance, List<Position> boxesInGoal)
+        public static GoalMacro GenerateGoalMacro(Position playerPosition, Position goal, Position entrance, List<Position> boxesInGoal, SokobanGameState state)
         {
-            AbstractSokobanState clone = (AbstractSokobanState)state.Clone();
+            SokobanGameState clone = (SokobanGameState)state.Clone();
             clone.ClearBoardForGoalMacro(boxesInGoal,goal, entrance);
             
-            if (state.State.Board[position.X, position.Y] == SokobanGameState.EMPTY || state.State.Board[position.X, position.Y] == SokobanGameState.GOAL)
+            if (clone.Board[playerPosition.X, playerPosition.Y] == SokobanGameState.EMPTY || clone.Board[playerPosition.X, playerPosition.Y] == SokobanGameState.GOAL)
             {
-                clone.SetPlayerPosition(position);
-                AbstractSokobanState clearState = new AbstractSokobanState(clone.State.ToString(), clone.RewardType, false, false, false, false, clone.SimulationStrategy, clone.Rng);
+                clone.SetPlayerPosition(playerPosition);
+                AbstractSokobanState clearState = new AbstractSokobanState(clone.ToString(), clone.RewardType, false, false, false, false, clone.SimulationStrategy, null);
                 SokobanPushMove pushMove = SolveMacro(clearState);
                 if (pushMove != null)
                 {
-                    macros.Add(new GoalMacro(position, pushMove));
+                    return new GoalMacro(playerPosition, pushMove);
                 }
             }
+            return null;
         }
 
         static SokobanPushMove SolveMacro(AbstractSokobanState s)

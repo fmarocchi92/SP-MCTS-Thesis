@@ -88,7 +88,7 @@ namespace MCTS2016.Puzzles.Sokoban
                 newNode = GetInitialMacroNode(entry.Next, hash);
                 if (newNode != null)
                 {
-                    return node;
+                    return newNode;
                 }
             }
             return null;
@@ -254,22 +254,47 @@ namespace MCTS2016.Puzzles.Sokoban
         private void DoAbstractMove(IPuzzleMove move)
         {
             SokobanPushMove pushMove = (SokobanPushMove)move;
+            int boxIndex = -1;
             foreach (SokobanGameMove m in pushMove.MoveList)
             {
                 state.DoMove(m);
-            }
-            if (pushMove.IsGoalMacro)
-            {
-                SokobanGameMove lastMove = pushMove.MoveList[pushMove.MoveList.Count - 1];
-                state.LockBox(state.BoxPositions[lastMove.BoxIndex]);
-                foreach (GoalMacroEntry entry in currentGoalMacroNode.Entries)
+                if(boxIndex == -1 && m > 3)
                 {
-                    if (entry.GetGoalPosition().Equals(state.BoxPositions[lastMove.BoxIndex]))
+                    boxIndex = m.BoxIndex;
+                }
+                else
+                {
+                    if(m > 3)
                     {
-                        currentGoalMacroNode = entry.Next;
-                        break;
+                        m.BoxIndex = boxIndex;
                     }
                 }
+            }
+
+            SokobanGameMove lastMove = pushMove.MoveList[pushMove.MoveList.Count - 1];
+            if (useGoalMacro && state.Goals.Contains(state.BoxPositions[lastMove.BoxIndex]))
+            {
+                GoalMacroNode newNode = GetInitialMacroNode(goalMacroTree.Roots[0], state.GetGoalMacroHash(goalMacroTree.GoalsInRoom));
+                if (newNode != null) {
+                    currentGoalMacroNode = newNode;
+                }
+                else
+                {
+                    currentGoalMacroNode = newNode;
+                }
+            }
+            //foreach (GoalMacroEntry entry in currentGoalMacroNode.Entries)
+            //{
+            //    Position entryGoal = entry.GetGoalPosition;
+            //    if (entry.GetGoalPosition.Equals(state.BoxPositions[lastMove.BoxIndex]))
+            //    {
+            //        currentGoalMacroNode = entry.Next;
+            //        break;
+            //    }
+            //}
+            if (pushMove.IsGoalMacro)
+            {
+                state.LockBox(state.BoxPositions[lastMove.BoxIndex]);
             }
         }
 
@@ -390,6 +415,7 @@ namespace MCTS2016.Puzzles.Sokoban
                     pushTarget = new Position(state.PlayerX - 2, state.PlayerY);
                     break;
             }
+            int boxIndex = state.BoxPositions.IndexOf(boxToPush);
             if (boxToPush.X == pushTarget.X &&
                 state.Board[boxToPush.X + 1, boxToPush.Y] == SokobanGameState.WALL && state.Board[boxToPush.X - 1, boxToPush.Y] == SokobanGameState.WALL) //Vertical push
             {
@@ -410,6 +436,7 @@ namespace MCTS2016.Puzzles.Sokoban
                         pushTarget.Y--;
                         boxToPush.Y--;
                     }
+                    move.BoxIndex = boxIndex;
                     macro.Add(move);
                 }
             }
@@ -432,6 +459,7 @@ namespace MCTS2016.Puzzles.Sokoban
                         pushTarget.X--;
                         boxToPush.X--;
                     }
+                    move.BoxIndex = boxIndex;
                     macro.Add(move);
                 }
             }
@@ -442,7 +470,6 @@ namespace MCTS2016.Puzzles.Sokoban
         private SokobanPushMove GetGoalMacro(SokobanGameState state, IPuzzleMove push)
         {
             Position boxToPush = null;
-
             switch (push.ToString())
             {
                 case "U":
@@ -463,23 +490,29 @@ namespace MCTS2016.Puzzles.Sokoban
             {
                 foreach (GoalMacroEntry entry in currentGoalMacroNode.Entries)
                 {
-                    if (boxToPush.Equals(entry.GetEntrancePosition()))
+                    if (boxToPush.Equals(entry.GetEntrancePosition))
                     {
-                        foreach(GoalMacro goalMacro in entry.GoalMacros)
+                        foreach(GoalMacro goalMacro in entry.GoalMacros)//breakpoint here
                         {
                             if(state.PlayerX == goalMacro.PlayerPosition.X && state.PlayerY == goalMacro.PlayerPosition.Y)
                             {
-                                foreach (IPuzzleMove move in goalMacro.MacroMove.MoveList)
+                                SokobanGameState clone = (SokobanGameState)state.Clone();
+                                
+                                if (!TryMacroMove(goalMacro, state))//try new search
                                 {
-                                    if (state.GetMoves().Contains(move))
+                                    List<Position> boxesToWall = new List<Position>(clone.BoxPositions);
+                                    boxesToWall.Remove(boxToPush);
+                                    GoalMacro generatedGoalMacro =  GoalMacroWrapper.GenerateGoalMacro(new Position(clone.PlayerX, clone.PlayerY), entry.GetGoalPosition, entry.GetEntrancePosition, boxesToWall, clone);
+                                    if(generatedGoalMacro != null)
                                     {
-                                        state.DoMove(move);
+                                        generatedGoalMacro.MacroMove.IsGoalMacro = true;
+                                        return generatedGoalMacro.MacroMove;
                                     }
                                     else
                                     {
                                         return null;
                                     }
-                                }
+                                }//stored macro works
                                 goalMacro.MacroMove.IsGoalMacro = true;
                                 return goalMacro.MacroMove;
                             }
@@ -490,44 +523,24 @@ namespace MCTS2016.Puzzles.Sokoban
             return null;
         }
 
-        public void ClearBoardForGoalMacro(List<Position> boxesInGoal, Position goal, Position entrance)
-        {
-            for (int x = 0; x < state.Board.GetLength(0); x++)
-            {
-                for (int y = 0; y < state.Board.GetLength(1); y++)
-                {
-                    if (state.Board[x, y] != SokobanGameState.WALL)
-                    {
-                        state.Board[x, y] = SokobanGameState.EMPTY;
-                    }
-                }
-            }
-            
-            state.Board[entrance.X, entrance.Y] = SokobanGameState.BOX;
-            state.Board[goal.X,goal.Y] = SokobanGameState.GOAL;
-            foreach(Position p in boxesInGoal)
-            {
-                state.Board[p.X, p.Y] = SokobanGameState.WALL;
-            }
-        }
 
-        public void SetPlayerPosition(Position player)
+
+        public bool TryMacroMove(GoalMacro goalMacro, SokobanGameState state)
         {
-            for (int x = 0; x < state.Board.GetLength(0); x++)
+            foreach (IPuzzleMove move in goalMacro.MacroMove.MoveList)
             {
-                for (int y = 0; y < state.Board.GetLength(1); y++)
+                List<IPuzzleMove> movelist = state.GetMoves();
+                if (state.GetMoves().Contains(move))
                 {
-                    if (x == player.X && y == player.Y)
-                    {
-                        if (state.Board[x, y] == SokobanGameState.GOAL)
-                            state.Board[x, y] = SokobanGameState.PLAYER_ON_GOAL;
-                        else if (state.Board[x, y] == SokobanGameState.EMPTY)
-                            state.Board[x, y] = SokobanGameState.PLAYER;
-                    }
+                    state.DoMove(move);
+                }
+                else
+                {
+                    return false;
                 }
             }
-            state.PlayerX = player.X;
-            state.PlayerY = player.Y;
+            return true;
         }
+        
     }
 }

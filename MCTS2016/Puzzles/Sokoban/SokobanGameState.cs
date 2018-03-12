@@ -22,6 +22,10 @@ namespace MCTS2016.Puzzles.Sokoban
         public int PlayerX { get => playerX; set => playerX = value; }
         public int[,] Board { get => board;}
         public List<Position> BoxPositions { get => boxPositions; set => boxPositions = value; }
+        public List<Position> Goals { get => goals; set => goals = value; }
+        internal RewardType RewardType { get => rewardType; set => rewardType = value; }
+        public ISPSimulationStrategy SimulationStrategy { get => simulationStrategy; set => simulationStrategy = value; }
+
         private bool stateChanged = false;
 
         private bool isDeadlock = false;
@@ -951,7 +955,9 @@ namespace MCTS2016.Puzzles.Sokoban
         public int GetGoalMacroHash(HashSet<Position> goalsInRoom)
         {
             int h = 27;
-            foreach (Position p in boxPositions)
+            List<Position> sortedBoxes = new List<Position>(boxPositions);
+            sortedBoxes.Sort((x, y) => (x.X + 1000 * x.Y).CompareTo(y.X + 1000 * y.Y));
+            foreach (Position p in sortedBoxes)
             {
                 if(board[p.X,p.Y] == BOX_ON_GOAL && goalsInRoom.Contains(p))
                     h = 13 * h + p.GetHashCode();
@@ -971,12 +977,11 @@ namespace MCTS2016.Puzzles.Sokoban
             if (playerX < board.GetLength(0) - 1 &&
                 board[playerX + 1, playerY] != WALL)
             {
-                if (board[playerX + 1, playerY] == BOX || board[playerX + 1, playerY] == BOX_ON_GOAL)
+                if ((board[playerX + 1, playerY] == BOX || board[playerX + 1, playerY] == BOX_ON_GOAL) && !lockedBoxes.Contains(new Position(playerX + 1,playerY))) //push
                 {
                     targetPosition = new Position(playerX + 2, playerY);
                     if ((board[playerX + 2, playerY] == EMPTY || board[playerX + 2, playerY] == GOAL) 
-                        && !simpleDeadlock.Contains(targetPosition)
-                        && !lockedBoxes.Contains(targetPosition))
+                        && !simpleDeadlock.Contains(targetPosition))
                     {
                         moves.Add(new SokobanGameMove("R") { BoxIndex = boxPositions.IndexOf(new Position(playerX + 1, playerY)) });
                     }
@@ -989,12 +994,11 @@ namespace MCTS2016.Puzzles.Sokoban
             if (playerX > 0 &&
                 board[playerX - 1, playerY] != WALL)
             {
-                if (board[playerX - 1, playerY] == BOX || board[playerX - 1, playerY] == BOX_ON_GOAL)
+                if (board[playerX - 1, playerY] == BOX || board[playerX - 1, playerY] == BOX_ON_GOAL && !lockedBoxes.Contains(new Position(playerX - 1, playerY)))
                 {
                     targetPosition = new Position(playerX - 2, playerY);
                     if ((board[playerX - 2, playerY] == EMPTY || board[playerX - 2, playerY] == GOAL) 
-                        && !simpleDeadlock.Contains(targetPosition)
-                        && !lockedBoxes.Contains(targetPosition))
+                        && !simpleDeadlock.Contains(targetPosition))
                     {
                         moves.Add(new SokobanGameMove("L") { BoxIndex = boxPositions.IndexOf(new Position(playerX - 1, playerY)) });
                     }
@@ -1007,12 +1011,11 @@ namespace MCTS2016.Puzzles.Sokoban
             if (playerY < board.GetLength(1) - 1 &&
                 board[playerX, playerY + 1] != WALL)
             {
-                if (board[playerX, playerY + 1] == BOX || board[playerX, playerY + 1] == BOX_ON_GOAL)
+                if (board[playerX, playerY + 1] == BOX || board[playerX, playerY + 1] == BOX_ON_GOAL && !lockedBoxes.Contains(new Position(playerX, playerY + 1)))
                 {
                     targetPosition = new Position(playerX, playerY + 2);
                     if ((board[playerX, playerY + 2] == EMPTY || board[playerX, playerY + 2] == GOAL) 
-                        && !simpleDeadlock.Contains(targetPosition)
-                        && !lockedBoxes.Contains(targetPosition))
+                        && !simpleDeadlock.Contains(targetPosition))
                     {
                         moves.Add(new SokobanGameMove("D") { BoxIndex = boxPositions.IndexOf(new Position(playerX, playerY + 1)) });
                     }
@@ -1025,12 +1028,11 @@ namespace MCTS2016.Puzzles.Sokoban
             if (playerY > 0 &&
                 board[playerX, playerY - 1] != WALL)
             {
-                if (board[playerX, playerY - 1] == BOX || board[playerX, playerY - 1] == BOX_ON_GOAL)
+                if (board[playerX, playerY - 1] == BOX || board[playerX, playerY - 1] == BOX_ON_GOAL && !lockedBoxes.Contains(new Position(playerX, playerY - 1)))
                 {
                     targetPosition = new Position(playerX, playerY - 2);
                     if ((board[playerX, playerY - 2] == EMPTY || board[playerX, playerY - 2] == GOAL) 
-                        && !simpleDeadlock.Contains(targetPosition)
-                        && !lockedBoxes.Contains(targetPosition))
+                        && !simpleDeadlock.Contains(targetPosition))
                     {
                         moves.Add(new SokobanGameMove("U") { BoxIndex = boxPositions.IndexOf(new Position(playerX, playerY - 1)) });
                     }
@@ -1051,106 +1053,147 @@ namespace MCTS2016.Puzzles.Sokoban
         }
 
 
-        void FindMacros()
+        public void ClearBoardForGoalMacro(List<Position> boxesInGoal, Position goal, Position entrance)
         {
-            FindGoalRooms();
-        }
-
-        void FindGoalRooms()
-        {
-            int[,] groomIndex = new int[board.GetLength(0),board.GetLength(1)];
-            for(int x = 0; x < groomIndex.GetLength(0); x++)
+            for (int x = 0; x < board.GetLength(0); x++)
             {
-                for (int y = 0; y < groomIndex.GetLength(1); y++)
+                for (int y = 0; y < board.GetLength(1); y++)
                 {
-                    groomIndex[x, y] = -2;
-                }
-            }
-            List<GoalRoom> rooms = new List<GoalRoom>();
-            for(int index = 0; index < goals.Count; index++)
-            {
-                if(groomIndex[goals[index].X,goals[index].Y] < -1 ) //goal not yet evaluated for macros
-                {
-                    GoalRoom newRoom = CreateNewRoom(goals[index], index, groomIndex);
-                    if (newRoom != null)
+                    if (board[x, y] != SokobanGameState.WALL)
                     {
-                        rooms.Add(newRoom);
+                        board[x, y] = SokobanGameState.EMPTY;
                     }
                 }
             }
-            //TODO select best room
-            //TODO grow tree
+
+            board[entrance.X, entrance.Y] = SokobanGameState.BOX;
+            board[goal.X, goal.Y] = SokobanGameState.GOAL;
+            foreach (Position p in boxesInGoal)
+            {
+                board[p.X, p.Y] = SokobanGameState.WALL;
+            }
         }
 
-        private GoalRoom CreateNewRoom(Position goal, int roomIndex,int[,] groomIndex)
+        public void SetPlayerPosition(Position player)
         {
-            List<Position> goalGroup = new List<Position>();
-            GetAdjacentGoals(goal, ref goalGroup);
-            if (goalGroup.Count() < 3)
+            for (int x = 0; x < board.GetLength(0); x++)
             {
-                return null;
+                for (int y = 0; y < board.GetLength(1); y++)
+                {
+                    if (x == player.X && y == player.Y)
+                    {
+                        if (board[x, y] == SokobanGameState.GOAL)
+                            board[x, y] = SokobanGameState.PLAYER_ON_GOAL;
+                        else if (board[x, y] == SokobanGameState.EMPTY)
+                            board[x, y] = SokobanGameState.PLAYER;
+                    }
+                }
             }
-            GoalRoom room = new GoalRoom(goalGroup, roomIndex);
-            List<Position> entrances = PickUpEntrances(goal, room, groomIndex);
-            return room;
+            PlayerX = player.X;
+            PlayerY = player.Y;
         }
 
-        private List<Position> PickUpEntrances(Position goal, GoalRoom room, int[,] groomIndex)
-        {
-            foreach(Position p in room.Squares)
-            {
-                Position nextPosition = new Position(p.X + 1, p.Y);
-                //if (board[p.X + 1, p.Y] != GOAL && !p.Contains(nextPosition))
-                //{
-                //    //GetAdjacentGoals(nextPosition, ref goalList);
-                //}
-                //nextPosition = new Position(p.X - 1, p.Y);
-                //if (board[nextPosition.X, nextPosition.Y] == GOAL && !goalList.Contains(nextPosition))
-                //{
-                //    GetAdjacentGoals(nextPosition, ref goalList);
-                //}
-                //nextPosition = new Position(p.X, p.Y + 1);
-                //if (board[nextPosition.X, nextPosition.Y] == GOAL && !goalList.Contains(nextPosition))
-                //{
-                //    GetAdjacentGoals(nextPosition, ref goalList);
-                //}
-                //nextPosition = new Position(p.X, p.Y - 1);
-                //if (board[nextPosition.X, nextPosition.Y] == GOAL && !goalList.Contains(nextPosition))
-                //{
-                //    GetAdjacentGoals(nextPosition, ref goalList);
-                //}
-            }
-            return null;
-        }
+        //void FindMacros()
+        //{
+        //    FindGoalRooms();
+        //}
 
-        private void GetAdjacentGoals(Position current, ref List<Position> goalList)
-        {
-            if (board[current.X, current.Y] != GOAL)
-            {
-                return;
-            }
-            goalList.Add(current);
-            Position nextPosition = new Position(current.X + 1, current.Y);
-            if (board[current.X + 1, current.Y] == GOAL && !goalList.Contains(nextPosition))
-            {
-                GetAdjacentGoals(nextPosition, ref goalList);
-            }
-            nextPosition = new Position(current.X - 1, current.Y);
-            if (board[nextPosition.X, nextPosition.Y] == GOAL && !goalList.Contains(nextPosition))
-            {
-                GetAdjacentGoals(nextPosition, ref goalList);
-            }
-            nextPosition = new Position(current.X, current.Y + 1);
-            if (board[nextPosition.X, nextPosition.Y] == GOAL && !goalList.Contains(nextPosition))
-            {
-                GetAdjacentGoals(nextPosition, ref goalList);
-            }
-            nextPosition = new Position(current.X, current.Y - 1);
-            if (board[nextPosition.X, nextPosition.Y] == GOAL && !goalList.Contains(nextPosition))
-            {
-                GetAdjacentGoals(nextPosition, ref goalList);
-            }
-        }
+        //void FindGoalRooms()
+        //{
+        //    int[,] groomIndex = new int[board.GetLength(0),board.GetLength(1)];
+        //    for(int x = 0; x < groomIndex.GetLength(0); x++)
+        //    {
+        //        for (int y = 0; y < groomIndex.GetLength(1); y++)
+        //        {
+        //            groomIndex[x, y] = -2;
+        //        }
+        //    }
+        //    List<GoalRoom> rooms = new List<GoalRoom>();
+        //    for(int index = 0; index < goals.Count; index++)
+        //    {
+        //        if(groomIndex[goals[index].X,goals[index].Y] < -1 ) //goal not yet evaluated for macros
+        //        {
+        //            GoalRoom newRoom = CreateNewRoom(goals[index], index, groomIndex);
+        //            if (newRoom != null)
+        //            {
+        //                rooms.Add(newRoom);
+        //            }
+        //        }
+        //    }
+        //    //TODO select best room
+        //    //TODO grow tree
+        //}
+
+        //private GoalRoom CreateNewRoom(Position goal, int roomIndex,int[,] groomIndex)
+        //{
+        //    List<Position> goalGroup = new List<Position>();
+        //    GetAdjacentGoals(goal, ref goalGroup);
+        //    if (goalGroup.Count() < 3)
+        //    {
+        //        return null;
+        //    }
+        //    GoalRoom room = new GoalRoom(goalGroup, roomIndex);
+        //    List<Position> entrances = PickUpEntrances(goal, room, groomIndex);
+        //    return room;
+        //}
+
+        //private List<Position> PickUpEntrances(Position goal, GoalRoom room, int[,] groomIndex)
+        //{
+        //    foreach(Position p in room.Squares)
+        //    {
+        //        Position nextPosition = new Position(p.X + 1, p.Y);
+        //        //if (board[p.X + 1, p.Y] != GOAL && !p.Contains(nextPosition))
+        //        //{
+        //        //    //GetAdjacentGoals(nextPosition, ref goalList);
+        //        //}
+        //        //nextPosition = new Position(p.X - 1, p.Y);
+        //        //if (board[nextPosition.X, nextPosition.Y] == GOAL && !goalList.Contains(nextPosition))
+        //        //{
+        //        //    GetAdjacentGoals(nextPosition, ref goalList);
+        //        //}
+        //        //nextPosition = new Position(p.X, p.Y + 1);
+        //        //if (board[nextPosition.X, nextPosition.Y] == GOAL && !goalList.Contains(nextPosition))
+        //        //{
+        //        //    GetAdjacentGoals(nextPosition, ref goalList);
+        //        //}
+        //        //nextPosition = new Position(p.X, p.Y - 1);
+        //        //if (board[nextPosition.X, nextPosition.Y] == GOAL && !goalList.Contains(nextPosition))
+        //        //{
+        //        //    GetAdjacentGoals(nextPosition, ref goalList);
+        //        //}
+        //    }
+        //    return null;
+        //}
+
+        //private void GetAdjacentGoals(Position current, ref List<Position> goalList)
+        //{
+        //    if (board[current.X, current.Y] != GOAL)
+        //    {
+        //        return;
+        //    }
+        //    goalList.Add(current);
+        //    Position nextPosition = new Position(current.X + 1, current.Y);
+        //    if (board[current.X + 1, current.Y] == GOAL && !goalList.Contains(nextPosition))
+        //    {
+        //        GetAdjacentGoals(nextPosition, ref goalList);
+        //    }
+        //    nextPosition = new Position(current.X - 1, current.Y);
+        //    if (board[nextPosition.X, nextPosition.Y] == GOAL && !goalList.Contains(nextPosition))
+        //    {
+        //        GetAdjacentGoals(nextPosition, ref goalList);
+        //    }
+        //    nextPosition = new Position(current.X, current.Y + 1);
+        //    if (board[nextPosition.X, nextPosition.Y] == GOAL && !goalList.Contains(nextPosition))
+        //    {
+        //        GetAdjacentGoals(nextPosition, ref goalList);
+        //    }
+        //    nextPosition = new Position(current.X, current.Y - 1);
+        //    if (board[nextPosition.X, nextPosition.Y] == GOAL && !goalList.Contains(nextPosition))
+        //    {
+        //        GetAdjacentGoals(nextPosition, ref goalList);
+        //    }
+        //}
+
     }
 
     class PositionGoalPair

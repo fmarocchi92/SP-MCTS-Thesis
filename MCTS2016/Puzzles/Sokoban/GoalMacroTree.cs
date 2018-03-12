@@ -26,31 +26,39 @@ namespace MCTS2016.Puzzles.Sokoban
         int[] stonesPosition;
         int hashkey;
         GoalMacroEntry[] entries;
+        List<Position> getBoxPositions;
 
-        public int[] StonesPosition { get => stonesPosition; set => stonesPosition = value; }
+        public int[] StonesPosition {set => stonesPosition = value; }
         public int Hashkey { get => hashkey; set => hashkey = value; }
         public GoalMacroEntry[] Entries { get => entries; set => entries = value; }
 
-        public List<Position> GetBoxPositions()
+        [JsonIgnore]
+        public List<Position> GetBoxPositions { get => getBoxPositions; set => getBoxPositions = value; }
+
+        public List<Position> ComputeBoxPositions()
         {
             List<Position> boxes = new List<Position>();
-            for (int i = 0; i < StonesPosition.Length; i++)
+            for (int i = 0; i < stonesPosition.Length; i++)
             {
-                if(StonesPosition[i] == 1)
+                if(stonesPosition[i] == 1)
                 {
                     boxes.Add(new Position(i / 16, (15 - i % 16)));
                 }
             }
+            boxes.Sort((x, y) => (x.X + 1000 * x.Y).CompareTo(y.X + 1000 * y.Y));
+            GetBoxPositions = boxes;
             return boxes;
         }
 
         public int ComputeHashKey()
         {
-            hashkey = 27;
-            foreach(Position box in GetBoxPositions())
+            int hashkey = 27;
+            
+            foreach(Position box in GetBoxPositions)
             {
                 hashkey = (hashkey * 13) + box.GetHashCode();
             }
+            this.hashkey = hashkey;
             return hashkey;
         }
     }
@@ -59,22 +67,27 @@ namespace MCTS2016.Puzzles.Sokoban
     {
         int goalPosition;
         int entrancePosition;
+        Position getGoalPosition;
+        Position getEntrancePosition;
         GoalMacroNode next;
 
         [JsonIgnore]
         public List<GoalMacro> GoalMacros { get; set; }
 
-        public int GoalPosition { get => goalPosition; set => goalPosition = value; }
-        public int EntrancePosition { get => entrancePosition; set => entrancePosition = value; }
+        public int GoalPosition {set => goalPosition = value; }
+        public int EntrancePosition {set => entrancePosition = value; }
         public GoalMacroNode Next { get => next; set => next = value; }
 
-        public Position GetGoalPosition()
+        public Position GetGoalPosition { get => getGoalPosition; set => getGoalPosition = value; }
+        public Position GetEntrancePosition { get => getEntrancePosition; set => getEntrancePosition = value; }
+
+        public void ComputeGoalPosition()
         {
-            return new Position(GoalPosition / 16 , (15 - GoalPosition % 16));
+            GetGoalPosition = new Position(goalPosition / 16, 15 - goalPosition % 16);
         }
-        public Position GetEntrancePosition()
+        public void ComputeEntrancePosition()
         {
-            return new Position(entrancePosition / 16, (15 - entrancePosition % 16));
+            GetEntrancePosition = new Position(entrancePosition / 16, 15 - entrancePosition % 16);
         }
     }
 
