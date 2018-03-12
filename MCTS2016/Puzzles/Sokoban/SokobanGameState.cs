@@ -922,25 +922,30 @@ namespace MCTS2016.Puzzles.Sokoban
         public int GetEmptyBoardHash()
         {
             int hc = 27;
-            if (board != null)
+            foreach (Position p in boxPositions)
             {
-                foreach (var p in board)
-                {
-                    if (p == PLAYER)
-                    {
-                        hc = (13 * hc) + EMPTY.GetHashCode();
-                    }
-                    else if (p == PLAYER_ON_GOAL)
-                    {
-                        hc = (13 * hc) + GOAL.GetHashCode();
-                    }
-                    else
-                    {
-                        hc = (13 * hc) + p.GetHashCode();
-                    }
-                }
+                hc = 13 * hc + p.GetHashCode();
             }
             return hc;
+            //if (board != null)
+            //{
+            //    foreach (var p in board)
+            //    {
+            //        if (p == PLAYER)
+            //        {
+            //            hc = (13 * hc) + EMPTY.GetHashCode();
+            //        }
+            //        else if (p == PLAYER_ON_GOAL)
+            //        {
+            //            hc = (13 * hc) + GOAL.GetHashCode();
+            //        }
+            //        else
+            //        {
+            //            hc = (13 * hc) + p.GetHashCode();
+            //        }
+            //    }
+            //}
+            //return hc;
         }
 
         public int GetGoalMacroHash(HashSet<Position> goalsInRoom)

@@ -45,6 +45,11 @@ namespace MCTS2016.IDAStar
                 {
                     value = NOT_FOUND;
                 }
+                if(threshold == double.MaxValue)
+                {
+                    Debug.WriteLine("Unsolvable");
+                    value = NOT_FOUND;
+                }
             }
             return BuildSolution(result);
         }
@@ -52,7 +57,7 @@ namespace MCTS2016.IDAStar
         private double Search(AStarNode node, double cost, double threshold)
         {
             nodeCount++;
-            if (nodeCount > maxNodes)
+            if (nodeCount > maxNodes || cost > maxDepth)
             {
                 return NOT_FOUND;
             }
@@ -76,31 +81,42 @@ namespace MCTS2016.IDAStar
             }
             double minValue = double.MaxValue;
             List<IPuzzleMove> moves = node.state.GetMoves();
+            if(moves.Count == 0)
+            {                
+                //Debug.WriteLine(node.state);
+            }
             foreach(IPuzzleMove move in moves)
             {
+                
                 IPuzzleState clone = node.state.Clone();
                 //Debug.WriteLine(clone.PrettyPrint());
                 clone.DoMove(move);
-                currentHash = clone.GetHashCode();
+                if (((SokobanPushMove)move).IsGoalMacro)
+                {
+                    Debug.WriteLine("GOAL_MACRO:");
+                    Debug.WriteLine(node.state);
+                    Debug.WriteLine(move);
+                    Debug.WriteLine(clone);
+                }
+                int childHash = clone.GetHashCode();
                 //Debug.WriteLine(move);
                 //Debug.WriteLine(clone.PrettyPrint());
-                entry = RetrieveFromTables(currentHash);
+                entry = RetrieveFromTables(childHash);
                 if (entry != null && entry.Visited)//loop
                     continue;
-                
-                //if (!visited.Contains(clone))
-                    //visited.Add(clone);
 
-                if (entry != null)
+                //if (!visited.Contains(clone))
+                //visited.Add(clone);
+                int childDepth = (int)(threshold - (cost + move.GetCost()));
+                if (entry != null && childDepth <= entry.Depth)
                 {
-                    if (threshold - cost <= entry.Depth)
-                    {
-                        return entry.Score;
-                    }
+                    value = entry.Score;
                 }
-                StoreInTranspositionTable(currentHash, clone.GetResult() + cost + move.GetCost(), (int)(threshold - (cost + move.GetCost())), true);
-                value = Search(new AStarNode(clone, move, node), cost + move.GetCost(), threshold);
-                
+                else
+                {
+                    StoreInTranspositionTable(childHash, clone.GetResult() + cost + move.GetCost(), childDepth, true);
+                    value = Search(new AStarNode(clone, move, node), cost + move.GetCost(), threshold);
+                }
                 if (value == RESULT)
                 {
                     return RESULT;
@@ -111,13 +127,18 @@ namespace MCTS2016.IDAStar
                 }
             }
 
-            entry = RetrieveFromTables(node.state.GetHashCode());
+            entry = RetrieveFromTables(currentHash);
+            int depth = (int)(threshold - (cost));
             if (entry == null /*|| minValue < double.MaxValue*/) //TODO deadlock backpropagation
             {//valid state
-                StoreInTranspositionTable(currentHash, minValue, (int)(threshold - (cost)), false);
+                StoreInTranspositionTable(currentHash, minValue, depth, false);
             }
             else
             {
+                if(depth >= entry.Depth){
+                    entry.Score = minValue;
+                    entry.Depth = depth;
+                }
                 entry.Visited = false;
             }
             return minValue;
@@ -145,6 +166,19 @@ namespace MCTS2016.IDAStar
             if (entry == null)
             {
                 entry = secondLevelTable.Retrieve(hashkey);
+            }
+            if (entry != null)
+            {
+                //for(int x = 0; x < state.GetBoard().Count; x++)
+                //{
+                //    if(state.GetBoard()[x] != entry.state.GetBoard()[x])
+                //    {
+                //        Debug.WriteLine("Entry in table:\n" + entry.state);
+                //        Debug.WriteLine("state:\n" + state+"\n\n");
+                //        break;
+                //    }
+                //}
+                
             }
             return entry;
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MCTS2016.Common.Abstract;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -20,7 +21,7 @@ namespace MCTS2016.SP_MCTS.Optimizations.Utils
         {
             TranspositionTableEntry entry = table[(uint)hashkey % table.Length];
             if(entry != null && entry.HashKey == hashkey)
-            {
+            { 
                 return entry;
             }
             else if(entry != null)

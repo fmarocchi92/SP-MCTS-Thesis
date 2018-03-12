@@ -54,7 +54,7 @@ namespace MCTS2016.Puzzles.Sokoban
             this.rng = rng;
             this.rewardType = rewardType;
             this.simulationStrategy = simulationStrategy;
-            normalizedPlayerPosition = new Position(int.MaxValue, int.MaxValue);
+            normalizedPlayerPosition = new Position(state.PlayerX, state.PlayerY);
             availableMoves = null;
             this.useGoalMacro = useGoalMacro;
             this.useTunnelMacro = useTunnelMacro;
@@ -116,8 +116,8 @@ namespace MCTS2016.Puzzles.Sokoban
                 useGoalCut = useGoalCut,
                 simulationStrategy = simulationStrategy,
                 rng = rng,
-                normalizedPlayerPosition = new Position(int.MaxValue, int.MaxValue),
-                availableMoves = null,
+                normalizedPlayerPosition = normalizedPlayerPosition,
+                availableMoves = availableMoves,
                 goalMacroTree = goalMacroTree,
                 currentGoalMacroNode = currentGoalMacroNode
             };//(SokobanGameState)state.Clone(), rewardType, useNormalizedPosition,useGoalMacro,useTunnelMacro, simulationStrategy, rng);
@@ -128,6 +128,7 @@ namespace MCTS2016.Puzzles.Sokoban
         {
             DoAbstractMove(move);
             availableMoves = null;
+            normalizedPlayerPosition = new Position(state.PlayerX, state.PlayerY);
         }
 
         public bool EndState()
@@ -261,8 +262,15 @@ namespace MCTS2016.Puzzles.Sokoban
             {
                 SokobanGameMove lastMove = pushMove.MoveList[pushMove.MoveList.Count - 1];
                 state.LockBox(state.BoxPositions[lastMove.BoxIndex]);
+                foreach (GoalMacroEntry entry in currentGoalMacroNode.Entries)
+                {
+                    if (entry.GetGoalPosition().Equals(state.BoxPositions[lastMove.BoxIndex]))
+                    {
+                        currentGoalMacroNode = entry.Next;
+                        break;
+                    }
+                }
             }
-
         }
 
         private List<IPuzzleMove> GetAvailablePushes()
@@ -272,11 +280,12 @@ namespace MCTS2016.Puzzles.Sokoban
             List<IPuzzleMove> pushes = new List<IPuzzleMove>();
             List<BFSNodeState> frontier = new List<BFSNodeState>();
             frontier.Add(new BFSNodeState(state, null, null));
+            //Debug.WriteLine(state);
             while (frontier.Count() > 0)
             {
                 BFSNodeState currentNode = frontier[0];
                 SokobanGameState s = (SokobanGameState)currentNode.state;
-                if (s.PlayerY < normalizedPosition.Y || s.PlayerY == normalizedPosition.Y && s.PlayerX < normalizedPosition.X)
+                if (s.PlayerY < normalizedPosition.Y || (s.PlayerY == normalizedPosition.Y && s.PlayerX < normalizedPosition.X))
                 {
                     normalizedPosition.X = s.PlayerX;
                     normalizedPosition.Y = s.PlayerY;
@@ -313,11 +322,15 @@ namespace MCTS2016.Puzzles.Sokoban
                             SokobanPushMove goalMacro = GetGoalMacro((SokobanGameState)sCopy, move);
                             if (goalMacro != null)
                             {
-                                movesToPush.Add(move);
-                                movesToPush.AddRange(goalMacro.MoveList);
-                                SokobanPushMove pushMove = new SokobanPushMove(movesToPush, goalMacro.PlayerPosition, movesToPush[movesToPush.Count - 1].BoxIndex);
+                                List<SokobanGameMove> movesToMacro = new List<SokobanGameMove>(movesToPush);
+                                movesToMacro.Add(move);
+                                movesToMacro.AddRange(goalMacro.MoveList);
+                                SokobanPushMove pushMove = new SokobanPushMove(movesToMacro, goalMacro.PlayerPosition, movesToMacro[movesToMacro.Count - 1].BoxIndex);
+                                pushMove.IsGoalMacro = true;
                                 if (useGoalCut)
                                 {
+                                    Debug.WriteLine("GoalCut");
+                                    normalizedPlayerPosition = normalizedPosition;
                                     return new List<IPuzzleMove>() { pushMove };
                                 }
                                 else
@@ -348,6 +361,7 @@ namespace MCTS2016.Puzzles.Sokoban
                 }
             }
             normalizedPlayerPosition = normalizedPosition;
+            //Debug.WriteLine(normalizedPlayerPosition);
             return pushes;
         }
 
