@@ -22,6 +22,8 @@ namespace MCTS2016.IDAStar
         int maxDepth;
         int maxNodes;
 
+        public int NodeCount { get => nodeCount; set => nodeCount = value; }
+
         public List<IPuzzleMove> Solve(IPuzzleState rootState, int maxNodes, int tableSize, int maxDepth)
         {
             this.maxDepth = maxDepth;

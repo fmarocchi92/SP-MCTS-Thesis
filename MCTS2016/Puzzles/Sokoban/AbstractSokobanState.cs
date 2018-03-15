@@ -280,7 +280,7 @@ namespace MCTS2016.Puzzles.Sokoban
                 }
                 else
                 {
-                    currentGoalMacroNode = newNode;
+                    //currentGoalMacroNode = newNode;
                 }
             }
             //foreach (GoalMacroEntry entry in currentGoalMacroNode.Entries)

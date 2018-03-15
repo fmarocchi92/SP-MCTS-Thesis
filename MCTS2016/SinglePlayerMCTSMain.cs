@@ -16,6 +16,8 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using MCTS2016.SP_MCTS.SP_UCT;
+using MCTS2016.SP_MCTS.Optimizations;
+using MCTS2016.SP_MCTS.Optimizations.UCT;
 
 namespace MCTS2016
 {
@@ -30,6 +32,15 @@ namespace MCTS2016
         private static uint threadIndex;
         private static int restarts;
         static TextWriter textWriter;
+
+        static bool useNormalizedPosition;
+        static bool useTunnelMacro;
+        static bool useGoalMacro;
+        static bool useGoalCut;
+        static bool ucb1Tuned;
+        static bool rave;
+        static bool nodeRecycling;
+        static int memoryBudget;
 
 
         public static void Main(string[] args)
@@ -53,14 +64,35 @@ namespace MCTS2016
 
             textWriter = File.AppendText("Log.txt");
 
-            game = args[0];
 
+            string[] gameSettings = args[0].Split(':');
             string[] commands = args[1].Split(':');
 
             level = args[2];
-
-            switch (game) {
+            string configurationString = "\n\n\n********************************\n********************************\nBEGIN TASK:\nGame: " + gameSettings[0];
+            switch (gameSettings[0]) {
                 case "sokoban":
+                    if (!bool.TryParse(gameSettings[1], out useNormalizedPosition))
+                    {
+                        PrintInputError("useNormalizedPosition requires a bool value");
+                        return;
+                    }
+                    if (!bool.TryParse(gameSettings[2], out useTunnelMacro))
+                    {
+                        PrintInputError("useTunnelMacro requires a bool value");
+                        return;
+                    }
+                    if (!bool.TryParse(gameSettings[3], out useGoalMacro))
+                    {
+                        PrintInputError("useGoalMacro requires a bool value");
+                        return;
+                    }
+                    if (!bool.TryParse(gameSettings[4], out useGoalCut))
+                    {
+                        PrintInputError("useGoalCut requires a bool value");
+                        return;
+                    }
+                    configurationString += "\nUse Normalized Position: " + useNormalizedPosition + "\nUse Tunnel Macro: " + useTunnelMacro + "\nUse Goal Macro: " + useGoalMacro + (useGoalMacro ? "\nUse Goal Cut: " + useGoalCut : "\nGoal Cut ignored with Goal Macro disabled") +"\n";
                     switch (commands[0])
                     {
                         case "mcts":
@@ -99,7 +131,34 @@ namespace MCTS2016
                                 PrintInputError("seed requires an unsigned integer value");
                                 return;
                             }
-                            Log("\n********************\nBEGIN TASK:\nGame:" + game + "\nMethod: MCTS \niterations: " + iterations + "\nUCT constant: " + const_C+ "\nSP_UCT constant: "+ const_D +  "\nReward Type: "+rewardType+"\nepsilon: "+epsilon+ "level: "+ level +"\n********************");
+                            if (!bool.TryParse(commands[8], out ucb1Tuned))
+                            {
+                                PrintInputError("UCB1 tuned requires a boolean value");
+                                return;
+                            }
+                            if (!bool.TryParse(commands[9], out rave))
+                            {
+                                PrintInputError("rave requires a boolean value");
+                                return;
+                            }
+                            if (!bool.TryParse(commands[10], out nodeRecycling))
+                            {
+                                PrintInputError("node recycling requires a boolean value");
+                                return;
+                            }
+                            if (!int.TryParse(commands[11], out memoryBudget))
+                            {
+                                PrintInputError("Memory budget requires an integer value");
+                                return;
+                            }
+                            if (nodeRecycling && (memoryBudget <= 0 || memoryBudget >= iterations))
+                            {
+                                PrintInputError("Memory budget value not compatible with node recycling");
+                                return;
+                            }
+                            configurationString += "\nMethod: MCTS \niterations: " + iterations + "\nUCT constant: " + const_C+ "\nSP_UCT constant: "+ const_D +  "\nReward Type: "+rewardType+"\nepsilon: "+epsilon+
+                                "\nUCB1Tuned: "+ucb1Tuned+"\nRAVE: "+rave+"\nNode Recycling: "+nodeRecycling+"\nMemory Budget: "+(nodeRecycling?""+memoryBudget:"Ignored with node recycling disabled")+"\nlevel: "+ level + "\n********************************\n********************************\n";
+                            Log(configurationString);
                             MultiThreadSokobanTest(const_C, const_D, iterations, 1, level, seed, true, rewardType, stopOnResult, epsilon, true, 1);
                             break;
                         case "ida":
@@ -118,8 +177,9 @@ namespace MCTS2016
                                 PrintInputError("maxTableSize requires an integer value");
                                 return;
                             }
-                            Log("\n********************\nBEGIN TASK:\nGame:" + game + "\nMethod: IDA* \nMaximum cost: " + maxCost + "\nReward Type: " + rewardType + "\nlevel: "+level+"\n********************");
-                            IDAStarTest(level, maxCost, rewardType, maxTableSize);
+                            configurationString+= "\nMethod: IDA* \nMaximum cost: " + maxCost + "\nReward Type: " + rewardType + "\nlevel: "+level+ "\n********************************\n********************************\n";
+                            Log(configurationString);
+                            SokobanIDAStarTest(level, maxCost, rewardType, maxTableSize, useNormalizedPosition, useTunnelMacro, useGoalMacro, useGoalCut);
                             break;
                     }
                     break;
@@ -176,13 +236,16 @@ namespace MCTS2016
                                 PrintInputError("Memory budget value not compatible with node recycling");
                                 return;
                             }
-                            Log("\n********************\nBEGIN TASK:\nGame:" + game + "\nMethod: MCTS \niterations: " + iterations + "\nUCT constant: " + const_C + "\nSP_UCT constant: " + const_D + "\nrestarts: " + restarts + "level: " + level + "\n********************");
+                            Log("\n********************\nBEGIN TASK:\nGame:" + gameSettings[0] + "\nMethod: MCTS \niterations: " + iterations + "\nUCT constant: " + const_C + "\nSP_UCT constant: " + const_D + "\nrestarts: " + restarts + "level: " + level + "\n********************");
                             MultiThreadSamegameTest(const_C, const_D, iterations, restarts, level, 1, seed, ucb1Tuned, rave, nodeRecycling, memoryBudget);
                             break;
                         case "ida":
                             throw new NotImplementedException("IDA* for samegame not implemented");
                             break;
                     }
+                    break;
+                default:
+                    PrintInputError("Wrong game name: Accepted names are 'sokoban' and 'samegame'");
                     break;
 
             }
@@ -193,6 +256,7 @@ namespace MCTS2016
         private static void PrintInputError(string errorMessage)
         {
             Console.WriteLine(errorMessage + ".\nArguments list:\n - game\n -const_C\n -const_D\n -iterations per search\n -number of randomized restarts\n -maximum number of threads\n -seed\n -abstractSokoban\n -rewardType\n -log path\n -level path");
+            Log(errorMessage);
             if (textWriter != null)
             {
                 textWriter.Close();
@@ -230,7 +294,7 @@ namespace MCTS2016
             }
         }
 
-        private static void IDAStarTest(string levelPath, int maxCost, RewardType rewardType, int maxTableSize)
+        private static void SokobanIDAStarTest(string levelPath, int maxCost, RewardType rewardType, int maxTableSize, bool useNormalizedPosition, bool useTunnelMacro, bool useGoalMacro, bool useGoalCut)
         {
             string[] levels = ReadSokobanLevels(levelPath);
             IPuzzleState[] states = new IPuzzleState[levels.Length];
@@ -238,9 +302,9 @@ namespace MCTS2016
             //GoalMacroWrapper.BuildMacroTree(null);
             for (int i = 0; i < states.Length; i++)
             {
-                states[i] = new AbstractSokobanState(levels[i], rewardType,true,true,true,true, null);
+                states[i] = new AbstractSokobanState(levels[i], rewardType,useNormalizedPosition,useGoalMacro,useTunnelMacro,useGoalCut, null);
                 IDAStarSearch idaStar = new IDAStarSearch();
-                Log("Level" + (i + 1) + ":\n" + states[i].PrettyPrint());
+                //Log("Level" + (i + 1) + ":\n" + states[i].PrettyPrint());
                 List<IPuzzleMove> solution = idaStar.Solve(states[i],maxCost, maxTableSize, 700);
                 string moves = "";
                 int pushCount = 0;
@@ -266,7 +330,7 @@ namespace MCTS2016
                     {
                         solvedLevels++;
                     }
-                    Log("Level " + (i + 1) + " solved: " + (states[i].EndState()) + " solution length:" + moves.Count() +"/"+pushCount);
+                    Log("Level " + (i + 1) + " solved: " + (states[i].EndState()) + " with "+idaStar.NodeCount+ " nodes; solution length:" + moves.Count() +"/"+pushCount);
                     Log("Moves: " + moves);
                     Log("Solved " + solvedLevels + "/" + (i + 1));
                     Console.Write("\rSolved " + solvedLevels + "/" + (i + 1));
@@ -274,7 +338,7 @@ namespace MCTS2016
             }
         }
 
-        private static int[] MultiThreadSokobanTest(double const_C, double const_D, int iterations, int restarts, string levelPath, uint seed, bool abstractSokoban, RewardType rewardType, bool stopOnResult, double epsilonValue, bool log = true, int threadNumber = 8)
+        private static int[] MultiThreadSokobanTest(double const_C, double const_D, int iterations, int restarts, string levelPath, uint seed, bool abstractSokoban, RewardType rewardType, bool stopOnResult, double epsilonValue, bool log, int threadNumber)
         {
             string[] levels = ReadSokobanLevels(levelPath);
             int threadCount = Math.Min(Environment.ProcessorCount, threadNumber);
@@ -329,7 +393,7 @@ namespace MCTS2016
                 }
                 if (abstractSokoban)
                 {
-                    states[i] = new AbstractSokobanState(levels[i], rewardType,false, true,true,true,simulationStrategy,rng);
+                    states[i] = new AbstractSokobanState(levels[i], rewardType,useNormalizedPosition, useGoalMacro, useTunnelMacro, useGoalCut,simulationStrategy,rng);
                 }
                 else
                 {
@@ -337,8 +401,9 @@ namespace MCTS2016
                 }
                 List<IPuzzleMove> moveList = new List<IPuzzleMove>();
                 //player = new SokobanMCTSStrategy(rng, iterations, 600, null, const_C, const_D, stopOnResult);
-                SP_MCTSAlgorithm mcts = new SP_MCTSAlgorithm(new SP_UCTTreeNodeCreator(const_C, const_D, rng), stopOnResult);                
 
+                //SP_MCTSAlgorithm mcts = new SP_MCTSAlgorithm(new SP_UCTTreeNodeCreator(const_C, const_D, rng), stopOnResult);
+                OptMCTSAlgorithm mcts = new OptMCTSAlgorithm(new Opt_SP_UCTTreeNodeCreator(const_C, const_D, rng, ucb1Tuned, rave, nodeRecycling), iterations, memoryBudget, stopOnResult);
                 string moves = "";
                 moveList = mcts.Solve(states[i], iterations);
                 //moveList = player.GetSolution(states[i]);
@@ -422,8 +487,6 @@ namespace MCTS2016
                                 }
                             }
                         }
-                        
-
                         for (int j = 0; j < scores.Length; j++)
                         {
                             rolloutsCount[j] = rolloutsCount[j] / restarts;

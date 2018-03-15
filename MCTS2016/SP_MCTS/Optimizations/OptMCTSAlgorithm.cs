@@ -8,6 +8,7 @@ using MCTS2016.Common.Abstract;
 using MCTS2016.Optimizations.UCT;
 using MCTS2016.SP_MCTS.Optimizations.UCT;
 using MCTS2016.SP_MCTS.Optimizations.Utils;
+using Common;
 
 namespace MCTS2016.SP_MCTS.Optimizations
 {
@@ -22,6 +23,7 @@ namespace MCTS2016.SP_MCTS.Optimizations
         private List<IPuzzleMove> bestRollout;
         private double topScore = double.MinValue;
         private bool stopOnResult;
+        private int iterationsExecuted;
 
         public OptMCTSAlgorithm(ISPTreeNodeCreator treeCreator, int iterations, int memoryBudget, bool stopOnResult)
         {
@@ -71,7 +73,7 @@ namespace MCTS2016.SP_MCTS.Optimizations
                 long averageUsedMemoryPerIteration = 0;
             #endif
             
-            for (int i = 0; i < iterations; i++)
+            for (iterationsExecuted = 0; iterationsExecuted < iterations; iterationsExecuted++)
             {
                 looped = false;
                 ISPTreeNode node = rootNode;
@@ -132,17 +134,18 @@ namespace MCTS2016.SP_MCTS.Optimizations
                         if (visitedStatesInRollout.Contains(state))
                         {
                             looped = true;
-                            //while (node.GetUntriedMoves().Count() > 0 && visitedStatesInRollout.Contains(state))
+                            //while (node.GetUntriedMoves().Count > 0 && visitedStatesInRollout.Contains(state))
                             //{
                             //    state = backupState.Clone();
-                            //    move = node.GetUntriedMoves()[RNG.Next(node.GetUntriedMoves().Count())];
+                            //    move = node.GetUntriedMoves()[RNG.Next(node.GetUntriedMoves().Count)];
                             //    state.DoMove(move);
                             //    node.RemoveUntriedMove(move);
                             //}
                             //if (!visitedStatesInRollout.Contains(state)) //found valid move
                             //{
-                            //    node = node.AddChild(move, state);
+                            //    node = node.AddChild(objectPool, move, state);
                             //    currentRollout.Add(move);
+                            //    allFirstMoves.Add(move);
                             //    nodeCount++;
                             //}
                             //else //all moves visited
@@ -180,13 +183,14 @@ namespace MCTS2016.SP_MCTS.Optimizations
                             looped = true;
                             //state = backupState.Clone();
                             //List<IPuzzleMove> availableMoves = state.GetMoves();
-                            //while(availableMoves.Count()>0 && visitedStatesInRollout.Contains(state)) { //keep trying different moves until we end up in an unvisited state
+                            //while (availableMoves.Count > 0 && visitedStatesInRollout.Contains(state))
+                            //{ //keep trying different moves until we end up in an unvisited state
                             //    state = backupState.Clone();
-                            //    move = availableMoves[RNG.Next(availableMoves.Count())];
+                            //    move = availableMoves[RNG.Next(availableMoves.Count)];
                             //    availableMoves.Remove(move);
                             //    state.DoMove(move);
                             //}
-                            //if (availableMoves.Count() == 0 && visitedStatesInRollout.Contains(state))//all states have already been visited
+                            //if (availableMoves.Count == 0 && visitedStatesInRollout.Contains(state))//all states have already been visited
                             //{
                             //    break;
                             //}
@@ -227,6 +231,8 @@ namespace MCTS2016.SP_MCTS.Optimizations
                     {
                         if (node.Parent == null)//unsolvable level. The tree has been completely explored. Return current best score
                         {
+                            SinglePlayerMCTSMain.Log("Unsolvable Level");
+                            Console.WriteLine("Unsolvable Level");
                             break;
                         }
                         node.Parent.RemoveChild(node);
@@ -306,6 +312,7 @@ namespace MCTS2016.SP_MCTS.Optimizations
         }
 
         public List<IPuzzleMove> BestRollout { get => bestRollout; set => bestRollout = value; }
+        public int IterationsExecuted { get => iterationsExecuted; set => iterationsExecuted = value; }
 
         public void Abort()
         {
