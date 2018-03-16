@@ -31,7 +31,7 @@ namespace MCTS2016.IDAStar
             nodeCount = 0;
             firstLevelTable = new TranspositionTable(tableSize);
             secondLevelTable = new TranspositionTable(tableSize);
-            double threshold = rootState.GetResult();
+            double threshold = rootState.GetHeuristicEvaluation();
             result = null;
             double value = 1;
             AStarNode rootNode = new AStarNode(rootState, null, null);
@@ -63,7 +63,7 @@ namespace MCTS2016.IDAStar
             {
                 return NOT_FOUND;
             }
-            double value = cost + node.state.GetResult();
+            double value = cost + node.state.GetHeuristicEvaluation();
             int currentHash = node.state.GetHashCode();
             TranspositionTableEntry entry;
             if (node.state.EndState())
@@ -116,7 +116,7 @@ namespace MCTS2016.IDAStar
                 }
                 else
                 {
-                    StoreInTranspositionTable(childHash, clone.GetResult() + cost + move.GetCost(), childDepth, true);
+                    StoreInTranspositionTable(childHash, clone.GetHeuristicEvaluation() + cost + move.GetCost(), childDepth, true);
                     value = Search(new AStarNode(clone, move, node), cost + move.GetCost(), threshold);
                 }
                 if (value == RESULT)

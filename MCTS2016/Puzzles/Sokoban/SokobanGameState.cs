@@ -1093,6 +1093,11 @@ namespace MCTS2016.Puzzles.Sokoban
             PlayerY = player.Y;
         }
 
+        public double GetHeuristicEvaluation()
+        {
+            return GetResult();
+        }
+
         //void FindMacros()
         //{
         //    FindGoalRooms();

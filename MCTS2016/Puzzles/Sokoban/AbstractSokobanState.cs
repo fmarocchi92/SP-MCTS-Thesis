@@ -541,6 +541,10 @@ namespace MCTS2016.Puzzles.Sokoban
             }
             return true;
         }
-        
+
+        public double GetHeuristicEvaluation()
+        {
+            return GetResult();
+        }
     }
 }

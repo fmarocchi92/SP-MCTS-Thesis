@@ -41,6 +41,8 @@ namespace MCTS2016
         static bool rave;
         static bool nodeRecycling;
         static int memoryBudget;
+        static bool avoidCycles;
+        static bool useNodeElimination;
 
 
         public static void Main(string[] args)
@@ -151,6 +153,16 @@ namespace MCTS2016
                                 PrintInputError("Memory budget requires an integer value");
                                 return;
                             }
+                            if (!bool.TryParse(commands[12], out avoidCycles))
+                            {
+                                PrintInputError("Avoid Cycles requires a boolean value");
+                                return;
+                            }
+                            if (!bool.TryParse(commands[13], out useNodeElimination))
+                            {
+                                PrintInputError("Use Node Elimination requires a boolean value");
+                                return;
+                            }
                             if (nodeRecycling && (memoryBudget <= 0 || memoryBudget >= iterations))
                             {
                                 PrintInputError("Memory budget value not compatible with node recycling");
@@ -232,7 +244,12 @@ namespace MCTS2016
                                 PrintInputError("restarts requires an integer value");
                                 return;
                             }
-                            if(nodeRecycling && (memoryBudget <= 0 || memoryBudget >= iterations)){
+                            if (!bool.TryParse(commands[10], out avoidCycles))
+                            {
+                                PrintInputError("Use Node Elimination requires a boolean value");
+                                return;
+                            }
+                            if (nodeRecycling && (memoryBudget <= 0 || memoryBudget >= iterations)){
                                 PrintInputError("Memory budget value not compatible with node recycling");
                                 return;
                             }
@@ -299,15 +316,25 @@ namespace MCTS2016
             string[] levels = ReadSokobanLevels(levelPath);
             IPuzzleState[] states = new IPuzzleState[levels.Length];
             int solvedLevels = 0;
+            Stopwatch stopwatch = new Stopwatch();
+            long stateInitTime;
+            long solvingTime;
             //GoalMacroWrapper.BuildMacroTree(null);
             for (int i = 0; i < states.Length; i++)
             {
+                stopwatch.Restart();
                 states[i] = new AbstractSokobanState(levels[i], rewardType,useNormalizedPosition,useGoalMacro,useTunnelMacro,useGoalCut, null);
+                stopwatch.Stop();
+                stateInitTime = stopwatch.ElapsedMilliseconds;
                 IDAStarSearch idaStar = new IDAStarSearch();
                 //Log("Level" + (i + 1) + ":\n" + states[i].PrettyPrint());
+                stopwatch.Restart();
                 List<IPuzzleMove> solution = idaStar.Solve(states[i],maxCost, maxTableSize, 700);
+                stopwatch.Stop();
+                solvingTime = stopwatch.ElapsedMilliseconds;
                 string moves = "";
                 int pushCount = 0;
+                
                 if (solution != null)
                 {
                     foreach (IPuzzleMove m in solution)
@@ -330,7 +357,7 @@ namespace MCTS2016
                     {
                         solvedLevels++;
                     }
-                    Log("Level " + (i + 1) + " solved: " + (states[i].EndState()) + " with "+idaStar.NodeCount+ " nodes; solution length:" + moves.Count() +"/"+pushCount);
+                    Log("Level " + (i + 1) + " solved: " + (states[i].EndState()) + " with "+idaStar.NodeCount+ " nodes; solution length:" + moves.Count() +"/"+pushCount + " - Init Time: " + TimeFormat(stateInitTime) + " - Solving Time: " + TimeFormat(solvingTime));
                     Log("Moves: " + moves);
                     Log("Solved " + solvedLevels + "/" + (i + 1));
                     Console.Write("\rSolved " + solvedLevels + "/" + (i + 1));
@@ -360,14 +387,18 @@ namespace MCTS2016
             }
             if (log)
             {
+                int totalRollouts = 0;
                 int solvedCount = 0;
                 for (int i = 0; i < levels.Length; i++)
                 {
                     if (solved[i])
                         solvedCount++;
                     Log("Level " + (i + 1) + " solved: " + (solved[i]) + " in " + scores[i]);
+                    totalRollouts += scores[i];
                 }
                 Log("Solved " + solvedCount + "/" + levels.Length);
+                Log("Total Rollouts: " + totalRollouts);
+
             }
             return scores;
         }
@@ -382,15 +413,21 @@ namespace MCTS2016
 
             simulationStrategy = new SokobanEGreedyStrategy(epsilonValue, rng);
             IPuzzleState[] states = new IPuzzleState[levels.Length];
+
             //SokobanMCTSStrategy player;
+
             int solvedLevels = 0;
             int[] rolloutsCount = new int[states.Length];
+            Stopwatch stopwatch = new Stopwatch();
+            long stateInitializationTime;
+            long solvingTime;
             for (int i = 0; i < states.Length; i++)
             {
                 if(i%SinglePlayerMCTSMain.threadIndex != threadIndex)
                 {
                     continue;
                 }
+                stopwatch.Restart();
                 if (abstractSokoban)
                 {
                     states[i] = new AbstractSokobanState(levels[i], rewardType,useNormalizedPosition, useGoalMacro, useTunnelMacro, useGoalCut,simulationStrategy,rng);
@@ -399,13 +436,20 @@ namespace MCTS2016
                 {
                     states[i] = new SokobanGameState(levels[i], rewardType, simulationStrategy);
                 }
+                stopwatch.Stop();
+                stateInitializationTime = stopwatch.ElapsedMilliseconds;
                 List<IPuzzleMove> moveList = new List<IPuzzleMove>();
                 //player = new SokobanMCTSStrategy(rng, iterations, 600, null, const_C, const_D, stopOnResult);
 
                 //SP_MCTSAlgorithm mcts = new SP_MCTSAlgorithm(new SP_UCTTreeNodeCreator(const_C, const_D, rng), stopOnResult);
-                OptMCTSAlgorithm mcts = new OptMCTSAlgorithm(new Opt_SP_UCTTreeNodeCreator(const_C, const_D, rng, ucb1Tuned, rave, nodeRecycling), iterations, memoryBudget, stopOnResult);
+                
+                OptMCTSAlgorithm mcts = new OptMCTSAlgorithm(new Opt_SP_UCTTreeNodeCreator(const_C, const_D, rng, ucb1Tuned, rave, nodeRecycling), iterations, memoryBudget, stopOnResult, avoidCycles, useNodeElimination);
                 string moves = "";
+                stopwatch.Restart();
                 moveList = mcts.Solve(states[i], iterations);
+                stopwatch.Stop();
+                solvingTime = stopwatch.ElapsedMilliseconds;
+
                 //moveList = player.GetSolution(states[i]);
                 int pushCount = 0;
                 foreach (IPuzzleMove m in moveList)
@@ -443,7 +487,7 @@ namespace MCTS2016
                 solved[i] = states[i].EndState();
                 if (log)
                 {
-                    Log("Level " + (i + 1) + " solved: " + (states[i].EndState()) + " in " + mcts.IterationsExecuted + " rollouts - solution length (moves/pushes): " + moves.Count() + "/" + pushCount);
+                    Log("Level " + (i + 1) + " solved: " + (states[i].EndState()) + " in " + mcts.IterationsExecuted + " rollouts - solution length (moves/pushes): " + moves.Count() + "/" + pushCount +" - Init Time: "+TimeFormat(stateInitializationTime) +" - Solving Time: "+TimeFormat(solvingTime));
                     Log("Moves: " + moves);
                 }
                 Console.Write("\r                              ");
@@ -625,34 +669,43 @@ namespace MCTS2016
             Console.WriteLine("Thread "+ threadIndex +" started");
             MersenneTwister rnd = new MersenneTwister(seed+threadIndex);
             int currentLevelIndex = GetTaskIndex(threadIndex);
+            Stopwatch stopwatch = new Stopwatch();
+            long stateInitTime;
+            long solvingTime;
             while (currentLevelIndex >= 0)
             {
                 ISPSimulationStrategy simulationStrategy = new SamegameTabuColorRandomStrategy(levels[currentLevelIndex],rnd);
                 //Console.Write("\rRun " + (restartN + 1) + " of " + restarts + "  ");
+                stopwatch.Restart();
                 SamegameGameState s = new SamegameGameState(levels[currentLevelIndex], rnd, simulationStrategy);
+                stopwatch.Stop();
+                stateInitTime = stopwatch.ElapsedMilliseconds;
                 IPuzzleMove move;
-                ISPSimulationStrategy player = new SamegameMCTSStrategy(rnd,ucb1Tuned, rave, nodeRecycling, memoryBudget, iterations, null, const_C, const_D);
+                ISPSimulationStrategy player = new SamegameMCTSStrategy(rnd,ucb1Tuned, rave, nodeRecycling, memoryBudget, useNodeElimination, iterations, null, const_C, const_D);
                 string moveString = string.Empty;
                 List<IPuzzleMove> moveList = new List<IPuzzleMove>();
+                stopwatch.Restart();
                 while (!s.isTerminal())
                 {
                     move = player.selectMove(s);
                     moveList.Add(move);
                     s.DoMove(move);
                 }
+                stopwatch.Stop();
+                solvingTime = stopwatch.ElapsedMilliseconds;
                 lock (taskLock)
                 {
                     if (s.GetScore() > scores[currentLevelIndex])
                     {
                         scores[currentLevelIndex] = s.GetScore();
                         bestMoves[currentLevelIndex] = moveList;
-                        Log("Completed run " + taskTaken[currentLevelIndex] + "/" + restarts + " of level " + (currentLevelIndex + 1) + ". New top score found: " + scores[currentLevelIndex]);
+                        Log("Completed run " + taskTaken[currentLevelIndex] + "/" + restarts + " of level " + (currentLevelIndex + 1) + ". New top score found: " + scores[currentLevelIndex] + " - Init Time: " + TimeFormat(stateInitTime) + " - Solving Time: " + TimeFormat(solvingTime));
                         PrintMoveList(currentLevelIndex, moveList);
                         PrintBestScore();
                     }
                     else
                     {
-                        Log("Completed run " + taskTaken[currentLevelIndex] + "/" + restarts + " of level " + (currentLevelIndex + 1) + " with score: " + s.GetScore());
+                        Log("Completed run " + taskTaken[currentLevelIndex] + "/" + restarts + " of level " + (currentLevelIndex + 1) + " with score: " + s.GetScore() + " - Init Time: " + TimeFormat(stateInitTime) + " - Solving Time: " + TimeFormat(solvingTime));
                     }
                 }
                 currentLevelIndex = GetTaskIndex(threadIndex);
@@ -750,6 +803,12 @@ namespace MCTS2016
                     textWriter.Flush();
                 }
             }
+        }
+
+        public static string TimeFormat(long timeInMilliseconds)
+        {
+            TimeSpan timeSpan = TimeSpan.FromMilliseconds(timeInMilliseconds);
+            return String.Format("{0:00}h:{1:00}m:{2:00}s.{3:000}ms", timeSpan.Hours, timeSpan.Minutes, timeSpan.Seconds, timeSpan.Milliseconds);
         }
     }
 }

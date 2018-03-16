@@ -73,5 +73,14 @@ namespace MCTS2016.Puzzles.SameGame
             hc = (13 * hc) + color.GetHashCode();
             return hc;
         }
+
+        public override double GetCost()
+        {
+            if(Blocks.Count == 2)
+            {
+                return 1;
+            }
+            return 1/((Blocks.Count - 2)^2);
+        }
     }
 }

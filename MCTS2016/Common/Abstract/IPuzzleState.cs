@@ -65,6 +65,8 @@ namespace MCTS2016.Common.Abstract
 
         int GetScore();
 
+        double GetHeuristicEvaluation();
+
         IPuzzleMove GetSimulationMove();
     }
 }

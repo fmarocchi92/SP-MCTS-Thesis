@@ -450,6 +450,35 @@ namespace MCTS2016.Puzzles.SameGame
         {
             throw new NotImplementedException();
         }
+
+        public double GetHeuristicEvaluation()
+        {
+            int[] colors = new int[5];
+            List<int> board = GetBoard();
+            foreach(int block in board)
+            {
+                colors[block]++;
+            }
+            double value = GetResult();
+            bool unsolvable = false;
+            foreach(int count in colors)
+            {
+                if (count == 1)
+                {
+                    unsolvable = true;
+                }
+                value += (count-2) ^ 2;
+            }
+            if (unsolvable)
+            {
+                value -= 1000;
+            }
+            if(value <= 0)
+            {
+                return 1;
+            }
+            return 1/value;
+        }
     }
 
     public class Position
