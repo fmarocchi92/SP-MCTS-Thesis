@@ -43,6 +43,7 @@ namespace MCTS2016
         static int memoryBudget;
         static bool avoidCycles;
         static bool useNodeElimination;
+        static int raveThreshold;
 
 
         public static void Main(string[] args)
@@ -143,22 +144,27 @@ namespace MCTS2016
                                 PrintInputError("rave requires a boolean value");
                                 return;
                             }
-                            if (!bool.TryParse(commands[10], out nodeRecycling))
+                            if (!int.TryParse(commands[10], out raveThreshold))
+                            {
+                                PrintInputError("Rave threshold requires an integer value");
+                                return;
+                            }
+                            if (!bool.TryParse(commands[11], out nodeRecycling))
                             {
                                 PrintInputError("node recycling requires a boolean value");
                                 return;
                             }
-                            if (!int.TryParse(commands[11], out memoryBudget))
+                            if (!int.TryParse(commands[12], out memoryBudget))
                             {
                                 PrintInputError("Memory budget requires an integer value");
                                 return;
                             }
-                            if (!bool.TryParse(commands[12], out avoidCycles))
+                            if (!bool.TryParse(commands[13], out avoidCycles))
                             {
                                 PrintInputError("Avoid Cycles requires a boolean value");
                                 return;
                             }
-                            if (!bool.TryParse(commands[13], out useNodeElimination))
+                            if (!bool.TryParse(commands[14], out useNodeElimination))
                             {
                                 PrintInputError("Use Node Elimination requires a boolean value");
                                 return;
@@ -168,8 +174,8 @@ namespace MCTS2016
                                 PrintInputError("Memory budget value not compatible with node recycling");
                                 return;
                             }
-                            configurationString += "\nMethod: MCTS \niterations: " + iterations + "\nUCT constant: " + const_C+ "\nSP_UCT constant: "+ const_D +  "\nReward Type: "+rewardType+"\nepsilon: "+epsilon+
-                                "\nUCB1Tuned: "+ucb1Tuned+"\nRAVE: "+rave+"\nNode Recycling: "+nodeRecycling+"\nMemory Budget: "+(nodeRecycling?""+memoryBudget:"Ignored with node recycling disabled")+"\nlevel: "+ level + "\n********************************\n********************************\n";
+                            configurationString += "\nNO SP-MCTS \nMethod: MCTS \niterations: " + iterations + "\nUCT constant: " + const_C+ "\nSP_UCT constant: "+ const_D +  "\nReward Type: "+rewardType+"\nepsilon: "+epsilon+
+                                "\nUCB1Tuned: "+ucb1Tuned+"\nRAVE: "+rave+"\nRAVE Threshold: "+raveThreshold+"\nNode Recycling: "+nodeRecycling+"\nMemory Budget: "+(nodeRecycling?""+memoryBudget:"Ignored with node recycling disabled")+"\nAvoid Cycles: "+avoidCycles+"\nNode Elimination:"+useNodeElimination+"\nStop on Result: "+stopOnResult+"\nlevel path: "+ level + "\n********************************\n********************************\n";
                             Log(configurationString);
                             MultiThreadSokobanTest(const_C, const_D, iterations, 1, level, seed, true, rewardType, stopOnResult, epsilon, true, 1);
                             break;
@@ -234,17 +240,22 @@ namespace MCTS2016
                                 PrintInputError("seed requires an unsigned integer value");
                                 return;
                             }
-                            if (!bool.TryParse(commands[8], out bool nodeRecycling))
+                            if (!int.TryParse(commands[8], out raveThreshold))
+                            {
+                                PrintInputError("Rave threshold requires an integer value");
+                                return;
+                            }
+                            if (!bool.TryParse(commands[9], out bool nodeRecycling))
                             {
                                 PrintInputError("seed requires an unsigned integer value");
                                 return;
                             }
-                            if (!int.TryParse(commands[9], out int memoryBudget))
+                            if (!int.TryParse(commands[10], out int memoryBudget))
                             {
                                 PrintInputError("restarts requires an integer value");
                                 return;
                             }
-                            if (!bool.TryParse(commands[10], out avoidCycles))
+                            if (!bool.TryParse(commands[11], out useNodeElimination))
                             {
                                 PrintInputError("Use Node Elimination requires a boolean value");
                                 return;
@@ -387,17 +398,17 @@ namespace MCTS2016
             }
             if (log)
             {
-                int totalRollouts = 0;
-                int solvedCount = 0;
-                for (int i = 0; i < levels.Length; i++)
-                {
-                    if (solved[i])
-                        solvedCount++;
-                    Log("Level " + (i + 1) + " solved: " + (solved[i]) + " in " + scores[i]);
-                    totalRollouts += scores[i];
-                }
-                Log("Solved " + solvedCount + "/" + levels.Length);
-                Log("Total Rollouts: " + totalRollouts);
+                //int totalRollouts = 0;
+                //int solvedCount = 0;
+                //for (int i = 0; i < levels.Length; i++)
+                //{
+                //    if (solved[i])
+                //        solvedCount++;
+                //    Log("Level " + (i + 1) + " solved: " + (solved[i]) + " in " + scores[i]);
+                //    totalRollouts += scores[i];
+                //}
+                //Log("Solved " + solvedCount + "/" + levels.Length);
+                //Log("Total Rollouts: " + totalRollouts);
 
             }
             return scores;
@@ -416,11 +427,35 @@ namespace MCTS2016
 
             //SokobanMCTSStrategy player;
 
+            IPuzzleState state = new AbstractSokobanState(levels[0], rewardType, useNormalizedPosition, useGoalMacro, useTunnelMacro, useGoalCut, simulationStrategy, rng);
+            //IPuzzleMove move = null;
+            //int restart = 0;
+            //IPuzzleState clone = state.Clone();
+
+            //while (!state.EndState() && restart < 1000)
+            //{
+            //    state = clone.Clone();
+            //    int count = 0;
+                
+            //    while (!state.isTerminal() && count < 100)
+            //    {
+            //        move = state.GetRandomMove();
+            //        state.DoMove(move);
+            //        count++;
+            //    }
+            //    Debug.WriteLine(restart + "\t" +count);
+            //    restart++;
+            //}
+            
+            //    Debug.WriteLine(restart);
+            
+
             int solvedLevels = 0;
             int[] rolloutsCount = new int[states.Length];
             Stopwatch stopwatch = new Stopwatch();
             long stateInitializationTime;
             long solvingTime;
+            int totalRollouts=0;
             for (int i = 0; i < states.Length; i++)
             {
                 if(i%SinglePlayerMCTSMain.threadIndex != threadIndex)
@@ -443,7 +478,7 @@ namespace MCTS2016
 
                 //SP_MCTSAlgorithm mcts = new SP_MCTSAlgorithm(new SP_UCTTreeNodeCreator(const_C, const_D, rng), stopOnResult);
                 
-                OptMCTSAlgorithm mcts = new OptMCTSAlgorithm(new Opt_SP_UCTTreeNodeCreator(const_C, const_D, rng, ucb1Tuned, rave, nodeRecycling), iterations, memoryBudget, stopOnResult, avoidCycles, useNodeElimination);
+                OptMCTSAlgorithm mcts = new OptMCTSAlgorithm(new Opt_SP_UCTTreeNodeCreator(const_C, const_D, rng, ucb1Tuned, rave, raveThreshold, nodeRecycling), iterations, memoryBudget, stopOnResult, avoidCycles, useNodeElimination);
                 string moves = "";
                 stopwatch.Restart();
                 moveList = mcts.Solve(states[i], iterations);
@@ -482,17 +517,23 @@ namespace MCTS2016
                 {
                     solvedLevels++;
                 }
+                totalRollouts += mcts.IterationsForFirstSolution;
+
                 rolloutsCount[i] = mcts.IterationsExecuted;
                 scores[i] = rolloutsCount[i];
                 solved[i] = states[i].EndState();
                 if (log)
                 {
-                    Log("Level " + (i + 1) + " solved: " + (states[i].EndState()) + " in " + mcts.IterationsExecuted + " rollouts - solution length (moves/pushes): " + moves.Count() + "/" + pushCount +" - Init Time: "+TimeFormat(stateInitializationTime) +" - Solving Time: "+TimeFormat(solvingTime));
-                    Log("Moves: " + moves);
+                    //Log("Level " + (i + 1) + " solved: " + (states[i].EndState()) + " in " + mcts.IterationsExecuted + " rollouts - solution length (moves/pushes): " + moves.Count() + "/" + pushCount +" - Init Time: "+TimeFormat(stateInitializationTime) +" - Solving Time: "+TimeFormat(solvingTime));
+                    //Log("Moves: " + moves);
+                    Log("Level " + (i + 1) + "\titerations: " + mcts.IterationsExecuted + "\titerations for first solution: "+ mcts.IterationsForFirstSolution + "\ttotal solutions: "+mcts.SolutionCount+"\tbest solution length (moves/pushes): " + moves.Count() + "/" + pushCount + "\tInit Time: " + TimeFormat(stateInitializationTime) + " - Solving Time: " + TimeFormat(solvingTime));
+                    Log("Best solution: " + moves);
                 }
                 Console.Write("\r                              ");
                 Console.Write("\rSolved " + solvedLevels + "/" + (i + 1));
             }
+            Log("Solved " + solvedLevels + "/" + levels.Length);
+            Log("Total Rollouts for first solutions: " + totalRollouts);
             return rolloutsCount;
         }
 
@@ -681,7 +722,7 @@ namespace MCTS2016
                 stopwatch.Stop();
                 stateInitTime = stopwatch.ElapsedMilliseconds;
                 IPuzzleMove move;
-                ISPSimulationStrategy player = new SamegameMCTSStrategy(rnd,ucb1Tuned, rave, nodeRecycling, memoryBudget, useNodeElimination, iterations, null, const_C, const_D);
+                ISPSimulationStrategy player = new SamegameMCTSStrategy(rnd,ucb1Tuned, rave, raveThreshold, nodeRecycling, memoryBudget, useNodeElimination, iterations, null, const_C, const_D);
                 string moveString = string.Empty;
                 List<IPuzzleMove> moveList = new List<IPuzzleMove>();
                 stopwatch.Restart();
@@ -798,6 +839,7 @@ namespace MCTS2016
             lock (taskLock)
             {
                 textWriter.WriteLine("{0} - {1}  :  {2}", DateTime.Now.ToShortDateString(), DateTime.Now.ToLongTimeString(), logMessage);
+                Console.WriteLine(logMessage);
                 if (autoFlush)
                 {
                     textWriter.Flush();

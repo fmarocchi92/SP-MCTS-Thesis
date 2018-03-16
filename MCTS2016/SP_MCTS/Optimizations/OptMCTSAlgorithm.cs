@@ -9,6 +9,8 @@ using MCTS2016.Optimizations.UCT;
 using MCTS2016.SP_MCTS.Optimizations.UCT;
 using MCTS2016.SP_MCTS.Optimizations.Utils;
 using Common;
+using System.Diagnostics;
+using MCTS2016.Puzzles.Sokoban;
 
 namespace MCTS2016.SP_MCTS.Optimizations
 {
@@ -26,6 +28,10 @@ namespace MCTS2016.SP_MCTS.Optimizations
         private bool avoidCycles;
         private int iterationsExecuted;
         private bool useNodeElimination;
+        private int iterationsForFirstSolution;
+        private int solutionCount;
+        private int solutionHash;
+        private HashSet<int> solutionHashes;
 
         public OptMCTSAlgorithm(ISPTreeNodeCreator treeCreator, int iterations, int memoryBudget, bool stopOnResult, bool avoidCycles, bool useNodeElimination)
         {
@@ -50,7 +56,7 @@ namespace MCTS2016.SP_MCTS.Optimizations
 
         public IPuzzleMove Search(IPuzzleState rootState, int iterations, double maxTimeInMinutes = 5)
         {
-
+            IterationsForFirstSolution = -1;
             int nodeCount = 0;
             bool looped;
             if (!search)
@@ -70,6 +76,7 @@ namespace MCTS2016.SP_MCTS.Optimizations
             
             HashSet<IPuzzleMove> allFirstMoves = new HashSet<IPuzzleMove>();
             List<IPuzzleMove> currentRollout = new List<IPuzzleMove>();
+            solutionHashes = new HashSet<int>();
 
             #if PROFILING
                 long beforeMemory = GC.GetTotalMemory(false);
@@ -80,14 +87,16 @@ namespace MCTS2016.SP_MCTS.Optimizations
             
             for (iterationsExecuted = 0; iterationsExecuted < iterations; iterationsExecuted++)
             {
+                
                 looped = false;
                 ISPTreeNode node = rootNode;
                 IPuzzleState state = rootState.Clone();
                 
                 HashSet<IPuzzleState> visitedStatesInRollout = new HashSet<IPuzzleState>() { state.Clone() };
-                
+
                 // Clear lists of moves used for RAVE updates && best rollout
-                currentRollout.Clear();
+                solutionHash = 27;
+                currentRollout = new List<IPuzzleMove>();
                 allFirstMoves.Clear();
 
                 // Select
@@ -99,6 +108,7 @@ namespace MCTS2016.SP_MCTS.Optimizations
                     visitedStatesInRollout.Add(state.Clone());
                     // RAVE Optimization && best rollout
                     currentRollout.Add(node.Move);
+                    UpdateSolutionHash(node.Move);
                     allFirstMoves.Add(node.Move);
 
                     // Node Recycling Optimization
@@ -150,6 +160,7 @@ namespace MCTS2016.SP_MCTS.Optimizations
                                 if (!visitedStatesInRollout.Contains(state)) //found valid move
                                 {
                                     node = node.AddChild(objectPool, move, state);
+                                    UpdateSolutionHash(move);
                                     currentRollout.Add(move);
                                     allFirstMoves.Add(move);
                                     nodeCount++;
@@ -168,6 +179,7 @@ namespace MCTS2016.SP_MCTS.Optimizations
                         {
                             node = node.AddChild(objectPool, move, state);
                             // RAVE Optimization && best rollout
+                            UpdateSolutionHash(move);
                             currentRollout.Add(move);
                             allFirstMoves.Add(move);
                             nodeCount++;
@@ -213,6 +225,7 @@ namespace MCTS2016.SP_MCTS.Optimizations
                             }
                         }
                         // RAVE Optimization && best rollout
+                        UpdateSolutionHash(move);
                         currentRollout.Add(move);
                         allFirstMoves.Add(move);
                         visitedStatesInRollout.Add(state.Clone());
@@ -225,6 +238,16 @@ namespace MCTS2016.SP_MCTS.Optimizations
                 
                 //Keep topScore and update bestRollout
                 double result = state.GetResult();
+
+                if (state.EndState() && !solutionHashes.Contains(solutionHash))
+                {
+                    solutionHashes.Add(solutionHash);
+                    solutionCount++;
+                    if (iterationsForFirstSolution < 0)
+                    {
+                        iterationsForFirstSolution = iterationsExecuted;
+                    }
+                }
                 if (result > topScore || result == topScore && currentRollout.Count < bestRollout.Count)
                 {
                     topScore = result;
@@ -234,6 +257,7 @@ namespace MCTS2016.SP_MCTS.Optimizations
                         break;
                     }
                 }
+                
 
                 // Backpropagate
                 while (node != null)
@@ -330,10 +354,17 @@ namespace MCTS2016.SP_MCTS.Optimizations
 
         public List<IPuzzleMove> BestRollout { get => bestRollout; set => bestRollout = value; }
         public int IterationsExecuted { get => iterationsExecuted; set => iterationsExecuted = value; }
+        public int IterationsForFirstSolution { get => iterationsForFirstSolution; set => iterationsForFirstSolution = value; }
+        public int SolutionCount { get => solutionCount; set => solutionCount = value; }
 
         public void Abort()
         {
             search = false;
+        }
+
+        private void UpdateSolutionHash(IPuzzleMove move)
+        {
+            solutionHash = solutionHash * 13 + move.GetHashCode();
         }
     }
 }

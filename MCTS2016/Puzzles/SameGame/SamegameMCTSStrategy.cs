@@ -23,11 +23,11 @@ namespace MCTS2016.Puzzles.SameGame
 
         public int iterations { get; set; }
 
-        public SamegameMCTSStrategy(MersenneTwister rng, bool ucb1Tuned, bool rave, bool nodeRecycling, int memoryBudget, bool useNodeElimination, int iterations = 1000, OptMCTSAlgorithm mcts = null, double const_C = 4.31, double const_D = 96.67)
+        public SamegameMCTSStrategy(MersenneTwister rng, bool ucb1Tuned, bool rave, int raveThreshold, bool nodeRecycling, int memoryBudget, bool useNodeElimination, int iterations = 1000, OptMCTSAlgorithm mcts = null, double const_C = 4.31, double const_D = 96.67)
         {
             if (mcts == null)
             {
-                mcts = new OptMCTSAlgorithm(new Opt_SP_UCTTreeNodeCreator(const_C, const_D, rng, ucb1Tuned, rave, nodeRecycling ),iterations, memoryBudget ,false, false, useNodeElimination);
+                mcts = new OptMCTSAlgorithm(new Opt_SP_UCTTreeNodeCreator(const_C, const_D, rng, ucb1Tuned, rave, raveThreshold, nodeRecycling ),iterations, memoryBudget ,false, false, useNodeElimination);
             }
             this.mcts = mcts;
             this.iterations = iterations;

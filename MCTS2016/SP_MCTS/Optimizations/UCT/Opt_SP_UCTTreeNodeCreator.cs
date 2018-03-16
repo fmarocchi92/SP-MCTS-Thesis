@@ -14,6 +14,7 @@ namespace MCTS2016.SP_MCTS.Optimizations.UCT
         private bool ucb1Tuned;
         private bool rave;
         private bool nodeRecycling;
+        private int raveThreshold;
 
         public bool NodeRecycling
         {
@@ -21,7 +22,7 @@ namespace MCTS2016.SP_MCTS.Optimizations.UCT
             set => nodeRecycling = value;
         }
 
-        public Opt_SP_UCTTreeNodeCreator(double constant, double const_D, MersenneTwister rng, bool ucb1Tuned, bool rave, bool nodeRecycling)
+        public Opt_SP_UCTTreeNodeCreator(double constant, double const_D, MersenneTwister rng, bool ucb1Tuned, bool rave, int raveThreshold, bool nodeRecycling)
         {
             rnd = rng;
             this.const_C = constant;
@@ -29,11 +30,12 @@ namespace MCTS2016.SP_MCTS.Optimizations.UCT
             this.ucb1Tuned = ucb1Tuned;
             this.rave = rave;
             this.nodeRecycling = nodeRecycling;
+            this.raveThreshold = raveThreshold;
         }
 
         public ISPTreeNode GenRootNode(IPuzzleState rootState)
         {
-            return new Opt_SP_UCTTreeNode(null, null, rootState, rnd, ucb1Tuned, rave, nodeRecycling, const_C, const_D, true);
+            return new Opt_SP_UCTTreeNode(null, null, rootState, rnd, ucb1Tuned, rave, raveThreshold, nodeRecycling, const_C, const_D, true);
         }
 
         public override string ToString()

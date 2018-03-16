@@ -49,7 +49,7 @@ namespace MCTS2016.SP_MCTS.Optimizations.Utils
 			    //instantiate and create an object with useless attributes.
 			    //these should be reset anyways.
 			    //make sure the object isn't active.
-			    Opt_SP_UCTTreeNode objNode = new Opt_SP_UCTTreeNode(null, null, null, null, false, false, false, 1, 20000, generateUntriedMoves: false);
+			    Opt_SP_UCTTreeNode objNode = new Opt_SP_UCTTreeNode(null, null, null, null, false, false, 0, false, 1, 20000, generateUntriedMoves: false);
 
 			    //add the object too our list.
 			    pooledObjects.Add(objNode);
@@ -67,7 +67,7 @@ namespace MCTS2016.SP_MCTS.Optimizations.Utils
 	    /// You will need to set its values and set it inactive again when you are done with it.
 	    /// </summary>
 	    /// <returns>ITreeNode of requested type if it is available, otherwise null.</returns>
-	    public Opt_SP_UCTTreeNode GetObject(IPuzzleMove move, Opt_SP_UCTTreeNode parent, IPuzzleState state, MersenneTwister rng, bool ucb1Tuned, bool rave, bool nodeRecycling, double const_C, double const_D)
+	    public Opt_SP_UCTTreeNode GetObject(IPuzzleMove move, Opt_SP_UCTTreeNode parent, IPuzzleState state, MersenneTwister rng, bool ucb1Tuned, bool rave, double raveThreshold, bool nodeRecycling, double const_C, double const_D)
 	    {
 		    //iterate through all pooled objects.
 		    foreach (Opt_SP_UCTTreeNode node in pooledObjects)
@@ -84,6 +84,7 @@ namespace MCTS2016.SP_MCTS.Optimizations.Utils
 			    node.Rnd = rng;
 			    node.Ucb1Tuned = ucb1Tuned;
 			    node.Rave = rave;
+                node.RaveThreshold = raveThreshold;
 			    node.NodeRecycling = nodeRecycling;
 			    node.ConstC = const_C;
 			    node.ConstD = const_D;
@@ -99,7 +100,7 @@ namespace MCTS2016.SP_MCTS.Optimizations.Utils
 		    
 		    //Instantiate a new object.
 		    //set it to active since we are about to use it.
-		    Opt_SP_UCTTreeNode objNode = new Opt_SP_UCTTreeNode(move, parent, state, rng, ucb1Tuned, rave, nodeRecycling, const_C, const_D) {SetActive = true};
+		    Opt_SP_UCTTreeNode objNode = new Opt_SP_UCTTreeNode(move, parent, state, rng, ucb1Tuned, rave, raveThreshold, nodeRecycling, const_C, const_D) {SetActive = true};
 		    
 		    //add it to the pool of objects
 		    pooledObjects.Add(objNode);

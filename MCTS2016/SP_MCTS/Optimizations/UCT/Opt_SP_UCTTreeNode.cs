@@ -29,8 +29,9 @@ namespace MCTS2016.Optimizations.UCT
         private bool ucb1Tuned;
         private bool rave;
         private bool nodeRecycling;
+        private double raveThreshold;
 
-        public Opt_SP_UCTTreeNode(IPuzzleMove move, Opt_SP_UCTTreeNode parent, IPuzzleState state, MersenneTwister rng, bool ucb1Tuned, bool rave, bool nodeRecycling, double const_C = 1, double const_D = 20000, bool generateUntriedMoves = true)
+        public Opt_SP_UCTTreeNode(IPuzzleMove move, Opt_SP_UCTTreeNode parent, IPuzzleState state, MersenneTwister rng, bool ucb1Tuned, bool rave, double raveThreshold, bool nodeRecycling, double const_C = 1, double const_D = 20000, bool generateUntriedMoves = true)
         {
             Move = move;
             this.parent = parent;
@@ -50,6 +51,7 @@ namespace MCTS2016.Optimizations.UCT
             topScore = double.MinValue;
             this.ucb1Tuned = ucb1Tuned;
             this.rave = rave;
+            this.raveThreshold = raveThreshold;
             this.nodeRecycling = nodeRecycling;
             if (generateUntriedMoves)
             {
@@ -120,7 +122,7 @@ namespace MCTS2016.Optimizations.UCT
                 RAVEScore = RAVEwins / RAVEvisits + const_C * Math.Sqrt(2 * Math.Log(parent.visits) / RAVEvisits);
                 if (double.IsNaN(RAVEScore))
                     RAVEScore = 0;
-                alpha = RAVEScore == 0 ? 0 : Math.Max(0, (1000 - RAVEvisits) / 1000);
+                alpha = RAVEScore == 0 ? 0 : Math.Max(0, (raveThreshold - RAVEvisits) / raveThreshold);
             }
                         
             if (ucb1Tuned)
@@ -131,9 +133,9 @@ namespace MCTS2016.Optimizations.UCT
                 ucb1min = Math.Min(1 / 4.0, (visits * squares_rewards - Math.Pow(wins, 2)) / visits * (visits - 1)
                                                 + Math.Sqrt(2 * Math.Log(parent.visits) / visits));
             }
-            
-            UCTScore =  wins / visits + topScore*0.02 + const_C * Math.Sqrt(ucb1min * Math.Log(parent.visits) / visits)
-                        +Math.Sqrt((squaredReward - visits * Math.Pow(wins / visits, 2) + const_D) / visits); //this should probably be used only in score maximization problems
+
+            UCTScore = wins / visits + topScore * 0.02 + const_C * Math.Sqrt(ucb1min * Math.Log(parent.visits) / visits);
+                        //+Math.Sqrt((squaredReward - visits * Math.Pow(wins / visits, 2) + const_D) / visits); //EXTRA COSTANTE //this should probably be used only in score maximization problems
             
             
             return alpha * RAVEScore + (1 - alpha) * UCTScore;
@@ -142,14 +144,14 @@ namespace MCTS2016.Optimizations.UCT
         public virtual ISPTreeNode AddChild(IPuzzleMove move, IPuzzleState state)
         {
             untriedMoves.Remove(move);
-            Opt_SP_UCTTreeNode n = new Opt_SP_UCTTreeNode(move, this, state, rnd, ucb1Tuned, rave, nodeRecycling, const_C, const_D);
+            Opt_SP_UCTTreeNode n = new Opt_SP_UCTTreeNode(move, this, state, rnd, ucb1Tuned, rave, raveThreshold, nodeRecycling, const_C, const_D);
             childNodes.Add(n);
             return n;
         }
 
         public virtual ISPTreeNode AddChild(ObjectPool objectPool, IPuzzleMove move, IPuzzleState state)
         {
-            Opt_SP_UCTTreeNode n = objectPool.GetObject(move, this, state, rnd, ucb1Tuned, rave, nodeRecycling, const_C, const_D);
+            Opt_SP_UCTTreeNode n = objectPool.GetObject(move, this, state, rnd, ucb1Tuned, rave, raveThreshold, nodeRecycling, const_C, const_D);
             untriedMoves.Remove(move);
             childNodes.Add(n);
             return n;
@@ -206,7 +208,8 @@ namespace MCTS2016.Optimizations.UCT
         public Opt_SP_UCTTreeNode PrevLRUElem { get; set; }
 
         public bool SetActive { get; set; }
-        
+        public double RaveThreshold { get => raveThreshold; set => raveThreshold = value; }
+
         public IPuzzleMove SelectUntriedMove()
         {
             return untriedMoves[rnd.Next(untriedMoves.Count)];
@@ -248,6 +251,7 @@ namespace MCTS2016.Optimizations.UCT
             topScore = double.MinValue;
             ucb1Tuned = false;
             rave = false;
+            raveThreshold = 0;
             nodeRecycling = false;
         }
 
