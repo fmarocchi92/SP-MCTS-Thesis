@@ -174,7 +174,7 @@ namespace MCTS2016
                                 PrintInputError("Memory budget value not compatible with node recycling");
                                 return;
                             }
-                            configurationString += "\nNO SP-MCTS \nMethod: MCTS \niterations: " + iterations + "\nUCT constant: " + const_C+ "\nSP_UCT constant: "+ const_D +  "\nReward Type: "+rewardType+"\nepsilon: "+epsilon+
+                            configurationString += "\nNOSP-MCTS \nMethod: MCTS \niterations: " + iterations + "\nUCT constant: " + const_C+ "\nSP_UCT constant: "+ const_D +  "\nReward Type: "+rewardType+"\nepsilon: "+epsilon+
                                 "\nUCB1Tuned: "+ucb1Tuned+"\nRAVE: "+rave+"\nRAVE Threshold: "+raveThreshold+"\nNode Recycling: "+nodeRecycling+"\nMemory Budget: "+(nodeRecycling?""+memoryBudget:"Ignored with node recycling disabled")+"\nAvoid Cycles: "+avoidCycles+"\nNode Elimination:"+useNodeElimination+"\nStop on Result: "+stopOnResult+"\nlevel path: "+ level + "\n********************************\n********************************\n";
                             Log(configurationString);
                             MultiThreadSokobanTest(const_C, const_D, iterations, 1, level, seed, true, rewardType, stopOnResult, epsilon, true, 1);
@@ -456,6 +456,10 @@ namespace MCTS2016
             long stateInitializationTime;
             long solvingTime;
             int totalRollouts=0;
+            int totalNodes = 0;
+            List<int> visitsList = new List<int>();
+            List<int> raveVisitsList = new List<int>();
+
             for (int i = 0; i < states.Length; i++)
             {
                 if(i%SinglePlayerMCTSMain.threadIndex != threadIndex)
@@ -491,8 +495,8 @@ namespace MCTS2016
                 {
                     if (abstractSokoban)
                     {
-                        Debug.WriteLine("Move: " + m);
-                        Debug.WriteLine(states[i]);
+                        //Debug.WriteLine("Move: " + m);
+                        //Debug.WriteLine(states[i]);
                         SokobanPushMove push = (SokobanPushMove)m;
                         foreach (IPuzzleMove basicMove in push.MoveList)
                         {
@@ -524,16 +528,39 @@ namespace MCTS2016
                 solved[i] = states[i].EndState();
                 if (log)
                 {
-                    //Log("Level " + (i + 1) + " solved: " + (states[i].EndState()) + " in " + mcts.IterationsExecuted + " rollouts - solution length (moves/pushes): " + moves.Count() + "/" + pushCount +" - Init Time: "+TimeFormat(stateInitializationTime) +" - Solving Time: "+TimeFormat(solvingTime));
-                    //Log("Moves: " + moves);
-                    Log("Level " + (i + 1) + "\titerations: " + mcts.IterationsExecuted + "\titerations for first solution: "+ mcts.IterationsForFirstSolution + "\ttotal solutions: "+mcts.SolutionCount+"\tbest solution length (moves/pushes): " + moves.Count() + "/" + pushCount + "\tInit Time: " + TimeFormat(stateInitializationTime) + " - Solving Time: " + TimeFormat(solvingTime));
-                    Log("Best solution: " + moves);
+                    //Log("Level " + (i + 1) + "\titerations: " + mcts.IterationsExecuted + "\titerations for first solution: "+ mcts.IterationsForFirstSolution + "\ttotal solutions: "+mcts.SolutionCount+"\tbest solution length (moves/pushes): " + moves.Count() + "/" + pushCount + "\tInit Time: " + TimeFormat(stateInitializationTime) + " - Solving Time: " + TimeFormat(solvingTime));
+                    //Log("Best solution: " + moves);
                 }
+                totalNodes += mcts.NodeCount;
+                visitsList.AddRange(mcts.visits);
+                raveVisitsList.AddRange(mcts.raveVisits);
                 Console.Write("\r                              ");
                 Console.Write("\rSolved " + solvedLevels + "/" + (i + 1));
             }
+            visitsList.Sort((x, y) => (x.CompareTo(y)));
+            raveVisitsList.Sort((x, y) => (x.CompareTo(y)));
+            double avgVisits = 0;
+            foreach(int v in visitsList)
+            {
+                avgVisits += v;
+            }
+            double avgRaveVisits = 0;
+            foreach (int v in raveVisitsList)
+            {
+                avgRaveVisits += v;
+            }
+            avgVisits /= visitsList.Count;
+            avgRaveVisits /= raveVisitsList.Count;
+
             Log("Solved " + solvedLevels + "/" + levels.Length);
-            Log("Total Rollouts for first solutions: " + totalRollouts);
+            //Log("Total Rollouts for first solutions: " + totalRollouts);
+            //Log("Total nodes:"+ totalNodes);
+            Log("avg rollouts: " + totalRollouts / states.Length);
+            Log("avg nodes:" + ((double)totalNodes)/states.Length);
+            Log("avg visits: " + avgVisits);
+            Log("avg raveVisits: " + avgRaveVisits);
+            Log("median visits: " + (visitsList.Count % 2 == 0 ? visitsList[visitsList.Count / 2] : (visitsList[visitsList.Count / 2] + visitsList[1 + visitsList.Count / 2]) / 2));
+            Log("median raveVisits: " + (raveVisitsList.Count % 2 == 0 ? raveVisitsList[raveVisitsList.Count / 2] : (raveVisitsList[raveVisitsList.Count / 2] + raveVisitsList[1 + raveVisitsList.Count / 2]) / 2));
             return rolloutsCount;
         }
 

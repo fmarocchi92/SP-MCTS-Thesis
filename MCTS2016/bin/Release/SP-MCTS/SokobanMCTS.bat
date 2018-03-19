@@ -1,0 +1,2 @@
+::executable game:normalizedPosition:tunnelMacro:goalMacro:goalCut method:iterations:const_C:const_D:rewardType:epsilon:terminateOnSolution:seed levelfile
+.\MCTS2016.exe sokoban:true:true:false:false mcts:10000:0.35:100:InverseBM:0.2:true:1:true:true:100:true:5000:false:false ./microban.txt

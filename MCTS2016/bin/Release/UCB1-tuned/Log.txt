@@ -1,0 +1,41 @@
+3/16/2018 - 6:41:22 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NO SP-MCTS 
+Method: MCTS 
+iterations: 10000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: True
+Memory Budget: 5000
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: True
+level path: ./microban.txt
+********************************
+********************************
+
+3/16/2018 - 6:41:23 PM  :  Level 1	iterations: 10000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 3/1	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.556ms
+3/16/2018 - 6:41:23 PM  :  Best solution: ulD
+3/16/2018 - 6:41:23 PM  :  Level 2	iterations: 0	iterations for first solution: 0	total solutions: 1	best solution length (moves/pushes): 16/3	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.001ms
+3/16/2018 - 6:41:23 PM  :  Best solution: rddLruulDuullddR
+3/16/2018 - 6:41:24 PM  :  Level 3	iterations: 10000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 14/4	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.384ms
+3/16/2018 - 6:41:24 PM  :  Best solution: ruuLLrrddlUruL
+3/16/2018 - 6:41:24 PM  :  Level 4	iterations: 3	iterations for first solution: 3	total solutions: 1	best solution length (moves/pushes): 33/7	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.012ms
+3/16/2018 - 6:41:24 PM  :  Best solution: ullDLrurrdLullddRluurrdLrrddlUruL
+3/16/2018 - 6:41:24 PM  :  Level 5	iterations: 47	iterations for first solution: 47	total solutions: 1	best solution length (moves/pushes): 59/12	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.235ms
+3/16/2018 - 6:41:24 PM  :  Best solution: LuurDlddlUrddrruUruullllDDrdRldlUrrdrruulLdlUruulldDrddlluR

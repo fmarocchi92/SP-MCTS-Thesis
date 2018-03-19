@@ -32,6 +32,9 @@ namespace MCTS2016.SP_MCTS.Optimizations
         private int solutionCount;
         private int solutionHash;
         private HashSet<int> solutionHashes;
+        private int nodeCount;
+        public List<int> visits = new List<int>();
+        public List<int> raveVisits = new List<int>();
 
         public OptMCTSAlgorithm(ISPTreeNodeCreator treeCreator, int iterations, int memoryBudget, bool stopOnResult, bool avoidCycles, bool useNodeElimination)
         {
@@ -57,7 +60,7 @@ namespace MCTS2016.SP_MCTS.Optimizations
         public IPuzzleMove Search(IPuzzleState rootState, int iterations, double maxTimeInMinutes = 5)
         {
             IterationsForFirstSolution = -1;
-            int nodeCount = 0;
+            nodeCount = 0;
             bool looped;
             if (!search)
             {
@@ -78,13 +81,13 @@ namespace MCTS2016.SP_MCTS.Optimizations
             List<IPuzzleMove> currentRollout = new List<IPuzzleMove>();
             solutionHashes = new HashSet<int>();
 
-            #if PROFILING
+#if PROFILING
                 long beforeMemory = GC.GetTotalMemory(false);
                 long afterMemory = GC.GetTotalMemory(false);
                 long usedMemory = afterMemory - beforeMemory;
                 long averageUsedMemoryPerIteration = 0;
-            #endif
-            
+#endif
+            int deadlocksInTree = 0;
             for (iterationsExecuted = 0; iterationsExecuted < iterations; iterationsExecuted++)
             {
                 
@@ -122,6 +125,15 @@ namespace MCTS2016.SP_MCTS.Optimizations
                     }
                 }
                 IPuzzleState backupState = state.Clone();
+
+                if(!node.HasChildren() && !node.HasMovesToTry())
+                {
+                    deadlocksInTree++;
+                }
+                else
+                {
+                    Debug.Write("");
+                }
 
                 // Expand
                 if (node.HasMovesToTry())
@@ -344,6 +356,16 @@ namespace MCTS2016.SP_MCTS.Optimizations
             {
                 bestMove = rootNode.GetBestMove();
             }
+            Debug.WriteLine(rootNode.TreeToString(2));
+
+            visits = new List<int>();
+            raveVisits = new List<int>();
+            CountVisits((Opt_SP_UCTTreeNode)rootNode, visits, raveVisits);
+
+            visits.Sort((x, y) => (x.CompareTo(y)));
+            raveVisits.Sort((x, y) => (x.CompareTo(y)));
+            //string visitsString = LogVisits((Opt_SP_UCTTreeNode) rootNode);
+            //SinglePlayerMCTSMain.Log("Iterations: "+IterationsExecuted+" NodeCount: " + nodeCount+" "+visitsString);
             return bestMove;
         }
 
@@ -356,6 +378,7 @@ namespace MCTS2016.SP_MCTS.Optimizations
         public int IterationsExecuted { get => iterationsExecuted; set => iterationsExecuted = value; }
         public int IterationsForFirstSolution { get => iterationsForFirstSolution; set => iterationsForFirstSolution = value; }
         public int SolutionCount { get => solutionCount; set => solutionCount = value; }
+        public int NodeCount { get => nodeCount; set => nodeCount = value; }
 
         public void Abort()
         {
@@ -365,6 +388,46 @@ namespace MCTS2016.SP_MCTS.Optimizations
         private void UpdateSolutionHash(IPuzzleMove move)
         {
             solutionHash = solutionHash * 13 + move.GetHashCode();
+        }
+
+        private string LogVisits(Opt_SP_UCTTreeNode node)
+        {
+            List<int> visits = new List<int>();
+
+            List<int> raveVisits = new List<int>();
+            CountVisits(node, visits, raveVisits);
+
+            visits.Sort((x, y) => (x.CompareTo(y)));
+            raveVisits.Sort((x, y) => (x.CompareTo(y)));
+
+            double avgVisits = 0;
+            double avgRaveVisits = 0;
+            foreach(int v in visits)
+            {
+                avgVisits += v;
+            }
+            foreach(int v in raveVisits)
+            {
+                avgRaveVisits += v;
+            }
+            avgVisits /= visits.Count;
+            avgRaveVisits /= raveVisits.Count;
+            string s = "";
+            s+= " Median visits: "+(visits.Count%2==0?visits[visits.Count/2]:(visits[visits.Count / 2]+ visits[1+visits.Count / 2])/2);
+            s+= " Median raveVisits: " + (raveVisits.Count % 2 == 0 ? raveVisits[raveVisits.Count / 2] : (raveVisits[raveVisits.Count / 2] + raveVisits[1 + raveVisits.Count / 2]) / 2);
+            s += " Avg visits: " + avgVisits;
+            s+= " Avg raveVisits: " + avgRaveVisits;
+            return s;
+        }
+
+        private void CountVisits(Opt_SP_UCTTreeNode node, List<int> visits, List<int> raveVisits)
+        {
+            visits.Add(node.Visits);
+            raveVisits.Add(node.RAVEvisits);
+            foreach(Opt_SP_UCTTreeNode child in node.ChildNodes)
+            {
+                CountVisits(child,visits,raveVisits);
+            }
         }
     }
 }

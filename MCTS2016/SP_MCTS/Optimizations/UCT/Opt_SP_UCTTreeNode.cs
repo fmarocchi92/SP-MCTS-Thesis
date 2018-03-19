@@ -14,13 +14,13 @@ namespace MCTS2016.Optimizations.UCT
     {
         private static Random random = new Random();
         private Opt_SP_UCTTreeNode parent;
-        protected List<Opt_SP_UCTTreeNode> childNodes;
+        private List<Opt_SP_UCTTreeNode> childNodes;
         protected internal List<IPuzzleMove> untriedMoves;
         private double wins;
         private double squares_rewards;
-        protected int visits;
+        private int visits;
         private double RAVEwins;
-        protected int RAVEvisits;
+        private int rAVEvisits;
         protected double const_C;
         protected double const_D;
         private double squaredReward;
@@ -209,6 +209,9 @@ namespace MCTS2016.Optimizations.UCT
 
         public bool SetActive { get; set; }
         public double RaveThreshold { get => raveThreshold; set => raveThreshold = value; }
+        public int Visits { get => visits; set => visits = value; }
+        public int RAVEvisits { get => rAVEvisits; set => rAVEvisits = value; }
+        public List<Opt_SP_UCTTreeNode> ChildNodes { get => childNodes; set => childNodes = value; }
 
         public IPuzzleMove SelectUntriedMove()
         {
@@ -257,7 +260,7 @@ namespace MCTS2016.Optimizations.UCT
 
         public override string ToString()
         {
-            return "[M:" + Move + " W/V:" + wins + "/" + visits + "]";
+            return "[M:" + Move + " W/V:" + wins + "/" + visits + (parent!=null?("     UCTVal: "+ SP_UCTValue()):("")) + "]";
         }
 
         public string TreeToString(int indent)

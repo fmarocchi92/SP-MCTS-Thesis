@@ -15540,3 +15540,1613 @@ restarts: 1level: ./Levels/samegame.txt
 3/15/2018 - 7:26:44 PM  :  Level 20 - move 51: {[2,0][1,0]}
 3/15/2018 - 7:26:44 PM  :  Level 20 - move 52: {[1,0][0,0]}
 3/15/2018 - 7:26:44 PM  :  Total score:56473
+3/17/2018 - 1:13:14 AM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NO SP-MCTS 
+Method: MCTS 
+iterations: 100
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: True
+Node Elimination:True
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+
+3/17/2018 - 1:13:14 AM  :  Level 1	iterations: 100	iterations for first solution: 0	total solutions: 11	best solution length (moves/pushes): 61/13	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.177ms
+3/17/2018 - 1:13:14 AM  :  Best solution: urrrDullDRurrdddlllUluurrdRurDllulldRRRllddrrURldlluururrDulD
+3/17/2018 - 1:13:15 AM  :  Level 2	iterations: 100	iterations for first solution: 1	total solutions: 15	best solution length (moves/pushes): 38/6	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.697ms
+3/17/2018 - 1:13:15 AM  :  Best solution: lluurUrDllddrUluurrdrUruullDurrdddddlU
+3/17/2018 - 1:13:15 AM  :  Level 3	iterations: 100	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 41/9	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.192ms
+3/17/2018 - 1:13:15 AM  :  Best solution: ulLLrrrddlLrruullldlddrUluUrrDurrddlLLruL
+3/17/2018 - 1:13:18 AM  :  Level 4	iterations: 100	iterations for first solution: 0	total solutions: 33	best solution length (moves/pushes): 29/6	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:03s.036ms
+3/17/2018 - 1:13:18 AM  :  Best solution: LuurrdLrrddlUluulldDrdRldlluR
+3/17/2018 - 1:13:19 AM  :  Level 5	iterations: 100	iterations for first solution: 13	total solutions: 4	best solution length (moves/pushes): 97/13	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.311ms
+3/17/2018 - 1:13:19 AM  :  Best solution: ruuuulllddrRDrUdddlUruuUdllluurrurrdLddddlUruuuullldddrRdrUllluururrdLulldddrrrUdllluuurrdLrurrdL
+3/17/2018 - 1:13:19 AM  :  Level 6	iterations: 100	iterations for first solution: 1	total solutions: 3	best solution length (moves/pushes): 32/10	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.502ms
+3/17/2018 - 1:13:19 AM  :  Best solution: drrrURuLddllURRuulDrddllluuRRurD
+3/17/2018 - 1:13:21 AM  :  Level 7	iterations: 100	iterations for first solution: 2	total solutions: 1	best solution length (moves/pushes): 117/15	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.277ms
+3/17/2018 - 1:13:21 AM  :  Best solution: DDrrdrddddldLruruuuulullDDrddldDrddlluRuuuruuluulldlddddrdRluluuuururrrrdrddddldlDururuuuulullddrddldDrdLddrUluuuuUUU
+3/17/2018 - 1:13:22 AM  :  Level 8	iterations: 100	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 20/8	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.227ms
+3/17/2018 - 1:13:22 AM  :  Best solution: urDRlDurRlldDlddrUUU
+3/17/2018 - 1:13:22 AM  :  Level 9	iterations: 100	iterations for first solution: 7	total solutions: 14	best solution length (moves/pushes): 98/18	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.381ms
+3/17/2018 - 1:13:22 AM  :  Best solution: ulllddddrrrruLdllluuuurrrdDlDuruulllddddrRuurrdLrdLLLLullddrUluRdrrrruulDrdLLLUllddrUrrrruuuullldD
+3/17/2018 - 1:13:22 AM  :  Level 10	iterations: 100	iterations for first solution: 15	total solutions: 11	best solution length (moves/pushes): 99/32	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.278ms
+3/17/2018 - 1:13:22 AM  :  Best solution: llDDDDDDldddrruuLuuuuuuurrdLulDDDDDDlllddrrUdlluurRdddrruuLrddlluUrUUUUUUluRdddddddldlluurRdrUUUUUU
+3/17/2018 - 1:13:23 AM  :  Level 11	iterations: 100	iterations for first solution: 13	total solutions: 14	best solution length (moves/pushes): 91/23	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.270ms
+3/17/2018 - 1:13:23 AM  :  Best solution: drruulLuLLdRRRlddrruUUUddlllluullddRRRluulDldRurrdRlulldRurrdRlulldRRddrruUUdddlluuRlddrruU
+3/17/2018 - 1:13:23 AM  :  Level 12	iterations: 100	iterations for first solution: 0	total solutions: 4	best solution length (moves/pushes): 61/21	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.289ms
+3/17/2018 - 1:13:23 AM  :  Best solution: rDlDDRdrruLdldlUUUUruLddddrruLdlUUUrDlulUdrruLddddrruLdlUUruL
+3/17/2018 - 1:13:23 AM  :  Level 13	iterations: 100	iterations for first solution: 16	total solutions: 1	best solution length (moves/pushes): 45/10	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.167ms
+3/17/2018 - 1:13:23 AM  :  Best solution: rdddlUrdddlUUlldRurruuulldRDrdLrddlUruuluurDD
+3/17/2018 - 1:13:23 AM  :  Level 14	iterations: 100	iterations for first solution: 74	total solutions: 6	best solution length (moves/pushes): 63/24	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.180ms
+3/17/2018 - 1:13:23 AM  :  Best solution: urrDLLrrDullulldRRurrddDlddrUUUUruLLLdlluRdrRurDDDlddrUUUUllluR
+3/17/2018 - 1:13:24 AM  :  Level 15	iterations: 100	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 66/12	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.416ms
+3/17/2018 - 1:13:24 AM  :  Best solution: drrUdrUlLrrddrruUddllulllluRdrrruRlldlluRdrruruRldlddrruUlldlluRRR
+3/17/2018 - 1:13:24 AM  :  Level 16	iterations: 100	iterations for first solution: 34	total solutions: 2	best solution length (moves/pushes): 36/9	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.120ms
+3/17/2018 - 1:13:24 AM  :  Best solution: ullDullddrUrurrdLLLddrUluRurrdLululD
+3/17/2018 - 1:13:24 AM  :  Level 17	iterations: 100	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 7/2	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.264ms
+3/17/2018 - 1:13:24 AM  :  Best solution: dddldRR
+3/17/2018 - 1:13:24 AM  :  Level 18	iterations: 100	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 48/10	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.287ms
+3/17/2018 - 1:13:24 AM  :  Best solution: rddrDulDLrrrddlUruLuluullddDuuurrddrdLLrrddlUruL
+3/17/2018 - 1:13:25 AM  :  Level 19	iterations: 100	iterations for first solution: 27	total solutions: 4	best solution length (moves/pushes): 67/23	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.582ms
+3/17/2018 - 1:13:25 AM  :  Best solution: drrruulDLdlUUUluRdddrrrdLLdlUUUUluurDDDuuRlddDrddlUUUUruLdddrrruuuL
+3/17/2018 - 1:13:25 AM  :  Level 20	iterations: 100	iterations for first solution: 23	total solutions: 5	best solution length (moves/pushes): 60/18	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.271ms
+3/17/2018 - 1:13:25 AM  :  Best solution: lLLdlluRRluurDDRRRllluurrDullddrRdrrULrruulDrddlluLLrrdrruLL
+3/17/2018 - 1:13:26 AM  :  Level 21	iterations: 100	iterations for first solution: 27	total solutions: 7	best solution length (moves/pushes): 89/27	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.473ms
+3/17/2018 - 1:13:26 AM  :  Best solution: ruuLLLuullddRluurrdDDDuurrrddlUruLLLuullddRRRRurDlllddllddrrUUUUlluurrDullddrRRRdRUddrruL
+3/17/2018 - 1:13:26 AM  :  Level 22	iterations: 100	iterations for first solution: 44	total solutions: 1	best solution length (moves/pushes): 110/21	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.456ms
+3/17/2018 - 1:13:26 AM  :  Best solution: llulDDulldRRRurrrrdddlllllUUrurrdLrurrdddllllluuluRdddrrrrruuullldLLuRllldRurrdrrurrdddllllluUruRRRllldlluRRRR
+3/17/2018 - 1:13:27 AM  :  Level 23	iterations: 100	iterations for first solution: 81	total solutions: 2	best solution length (moves/pushes): 216/32	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.507ms
+3/17/2018 - 1:13:27 AM  :  Best solution: lulldRurrdrrddllllllluuRurrdRlulldRurrdRlLrrRlllulldRRlllddrrrrrrruUUdllulldRllllddrrrrrrruuuruulDDDlLulldRllllddrrrrrrrUUddllllllluurrrrRlllllddrrrrrrruuUUddddllllllluurrrrrRllllllddrrrrrrruUUruuLDuulldRdrDDuuluurDD
+3/17/2018 - 1:13:27 AM  :  Level 24	iterations: 100	iterations for first solution: 30	total solutions: 3	best solution length (moves/pushes): 56/10	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.090ms
+3/17/2018 - 1:13:27 AM  :  Best solution: ruulluRdrddldlUUdrruululldRddrruuruLLrdddlluuRurDDullluR
+3/17/2018 - 1:13:27 AM  :  Level 25	iterations: 100	iterations for first solution: 37	total solutions: 12	best solution length (moves/pushes): 113/50	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.515ms
+3/17/2018 - 1:13:27 AM  :  Best solution: llllLLulLLLLLLulldRurDrrrrrrrddlUruLLLLLLLulldRRRRRRRllllddlUrurrrrRurDldRlulllllLulldRRRRRRRRdrUdRRRRRdrruLLLLLL
+3/17/2018 - 1:13:27 AM  :  Level 26	iterations: 100	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 50/17	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.191ms
+3/17/2018 - 1:13:27 AM  :  Best solution: ldddlLDuLrdLddrUllluRluRRRRRllllddrUluRRRllddrUluR
+3/17/2018 - 1:13:28 AM  :  Level 27	iterations: 100	iterations for first solution: 22	total solutions: 2	best solution length (moves/pushes): 90/29	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.187ms
+3/17/2018 - 1:13:28 AM  :  Best solution: rdrrrddlUruLrddddlUruuluLrdDuulLrrrddddlUUruulllulldRRRRurDDDldRRlluUruLLLulldRRRRurDDDldR
+3/17/2018 - 1:13:28 AM  :  Level 28	iterations: 100	iterations for first solution: 43	total solutions: 3	best solution length (moves/pushes): 229/41	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.522ms
+3/17/2018 - 1:13:28 AM  :  Best solution: dlllllululllddRluurDRllddrUluurrdRlulldRurrdRlLulDrrrRlllllddrUluRurrdrrRdrrruullDurrddlLullllLrrrdRllullulDlddrrUdlluururrdrrrrurrddlLLLullulldRlldRurRRlllddrUluurrdrRRdrrruullDurrddlLullllLrrrrrdLulllldlluRRRRRRdrrruullDurrddlL
+3/17/2018 - 1:13:29 AM  :  Level 29	iterations: 100	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 61/13	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.388ms
+3/17/2018 - 1:13:29 AM  :  Best solution: uulllluurDDrruLdlDurrrruLLrdddddlllluuRuuluurDDrruLdlDuluurDD
+3/17/2018 - 1:13:29 AM  :  Level 30	iterations: 100	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 62/18	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.220ms
+3/17/2018 - 1:13:29 AM  :  Best solution: rddLUrddLdllluurRRurDuuulDDrdLddllluurRRddlUdlluurRdrUUruulDDD
+3/17/2018 - 1:13:29 AM  :  Solved 22/30
+3/17/2018 - 1:13:29 AM  :  Total Rollouts for first solutions: 502
+3/17/2018 - 1:13:29 AM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NO SP-MCTS 
+Method: MCTS 
+iterations: 300
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: True
+Node Elimination:True
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+
+3/17/2018 - 1:13:29 AM  :  Level 1	iterations: 300	iterations for first solution: 0	total solutions: 11	best solution length (moves/pushes): 61/13	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.315ms
+3/17/2018 - 1:13:29 AM  :  Best solution: urrrDullDRurrdddlllUluurrdRurDllulldRRRllddrrURldlluururrDulD
+3/17/2018 - 1:13:32 AM  :  Level 2	iterations: 300	iterations for first solution: 1	total solutions: 31	best solution length (moves/pushes): 38/6	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.593ms
+3/17/2018 - 1:13:32 AM  :  Best solution: lluurUrDllddrUluurrdrUruullDurrdddddlU
+3/17/2018 - 1:13:32 AM  :  Level 3	iterations: 300	iterations for first solution: 18	total solutions: 1	best solution length (moves/pushes): 49/10	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.618ms
+3/17/2018 - 1:13:32 AM  :  Best solution: ulLrrddlLrruullLrDllUdddrUluurrrrddlLLruulldDrruL
+3/17/2018 - 1:13:43 AM  :  Level 4	iterations: 300	iterations for first solution: 2	total solutions: 129	best solution length (moves/pushes): 39/8	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:10s.363ms
+3/17/2018 - 1:13:43 AM  :  Best solution: LdRluulDrrddrruuLuulldRurrddlLdlUddlluR
+3/17/2018 - 1:13:44 AM  :  Level 5	iterations: 300	iterations for first solution: 87	total solutions: 5	best solution length (moves/pushes): 111/17	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.997ms
+3/17/2018 - 1:13:44 AM  :  Best solution: ruuuulllddrRDrddlUruUlDruUddddlUruullluurrurrdLLrddddlUruuululldRlddrRdrUllluururrdLulldddrrrUdllluuurrdLrurrdL
+3/17/2018 - 1:13:45 AM  :  Level 6	iterations: 300	iterations for first solution: 3	total solutions: 2	best solution length (moves/pushes): 43/8	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.852ms
+3/17/2018 - 1:13:45 AM  :  Best solution: drrrURldllluurrurDrddllUdlluurRdRluurDllldR
+3/17/2018 - 1:13:51 AM  :  Level 7	iterations: 300	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 90/20	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:06s.409ms
+3/17/2018 - 1:13:51 AM  :  Best solution: DDlldlddddrdRdrUUUruulDuUUdddDDDlddrruLuuuuuuurrdrddddldLruruuuululldddddDlDRddlUruurDlulD
+3/17/2018 - 1:13:52 AM  :  Level 8	iterations: 300	iterations for first solution: 31	total solutions: 4	best solution length (moves/pushes): 54/18	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.925ms
+3/17/2018 - 1:13:52 AM  :  Best solution: urDDuRldDrrruuLLLLrddlddrUUUdrrruullulldRRRlllulldRRRR
+3/17/2018 - 1:13:53 AM  :  Level 9	iterations: 300	iterations for first solution: 10	total solutions: 14	best solution length (moves/pushes): 88/16	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.896ms
+3/17/2018 - 1:13:53 AM  :  Best solution: ulllddddrrrruLdllluuuurrrdDlDurrddlLrruLdlLLullddrUluRdrrrruulDrdLLLUllddrUrrrruuuullldD
+3/17/2018 - 1:13:54 AM  :  Level 10	iterations: 300	iterations for first solution: 6	total solutions: 15	best solution length (moves/pushes): 153/34	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.666ms
+3/17/2018 - 1:13:54 AM  :  Best solution: llDDDDDDldddrruuLuuuuuuurrdLulDDDDDDlllddrrUddrruuLrddllulluurRllddrrdrruulUlDruUUUUdddddrddllUlluurrruuuuUdddddlllddrrUruuuuuuluRdddddddldlluurRdrUUUUUU
+3/17/2018 - 1:13:54 AM  :  Level 11	iterations: 300	iterations for first solution: 21	total solutions: 2	best solution length (moves/pushes): 99/27	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.555ms
+3/17/2018 - 1:13:54 AM  :  Best solution: drruulLuLLdRRRllluulldRldRuRldRRRuLrdddrruUUUddddlluuRlddrruUllllluRdrrrrUdlluLdlluurDldRRRRlddrruU
+3/17/2018 - 1:13:55 AM  :  Level 12	iterations: 300	iterations for first solution: 44	total solutions: 1	best solution length (moves/pushes): 121/35	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.799ms
+3/17/2018 - 1:13:55 AM  :  Best solution: rDlDDRddlUruUddlUrdrruLdlluUddrruLulUluurDrDDlUruLdlUrddDRddlUUUruulldRdrddrruLdlluuuurDldddrruLdlUUUruLrdDlddrruLdlUUruL
+3/17/2018 - 1:13:55 AM  :  Level 13	iterations: 300	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 24/7	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.429ms
+3/17/2018 - 1:13:55 AM  :  Best solution: rdddddlUruLUruulldRurDDD
+3/17/2018 - 1:13:56 AM  :  Level 14	iterations: 300	iterations for first solution: 104	total solutions: 10	best solution length (moves/pushes): 86/26	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.444ms
+3/17/2018 - 1:13:56 AM  :  Best solution: urrDLLrrDullulldRurrrddDuululldRurrdddlddrUUUUruLLLdlluRdrRurDllluRRdrDuruLddDlddrUUUU
+3/17/2018 - 1:13:57 AM  :  Level 15	iterations: 300	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 46/10	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.247ms
+3/17/2018 - 1:13:57 AM  :  Best solution: drrrdrruUruulldRdddlluURldlUrddrruUllldlluRRRR
+3/17/2018 - 1:13:57 AM  :  Level 16	iterations: 300	iterations for first solution: 94	total solutions: 2	best solution length (moves/pushes): 36/9	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.275ms
+3/17/2018 - 1:13:57 AM  :  Best solution: ullDullddrUrurrdLLLddrUluRurrdLululD
+3/17/2018 - 1:13:58 AM  :  Level 17	iterations: 300	iterations for first solution: 278	total solutions: 3	best solution length (moves/pushes): 118/37	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.983ms
+3/17/2018 - 1:13:58 AM  :  Best solution: dddrdrruLLdLUlldRurUdldRuuUdddRurrddlUlluuuruulDDDDrdLrrruLLdlUUdlldRRRluuUruulDDDDldRurrrddlUruLLLdRllluRdrrurDllluRR
+3/17/2018 - 1:13:59 AM  :  Level 18	iterations: 300	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 60/10	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.592ms
+3/17/2018 - 1:13:59 AM  :  Best solution: rddrDulDLrrrddllUdrruululuulllddddrUluururrddrdLLrrrdLdlUruL
+3/17/2018 - 1:14:00 AM  :  Level 19	iterations: 300	iterations for first solution: 45	total solutions: 13	best solution length (moves/pushes): 119/29	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.504ms
+3/17/2018 - 1:14:00 AM  :  Best solution: drrruulDrdLruuuullldddRlddrUrruulDLdlUrrrdLullddrUluRlUdrdrruLdlluuUluRddddrruLdlUUUluurDDDuuRlddDrddlUUUUruLdddrrruuuL
+3/17/2018 - 1:14:01 AM  :  Level 20	iterations: 300	iterations for first solution: 26	total solutions: 6	best solution length (moves/pushes): 64/18	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.592ms
+3/17/2018 - 1:14:01 AM  :  Best solution: lLLdlluRRluurDDRRRdrUlllluurrDullddrRdrruLrruulDrddlluLLrrdrruLL
+3/17/2018 - 1:14:02 AM  :  Level 21	iterations: 300	iterations for first solution: 21	total solutions: 11	best solution length (moves/pushes): 93/27	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.353ms
+3/17/2018 - 1:14:02 AM  :  Best solution: ruuLLLuullddRluurrdDDurrrddlUruLLLuullddRRRldDuurRurDlllddllddrrUUUUlluurrDullddrRRRdRUddrruL
+3/17/2018 - 1:14:05 AM  :  Level 22	iterations: 300	iterations for first solution: 38	total solutions: 5	best solution length (moves/pushes): 116/19	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.460ms
+3/17/2018 - 1:14:05 AM  :  Best solution: llulDDulldRRRurrrrdddlllllUdrrrrruuulldLrurrdddllllluUluRRldddrrrrruuulldlLrrurrdddllllluUruRRlldlluRdrrruRlldlluRRR
+3/17/2018 - 1:14:08 AM  :  Level 23	iterations: 300	iterations for first solution: 46	total solutions: 8	best solution length (moves/pushes): 138/24	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.777ms
+3/17/2018 - 1:14:08 AM  :  Best solution: lulldRurrdrrddllllllluuRurrdRlulldRurrdRlLrrRlllulldRRRRlllllddrrrrrrruUUUddddllllllluurrrrrRllllllddrrrrrrruUUruuLDDuuulldRurDrddlDuruulD
+3/17/2018 - 1:14:08 AM  :  Level 24	iterations: 300	iterations for first solution: 30	total solutions: 2	best solution length (moves/pushes): 56/10	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.360ms
+3/17/2018 - 1:14:08 AM  :  Best solution: ruulluRdrddldlUUdrruululldRddrruuruLLrdddlluuRurDDullluR
+3/17/2018 - 1:14:10 AM  :  Level 25	iterations: 300	iterations for first solution: 18	total solutions: 8	best solution length (moves/pushes): 105/50	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.138ms
+3/17/2018 - 1:14:10 AM  :  Best solution: llllLLulLLLLLLulldRurDrrrrrrrddlUruLLLLLLLulldRRRddlUruRRRRRurDldRlulllllLulldRRRRRRRRdrUdRRRRRdrruLLLLLL
+3/17/2018 - 1:14:12 AM  :  Level 26	iterations: 300	iterations for first solution: 254	total solutions: 14	best solution length (moves/pushes): 100/28	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.557ms
+3/17/2018 - 1:14:12 AM  :  Best solution: ldddlLLrDLdlluuRDrddrUluluRRDuRRdrUUldllldddrUUluRRRlllllddRurrurrurDllldddlUUrurruuurDlddlldlluRRRR
+3/17/2018 - 1:14:13 AM  :  Level 27	iterations: 300	iterations for first solution: 16	total solutions: 12	best solution length (moves/pushes): 74/27	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.135ms
+3/17/2018 - 1:14:13 AM  :  Best solution: rdrrrddlUrdddlUruuuLrdddlUruulLLulldRRRRurDDDldRRlluUruLLLulldRRRRurDDDldR
+3/17/2018 - 1:14:16 AM  :  Level 28	iterations: 300	iterations for first solution: 27	total solutions: 23	best solution length (moves/pushes): 145/31	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:03s.074ms
+3/17/2018 - 1:14:16 AM  :  Best solution: dlllllululllddRluurDRRlllddrUluurrrdRRlllullddrdrUlluurrrdrrRdrrruullDurrddlLLLullullDldRuRRRRRdrrruullDurrddlLLulllllddrUluRRRRRdrrruullDurrddlL
+3/17/2018 - 1:14:19 AM  :  Level 29	iterations: 300	iterations for first solution: 200	total solutions: 5	best solution length (moves/pushes): 288/41	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:03s.215ms
+3/17/2018 - 1:14:19 AM  :  Best solution: uulllluurDDDurruLrdrddddlllluuRuuluurDDrrrruLdddddlllluurUdlddrrrruuuuuLrdddddlllluuruUluurDDrruLdlluurDldRRurrdddddlllluurUdlddrrrruuuuLrddddlllluuruUluRRRlldRlddlddrrrruuuuruLLrdddddlllluuruurRurDDDDuuulllddlddrrrdrruLLLLrrruuuuluLrrdddddllldlUrrrruuuulllluurDDrrrddddllllUdrrrruuuulllD
+3/17/2018 - 1:14:20 AM  :  Level 30	iterations: 300	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 70/18	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.258ms
+3/17/2018 - 1:14:20 AM  :  Best solution: rddLUrddLdllluurRRuruulDDrDulDlllddrrrUdllluurrRddlUdlluurRdrUUruulDDD
+3/17/2018 - 1:14:20 AM  :  Solved 25/30
+3/17/2018 - 1:14:20 AM  :  Total Rollouts for first solutions: 1415
+3/17/2018 - 1:20:21 AM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 1000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: True
+Node Elimination:True
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+
+3/17/2018 - 1:23:48 AM  :  Solved 27/30
+3/17/2018 - 1:23:48 AM  :  avg rollouts: 78
+3/17/2018 - 1:23:48 AM  :  avg nodes:154
+3/17/2018 - 1:23:48 AM  :  avg visits: 170.971135343169
+3/17/2018 - 1:23:48 AM  :  avg raveVisits: 207.78276673081
+3/17/2018 - 1:23:48 AM  :  median visits: 2
+3/17/2018 - 1:23:48 AM  :  median raveVisits: 2
+3/17/2018 - 1:23:48 AM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 2000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: True
+Node Elimination:True
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+
+3/17/2018 - 1:29:19 AM  :  Solved 28/30
+3/17/2018 - 1:29:19 AM  :  avg rollouts: 103
+3/17/2018 - 1:29:19 AM  :  avg nodes:217
+3/17/2018 - 1:29:19 AM  :  avg visits: 294.967781340663
+3/17/2018 - 1:29:19 AM  :  avg raveVisits: 401.520995571843
+3/17/2018 - 1:29:19 AM  :  median visits: 2
+3/17/2018 - 1:29:19 AM  :  median raveVisits: 4
+3/17/2018 - 1:29:19 AM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 5000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: True
+Node Elimination:True
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+
+3/17/2018 - 1:46:04 AM  :  Solved 26/30
+3/17/2018 - 1:46:04 AM  :  avg rollouts: 170
+3/17/2018 - 1:46:04 AM  :  avg nodes:387
+3/17/2018 - 1:46:04 AM  :  avg visits: 618.924239821337
+3/17/2018 - 1:46:04 AM  :  avg raveVisits: 1331.10084177976
+3/17/2018 - 1:46:04 AM  :  median visits: 1
+3/17/2018 - 1:46:04 AM  :  median raveVisits: 140
+3/17/2018 - 1:46:04 AM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 10000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: True
+Node Elimination:True
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+
+3/17/2018 - 2:28:30 AM  :  Solved 27/30
+3/17/2018 - 2:28:30 AM  :  avg rollouts: 133
+3/17/2018 - 2:28:30 AM  :  avg nodes:712
+3/17/2018 - 2:28:30 AM  :  avg visits: 942.674985978688
+3/17/2018 - 2:28:30 AM  :  avg raveVisits: 2373.71658253879
+3/17/2018 - 2:28:30 AM  :  median visits: 1
+3/17/2018 - 2:28:30 AM  :  median raveVisits: 251
+3/17/2018 - 2:28:30 AM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 1000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+
+3/17/2018 - 2:28:47 AM  :  Solved 2/30
+3/17/2018 - 2:28:47 AM  :  avg rollouts: 0
+3/17/2018 - 2:28:47 AM  :  avg nodes:11
+3/17/2018 - 2:28:47 AM  :  avg visits: 319.779255319149
+3/17/2018 - 2:28:47 AM  :  avg raveVisits: 72.4654255319149
+3/17/2018 - 2:28:47 AM  :  median visits: 2
+3/17/2018 - 2:28:47 AM  :  median raveVisits: 0
+3/17/2018 - 2:28:47 AM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 2000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+
+3/17/2018 - 2:29:18 AM  :  Solved 2/30
+3/17/2018 - 2:29:18 AM  :  avg rollouts: 0
+3/17/2018 - 2:29:18 AM  :  avg nodes:11
+3/17/2018 - 2:29:18 AM  :  avg visits: 640.880319148936
+3/17/2018 - 2:29:18 AM  :  avg raveVisits: 146.281914893617
+3/17/2018 - 2:29:18 AM  :  median visits: 2
+3/17/2018 - 2:29:18 AM  :  median raveVisits: 0
+3/17/2018 - 2:29:18 AM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 5000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+
+3/17/2018 - 2:30:36 AM  :  Solved 2/30
+3/17/2018 - 2:30:36 AM  :  avg rollouts: 0
+3/17/2018 - 2:30:36 AM  :  avg nodes:11
+3/17/2018 - 2:30:36 AM  :  avg visits: 1604.82978723404
+3/17/2018 - 2:30:36 AM  :  avg raveVisits: 369.981382978723
+3/17/2018 - 2:30:36 AM  :  median visits: 2
+3/17/2018 - 2:30:36 AM  :  median raveVisits: 0
+3/17/2018 - 2:30:36 AM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 10000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+
+3/17/2018 - 2:33:08 AM  :  Solved 2/30
+3/17/2018 - 2:33:08 AM  :  avg rollouts: 0
+3/17/2018 - 2:33:08 AM  :  avg nodes:11
+3/17/2018 - 2:33:08 AM  :  avg visits: 3212.34574468085
+3/17/2018 - 2:33:08 AM  :  avg raveVisits: 745.470744680851
+3/17/2018 - 2:33:08 AM  :  median visits: 2
+3/17/2018 - 2:33:08 AM  :  median raveVisits: 0
+3/17/2018 - 10:41:41 AM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 1000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: True
+Node Elimination:True
+Stop on Result: True
+level path: ../Release/Levels/microban.txt
+********************************
+********************************
+
+3/17/2018 - 10:53:43 AM  :  Solved 72/155
+3/17/2018 - 10:53:43 AM  :  avg rollouts: 50
+3/17/2018 - 10:53:43 AM  :  avg nodes:95
+3/17/2018 - 10:53:43 AM  :  avg visits: 132.168800697191
+3/17/2018 - 10:53:43 AM  :  avg raveVisits: 152.726955822216
+3/17/2018 - 10:53:43 AM  :  median visits: 2
+3/17/2018 - 10:53:43 AM  :  median raveVisits: 1
+3/17/2018 - 10:53:43 AM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 2000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: True
+Node Elimination:True
+Stop on Result: True
+level path: ../Release/Levels/microban.txt
+********************************
+********************************
+
+3/17/2018 - 11:18:49 AM  :  Solved 70/155
+3/17/2018 - 11:18:49 AM  :  avg rollouts: 61
+3/17/2018 - 11:18:49 AM  :  avg nodes:132
+3/17/2018 - 11:18:49 AM  :  avg visits: 256.83447173376
+3/17/2018 - 11:18:49 AM  :  avg raveVisits: 323.497844305576
+3/17/2018 - 11:18:49 AM  :  median visits: 2
+3/17/2018 - 11:18:49 AM  :  median raveVisits: 1
+3/17/2018 - 11:18:49 AM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 5000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: True
+Node Elimination:True
+Stop on Result: True
+level path: ../Release/Levels/microban.txt
+********************************
+********************************
+
+3/17/2018 - 12:33:58 PM  :  Solved 74/155
+3/17/2018 - 12:33:58 PM  :  avg rollouts: 64
+3/17/2018 - 12:33:58 PM  :  avg nodes:153
+3/17/2018 - 12:33:58 PM  :  avg visits: 598.961648969394
+3/17/2018 - 12:33:58 PM  :  avg raveVisits: 773.065209244222
+3/17/2018 - 12:33:58 PM  :  median visits: 2
+3/17/2018 - 12:33:58 PM  :  median raveVisits: 1
+3/17/2018 - 12:33:58 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 10000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: True
+Node Elimination:True
+Stop on Result: True
+level path: ../Release/Levels/microban.txt
+********************************
+********************************
+
+3/17/2018 - 3:18:57 PM  :  Solved 78/155
+3/17/2018 - 3:18:57 PM  :  avg rollouts: 212
+3/17/2018 - 3:18:57 PM  :  avg nodes:197
+3/17/2018 - 3:18:57 PM  :  avg visits: 981.043795145442
+3/17/2018 - 3:18:57 PM  :  avg raveVisits: 1386.85703130084
+3/17/2018 - 3:18:57 PM  :  median visits: 2
+3/17/2018 - 3:18:57 PM  :  median raveVisits: 1
+3/17/2018 - 3:41:30 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 1000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: False
+level path: ../Release/Levels/microban.txt
+********************************
+********************************
+
+3/17/2018 - 3:44:22 PM  :  Solved 25/155
+3/17/2018 - 3:44:22 PM  :  avg rollouts: 0
+3/17/2018 - 3:44:22 PM  :  avg nodes:14
+3/17/2018 - 3:44:22 PM  :  avg visits: 272.449372384937
+3/17/2018 - 3:44:22 PM  :  avg raveVisits: 80.8845188284519
+3/17/2018 - 3:44:22 PM  :  median visits: 1
+3/17/2018 - 3:44:22 PM  :  median raveVisits: 1
+3/17/2018 - 3:44:22 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 2000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: False
+level path: ../Release/Levels/microban.txt
+********************************
+********************************
+
+3/17/2018 - 3:49:48 PM  :  Solved 23/155
+3/17/2018 - 3:49:48 PM  :  avg rollouts: 0
+3/17/2018 - 3:49:48 PM  :  avg nodes:14
+3/17/2018 - 3:49:48 PM  :  avg visits: 542.019121236778
+3/17/2018 - 3:49:48 PM  :  avg raveVisits: 183.121643612693
+3/17/2018 - 3:49:48 PM  :  median visits: 1
+3/17/2018 - 3:49:48 PM  :  median raveVisits: 1
+3/17/2018 - 3:49:49 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 5000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: False
+level path: ../Release/Levels/microban.txt
+********************************
+********************************
+
+3/17/2018 - 3:55:23 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 1000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: True
+Node Elimination:True
+Stop on Result: False
+level path: ../Release/Levels/microban.txt
+********************************
+********************************
+
+3/17/2018 - 4:17:36 PM  :  Solved 72/155
+3/17/2018 - 4:17:36 PM  :  avg rollouts: 31
+3/17/2018 - 4:17:36 PM  :  avg nodes:152
+3/17/2018 - 4:17:36 PM  :  avg visits: 166.472465476591
+3/17/2018 - 4:17:36 PM  :  avg raveVisits: 183.437226338835
+3/17/2018 - 4:17:36 PM  :  median visits: 2
+3/17/2018 - 4:17:36 PM  :  median raveVisits: 1
+3/17/2018 - 4:17:37 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 2000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: True
+Node Elimination:True
+Stop on Result: False
+level path: ../Release/Levels/microban.txt
+********************************
+********************************
+
+3/17/2018 - 5:04:38 PM  :  Solved 76/155
+3/17/2018 - 5:04:38 PM  :  avg rollouts: 75
+3/17/2018 - 5:04:38 PM  :  avg nodes:201
+3/17/2018 - 5:04:38 PM  :  avg visits: 295.587782618374
+3/17/2018 - 5:04:38 PM  :  avg raveVisits: 367.96829586288
+3/17/2018 - 5:04:38 PM  :  median visits: 2
+3/17/2018 - 5:04:38 PM  :  median raveVisits: 1
+3/17/2018 - 5:04:38 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 5000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: False
+level path: ../Release/Levels/microban.txt
+********************************
+********************************
+
+3/17/2018 - 5:18:39 PM  :  Solved 23/155
+3/17/2018 - 5:18:39 PM  :  avg rollouts: 0
+3/17/2018 - 5:18:39 PM  :  avg nodes:14
+3/17/2018 - 5:18:39 PM  :  avg visits: 1388.52898857385
+3/17/2018 - 5:18:39 PM  :  avg raveVisits: 446.481168006771
+3/17/2018 - 5:18:39 PM  :  median visits: 1
+3/17/2018 - 5:18:39 PM  :  median raveVisits: 1
+3/17/2018 - 5:18:40 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 10000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: False
+level path: ../Release/Levels/microban.txt
+********************************
+********************************
+
+3/17/2018 - 5:48:19 PM  :  Solved 23/155
+3/17/2018 - 5:48:19 PM  :  avg rollouts: 0
+3/17/2018 - 5:48:19 PM  :  avg nodes:15
+3/17/2018 - 5:48:19 PM  :  avg visits: 2754.16252465483
+3/17/2018 - 5:48:19 PM  :  avg raveVisits: 968.5483234714
+3/17/2018 - 5:48:19 PM  :  median visits: 1
+3/17/2018 - 5:48:19 PM  :  median raveVisits: 1
+3/18/2018 - 10:21:15 PM  :  stop on result requires a boolean value
+3/18/2018 - 10:21:36 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 20000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: True
+Node Elimination:True
+Stop on Result: True
+level path: ../Release/Levels/microban.txt
+********************************
+********************************
+
+3/19/2018 - 3:18:11 AM  :  Solved 77/155
+3/19/2018 - 3:18:11 AM  :  avg rollouts: 92
+3/19/2018 - 3:18:11 AM  :  avg nodes:264
+3/19/2018 - 3:18:11 AM  :  avg visits: 1549.60289212942
+3/19/2018 - 3:18:11 AM  :  avg raveVisits: 2237.98763298196
+3/19/2018 - 3:18:11 AM  :  median visits: 2
+3/19/2018 - 3:18:11 AM  :  median raveVisits: 1
+3/19/2018 - 12:20:56 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 20
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+
+3/19/2018 - 12:20:57 PM  :  Solved 3/30
+3/19/2018 - 12:20:57 PM  :  avg rollouts: 0
+3/19/2018 - 12:20:57 PM  :  avg nodes:9
+3/19/2018 - 12:20:57 PM  :  avg visits: 6.37539432176656
+3/19/2018 - 12:20:57 PM  :  avg raveVisits: 1.39432176656151
+3/19/2018 - 12:20:57 PM  :  median visits: 1
+3/19/2018 - 12:20:57 PM  :  median raveVisits: 0
+3/19/2018 - 12:20:57 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 50
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+
+3/19/2018 - 12:20:58 PM  :  Solved 2/30
+3/19/2018 - 12:20:58 PM  :  avg rollouts: 0
+3/19/2018 - 12:20:58 PM  :  avg nodes:11
+3/19/2018 - 12:20:58 PM  :  avg visits: 15.093085106383
+3/19/2018 - 12:20:58 PM  :  avg raveVisits: 3.60372340425532
+3/19/2018 - 12:20:58 PM  :  median visits: 2
+3/19/2018 - 12:20:58 PM  :  median raveVisits: 0
+3/19/2018 - 12:20:58 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 100
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+
+3/19/2018 - 12:21:01 PM  :  Solved 2/30
+3/19/2018 - 12:21:01 PM  :  avg rollouts: 0
+3/19/2018 - 12:21:01 PM  :  avg nodes:11
+3/19/2018 - 12:21:01 PM  :  avg visits: 31.1223404255319
+3/19/2018 - 12:21:01 PM  :  avg raveVisits: 7.14893617021277
+3/19/2018 - 12:21:01 PM  :  median visits: 2
+3/19/2018 - 12:21:01 PM  :  median raveVisits: 0
+3/19/2018 - 12:21:01 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 500
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+
+3/19/2018 - 12:21:10 PM  :  Solved 2/30
+3/19/2018 - 12:21:10 PM  :  avg rollouts: 0
+3/19/2018 - 12:21:10 PM  :  avg nodes:11
+3/19/2018 - 12:21:10 PM  :  avg visits: 159.316489361702
+3/19/2018 - 12:21:10 PM  :  avg raveVisits: 35.9547872340426
+3/19/2018 - 12:21:10 PM  :  median visits: 2
+3/19/2018 - 12:21:10 PM  :  median raveVisits: 0
+3/19/2018 - 12:21:11 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 100000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+
+3/19/2018 - 1:12:15 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 100
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: False
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+
+3/19/2018 - 1:12:19 PM  :  Solved 7/30
+3/19/2018 - 1:12:19 PM  :  avg rollouts: 8
+3/19/2018 - 1:12:19 PM  :  avg nodes:33
+3/19/2018 - 1:12:19 PM  :  avg visits: 11.9496611810261
+3/19/2018 - 1:12:19 PM  :  avg raveVisits: 0
+3/19/2018 - 1:12:19 PM  :  median visits: 1
+3/19/2018 - 1:12:19 PM  :  median raveVisits: 0
+3/19/2018 - 1:12:19 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 500
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: False
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+
+3/19/2018 - 1:12:36 PM  :  Solved 7/30
+3/19/2018 - 1:12:36 PM  :  avg rollouts: 11
+3/19/2018 - 1:12:36 PM  :  avg nodes:96
+3/19/2018 - 1:12:36 PM  :  avg visits: 28.2860560492139
+3/19/2018 - 1:12:36 PM  :  avg raveVisits: 0
+3/19/2018 - 1:12:36 PM  :  median visits: 1
+3/19/2018 - 1:12:36 PM  :  median raveVisits: 0
+3/19/2018 - 1:12:36 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 1000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: False
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+
+3/19/2018 - 1:13:09 PM  :  Solved 8/30
+3/19/2018 - 1:13:09 PM  :  avg rollouts: 26
+3/19/2018 - 1:13:09 PM  :  avg nodes:139
+3/19/2018 - 1:13:09 PM  :  avg visits: 43.7767751127998
+3/19/2018 - 1:13:09 PM  :  avg raveVisits: 0
+3/19/2018 - 1:13:09 PM  :  median visits: 1
+3/19/2018 - 1:13:09 PM  :  median raveVisits: 0
+3/19/2018 - 1:13:58 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 100
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+
+3/19/2018 - 1:14:00 PM  :  Solved 2/30
+3/19/2018 - 1:14:00 PM  :  avg rollouts: 0
+3/19/2018 - 1:14:00 PM  :  avg nodes:11
+3/19/2018 - 1:14:00 PM  :  avg visits: 31.1223404255319
+3/19/2018 - 1:14:00 PM  :  avg raveVisits: 7.14893617021277
+3/19/2018 - 1:14:00 PM  :  median visits: 2
+3/19/2018 - 1:14:00 PM  :  median raveVisits: 0
+3/19/2018 - 1:14:00 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 500
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+
+3/19/2018 - 1:14:10 PM  :  Solved 2/30
+3/19/2018 - 1:14:10 PM  :  avg rollouts: 0
+3/19/2018 - 1:14:10 PM  :  avg nodes:11
+3/19/2018 - 1:14:10 PM  :  avg visits: 159.316489361702
+3/19/2018 - 1:14:10 PM  :  avg raveVisits: 35.9547872340426
+3/19/2018 - 1:14:10 PM  :  median visits: 2
+3/19/2018 - 1:14:10 PM  :  median raveVisits: 0
+3/19/2018 - 1:14:10 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 1000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+
+3/19/2018 - 1:14:27 PM  :  Solved 2/30
+3/19/2018 - 1:14:27 PM  :  avg rollouts: 0
+3/19/2018 - 1:14:27 PM  :  avg nodes:11
+3/19/2018 - 1:14:27 PM  :  avg visits: 319.779255319149
+3/19/2018 - 1:14:27 PM  :  avg raveVisits: 72.4654255319149
+3/19/2018 - 1:14:27 PM  :  median visits: 2
+3/19/2018 - 1:14:27 PM  :  median raveVisits: 0
+3/19/2018 - 1:14:52 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 100
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: False
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+
+3/19/2018 - 1:14:54 PM  :  Solved 5/30
+3/19/2018 - 1:14:54 PM  :  avg rollouts: 1
+3/19/2018 - 1:14:54 PM  :  avg nodes:12
+3/19/2018 - 1:14:54 PM  :  avg visits: 26.1129807692308
+3/19/2018 - 1:14:54 PM  :  avg raveVisits: 5.10576923076923
+3/19/2018 - 1:14:54 PM  :  median visits: 1
+3/19/2018 - 1:14:54 PM  :  median raveVisits: 0
+3/19/2018 - 1:14:55 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 500
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: False
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+
+3/19/2018 - 1:15:06 PM  :  Solved 6/30
+3/19/2018 - 1:15:06 PM  :  avg rollouts: 2
+3/19/2018 - 1:15:06 PM  :  avg nodes:18
+3/19/2018 - 1:15:06 PM  :  avg visits: 95.9705372616984
+3/19/2018 - 1:15:06 PM  :  avg raveVisits: 19.0069324090121
+3/19/2018 - 1:15:06 PM  :  median visits: 1
+3/19/2018 - 1:15:06 PM  :  median raveVisits: 0
+3/19/2018 - 1:15:06 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 1000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: False
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+
+3/19/2018 - 1:15:26 PM  :  Solved 6/30
+3/19/2018 - 1:15:26 PM  :  avg rollouts: 2
+3/19/2018 - 1:15:26 PM  :  avg nodes:18
+3/19/2018 - 1:15:26 PM  :  avg visits: 189.870017331023
+3/19/2018 - 1:15:26 PM  :  avg raveVisits: 34.2391681109185
+3/19/2018 - 1:15:26 PM  :  median visits: 1
+3/19/2018 - 1:15:26 PM  :  median raveVisits: 0
+3/19/2018 - 1:15:52 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 2000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: False
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+
+3/19/2018 - 1:16:31 PM  :  Solved 6/30
+3/19/2018 - 1:16:31 PM  :  avg rollouts: 2
+3/19/2018 - 1:16:31 PM  :  avg nodes:18
+3/19/2018 - 1:16:31 PM  :  avg visits: 377.384748700173
+3/19/2018 - 1:16:31 PM  :  avg raveVisits: 64.4627383015598
+3/19/2018 - 1:16:31 PM  :  median visits: 1
+3/19/2018 - 1:16:31 PM  :  median raveVisits: 0
+3/19/2018 - 1:21:53 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 5000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: False
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+
+3/19/2018 - 1:23:25 PM  :  Solved 6/30
+3/19/2018 - 1:23:25 PM  :  avg rollouts: 2
+3/19/2018 - 1:23:25 PM  :  avg nodes:18
+3/19/2018 - 1:23:25 PM  :  avg visits: 939
+3/19/2018 - 1:23:25 PM  :  avg raveVisits: 154.400346620451
+3/19/2018 - 1:23:25 PM  :  median visits: 1
+3/19/2018 - 1:23:25 PM  :  median raveVisits: 0
+3/19/2018 - 1:27:08 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 2000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: False
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: True
+Node Elimination:True
+Stop on Result: True
+level path: ../Release/Levels/microban.txt
+********************************
+********************************
+
+3/19/2018 - 1:47:18 PM  :  Solved 83/155
+3/19/2018 - 1:47:18 PM  :  avg rollouts: 71
+3/19/2018 - 1:47:18 PM  :  avg nodes:698
+3/19/2018 - 1:47:18 PM  :  avg visits: 16.1281795971051
+3/19/2018 - 1:47:18 PM  :  avg raveVisits: 0
+3/19/2018 - 1:47:18 PM  :  median visits: 2
+3/19/2018 - 1:47:18 PM  :  median raveVisits: 0
+3/19/2018 - 1:47:19 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 5000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: False
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+

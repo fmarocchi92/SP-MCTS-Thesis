@@ -1,0 +1,104 @@
+3/16/2018 - 6:35:41 PM  :  Rave threshold requires an integer value
+3/16/2018 - 6:35:56 PM  :  Rave threshold requires an integer value
+3/16/2018 - 6:38:47 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+SP-MCTS 
+Method: MCTS 
+iterations: 10000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: True
+Memory Budget: 5000
+Avoid Cycles: True
+Node Elimination:True
+Stop on Result: True
+level path: ./microban.txt
+********************************
+********************************
+
+3/16/2018 - 6:38:47 PM  :  Level 1	iterations: 12	iterations for first solution: 12	total solutions: 1	best solution length (moves/pushes): 33/8	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.052ms
+3/16/2018 - 6:38:47 PM  :  Best solution: dlUrrrdLullddrUluRuulDrddrruLdlUU
+3/16/2018 - 6:38:47 PM  :  Level 2	iterations: 0	iterations for first solution: 0	total solutions: 1	best solution length (moves/pushes): 16/3	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.002ms
+3/16/2018 - 6:38:47 PM  :  Best solution: rddLruulDuullddR
+3/16/2018 - 6:38:47 PM  :  Level 3	iterations: 7	iterations for first solution: 7	total solutions: 1	best solution length (moves/pushes): 43/15	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.037ms
+3/16/2018 - 6:38:47 PM  :  Best solution: ruuLLLLrrrrddlUruLLLulDrddllluuRRDrdLuuurDD
+3/16/2018 - 6:38:47 PM  :  Level 4	iterations: 4	iterations for first solution: 4	total solutions: 1	best solution length (moves/pushes): 59/13	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.059ms
+3/16/2018 - 6:38:47 PM  :  Best solution: ulDulDLrrrddlUruulllddRuurrdLrddlUruullDldRuurrdLLrrddlUruL
+3/16/2018 - 6:38:47 PM  :  Level 5	iterations: 0	iterations for first solution: 0	total solutions: 1	best solution length (moves/pushes): 249/50	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.044ms
+3/16/2018 - 6:38:47 PM  :  Best solution: LuurrdLdldRuuulldDrddlluRRluuurDlddrdrUlUdrdrruLULrddlluRuuurDlulldRurrrddLrddllluUdrdrruLLdlluurRdrruulDuullDRddLrdrUllUddlluRurruLrddrruLdlLuuulDrdRlddlluRdrruululDrrddlUUddlluRdrrrruuuLDlddlUrdrruLulLrruullldDrdRuruulDrrddLdlluuRlddrruUlldRldlluR
+3/16/2018 - 6:38:48 PM  :  Level 6	iterations: 25	iterations for first solution: 25	total solutions: 1	best solution length (moves/pushes): 169/43	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.156ms
+3/16/2018 - 6:38:48 PM  :  Best solution: dlllllululDulldRRllddrrUdlUluurrDRlulDlddrrUdlUluurrrdRRRlllulDulldRRRRRdrrrruullDurrddlLLLullllddrUluurrdrrRlllulldRRRRdrrrruullDurrddlLLruLLLLulldRRRRRdrrruullDurrddlL
+3/16/2018 - 6:38:48 PM  :  Level 7	iterations: 8	iterations for first solution: 8	total solutions: 1	best solution length (moves/pushes): 38/6	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.071ms
+3/16/2018 - 6:38:48 PM  :  Best solution: rruuuulLullddddRluuRdddrrruulUdLrrddlU
+3/16/2018 - 6:38:48 PM  :  Level 8	iterations: 4	iterations for first solution: 4	total solutions: 1	best solution length (moves/pushes): 101/34	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.020ms
+3/16/2018 - 6:38:48 PM  :  Best solution: llDDDDDDldddrruuLrddlluUruuuuuuurrdLulDDDDDDLddlluuRRdddrruuLrddlluUrUUUUUUluRdddddddldlluurRdrUUUUUU
+3/16/2018 - 6:38:48 PM  :  Level 9	iterations: 2	iterations for first solution: 2	total solutions: 1	best solution length (moves/pushes): 30/10	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.004ms
+3/16/2018 - 6:38:48 PM  :  Best solution: urrDulldRdRluurDrDDlUruLdlUruL
+3/16/2018 - 6:38:51 PM  :  Level 10	iterations: 1050	iterations for first solution: 1050	total solutions: 1	best solution length (moves/pushes): 117/21	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:03s.379ms
+3/16/2018 - 6:38:51 PM  :  Best solution: rddrruuLLrrddrruuLruuurrdddLruuullddDlLddlluuRRddrrUUUUddddlllllluuRlddrrrruuRlddlllluurRddrrrruUUdllddlluuRRRlddrruU
+3/16/2018 - 6:38:51 PM  :  Level 11	iterations: 4	iterations for first solution: 4	total solutions: 1	best solution length (moves/pushes): 94/18	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.020ms
+3/16/2018 - 6:38:51 PM  :  Best solution: ulllddddrrrruLUlDrdLLLuuuurrrDullldddllddrUruuuurrrdDDldlllluRdrrrurrdLLLLUllddrUrrrruuuullldD
+3/16/2018 - 6:38:51 PM  :  Level 12	iterations: 7	iterations for first solution: 7	total solutions: 1	best solution length (moves/pushes): 49/11	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.013ms
+3/16/2018 - 6:38:51 PM  :  Best solution: uululldRdRluurDrDDrddlluRuuulldRurDDrrrddllUdlluR
+3/16/2018 - 6:38:51 PM  :  Level 13	iterations: 24	iterations for first solution: 24	total solutions: 1	best solution length (moves/pushes): 65/21	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.090ms
+3/16/2018 - 6:38:51 PM  :  Best solution: dDuurDldDRdrruLdldlUUUUruLddddrruLdlUUUrDlulUdrruLddddrruLdlUUruL
+3/16/2018 - 6:38:51 PM  :  Level 14	iterations: 1	iterations for first solution: 1	total solutions: 1	best solution length (moves/pushes): 51/10	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.004ms
+3/16/2018 - 6:38:51 PM  :  Best solution: uullllddrdrUlluurrrrddLLLrrruullDurrddlLdllURRuullD
+3/16/2018 - 6:38:51 PM  :  Level 15	iterations: 12	iterations for first solution: 12	total solutions: 1	best solution length (moves/pushes): 59/16	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.015ms
+3/16/2018 - 6:38:51 PM  :  Best solution: DrdddllUUddrruuLuLDuLLrrrrdddllUdrruulullldlluRRRRDrrddllUU
+3/16/2018 - 6:40:25 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+SP-MCTS 
+Method: MCTS 
+iterations: 10000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 100
+Node Recycling: True
+Memory Budget: 5000
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: True
+level path: ./microban.txt
+********************************
+********************************
+
+3/16/2018 - 6:40:26 PM  :  Level 1	iterations: 10000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 17/5	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.516ms
+3/16/2018 - 6:40:26 PM  :  Best solution: dlUrrrdLullddrUUU
+3/16/2018 - 6:40:26 PM  :  Level 2	iterations: 0	iterations for first solution: 0	total solutions: 1	best solution length (moves/pushes): 16/3	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.003ms
+3/16/2018 - 6:40:26 PM  :  Best solution: rddLruulDuullddR
+3/16/2018 - 6:40:28 PM  :  Level 3	iterations: 10000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 37/12	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.848ms
+3/16/2018 - 6:40:28 PM  :  Best solution: ruuLLLdldlluurRurDrrrddlUruLLLulDDurD
+3/16/2018 - 6:40:28 PM  :  Level 4	iterations: 7	iterations for first solution: 7	total solutions: 1	best solution length (moves/pushes): 37/9	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.019ms
+3/16/2018 - 6:40:28 PM  :  Best solution: ulDulDLrrrddlUruLLulllddrrRurrddlUruL
+3/16/2018 - 6:40:28 PM  :  Level 5	iterations: 6	iterations for first solution: 6	total solutions: 1	best solution length (moves/pushes): 73/16	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.065ms
+3/16/2018 - 6:40:28 PM  :  Best solution: LdlUrdRluuurrdLullDDrddlluRuuurDrrrdLrddlluUruulldRdLrddlUUruulldDrddlluR
