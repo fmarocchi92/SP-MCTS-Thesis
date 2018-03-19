@@ -427,7 +427,7 @@ namespace MCTS2016
 
             //SokobanMCTSStrategy player;
 
-            IPuzzleState state = new AbstractSokobanState(levels[0], rewardType, useNormalizedPosition, useGoalMacro, useTunnelMacro, useGoalCut, simulationStrategy, rng);
+            //IPuzzleState state = new AbstractSokobanState(levels[0], rewardType, useNormalizedPosition, useGoalMacro, useTunnelMacro, useGoalCut, simulationStrategy, rng);
             //IPuzzleMove move = null;
             //int restart = 0;
             //IPuzzleState clone = state.Clone();
@@ -462,7 +462,11 @@ namespace MCTS2016
 
             for (int i = 0; i < states.Length; i++)
             {
-                if(i%SinglePlayerMCTSMain.threadIndex != threadIndex)
+                RNG.Seed(seed + threadIndex);
+                rng = new MersenneTwister(seed + threadIndex);
+                simulationStrategy = new SokobanEGreedyStrategy(epsilonValue, rng);
+
+                if (i%SinglePlayerMCTSMain.threadIndex != threadIndex)
                 {
                     continue;
                 }
@@ -528,8 +532,7 @@ namespace MCTS2016
                 solved[i] = states[i].EndState();
                 if (log)
                 {
-                    //Log("Level " + (i + 1) + "\titerations: " + mcts.IterationsExecuted + "\titerations for first solution: "+ mcts.IterationsForFirstSolution + "\ttotal solutions: "+mcts.SolutionCount+"\tbest solution length (moves/pushes): " + moves.Count() + "/" + pushCount + "\tInit Time: " + TimeFormat(stateInitializationTime) + " - Solving Time: " + TimeFormat(solvingTime));
-                    //Log("Best solution: " + moves);
+                    Log("Level " + (i + 1) + "\titerations: " + mcts.IterationsExecuted + "\titerations for first solution: " + mcts.IterationsForFirstSolution + "\ttotal solutions: " + mcts.SolutionCount + "\tbest solution length (moves/pushes): " + moves.Count() + "/" + pushCount + "\tInit Time: " + TimeFormat(stateInitializationTime) + " - Solving Time: " + TimeFormat(solvingTime) + "\tBest solution: " + moves);
                 }
                 totalNodes += mcts.NodeCount;
                 visitsList.AddRange(mcts.visits);
@@ -553,9 +556,8 @@ namespace MCTS2016
             avgRaveVisits /= raveVisitsList.Count;
 
             Log("Solved " + solvedLevels + "/" + levels.Length);
-            //Log("Total Rollouts for first solutions: " + totalRollouts);
-            //Log("Total nodes:"+ totalNodes);
-            Log("avg rollouts: " + totalRollouts / states.Length);
+            Log("Total Rollouts for first solutions: " + totalRollouts);
+            Log("Total nodes:" + totalNodes);
             Log("avg nodes:" + ((double)totalNodes)/states.Length);
             Log("avg visits: " + avgVisits);
             Log("avg raveVisits: " + avgRaveVisits);

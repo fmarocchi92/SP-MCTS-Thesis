@@ -1,4 +1,4 @@
-3/16/2018 - 6:41:45 PM  :  
+3/19/2018 - 6:41:41 PM  :  
 
 
 ********************************
@@ -12,16 +12,109 @@ Goal Cut ignored with Goal Macro disabled
 
 NO SP-MCTS 
 Method: MCTS 
-iterations: 10000
+iterations: 200
 UCT constant: 0.35
 SP_UCT constant: 100
 Reward Type: InverseBM
 epsilon: 0.2
 UCB1Tuned: True
 RAVE: True
-RAVE Threshold: 100
-Node Recycling: True
-Memory Budget: 5000
+RAVE Threshold: 10
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: True
+Node Elimination:True
+Stop on Result: True
+level path: ../Release/Levels/microban.txt
+********************************
+********************************
+
+3/19/2018 - 6:41:47 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NO SP-MCTS 
+Method: MCTS 
+iterations: 500
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 10
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: True
+Node Elimination:True
+Stop on Result: True
+level path: ../Release/Levels/microban.txt
+********************************
+********************************
+
+3/19/2018 - 6:41:50 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NO SP-MCTS 
+Method: MCTS 
+iterations: 1000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 10
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: True
+Node Elimination:True
+Stop on Result: True
+level path: ../Release/Levels/microban.txt
+********************************
+********************************
+
+3/19/2018 - 6:42:16 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NO SP-MCTS 
+Method: MCTS 
+iterations: 200
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 10
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
 Avoid Cycles: True
 Node Elimination:True
 Stop on Result: True
@@ -29,27 +122,921 @@ level path: ./microban.txt
 ********************************
 ********************************
 
-3/16/2018 - 6:41:45 PM  :  Level 1	iterations: 10	iterations for first solution: 10	total solutions: 1	best solution length (moves/pushes): 33/8	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.050ms
-3/16/2018 - 6:41:45 PM  :  Best solution: dlUrrrdLullddrUluRuulDrddrruLdlUU
-3/16/2018 - 6:41:45 PM  :  Level 2	iterations: 0	iterations for first solution: 0	total solutions: 1	best solution length (moves/pushes): 16/3	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.003ms
-3/16/2018 - 6:41:45 PM  :  Best solution: rddLruulDuullddR
-3/16/2018 - 6:41:45 PM  :  Level 3	iterations: 12	iterations for first solution: 12	total solutions: 1	best solution length (moves/pushes): 41/13	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.019ms
-3/16/2018 - 6:41:45 PM  :  Best solution: ruuLLLulDrrrrddlUruLLLddllluurRDrdLuuurDD
-3/16/2018 - 6:41:45 PM  :  Level 4	iterations: 2	iterations for first solution: 2	total solutions: 1	best solution length (moves/pushes): 119/23	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.024ms
-3/16/2018 - 6:41:45 PM  :  Best solution: ulDullDurrdLullddRluurrdLrrrddlUruullllDrdRuurrdLullllddRRuurrrdddlUruulllddRluurDurrdLLLrrrddlUruLLulllddrrRurrddlUruL
-3/16/2018 - 6:41:45 PM  :  Level 5	iterations: 1	iterations for first solution: 1	total solutions: 1	best solution length (moves/pushes): 31/6	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.043ms
-3/16/2018 - 6:41:45 PM  :  Best solution: LuurrdLrrddlUlldRuuulldDrddlluR
-3/16/2018 - 6:41:46 PM  :  Level 6	iterations: 53	iterations for first solution: 53	total solutions: 1	best solution length (moves/pushes): 193/43	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.295ms
-3/16/2018 - 6:41:46 PM  :  Best solution: dlllllululDulldRRllddrUluurrdRlulDlddrrUdlUluurrrdRRllulDrrrRllllullddrdrUlluurrrdrrrdrrruullDurrddlLLLullulDulldRRRRlllddrUluurrdrRRlllulldRRRRdrrrruullDurrddlLLruLLLLulldRRRRRdrrruullDurrddlL
-3/16/2018 - 6:41:46 PM  :  Level 7	iterations: 2	iterations for first solution: 2	total solutions: 1	best solution length (moves/pushes): 38/6	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.013ms
-3/16/2018 - 6:41:46 PM  :  Best solution: lluurUrDllddrUluurrdrUruullDurrdddddlU
-3/16/2018 - 6:41:46 PM  :  Level 8	iterations: 6	iterations for first solution: 6	total solutions: 1	best solution length (moves/pushes): 117/32	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.040ms
-3/16/2018 - 6:41:46 PM  :  Best solution: llDDDDDDldddrruuLuuuuuuurrdLulDDDDDDlllddrrUddrruuLrddllulluurRllddrrdrruulUlllddrrUruUUUUUluRdddddddldlluurRdrUUUUUU
-3/16/2018 - 6:41:46 PM  :  Level 9	iterations: 0	iterations for first solution: 0	total solutions: 1	best solution length (moves/pushes): 30/10	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.002ms
-3/16/2018 - 6:41:46 PM  :  Best solution: urrDulldRdRluurDrDDlUruLdlUruL
-3/16/2018 - 6:41:47 PM  :  Level 10	iterations: 363	iterations for first solution: 363	total solutions: 1	best solution length (moves/pushes): 107/21	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.193ms
-3/16/2018 - 6:41:47 PM  :  Best solution: rddrruuLLrrddrruuuuurrdddLruuullddDLLddlluuRRddrrUUUUddddlllllluuRlddrrrruuRlddrruUUdllddlllluurRRRRlddrruU
-3/16/2018 - 6:41:47 PM  :  Level 11	iterations: 1	iterations for first solution: 1	total solutions: 1	best solution length (moves/pushes): 84/18	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.012ms
-3/16/2018 - 6:41:47 PM  :  Best solution: ulllddddrrrruLUlDrdLLLullddrUruuuurrrDDlddlllluRdrrrrruLulDrdLLLUllddrUrrrruuuullldD
-3/16/2018 - 6:41:47 PM  :  Level 12	iterations: 9	iterations for first solution: 9	total solutions: 1	best solution length (moves/pushes): 49/11	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.023ms
-3/16/2018 - 6:41:47 PM  :  Best solution: uululldRdRluurDrDDrddlluRuuulldRurDDrrrddllUdlluR
+3/19/2018 - 6:42:16 PM  :  Level 1	iterations: 11	iterations for first solution: 11	total solutions: 1	best solution length (moves/pushes): 33/8	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.035ms
+3/19/2018 - 6:42:16 PM  :  Best solution: dlUrrrdLullddrUluRuulDrddrruLdlUU
+3/19/2018 - 6:42:16 PM  :  Level 2	iterations: 0	iterations for first solution: 0	total solutions: 1	best solution length (moves/pushes): 16/3	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.002ms
+3/19/2018 - 6:42:16 PM  :  Best solution: rddLruulDuullddR
+3/19/2018 - 6:42:16 PM  :  Level 3	iterations: 10	iterations for first solution: 10	total solutions: 1	best solution length (moves/pushes): 41/13	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.022ms
+3/19/2018 - 6:42:16 PM  :  Best solution: ruuLLLulDrrrrddlUruLLLddllluurRDrdLuuurDD
+3/19/2018 - 6:42:16 PM  :  Level 4	iterations: 1	iterations for first solution: 1	total solutions: 1	best solution length (moves/pushes): 59/13	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.008ms
+3/19/2018 - 6:42:16 PM  :  Best solution: ulllDldRRluurDurrdLLrrddlUruulldLrurrdLLulllddrrRurrddlUruL
+3/19/2018 - 6:42:16 PM  :  Level 5	iterations: 0	iterations for first solution: 0	total solutions: 1	best solution length (moves/pushes): 61/12	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.008ms
+3/19/2018 - 6:42:16 PM  :  Best solution: LulDruurrdLrrddlUlldRuuLdddlluRdrUruululDrrddlUruulldDrddlluR
+3/19/2018 - 6:42:16 PM  :  Level 6	iterations: 66	iterations for first solution: 66	total solutions: 1	best solution length (moves/pushes): 221/45	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.453ms
+3/19/2018 - 6:42:16 PM  :  Best solution: dlllllululDulldRRllddrrUdlUluurrDRlulDrrRllllddrUluurrrdrRlllullddrdrUlluurrrdrrRdrrruullDllllulDrrrrrurrddlLulllllullddrdrUlluurrrdrrrrdLLullullDRlldRurRRRRlllllddrUluRRRRdrrrruullDurrddlLLruLLLLulldRRRRRdrrruullDurrddlL
+3/19/2018 - 6:42:16 PM  :  Level 7	iterations: 0	iterations for first solution: 0	total solutions: 1	best solution length (moves/pushes): 42/6	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.004ms
+3/19/2018 - 6:42:16 PM  :  Best solution: rruuuulLullddddRdrrruulLrUluullddRlddrdrrU
+3/19/2018 - 6:42:17 PM  :  Level 8	iterations: 27	iterations for first solution: 27	total solutions: 1	best solution length (moves/pushes): 99/34	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.089ms
+3/19/2018 - 6:42:17 PM  :  Best solution: llDDDDDDldddrruuLrddlluUruuuuuuurrdLulDDDDDDLddlluuRRdddrruuLUUUUUUluRddddddlllddrrUdlluurRdrUUUUUU
+3/19/2018 - 6:42:17 PM  :  Level 9	iterations: 0	iterations for first solution: 0	total solutions: 1	best solution length (moves/pushes): 30/10	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.002ms
+3/19/2018 - 6:42:17 PM  :  Best solution: urrDulldRdRluurDrDDlUruLdlUruL
+3/19/2018 - 6:42:17 PM  :  Level 10	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 38/9	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.771ms
+3/19/2018 - 6:42:17 PM  :  Best solution: rddrruuRlddrruUUUddllddlluuRRRlddrruUU
+3/19/2018 - 6:42:17 PM  :  Level 11	iterations: 17	iterations for first solution: 17	total solutions: 1	best solution length (moves/pushes): 134/22	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.084ms
+3/19/2018 - 6:42:17 PM  :  Best solution: ulllddddrrrruLdllluuuurrrdDlDurrddlLrruLdlLLullddrUrrrruulDrdLruuuulllddddlluRdrUdRRurrdLLLrruuuullldDuurrrddlddlLUllddrUrrrruuuullldD
+3/19/2018 - 6:42:17 PM  :  Level 12	iterations: 3	iterations for first solution: 3	total solutions: 1	best solution length (moves/pushes): 54/13	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.009ms
+3/19/2018 - 6:42:17 PM  :  Best solution: uululldRdRluurDrDDrddlluRdrUluuulldRurDDRddlluRdrrruuL
+3/19/2018 - 6:42:18 PM  :  Level 13	iterations: 58	iterations for first solution: 58	total solutions: 1	best solution length (moves/pushes): 85/27	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.110ms
+3/19/2018 - 6:42:18 PM  :  Best solution: dDDRddlUruuluurDldDrddlUUUUruLrdDlulUrddddrUdrruLLdlUUUrDlddrruLulDruuuLrdddddlUUUruL
+3/19/2018 - 6:42:18 PM  :  Level 14	iterations: 0	iterations for first solution: 0	total solutions: 1	best solution length (moves/pushes): 51/10	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.003ms
+3/19/2018 - 6:42:18 PM  :  Best solution: uullllddrdrUlluurrrrddLLLrrruullDurrddlLdllURRuullD
+3/19/2018 - 6:42:18 PM  :  Level 15	iterations: 12	iterations for first solution: 12	total solutions: 1	best solution length (moves/pushes): 43/14	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.013ms
+3/19/2018 - 6:42:18 PM  :  Best solution: DrdddllUUddrruuulLrrdLulLLdlluRRRRDrrddllUU
+3/19/2018 - 6:42:19 PM  :  Level 16	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 160/44	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.514ms
+3/19/2018 - 6:42:19 PM  :  Best solution: lddrUUddrruLLuluurDrDulldRddrruLdlUdlUUUruLdddrUluuLLulDDurrrrDlullldDDuuurrrrdrDLululllddlddRuuuurrrdDrddrUldlUUUruLLrrdrDlluulLulDDurrrrddddrruLLdlUUUruLLLulD
+3/19/2018 - 6:42:19 PM  :  Level 17	iterations: 9	iterations for first solution: 9	total solutions: 1	best solution length (moves/pushes): 28/9	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.007ms
+3/19/2018 - 6:42:19 PM  :  Best solution: rdDullDRddlUUrddrruLdlUrUdlU
+3/19/2018 - 6:42:19 PM  :  Level 18	iterations: 16	iterations for first solution: 16	total solutions: 1	best solution length (moves/pushes): 83/15	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.035ms
+3/19/2018 - 6:42:19 PM  :  Best solution: ruuuulllddrRDrUUdllluurrurrdLLrdddddlUUruuululldddrRdrUUdllluuurrdLulDrrurrdLddlllU
+3/19/2018 - 6:42:19 PM  :  Level 19	iterations: 51	iterations for first solution: 51	total solutions: 1	best solution length (moves/pushes): 90/28	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.131ms
+3/19/2018 - 6:42:19 PM  :  Best solution: urrDLLrrDullulldRurrrddDuululldRurrdddlddrUUUUruLLLdlluRdrRuLrrDlllluRRRdrDuruLddDlddrUUUU
+3/19/2018 - 6:42:19 PM  :  Level 20	iterations: 35	iterations for first solution: 35	total solutions: 1	best solution length (moves/pushes): 68/18	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.108ms
+3/19/2018 - 6:42:19 PM  :  Best solution: urDRlDDrrruuLLLLrddlddrUUUdrrruullulldRlulldRurrdRlulldRurrdRlulldRR
+3/19/2018 - 6:42:19 PM  :  Level 21	iterations: 0	iterations for first solution: 0	total solutions: 1	best solution length (moves/pushes): 17/5	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.000ms
+3/19/2018 - 6:42:19 PM  :  Best solution: dllUdlUluurDRddlU
+3/19/2018 - 6:42:20 PM  :  Level 22	iterations: 30	iterations for first solution: 30	total solutions: 1	best solution length (moves/pushes): 79/25	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.126ms
+3/19/2018 - 6:42:20 PM  :  Best solution: drrruulDLdlUrrrdLullUUdddRluuuluRdddrrrdLLdlUUUUluurDRlDDDrddlUUUUruLdddrrruuuL
+3/19/2018 - 6:42:20 PM  :  Level 23	iterations: 27	iterations for first solution: 27	total solutions: 1	best solution length (moves/pushes): 60/10	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.044ms
+3/19/2018 - 6:42:20 PM  :  Best solution: dlUrruulluRdrddllUdrruululldRddrruuruLLrdddlluuRurDllluRdrrD
+3/19/2018 - 6:42:20 PM  :  Level 24	iterations: 29	iterations for first solution: 29	total solutions: 1	best solution length (moves/pushes): 35/9	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.054ms
+3/19/2018 - 6:42:20 PM  :  Best solution: ullDDlddrruLuuurrdLulDDDullddrRuulD
+3/19/2018 - 6:42:20 PM  :  Level 25	iterations: 9	iterations for first solution: 9	total solutions: 1	best solution length (moves/pushes): 35/9	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.028ms
+3/19/2018 - 6:42:20 PM  :  Best solution: luuurDDrruLdllddrUluRluurDrrddLLdlU
+3/19/2018 - 6:42:20 PM  :  Level 26	iterations: 54	iterations for first solution: 54	total solutions: 1	best solution length (moves/pushes): 45/10	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.142ms
+3/19/2018 - 6:42:20 PM  :  Best solution: rdddlUrdddlUUlldRurruuulldRDrdLrddlUruuluurDD
+3/19/2018 - 6:42:20 PM  :  Level 27	iterations: 51	iterations for first solution: 51	total solutions: 1	best solution length (moves/pushes): 50/10	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.086ms
+3/19/2018 - 6:42:20 PM  :  Best solution: dlULddlluuuurrrDulllddddrruuLrdrruLuullldDDurRdrUU
+3/19/2018 - 6:42:20 PM  :  Level 28	iterations: 11	iterations for first solution: 11	total solutions: 1	best solution length (moves/pushes): 35/11	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.017ms
+3/19/2018 - 6:42:20 PM  :  Best solution: rDulldRddrruLUddlUUluurrDDldRuuulDD
+3/19/2018 - 6:42:20 PM  :  Level 29	iterations: 58	iterations for first solution: 58	total solutions: 1	best solution length (moves/pushes): 216/30	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.333ms
+3/19/2018 - 6:42:20 PM  :  Best solution: lulldRurrdrrddllllllluuRurrdRRllulldRurrrdRllullldlddrrrrrrruUlllulldRurrdrrUdllulldRllllddrrrrrrruuuruulDDDlLulllldlddrrrrrrrUdllllllluurrrRRlllllddrrrrrrruUUUddddllllllluurrrrrRllllllddrrrrrrruUUruuLDDDuuuulldRurDD
+3/19/2018 - 6:42:20 PM  :  Level 30	iterations: 1	iterations for first solution: 1	total solutions: 1	best solution length (moves/pushes): 47/9	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.005ms
+3/19/2018 - 6:42:20 PM  :  Best solution: urrdLdlUluRluurDDlddrruruuLrddlLuluurDrrddlldlU
+3/19/2018 - 6:42:20 PM  :  Level 31	iterations: 3	iterations for first solution: 3	total solutions: 1	best solution length (moves/pushes): 21/6	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.014ms
+3/19/2018 - 6:42:20 PM  :  Best solution: DldRuuRlddRdrruulLulD
+3/19/2018 - 6:42:20 PM  :  Level 32	iterations: 36	iterations for first solution: 36	total solutions: 1	best solution length (moves/pushes): 36/9	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.058ms
+3/19/2018 - 6:42:20 PM  :  Best solution: ullDullddrUrurrdLLLddrUluRurrdLululD
+3/19/2018 - 6:42:20 PM  :  Level 33	iterations: 56	iterations for first solution: 56	total solutions: 1	best solution length (moves/pushes): 47/10	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.145ms
+3/19/2018 - 6:42:20 PM  :  Best solution: dlLrruulLrrddllUdLuluurDldDrrrruulLLrddlluUrrdL
+3/19/2018 - 6:42:20 PM  :  Level 34	iterations: 1	iterations for first solution: 1	total solutions: 1	best solution length (moves/pushes): 66/12	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.010ms
+3/19/2018 - 6:42:20 PM  :  Best solution: drrrURldllluurrurDrddlllUluRRRllddrURuulDrddrrruulLrrddllllluururD
+3/19/2018 - 6:42:21 PM  :  Level 35	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 80/22	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.284ms
+3/19/2018 - 6:42:21 PM  :  Best solution: llluuuRDrDuluUddrdLuuurDlddddrruLdlUUdlUrrUdllUUddrruLdlUruurDDDlddrruLdlUruLdlU
+3/19/2018 - 6:42:21 PM  :  Level 36	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 109/19	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.691ms
+3/19/2018 - 6:42:21 PM  :  Best solution: ldlllllllllluurDrdrruLrdrruLrdrruLdlllluLrdrrrrruRRllldlluRlLLrrrdrruLrrrdrruLLdllluLrrdrruLLdlluLrdrruLdlluL
+3/19/2018 - 6:42:22 PM  :  Level 37	iterations: 24	iterations for first solution: 24	total solutions: 1	best solution length (moves/pushes): 121/27	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.047ms
+3/19/2018 - 6:42:22 PM  :  Best solution: drruulLuLLulldRRdRRuLLullddRRuulDrrrdRlulldRRddrruUUUddddlluullulldRurrrdRllulldRurrdddrruUllulldRRddrruuUdddlluuRlddrruU
+3/19/2018 - 6:42:22 PM  :  Level 38	iterations: 0	iterations for first solution: 0	total solutions: 1	best solution length (moves/pushes): 43/14	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.008ms
+3/19/2018 - 6:42:22 PM  :  Best solution: URRllldlluuurrrDDuurrrrddLLLrrrddlllULLrURR
+3/19/2018 - 6:42:22 PM  :  Level 39	iterations: 37	iterations for first solution: 37	total solutions: 1	best solution length (moves/pushes): 93/27	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.195ms
+3/19/2018 - 6:42:22 PM  :  Best solution: ruuLLLuullddRluurrdDDDuurrrddlUruLLLuullddRRRRllddllddrrUUUUrrurDllllluurrDullddrRRRdRUddrruL
+3/19/2018 - 6:42:22 PM  :  Level 40	iterations: 3	iterations for first solution: 3	total solutions: 1	best solution length (moves/pushes): 36/11	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.005ms
+3/19/2018 - 6:42:22 PM  :  Best solution: lUdrrUdlluRuulDDrdrruLdlUluurDDuurDD
+3/19/2018 - 6:42:22 PM  :  Level 41	iterations: 9	iterations for first solution: 9	total solutions: 1	best solution length (moves/pushes): 97/19	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.030ms
+3/19/2018 - 6:42:22 PM  :  Best solution: urDurrDulldRurrdddlllUluurrdRlulldRurrrDlLullddrdrrURuulDlulDrrrddlUruulldRddllUluRurrrDlulldRurD
+3/19/2018 - 6:42:22 PM  :  Level 42	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 68/18	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.387ms
+3/19/2018 - 6:42:22 PM  :  Best solution: rddLUdLrruuulDrddllddlluuRlddrruRuruulDDLddrUluRlddlluuRRdrUUruulDDD
+3/19/2018 - 6:42:23 PM  :  Level 43	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 54/18	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.573ms
+3/19/2018 - 6:42:23 PM  :  Best solution: ldddlLDuLrdLddrUllluRluRRRRRdrUlllllddrUluRRRllddrUluR
+3/19/2018 - 6:42:23 PM  :  Level 44	iterations: 0	iterations for first solution: 0	total solutions: 1	best solution length (moves/pushes): 1/1	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.000ms
+3/19/2018 - 6:42:23 PM  :  Best solution: R
+3/19/2018 - 6:42:23 PM  :  Level 45	iterations: 11	iterations for first solution: 11	total solutions: 1	best solution length (moves/pushes): 53/11	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.020ms
+3/19/2018 - 6:42:23 PM  :  Best solution: lluuururrdLulldddrdrruLLrUdldlUrruUruLdddllUURlddrruU
+3/19/2018 - 6:42:23 PM  :  Level 46	iterations: 13	iterations for first solution: 13	total solutions: 1	best solution length (moves/pushes): 47/8	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.020ms
+3/19/2018 - 6:42:23 PM  :  Best solution: dlluuRuRDrUlldlddrrUdlluururrdLddlluuluururrrDD
+3/19/2018 - 6:42:23 PM  :  Level 47	iterations: 63	iterations for first solution: 63	total solutions: 1	best solution length (moves/pushes): 113/32	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.294ms
+3/19/2018 - 6:42:23 PM  :  Best solution: rrruuulldRRddlllluuRRRurDDullllddrrrRRRdrruLLLLLruuurrdLulDllllddrRRRRRdrruLLLLLLdlluuurrrrDulllldddrrurRlldlluRR
+3/19/2018 - 6:42:24 PM  :  Level 48	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 40/10	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.784ms
+3/19/2018 - 6:42:24 PM  :  Best solution: rddrDulDLruuullddDrrrrddlUruLLLrrddlUruL
+3/19/2018 - 6:42:24 PM  :  Level 49	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 73/17	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.555ms
+3/19/2018 - 6:42:24 PM  :  Best solution: lddRldRluuurDDuurrddLDDDlddrruLuuuuruullldddRluururrddlDDDuulluurDldRurDD
+3/19/2018 - 6:42:25 PM  :  Level 50	iterations: 46	iterations for first solution: 46	total solutions: 1	best solution length (moves/pushes): 82/19	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.282ms
+3/19/2018 - 6:42:25 PM  :  Best solution: llulDDulldRRurrrrrdddlllllUURlluRRldddrrrrruuulldLLrrurrdddllllluUruRRRllldlluRRRR
+3/19/2018 - 6:42:25 PM  :  Level 51	iterations: 1	iterations for first solution: 1	total solutions: 1	best solution length (moves/pushes): 42/8	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.009ms
+3/19/2018 - 6:42:25 PM  :  Best solution: rddllluURuLrdddrruuLrddllluuurDllluurDldRR
+3/19/2018 - 6:42:25 PM  :  Level 52	iterations: 1	iterations for first solution: 1	total solutions: 1	best solution length (moves/pushes): 30/8	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.005ms
+3/19/2018 - 6:42:25 PM  :  Best solution: dddLrddlUlluuruRurDlldDldRRdrU
+3/19/2018 - 6:42:25 PM  :  Level 53	iterations: 42	iterations for first solution: 42	total solutions: 1	best solution length (moves/pushes): 57/16	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.053ms
+3/19/2018 - 6:42:25 PM  :  Best solution: rUruuLDuullDRllddRUUdddrrUruuLrddlUUdddlluRdrUruulLrrddlU
+3/19/2018 - 6:42:25 PM  :  Level 54	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 47/13	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.454ms
+3/19/2018 - 6:42:25 PM  :  Best solution: drrUdlluRRluurDRRRllllddrrUdllluluRdrRuRldlluRR
+3/19/2018 - 6:42:25 PM  :  Level 55	iterations: 65	iterations for first solution: 65	total solutions: 1	best solution length (moves/pushes): 72/27	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.146ms
+3/19/2018 - 6:42:25 PM  :  Best solution: rdrrrddlUruLLLrrrddddlUUruulllulldRRRRurDDDlUddRRluuuLLLulldRRRRurDDDldR
+3/19/2018 - 6:42:25 PM  :  Level 56	iterations: 7	iterations for first solution: 7	total solutions: 1	best solution length (moves/pushes): 23/6	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.018ms
+3/19/2018 - 6:42:25 PM  :  Best solution: luuLulldRurDrddllURuulD
+3/19/2018 - 6:42:26 PM  :  Level 57	iterations: 100	iterations for first solution: 100	total solutions: 1	best solution length (moves/pushes): 114/37	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.397ms
+3/19/2018 - 6:42:26 PM  :  Best solution: dddrdrruLLdLUlldRurUdldRRurrddlUlluuUruulDDDDrdLrrruLLdlUUUddlldRRRluuuruulDDDDldRurrrddlUruLLLdRllluRdrrurDllluRR
+3/19/2018 - 6:42:26 PM  :  Level 58	iterations: 7	iterations for first solution: 7	total solutions: 1	best solution length (moves/pushes): 56/11	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.004ms
+3/19/2018 - 6:42:26 PM  :  Best solution: luluurDRDulldRddrruLrruuLrddlldlUrrruulLLrrrddllUdrruulL
+3/19/2018 - 6:42:29 PM  :  Level 59	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 532/50	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.725ms
+3/19/2018 - 6:42:29 PM  :  Best solution: ldllllldRRllddlUrurrurrruullllllllddddRRdrUllluuuurrrrrrrrddllllllDurrdLrrurrruullllllllddddrRdrUllluuuurrrrrrrrddllllllDRurrrrruullllllllddddrRdrUUluRlddlluuuurrrrrrrrddllldLrurrruullllllllddddrruurRlldRurRdLruRllllddrUrrurRllldlluRdrrurrRllldlluRllddlluuuurrrrrrrrddldLrururDluullllllllddddrrruruRlllddlluuuurrrrrrrrddldlLrrurrDulldllLruRllllddrUldlluuuurrrrrrrrrdddDrddlluRuuuluullllllllddddrrrurrruRllldlluRRdrrruRlldlluRRllllddlluuuurrrrrrrrrdDDuluullllllllddddrrrurrruRlllllddlluuuurrrrrrrrrdddDuuulullllllllddddrrrurrrruRurDD
+3/19/2018 - 6:42:29 PM  :  Level 60	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 150/34	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.330ms
+3/19/2018 - 6:42:29 PM  :  Best solution: urrrrrrdddLLulldRRRllDDrddlUUUddLLdlluRRRllUUluurDDuuuurrrrrrddDDDuuuuullllllddddDuuuuurrrrrrdddllulldRddrddlUUdlldlluRRRlluuuuuurrrrrrdddlLulldRRRllD
+3/19/2018 - 6:42:29 PM  :  Level 61	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 58/13	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.609ms
+3/19/2018 - 6:42:29 PM  :  Best solution: lDDlDDrrUdlluRuuuruullllldddddrRRdrUUUdlldlluuuuurrrrrddLL
+3/19/2018 - 6:42:30 PM  :  Level 62	iterations: 86	iterations for first solution: 86	total solutions: 1	best solution length (moves/pushes): 92/34	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.199ms
+3/19/2018 - 6:42:30 PM  :  Best solution: LLLLullDRdLLLrruulDrrRlllLrrrrRlllllddlluuRldRuRRllddrURuRRRllldlluRRurrddLLuRRlldLdlUluRRRR
+3/19/2018 - 6:42:30 PM  :  Level 63	iterations: 30	iterations for first solution: 30	total solutions: 1	best solution length (moves/pushes): 121/50	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.146ms
+3/19/2018 - 6:42:30 PM  :  Best solution: llllLLulLLLLLLulldRurDrrrrrrrddlUruLLLLLLLulldRRRRRRRllllddlUrurrrrRlllllLrrrrrrurDlllllllulldRRRRRRRRdRUdRRRRRdrruLLLLLL
+3/19/2018 - 6:42:31 PM  :  Level 64	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 67/17	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.808ms
+3/19/2018 - 6:42:31 PM  :  Best solution: ldlluulUluurDurrdLLulDrrDDlUruulldRurDlddrDDuuluulldRurrDDuulldRurD
+3/19/2018 - 6:42:31 PM  :  Level 65	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 121/37	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.482ms
+3/19/2018 - 6:42:31 PM  :  Best solution: uuuuLrddddlluuRUruulDrdDDulUdldlluRRddrdrruLLLLdlUruLrruRuruulDulldRRDrDDuuluurDDDLLddrdrruLLLLruurrDulldlddlUrrrdrruLLLL
+3/19/2018 - 6:42:31 PM  :  Level 66	iterations: 1	iterations for first solution: 1	total solutions: 1	best solution length (moves/pushes): 247/29	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.075ms
+3/19/2018 - 6:42:31 PM  :  Best solution: DDrrdrddddldLruruuuulullDurrdrddddldldlUrruruuuululllldlddddrdRRlluluuuururrdDrddlDuUUdddDldRlululuuuururrrrdrddddldLruruuuulullDulldlddddrdrRlluluuuururrdDuurrdrddddldLruruuuulullddrddldDuuUUUdddddlddrUlululuuuururRdddddDDlddrruLdlUruurruruuuuluL
+3/19/2018 - 6:42:31 PM  :  Level 67	iterations: 5	iterations for first solution: 5	total solutions: 1	best solution length (moves/pushes): 37/8	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.011ms
+3/19/2018 - 6:42:31 PM  :  Best solution: uurrdDrdLuuullddRRdrrddllUlURuuullddR
+3/19/2018 - 6:42:32 PM  :  Level 68	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 43/11	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.819ms
+3/19/2018 - 6:42:32 PM  :  Best solution: luuurrdRRllulldddrrUUruLLulDDurrrRlllldDldR
+3/19/2018 - 6:42:34 PM  :  Level 69	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 125/36	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.602ms
+3/19/2018 - 6:42:34 PM  :  Best solution: rurrrurrDrrddllUdrUlUdrruLULLruurDDllLulDrdLLrrddlllluuurDDldRRluurrrurrrDrddlUlUUruulDrdDrdLdlUruuLLLulDrrrrddlUruLLLdLruulD
+3/19/2018 - 6:42:34 PM  :  Level 70	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 52/18	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.756ms
+3/19/2018 - 6:42:34 PM  :  Best solution: rdrrrddlUruLLLulldRRRldRlulldRDDDuuuurrdLulDDDldRurD
+3/19/2018 - 6:42:35 PM  :  Level 71	iterations: 52	iterations for first solution: 52	total solutions: 1	best solution length (moves/pushes): 258/33	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.572ms
+3/19/2018 - 6:42:35 PM  :  Best solution: ulldRurrDDuulllddddddrrrrrrrrrruuuuulllddllldlluRuuulldRurDllldddddrrrrrrrrrruuuuulllddllLdlluRUdRRRdrruLuurrrdddddlllllllllluuuuurrurrdLLrddrrRdrUUdlllluulullddddddrrrrrrrrrruuuuullulldRddlllluululldRRurDDullldddddrrrrrrrrrruuuuulLulldRRRllddllldlluRRRRdrUU
+3/19/2018 - 6:42:35 PM  :  Level 72	iterations: 53	iterations for first solution: 53	total solutions: 1	best solution length (moves/pushes): 141/40	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.432ms
+3/19/2018 - 6:42:35 PM  :  Best solution: llLDlluRRRldDDuuurRlldddrrddlULLrrruLdlUUddldlluurDrruuUdddllDruruuuluurDrrdrruLLLLDDulluRdrdDrdLLdlluurDldRurruuuluurDDDDrdLLDlluurDldRlddrU
+3/19/2018 - 6:42:36 PM  :  Level 73	iterations: 144	iterations for first solution: 144	total solutions: 1	best solution length (moves/pushes): 269/35	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.852ms
+3/19/2018 - 6:42:36 PM  :  Best solution: uulllluurDDDurruLrdrddddlllluuRuurrrruLdlllluurDDruRdrddddlllluurUdlddrrrruuuullulldRurrdrruLdddddlllluuruuRlddlddrrrruuuuuLLrrdLrddddlllluuruuluurDDRurrdddddlllluurUdlddrrrruuuuulldRlulldRurrrDDDDuuululldddlddrrrdrruLLLrruuuulLulDrrrddddllLdlUrrrruuuulllDurrrddddllllU
+3/19/2018 - 6:42:37 PM  :  Level 74	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 40/14	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.679ms
+3/19/2018 - 6:42:37 PM  :  Best solution: lulDDDldRuRRlluurrDRRRRdrUllllDulullddrR
+3/19/2018 - 6:42:37 PM  :  Level 75	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 110/20	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.361ms
+3/19/2018 - 6:42:37 PM  :  Best solution: ddlluLuRlLrrddrruuLrddllluulLdRluulldRRdrRuLrddrrruulLrrddlllullUUdrdrdrrUdllulluluuRddrdrdrruLuLrdrruLdlLrruL
+3/19/2018 - 6:42:40 PM  :  Level 76	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 163/34	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.248ms
+3/19/2018 - 6:42:40 PM  :  Best solution: rddrddrrrrUUlDrdLLLdlUUluuuuurrddddLddrrruuuuurrdLulDDDrddllllulUrddrrrruuluurDldDrUddLLrruuUluurrdLulDDrddldlLrrruuulDrddllldlUUluluuruurrddddLddrrrruulDrdLLLdlUU
+3/19/2018 - 6:42:40 PM  :  Level 77	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 50/12	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.510ms
+3/19/2018 - 6:42:40 PM  :  Best solution: ddddrruLrrrruLdllldlUrruRldllUUluRRRRRlllldddrrruR
+3/19/2018 - 6:42:41 PM  :  Level 78	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 60/17	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.534ms
+3/19/2018 - 6:42:41 PM  :  Best solution: rrrruUddlllluUrRuurrDLullDurrrdDDuululllDrRRurDDulldRlullDRR
+3/19/2018 - 6:42:41 PM  :  Level 79	iterations: 22	iterations for first solution: 22	total solutions: 1	best solution length (moves/pushes): 64/18	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.055ms
+3/19/2018 - 6:42:41 PM  :  Best solution: lLLdlluRRluurDDRRRdrUlllluurrDullddrRdrruLrruulDrddlluLLrrdrruLL
+3/19/2018 - 6:42:42 PM  :  Level 80	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 165/44	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.670ms
+3/19/2018 - 6:42:42 PM  :  Best solution: lddrUdrruLUUdddlluuRldRdrruuLuUUdllluUluurDDurrdRddddrddlUUUUlllUUluurDDurrdrRlDurRurDllldDDulllUUluRdddrrruurrddrUUlllluLrdrdddDrddlUUUUllluuluRdddrrrUddddlluRdrUUU
+3/19/2018 - 6:42:43 PM  :  Level 81	iterations: 83	iterations for first solution: 83	total solutions: 1	best solution length (moves/pushes): 96/30	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.198ms
+3/19/2018 - 6:42:43 PM  :  Best solution: luuurrdLDlUddddrruLdlUrUdlUrUUruullDurDDDDlluRUddddrruLuUdddlUUruUddlluRurruullDDDDrddlUUrUdlluR
+3/19/2018 - 6:42:43 PM  :  Level 82	iterations: 26	iterations for first solution: 26	total solutions: 1	best solution length (moves/pushes): 72/16	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.050ms
+3/19/2018 - 6:42:43 PM  :  Best solution: drrruUlUdrruLuLLulldRDuRldDlddrrrruuuuLrddddlllUdrrruuuulLulDrrrddlUruLL
+3/19/2018 - 6:42:44 PM  :  Level 83	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 301/53	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.403ms
+3/19/2018 - 6:42:44 PM  :  Best solution: rruuuuuLullDRlDDDDrrruuuuLLulDrrrddlUrdddllluuURldddrrruuuuLrddddllluuurRlldddrddlUrrruuuluuulDrddrddlldlUUUddrrruuluululldRurrdddrddllluuUdddrrruuluurDlLrrDDDldRuuuluuulDulldRRurDrddddllluuUdddrrruuuullulldRurrdrddlUrdddllluuuRRlluurrDrDululDrrdDDuuulllddddrrRuulUrdddllluuuRRluurDrDDuulldRdrDuluurDD
+3/19/2018 - 6:42:45 PM  :  Level 84	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 233/46	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.323ms
+3/19/2018 - 6:42:45 PM  :  Best solution: uRlddRUrrdLddlllluuuuuurrrrdDDlluRdrDruuLddDuuuuullllddddddrrrRRluuulluRdrdddlllluuuuuurrrrdDrdLdddrRlluuuullddRluurDruuullllddddddrrrrrrdrruLLLLuUruuluullllddddddrrRllluuuuuurrrrddDDulldRuruuullllddddddrrrRRRdrruLLLLLLLdlUUUUUUluRRR
+3/19/2018 - 6:42:47 PM  :  Level 85	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 68/21	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.113ms
+3/19/2018 - 6:42:47 PM  :  Best solution: luuuuuRRRRRldLLLulDDDDldRRRRlddrruUUruLddlllluuuurrrrRlllllddddrruuR
+3/19/2018 - 6:42:48 PM  :  Level 86	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 114/20	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.786ms
+3/19/2018 - 6:42:48 PM  :  Best solution: drrrUdllluuRlddrrrurruullDLDururrddlLdLLdlluurDuuRuRldlddrrrurruululDlldldlddRuuururrDulldRDuurrrddlLdLrurruullDlD
+3/19/2018 - 6:42:50 PM  :  Level 87	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 41/11	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.365ms
+3/19/2018 - 6:42:50 PM  :  Best solution: lululuRUddrddrruLdlUluuuUluRRRRdrruulDldR
+3/19/2018 - 6:42:52 PM  :  Level 88	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 306/56	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.606ms
+3/19/2018 - 6:42:52 PM  :  Best solution: rrruulDruuulUdDrdddLLrruuulDrddlldlluRRRRuuuuuuulDrddlddDuuuUrdddddLruuuuuuurrdddddddLruuuuuuullddldddddLruruuuuuurrdddddddldlUUluuruuuulDDDDruuuurrdddddddlllldlluRRRurUdlUrUUUldDuuuurrrdddddddldlUUdrruuuuuuulllddddDuruuUluRRlldddddDuuruuuururDlllddddddrUUUUluurrrDDDDDuuuuulllddrUluRRurDDDDuuulldddddddrrU
+3/19/2018 - 6:42:53 PM  :  Level 89	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 88/21	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.887ms
+3/19/2018 - 6:42:53 PM  :  Best solution: LrurrddLdlddrUluUrruullDDDDrdLruUlddLdlUrruuuuurrddLruulldDDDrddllluUdrdrruLLdlUrruuuulL
+3/19/2018 - 6:42:55 PM  :  Level 90	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 127/27	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.716ms
+3/19/2018 - 6:42:55 PM  :  Best solution: lDrrurrdLdDllLrrruuLrddllldlluRRRlUdrdrRurrdLuluulullDurrdLrrddrdLLLLrrruuullulldRRurrddddlllulldRurrdrruuuulldRllDurrurDDDrdLL
+3/19/2018 - 6:42:55 PM  :  Level 91	iterations: 5	iterations for first solution: 5	total solutions: 1	best solution length (moves/pushes): 49/14	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.013ms
+3/19/2018 - 6:42:55 PM  :  Best solution: rrdrrruulDLrrdLLuLLullllddrrURRlldlluurRlldRRRluR
+3/19/2018 - 6:42:57 PM  :  Level 92	iterations: 127	iterations for first solution: 127	total solutions: 1	best solution length (moves/pushes): 238/48	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.228ms
+3/19/2018 - 6:42:57 PM  :  Best solution: uuullllLLrrddllULUUdRRlldLdlluRRRurrRRRRlllddllUdrruurrrRllllddlluluRddrruurrrrddrruuLruulldDDDuullllddlluluuluurDDDrRldLrurRllldLrrurrRRRlllllldldlluRRRurrrrrrRddrruuLrddlluUddrddlUruruullllllddllUdrruurrrrrrddldlUrruullllllddlluluRRRRRR
+3/19/2018 - 6:42:59 PM  :  Level 93	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 129/25	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.931ms
+3/19/2018 - 6:42:59 PM  :  Best solution: rDrDulluuLLrrdrUddDuuurruullDurDlDlddrrrdddllUdrruululluluuulllddRuurrddrddrrrdddlluUrrdLdlUruuLDuUlluuulldRldRRdDllddrrUUlldRdrU
+3/19/2018 - 6:43:00 PM  :  Level 94	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 95/28	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.796ms
+3/19/2018 - 6:43:00 PM  :  Best solution: rdRRurDDulllulldRDuRRRurrdLdDuuLrddllldlUrrrrrddlUruLuulLLrrrddLruulllulldRRlDurRRurDDDrddlUruL
+3/19/2018 - 6:43:00 PM  :  Level 95	iterations: 4	iterations for first solution: 4	total solutions: 1	best solution length (moves/pushes): 48/8	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.019ms
+3/19/2018 - 6:43:00 PM  :  Best solution: rrrDrrddLruullLullddRlddrdrUdrruuUdddlluRllluurD
+3/19/2018 - 6:43:01 PM  :  Level 96	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 77/34	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.455ms
+3/19/2018 - 6:43:01 PM  :  Best solution: RRdrruLLLrrdddLLdlluRuuUdddRRlluuuLrUdlLulldRRRRuUruulDDDDRRdrruLLLLLLulldRRR
+3/19/2018 - 6:43:02 PM  :  Level 97	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 86/27	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.117ms
+3/19/2018 - 6:43:02 PM  :  Best solution: drDuRRllluurrRRdDDuuuluurDrRRRRRllllllldlllddrrrruUluRRRRRRllldLulldlllddrrrruUluRRRRR
+3/19/2018 - 6:43:05 PM  :  Level 98	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 227/64	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.518ms
+3/19/2018 - 6:43:05 PM  :  Best solution: lldlluuuullLLLuLulldRDRRlDuruLrdRRRlllluulDrrdrrrRllllldDuuulldRurrdrrrrurDDDuulllllulldRRRRRllllddrddlUUdlluRUUruulDrrdrrrRlllllulldRurrdrrrrurDDulllllulldRldddrruLdlUUdrUURRRRRurDllllluLulldRDuurDldRRRRRRlllllddlUruulldRRRRRR
+3/19/2018 - 6:43:12 PM  :  Level 99	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 250/62	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:07s.060ms
+3/19/2018 - 6:43:12 PM  :  Best solution: rrdrrrrrddrrrrrrrrrruulDldllllUdrruRlLrrRllldlluRRRllUdrrdrruLdllluuUluRRdrruruulldDrdLLulDDDrdrruLdlLLLLrrrrruLdlllldlUUdrrrrUUdldllluUruulDrdLLLLLLrrrrrddrrrruuUluRRldddldllluulllllulllddrrUruulldRurDldRRRRRRddrrrruuurrruruulldDrdLLulDDDrdLLLLdlUUU
+3/19/2018 - 6:43:12 PM  :  Level 100	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 32/7	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.344ms
+3/19/2018 - 6:43:12 PM  :  Best solution: lddrDluuurDrrrDldddrruLdlUUdrruL
+3/19/2018 - 6:43:13 PM  :  Level 101	iterations: 10	iterations for first solution: 10	total solutions: 1	best solution length (moves/pushes): 252/29	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.316ms
+3/19/2018 - 6:43:13 PM  :  Best solution: ruuuulLrrddlllldDllddrrUrrUrruuuulluullddRddrrrddllUdrruuuulLrrddddllddrRlluurruuuulluullddRddRddrruuurrDulldddllddrrddrruuLuurUdlllluuRlluuRlddrddddrRlluurrrruUddllllddrrddrruuLuuruurruullDllDuuLrddDulldddllUdrruuurrurrDulldllllDurrddddrRddrruuLuuLrrU
+3/19/2018 - 6:43:14 PM  :  Level 102	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 223/41	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.557ms
+3/19/2018 - 6:43:14 PM  :  Best solution: rrururrrddddLruulDruuulDLLrrrddlUruullldLdllluurrDrdLrurrurrdLulldllddlluRdrruururrdLLLdLLdlluururrDrddlllUUluRddrdrruLLLrrrurrrrddddlUUddlluRdrruulUruLLLrrrddddlUruulullLdlUdlldlUrrrrurrrrdddlUUruLulldlldlllUrdrrrururrdLLL
+3/19/2018 - 6:43:14 PM  :  Level 103	iterations: 25	iterations for first solution: 25	total solutions: 1	best solution length (moves/pushes): 75/14	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.146ms
+3/19/2018 - 6:43:14 PM  :  Best solution: ulLrrddllUdrruulullDurrdrddlluUdLrdddlluRdrUUrruullldDuurDldDlluuRlddrruRuL
+3/19/2018 - 6:43:16 PM  :  Level 104	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 139/29	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.513ms
+3/19/2018 - 6:43:16 PM  :  Best solution: ulLLLrrDDDuuullDlluRRRRurrdLrddlldllUdrrrruuululDrrddlldlluUddrrrddlUruruuullDurrddldLrruuulldDuulLdlluRRRRurrdLrddllDrruuululDDurrddldddlU
+3/19/2018 - 6:43:20 PM  :  Level 105	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 59/18	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:04s.146ms
+3/19/2018 - 6:43:20 PM  :  Best solution: rddRdrruLLLulldRururDllluuuLulldRRDrrruRurrdLLDlddrUUUruulD
+3/19/2018 - 6:43:21 PM  :  Level 106	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 196/32	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.126ms
+3/19/2018 - 6:43:21 PM  :  Best solution: ddrrrrDlulldRRRllluluurrrurrdLulllldddldRuuurrRllldddRRlluuurrrurrdLulllldddrrrrUddLruuruulDLLulldddrrrdLLuluuRurrrdDulullldddldRurrrdrUUdlllldRluuururrdLrurrdLulldLulDrrurrdLLulldDuurrrrdddllldRR
+3/19/2018 - 6:43:21 PM  :  Level 107	iterations: 134	iterations for first solution: 134	total solutions: 1	best solution length (moves/pushes): 74/10	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.351ms
+3/19/2018 - 6:43:21 PM  :  Best solution: llllluuuRldddrrUdrrruuuuullDurrddddldlluRdrruuuuulldDDuuulllddrRDrUllluurD
+3/19/2018 - 6:43:23 PM  :  Level 108	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 86/21	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.225ms
+3/19/2018 - 6:43:23 PM  :  Best solution: rrrrdrruRdrrUruuLrddlLrruulullDurrdrddlldlluRdrruruululldRlDDRdLLLLLLulllddrrUruLLLulD
+3/19/2018 - 6:43:25 PM  :  Level 109	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 165/20	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.272ms
+3/19/2018 - 6:43:25 PM  :  Best solution: ldddrdrdDurruuuuuLrdddddlldlUrrrdddllUdrruuuuuuuuuullllddrRuurrddddddddddlluUluRdddrruuuuuuuuuullddRluurrdDlllldddrDrdRlululuuurrrrDDDuuullllddlldRdRdRluluurDrDulldR
+3/19/2018 - 6:43:26 PM  :  Level 110	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 37/6	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.817ms
+3/19/2018 - 6:43:26 PM  :  Best solution: uulluuuurDldddrrddlUruuuLrrrdLullulDD
+3/19/2018 - 6:43:27 PM  :  Level 111	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 306/60	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.851ms
+3/19/2018 - 6:43:27 PM  :  Best solution: DRlluuurDRllddrUdrUrUdrdddllUdlUUdrdrruuullDlluRdddrrruuuluUddLruuUruLddddldlluRdddrrruuLrddllluuuRldddrrruulUUUUUruLdLruLLulldRdRluRRRlldRRddddllluurDlddrddrrruuluuLrdrdddllluuluRluRddddrrruulLrrddllluUluurRllddrrruUUdddllUdrruuuUddddlluRldddrUluururuuUdddldlddrdrruulUUUUddldlluRdddrUluuRlddrruUdLdlUrruU
+3/19/2018 - 6:43:28 PM  :  Level 112	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 128/31	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.228ms
+3/19/2018 - 6:43:28 PM  :  Best solution: rrruuuruuuLLLDllluururrDLDRRRurDDDuuluLrrdddrdLuuulllluurDrrrdddlDDDuuruuullulldRRRlldLrurrurDlllldddrUluurrrrDullllddrUluRRRurD
+3/19/2018 - 6:43:31 PM  :  Level 113	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 75/31	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:03s.364ms
+3/19/2018 - 6:43:31 PM  :  Best solution: rRRurDDDRDuluurDldDrrULrruLdldlUUdrruLLruLLLLdlUrrrrddlUruLLLuLLrrddlUUUdlL
+3/19/2018 - 6:43:32 PM  :  Level 114	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 62/15	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.692ms
+3/19/2018 - 6:43:32 PM  :  Best solution: luullddRRllddldRdrrULrrurrdLLLdllUdrrurrrurrdLLulldlLrrurrdLLL
+3/19/2018 - 6:43:33 PM  :  Level 115	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 169/36	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.280ms
+3/19/2018 - 6:43:33 PM  :  Best solution: drrUUddlluRdrUlldllUUdRluUdrddrruLLululuRRRdrRRRllDuruullDurrddlLulllddrdrrdrUUdllluluurrrdRddllldlUrrrruuluurrdrdddLruuurrdLullulldllldDrddlUUUluRRRllddrdrrdrUUdrruUruL
+3/19/2018 - 6:43:34 PM  :  Level 116	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 48/12	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.936ms
+3/19/2018 - 6:43:34 PM  :  Best solution: drrrUdlULrrddrruUddlluuRuRldlddrruUlllldlluRRRRR
+3/19/2018 - 6:43:37 PM  :  Level 117	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 267/41	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.854ms
+3/19/2018 - 6:43:37 PM  :  Best solution: llllllddldddrRlluurrurrrdDuullllldddrrRuRlddrUlllluurrurrrdrddLruulullluurrrrrrddddLruululullllddrrrdDuullllldddrrruRUruLLrddldllluurrUUluRddrrddlddrUUldllluurruuuRRRllllddldddrrrruUruLddldllluurruuurrrRllllddRluurrrrdrruLLLLLLulDDDldddrrrruuruLLLdLUlDruUrdrrddldlllU
+3/19/2018 - 6:43:38 PM  :  Level 118	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 210/46	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.143ms
+3/19/2018 - 6:43:38 PM  :  Best solution: rrruuluuululldRdDDDuuuulldRurDRluurDrDrddddlldlluRuuUdddRRRuulUrdddllluuuUddddrrrdrUUldllluuuuluurrdrDululDDDDDuuuurrdrddddlldlluRuuuuRlddddRRRdrUluuuuLLulDDDDuuurrrddddlldlluRRluuuurrrddlUruLLulDDDDuuurrrddddL
+3/19/2018 - 6:43:39 PM  :  Level 119	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 105/21	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.094ms
+3/19/2018 - 6:43:39 PM  :  Best solution: drddrruruuuulullldDlddrrruuLDDlluuRDrdDuulldRurruLdDlluuRuurrrdrddddldldlluRUUruLruLddlluRdrruulDDDulluuR
+3/19/2018 - 6:43:40 PM  :  Level 120	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 66/16	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.678ms
+3/19/2018 - 6:43:40 PM  :  Best solution: lddldRuuuluuRlddrddldddrUluuruuluurRRRRlllllddrUdddlddrUUUUluuRRRR
+3/19/2018 - 6:43:41 PM  :  Level 121	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 159/25	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.690ms
+3/19/2018 - 6:43:41 PM  :  Best solution: rRlllluuUruUrruulllDurrrddllddldddrrrrdrUllllluuuruuUdddldddrrrrrdrruLLLLLrrrrruullDurrddldlllulLdlUrrrrdrUlllllUdrrrrrrruullDurrddlLdllullluUddrrrdrruLLLLdlUU
+3/19/2018 - 6:43:42 PM  :  Level 122	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 289/43	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.338ms
+3/19/2018 - 6:43:42 PM  :  Best solution: lluuRDDDuluuuuurrDulldddrdddDldRRRRRRurDlllllluuuluuuuurrdrrdddlULrruulDulDuullddRDDDuuuRldddDuuuururrdLulullddrddddDldRRRRRlllluuuluuuuurrdrrdddlUruullullddrdddddrrrrdRllllluuuluuuuurrdrDLuulldddrddddrrrrrrrdLLullllluuluuuuurrdrrdddlUruullullddRdddddrrrrrdLulllluuluuuuurrdrrddlUruLddLruL
+3/19/2018 - 6:43:43 PM  :  Level 123	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 91/24	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.188ms
+3/19/2018 - 6:43:43 PM  :  Best solution: ddlDuruulDruuulDulldRRurDlllulldRRRurrdDuLLLrrrdDlUruulldRurDlllulldRRurrrdDluulldRRurDlddD
+3/19/2018 - 6:43:44 PM  :  Level 124	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 65/13	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.780ms
+3/19/2018 - 6:43:44 PM  :  Best solution: urrDDuulldRurDllulldRRRlldddddrrrrrrrrrruuuuulllddllldlluRRRRdrUU
+3/19/2018 - 6:43:45 PM  :  Level 125	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 357/64	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.013ms
+3/19/2018 - 6:43:45 PM  :  Best solution: dLrrddllUdrruuluululldRdDRddrruuLrddlluLrdrruuluuLrddrddllulLrrdrruuluululDDurrddrddllullLrrUUddlluRdrrdrruuluululldRdDlldLLulDrrrrurRddrruuLLruuLrddldLLrruruululDrrddldllLLLrrruRdrdrruuluullDurrddrddllulllllLullddrUluRdrrrrrrURllldlluLrdrrrrrdrruuLLdlllllllluRdrrrrrrruLUddlluRldlluLrdrrrrruLrruululDDDrdLLLLLrruRldllLrrrrrruruulldDrdLulldlllLrrrrurrdLLLLL
+3/19/2018 - 6:43:46 PM  :  Level 126	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 46/8	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.839ms
+3/19/2018 - 6:43:46 PM  :  Best solution: ddlluUddlluUddrruuRlLrddrruUruLdllluLrdrddlluU
+3/19/2018 - 6:43:47 PM  :  Level 127	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 120/28	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.697ms
+3/19/2018 - 6:43:47 PM  :  Best solution: uRRRdrruLLLrruulluRdrddllLuluuRlddldRuuurRlldddRRRllluuurrurDldRuRDllullddrdrrdrruLUdLLLuluurrrrDllullddldRRRlluuurrrrdD
+3/19/2018 - 6:43:47 PM  :  Level 128	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 54/14	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.967ms
+3/19/2018 - 6:43:47 PM  :  Best solution: rrurruulllulldRRdLDuruRRurrdLddlldlLdlluRdrUUUruulldRR
+3/19/2018 - 6:43:48 PM  :  Level 129	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 3/1	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.992ms
+3/19/2018 - 6:43:48 PM  :  Best solution: ldR
+3/19/2018 - 6:43:50 PM  :  Level 130	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 44/12	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.228ms
+3/19/2018 - 6:43:50 PM  :  Best solution: lulluurDurDDulldRurRRRRdrruulDldRllullDulldR
+3/19/2018 - 6:43:51 PM  :  Level 131	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 60/23	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.848ms
+3/19/2018 - 6:43:51 PM  :  Best solution: ddldRDRddlUUUUUUruLulDrdddRlddrUrrdLLdlUUUUddrrruulDrdLuLrdL
+3/19/2018 - 6:43:51 PM  :  Level 132	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 87/28	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.713ms
+3/19/2018 - 6:43:51 PM  :  Best solution: DrrDDllUdrrrruLrdrruLLdllllddrrUdlluuuluurDDDrRddllUUUluRddrrRRurrdLLLLLrddlluUUluurDDD
+3/19/2018 - 6:43:53 PM  :  Level 133	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 212/37	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.547ms
+3/19/2018 - 6:43:53 PM  :  Best solution: uurrrrrdddLruuulllllddRluurrrrrdddlLuLLrrddllURRllLUdrruLLUUrrrrrdddLruuulllllluRdrrrrrddLLLddrUluLrdrruLdlllUrdrrrruuullllluRdrrrrddllLrrruulllluRdrrrddllldlluUddrruLrrrruullllulldRurrdrrrddlllldlUUUluRdRRRllluR
+3/19/2018 - 6:43:54 PM  :  Level 134	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 147/32	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.674ms
+3/19/2018 - 6:43:54 PM  :  Best solution: rurrdrruUUUddddllulluuulLrrruRldlllulldRRRlddddrrurrdLLLdlUUUUdddrrruuuuLrdrdddrruuuuruulDDDDDrdLLLLLruuuuurRlldlddddLrrrrruuuuruulDllldlddddldlUUU
+3/19/2018 - 6:43:56 PM  :  Level 135	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 225/34	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.332ms
+3/19/2018 - 6:43:56 PM  :  Best solution: dldLruruullDurrddlddRluuruulllldddRluuurrrrddlddrRuuluulllldddrRlluuurrrrddrddllUdrrRluuluulldDuulldddrRuuurrddrrrrddLuullluulllldRurrrddrddRRlluuluullDDRRRRlddrruruulDDullddllUdrruuluulllldddrRuRRRddllUluRddrruuRRllddlluuRRR
+3/19/2018 - 6:43:56 PM  :  Level 136	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 41/13	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.658ms
+3/19/2018 - 6:43:56 PM  :  Best solution: llldlUrrrrrddLLrUruLLLLLdlddrrrUUdrruulLL
+3/19/2018 - 6:43:58 PM  :  Level 137	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 204/41	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.361ms
+3/19/2018 - 6:43:58 PM  :  Best solution: rrUdlluuurRlldddrruULulDDurrddlLrrurruLdldllLLdlUrrrrruruLLulDruurDlldDurRdrruLdldlLLrrruruLddlldddlluuUrrrrurruuLdlddlluuururDDLulDDDrrUdlllldddrruUUrruruulldRllDurrdrruLLddlLrruuLrddllLrrruululDrrddlllL
+3/19/2018 - 6:43:59 PM  :  Level 138	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 57/18	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.381ms
+3/19/2018 - 6:43:59 PM  :  Best solution: rrrdddrRddlUrdrruUddlluuRuulDLDRddlUUlUUUluRddddrruLdlUUU
+3/19/2018 - 6:44:02 PM  :  Level 139	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 74/18	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.436ms
+3/19/2018 - 6:44:02 PM  :  Best solution: ddrdrrrruRldllllddlluRdrUUrrrrurRllddrrULrrruulDLrrdLulLdLrRllLrrrurrdLLLL
+3/19/2018 - 6:44:05 PM  :  Level 140	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 143/35	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:03s.404ms
+3/19/2018 - 6:44:05 PM  :  Best solution: rddrRuRuRuRurrdLdLdLdLLLruRldlLulldRluuullddddrdrrruUUUluurrdLLLLrrrdddrrruuRuRurrdLdLdLruruulDlDlDldlllluuululDDDDuuurrrrdddrrurururrdLdLruulD
+3/19/2018 - 6:44:06 PM  :  Level 141	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 44/12	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.521ms
+3/19/2018 - 6:44:06 PM  :  Best solution: llluRurrUdrrddrruLUllluUluRRldddllddrUluRRRR
+3/19/2018 - 6:44:07 PM  :  Level 142	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 47/14	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.526ms
+3/19/2018 - 6:44:07 PM  :  Best solution: dLruuulDrdLrrruLdlUdddrUlluuuurDldRRDDurruLLdlU
+3/19/2018 - 6:44:09 PM  :  Level 143	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 41/7	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.724ms
+3/19/2018 - 6:44:09 PM  :  Best solution: rdrruLLLrruulLuuuullluurDluuurDrrdddddddD
+3/19/2018 - 6:44:14 PM  :  Level 144	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 214/29	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:05s.191ms
+3/19/2018 - 6:44:14 PM  :  Best solution: rrurrdLulldllululldRuruurrurrurDlllldlddrdddllUdrrurrRllluullDuruuluRdrrurrddrddrdLuuuUdddlldRuruurruLdlluulldllddldRuuurruLruulDrdrrddrruLdddlldlldllUdrrurrddrUluurrrddLLUdrUlllldlluUdRuuuurrurrurrDDuLrdrdLuluLrdD
+3/19/2018 - 6:44:15 PM  :  Level 145	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 100/31	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.175ms
+3/19/2018 - 6:44:15 PM  :  Best solution: rdDullDurrdLLrrDlulDLrrrDullDLDlluuRRRurrdLrdRDrruulLddrUluulldRdrUdrruLLdlUluurDllDllldRdrUluRRlddR
+3/19/2018 - 6:44:21 PM  :  Level 146	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 104/16	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:05s.985ms
+3/19/2018 - 6:44:21 PM  :  Best solution: ldDlluuuururrDurrdLddllddldRluluRluuururrrrdrddddldlUrruuuullullDurrdddRlDurDllulLrrdLulDrrrruUldlllUluR
+3/19/2018 - 6:44:23 PM  :  Level 147	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 161/37	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.108ms
+3/19/2018 - 6:44:23 PM  :  Best solution: lllllldddRDuRuLdlUUluRRRRRRdrrruullDldRRdrUllllullllddrrrDrddldllUdrruUddlluUluurrdLrurDlldlUrrrrddlUddlluuluUUdrddddrruruuLullluluRRRllddrrrdLullddrUruLdlUUluRR
+3/19/2018 - 6:44:26 PM  :  Level 148	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 379/45	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.246ms
+3/19/2018 - 6:44:26 PM  :  Best solution: lllullddrdrdrrrrUUddrruLdlllllululuurrrrdrRllllullddrdrdrrrrUldlllululuurrrrdrrurrdLLLLulDlullddrdrdrrrruUdldlllululuurrrrdrRurrdLLddrrdrruLdlllllllululuurrrrdRlllullddrdrdrrrrrrruLLrrrdrruLdlllllUldlllululuurrrrdrRDuurrdLLLLullllddrdrdrrrrUUdldlllululuurrrrdLulllddrdrdrrrrrrrrruLLLdllllllululuurrrrdrRurrdLLLrdddrruLdlllllululuurrrrDlulllddrdrdrrrrUUdldlllululuurrrrdrRurrdLLLL
+3/19/2018 - 6:44:27 PM  :  Level 149	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 54/18	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.216ms
+3/19/2018 - 6:44:27 PM  :  Best solution: RurDDDlddrURRRRllddddllUdrruuuullUUddrrddddlluUUluRRRR
+3/19/2018 - 6:44:28 PM  :  Level 150	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 202/33	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.706ms
+3/19/2018 - 6:44:28 PM  :  Best solution: lldllllllUrdrrULrUrrDulldlLrrdrRuuluLrurDDllddrrdrUllluurrDullddrRuRRlldlllllluRdrrrrrurrRllldllluLrrdrrurrrRlllldlllllluRdrrrrrurrrrurrddlUluRllldlldllllluRRdrrruullDldRuurrdddrUluRlullddRRurRllddrUluR
+3/19/2018 - 6:44:30 PM  :  Level 151	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 42/18	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.482ms
+3/19/2018 - 6:44:30 PM  :  Best solution: llLrruuuuLrdddllURdrUUUluurDDDDDldRRRRRurD
+3/19/2018 - 6:44:32 PM  :  Level 152	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 50/5	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.507ms
+3/19/2018 - 6:44:32 PM  :  Best solution: uurrrrrdrdRlululllllddrrrrRllllllluuUUrrddrrrrrddR
+3/19/2018 - 6:44:33 PM  :  Level 153	iterations: 200	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 33/14	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.590ms
+3/19/2018 - 6:44:33 PM  :  Best solution: lDRlDDDDurUUldddDrdLruUlddLrruuUU
+3/19/2018 - 6:44:33 PM  :  Level 154	iterations: 1	iterations for first solution: 1	total solutions: 1	best solution length (moves/pushes): 429/2	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.049ms
+3/19/2018 - 6:44:33 PM  :  Best solution: ruuuuuuuuuuuurrrrrrrrrrrrrrrrrrrrrddddddddddllllllllllllllllluuuuuurrrrrrrrrrrrrddlllllllllllddrrrrrrrrrrrrruuuuuulllllllllllllllllddddddddddrrrrrrrrrrrrrrrrrrrrruuuuuuuuuuuuuulllllllllllllllllllllllllddddddddddddDuuuuuuuuuuuuurrrrrrrrrrrrrrrrrrrrrrrrrddddddddddddddllllllllllllllllllllluuuuuuuuuurrrrrrrrrrrrrrrrrddddddllllllllllllluurrrrrrrrrrruulllllllllllllddddddrrrrrrrrrrrrrrrrruuuuuuuuuulllllllllllllllllllllddddddddddddlL
+3/19/2018 - 6:44:35 PM  :  Level 155	iterations: 1	iterations for first solution: 1	total solutions: 1	best solution length (moves/pushes): 282/175	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.868ms
+3/19/2018 - 6:44:35 PM  :  Best solution: uulldRRRRRRRRdrUUUruLLLLLLLLLLLLulDDDrdLLLLLLLLLLLulllddrrUdlluurRluurrdDldRRRRRRRRRRdrUUUluRRRRRRRRRdrUUUUUUruLLLulDDDrdLLLdlUUUruLLLulDDDrdLLLLdlUUUUdrruulLLrddlluUUluRRRRRRRRRRRRRRRRRRRurDDDDDDlddrUUUUUUruLLLLLLLLLLLLLLLLLLLLulDrdLLLLLulldRurDDDDDrddlluRdrUluRRurDDDDrrddllUUUUUU
+3/19/2018 - 6:44:35 PM  :  Solved 67/155
+3/19/2018 - 6:44:35 PM  :  Total Rollouts for first solutions: 1832
+3/19/2018 - 6:44:35 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NO SP-MCTS 
+Method: MCTS 
+iterations: 500
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 10
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: True
+Node Elimination:True
+Stop on Result: True
+level path: ./microban.txt
+********************************
+********************************
+
+3/19/2018 - 6:44:35 PM  :  Level 1	iterations: 11	iterations for first solution: 11	total solutions: 1	best solution length (moves/pushes): 33/8	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.044ms
+3/19/2018 - 6:44:35 PM  :  Best solution: dlUrrrdLullddrUluRuulDrddrruLdlUU
+3/19/2018 - 6:44:35 PM  :  Level 2	iterations: 0	iterations for first solution: 0	total solutions: 1	best solution length (moves/pushes): 16/3	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.001ms
+3/19/2018 - 6:44:35 PM  :  Best solution: rddLruulDuullddR
+3/19/2018 - 6:44:35 PM  :  Level 3	iterations: 10	iterations for first solution: 10	total solutions: 1	best solution length (moves/pushes): 41/13	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.018ms
+3/19/2018 - 6:44:35 PM  :  Best solution: ruuLLLulDrrrrddlUruLLLddllluurRDrdLuuurDD
+3/19/2018 - 6:44:35 PM  :  Level 4	iterations: 1	iterations for first solution: 1	total solutions: 1	best solution length (moves/pushes): 59/13	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.009ms
+3/19/2018 - 6:44:35 PM  :  Best solution: ulllDldRRluurDurrdLLrrddlUruulldLrurrdLLulllddrrRurrddlUruL
+3/19/2018 - 6:44:35 PM  :  Level 5	iterations: 0	iterations for first solution: 0	total solutions: 1	best solution length (moves/pushes): 61/12	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.010ms
+3/19/2018 - 6:44:35 PM  :  Best solution: LulDruurrdLrrddlUlldRuuLdddlluRdrUruululDrrddlUruulldDrddlluR
+3/19/2018 - 6:44:36 PM  :  Level 6	iterations: 66	iterations for first solution: 66	total solutions: 1	best solution length (moves/pushes): 221/45	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.506ms
+3/19/2018 - 6:44:36 PM  :  Best solution: dlllllululDulldRRllddrrUdlUluurrDRlulDrrRllllddrUluurrrdrRlllullddrdrUlluurrrdrrRdrrruullDllllulDrrrrrurrddlLulllllullddrdrUlluurrrdrrrrdLLullullDRlldRurRRRRlllllddrUluRRRRdrrrruullDurrddlLLruLLLLulldRRRRRdrrruullDurrddlL
+3/19/2018 - 6:44:36 PM  :  Level 7	iterations: 0	iterations for first solution: 0	total solutions: 1	best solution length (moves/pushes): 42/6	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.003ms
+3/19/2018 - 6:44:36 PM  :  Best solution: rruuuulLullddddRdrrruulLrUluullddRlddrdrrU
+3/19/2018 - 6:44:36 PM  :  Level 8	iterations: 27	iterations for first solution: 27	total solutions: 1	best solution length (moves/pushes): 99/34	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.101ms
+3/19/2018 - 6:44:36 PM  :  Best solution: llDDDDDDldddrruuLrddlluUruuuuuuurrdLulDDDDDDLddlluuRRdddrruuLUUUUUUluRddddddlllddrrUdlluurRdrUUUUUU
+3/19/2018 - 6:44:36 PM  :  Level 9	iterations: 0	iterations for first solution: 0	total solutions: 1	best solution length (moves/pushes): 30/10	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.002ms
+3/19/2018 - 6:44:36 PM  :  Best solution: urrDulldRdRluurDrDDlUruLdlUruL
+3/19/2018 - 6:44:37 PM  :  Level 10	iterations: 339	iterations for first solution: 339	total solutions: 1	best solution length (moves/pushes): 141/21	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.346ms
+3/19/2018 - 6:44:37 PM  :  Best solution: rddrruuLLrrddrruuLruuurrdddLruuullddDlLddlluuRlddrrrrUdlllluurRddrruUUUddddlllllluuRRddrruuRlddlluuRlddrrrruUddlllluurRddrruuUdddlluuRlddrruU
+3/19/2018 - 6:44:37 PM  :  Level 11	iterations: 7	iterations for first solution: 7	total solutions: 1	best solution length (moves/pushes): 116/20	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.045ms
+3/19/2018 - 6:44:37 PM  :  Best solution: ulllddddrrrruLdllluuuurrrdDlDurrddlUdLLLulldRuruuurrrdDlddlLullddrUrrrrruLdllllluRdrrrruulDrdLLLUllddrUrrrruuuullldD
+3/19/2018 - 6:44:37 PM  :  Level 12	iterations: 3	iterations for first solution: 3	total solutions: 1	best solution length (moves/pushes): 54/13	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.010ms
+3/19/2018 - 6:44:37 PM  :  Best solution: uululldRdRluurDrDDrddlluRdrUluuulldRurDDRddlluRdrrruuL
+3/19/2018 - 6:44:38 PM  :  Level 13	iterations: 207	iterations for first solution: 207	total solutions: 1	best solution length (moves/pushes): 155/47	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.570ms
+3/19/2018 - 6:44:38 PM  :  Best solution: dDuurDldDRUddrruLdldlUURlUrddrruLdlluurDrdLuluUdrdddlUruululuurDrDDlDuruulldRddRdrruLdldlUUUdRluUluurDrDDDluUruLdlUrdddddrUUdrruLLdlUUUruLrdDlddrruLdlUUruL
+3/19/2018 - 6:44:38 PM  :  Level 14	iterations: 6	iterations for first solution: 6	total solutions: 1	best solution length (moves/pushes): 51/10	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.013ms
+3/19/2018 - 6:44:38 PM  :  Best solution: uullllddrdrUlluurrrrddLLLrrruullDurrddlLdllURRuullD
+3/19/2018 - 6:44:38 PM  :  Level 15	iterations: 11	iterations for first solution: 11	total solutions: 1	best solution length (moves/pushes): 47/14	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.011ms
+3/19/2018 - 6:44:38 PM  :  Best solution: DrdddllUUddrruuulLLLrrrrdLullldlluRRRRDrrddllUU
+3/19/2018 - 6:44:41 PM  :  Level 16	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 180/44	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.973ms
+3/19/2018 - 6:44:41 PM  :  Best solution: lddrUUddrruLLuluurDrDulldRddrruLdllURlUUruLLrrddddrruLdlluururDlluulLrrddddrUluRluullulDDDDldRuuuurrrrddddrruLLdlUUUrrDluuLLrrddddrruLulluulLrrrdrddLuluullulDDurrrrddddlUUUruLLLulD
+3/19/2018 - 6:44:41 PM  :  Level 17	iterations: 4	iterations for first solution: 4	total solutions: 1	best solution length (moves/pushes): 25/9	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.003ms
+3/19/2018 - 6:44:41 PM  :  Best solution: rdDullDRddrruLUddlUUddlUU
+3/19/2018 - 6:44:41 PM  :  Level 18	iterations: 32	iterations for first solution: 32	total solutions: 1	best solution length (moves/pushes): 75/13	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.101ms
+3/19/2018 - 6:44:41 PM  :  Best solution: ruuuulllddrRDrddlUruUUdllluurrurrdLddddlUruuuLulldddrRdrUUdllluuurrdLrurrdL
+3/19/2018 - 6:44:41 PM  :  Level 19	iterations: 178	iterations for first solution: 178	total solutions: 1	best solution length (moves/pushes): 84/26	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.336ms
+3/19/2018 - 6:44:41 PM  :  Best solution: urrDLrDDuululldRurrdddlddrUUUUruLLLdRllluRdrrurDluLrrdDulllluRRRdrdDuuruLdddlddrUUUU
+3/19/2018 - 6:44:42 PM  :  Level 20	iterations: 95	iterations for first solution: 95	total solutions: 1	best solution length (moves/pushes): 74/22	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.266ms
+3/19/2018 - 6:44:42 PM  :  Best solution: urDDuRldDrrruuLrddllllddrUUrrruulLLDuLrdDlddrUUUdrrruullulldRRRlllulldRRRR
+3/19/2018 - 6:44:42 PM  :  Level 21	iterations: 1	iterations for first solution: 1	total solutions: 1	best solution length (moves/pushes): 17/5	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.002ms
+3/19/2018 - 6:44:42 PM  :  Best solution: dllUdlUluurDRddlU
+3/19/2018 - 6:44:42 PM  :  Level 22	iterations: 51	iterations for first solution: 51	total solutions: 1	best solution length (moves/pushes): 65/23	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.289ms
+3/19/2018 - 6:44:42 PM  :  Best solution: drrruulDLdlUUUluRdddrrrdLLdlUUUUluurDDuRldDDrddlUUUUruLdddrrruuuL
+3/19/2018 - 6:44:42 PM  :  Level 23	iterations: 26	iterations for first solution: 26	total solutions: 1	best solution length (moves/pushes): 72/12	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.045ms
+3/19/2018 - 6:44:42 PM  :  Best solution: ruuuLrdddldlUrruullluRRdrddllUdrruululldRddrruuruLLrdddlluuRurDllluRdrrD
+3/19/2018 - 6:44:42 PM  :  Level 24	iterations: 65	iterations for first solution: 65	total solutions: 1	best solution length (moves/pushes): 41/13	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.109ms
+3/19/2018 - 6:44:42 PM  :  Best solution: ullDDDrdLuuuurrdLulDDldRdrruLLullddRRuulD
+3/19/2018 - 6:44:42 PM  :  Level 25	iterations: 4	iterations for first solution: 4	total solutions: 1	best solution length (moves/pushes): 29/7	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.013ms
+3/19/2018 - 6:44:42 PM  :  Best solution: urrdLulluurDldRlddrUrruuLLulD
+3/19/2018 - 6:44:42 PM  :  Level 26	iterations: 31	iterations for first solution: 31	total solutions: 1	best solution length (moves/pushes): 41/10	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.115ms
+3/19/2018 - 6:44:42 PM  :  Best solution: rdddlUrdddlUUlldRurrddlUruLruuulldRDuurDD
+3/19/2018 - 6:44:42 PM  :  Level 27	iterations: 31	iterations for first solution: 31	total solutions: 1	best solution length (moves/pushes): 60/12	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.052ms
+3/19/2018 - 6:44:42 PM  :  Best solution: dlldlluuuurrrdDLLrddlluUrrrrdLulllddrrUruuulllDDrRllDurrdrUU
+3/19/2018 - 6:44:42 PM  :  Level 28	iterations: 57	iterations for first solution: 57	total solutions: 1	best solution length (moves/pushes): 61/19	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.086ms
+3/19/2018 - 6:44:42 PM  :  Best solution: rDulldRdRUddrruLLdlUUluurDurDDulldRddrruLdlUUluurrdDldRuuulDD
+3/19/2018 - 6:44:43 PM  :  Level 29	iterations: 92	iterations for first solution: 92	total solutions: 1	best solution length (moves/pushes): 222/34	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.707ms
+3/19/2018 - 6:44:43 PM  :  Best solution: lulldRurrdrrddllllllluuRurrdRlulldRurrdRRllLulldlddrrrrrrruUllllulldRurrrdrrUUddlllulldRRllllddrrrrrrruuuuluurDDDDlLulllldlddrrrrrrrUdllllllluurrrRRlllllddrrrrrrruUUUddddllllllluurrrrrRllllllddrrrrrrruUUruuLDDDuuuulldRurDD
+3/19/2018 - 6:44:43 PM  :  Level 30	iterations: 1	iterations for first solution: 1	total solutions: 1	best solution length (moves/pushes): 41/9	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.003ms
+3/19/2018 - 6:44:43 PM  :  Best solution: drUlluuurDlddrrruuLLrDululDrrrddLdlluRdrU
+3/19/2018 - 6:44:43 PM  :  Level 31	iterations: 2	iterations for first solution: 2	total solutions: 1	best solution length (moves/pushes): 21/8	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.013ms
+3/19/2018 - 6:44:43 PM  :  Best solution: DuRldRlldRRdrruuLLulD
+3/19/2018 - 6:44:43 PM  :  Level 32	iterations: 30	iterations for first solution: 30	total solutions: 1	best solution length (moves/pushes): 36/9	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.053ms
+3/19/2018 - 6:44:43 PM  :  Best solution: ullDullddrUrurrdLLLddrUluRurrdLululD
+3/19/2018 - 6:44:44 PM  :  Level 33	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 34/9	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.327ms
+3/19/2018 - 6:44:44 PM  :  Best solution: dlLrruulLDuLdlddrUluUrrrrddlLuLrdL
+3/19/2018 - 6:44:45 PM  :  Level 34	iterations: 88	iterations for first solution: 88	total solutions: 1	best solution length (moves/pushes): 54/14	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.326ms
+3/19/2018 - 6:44:45 PM  :  Best solution: drrrrUruLLLrrddllURldlluRdrruRldlluRRuulDrddllluuRRurD
+3/19/2018 - 6:44:47 PM  :  Level 35	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 68/20	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.127ms
+3/19/2018 - 6:44:47 PM  :  Best solution: llluuuRUdDrDuluurDlldddrUUUrDuuLdddddrruLdlUUUruLrdDlddrruLdlUruLdlU
+3/19/2018 - 6:44:50 PM  :  Level 36	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 143/42	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.850ms
+3/19/2018 - 6:44:50 PM  :  Best solution: ldlluRldlluRldlluLrRlldllluurDldRuRldRRluRdRRuLLrrdRRuLLdlluLrdrruLLdllluurDldRRRuLdlluurDldRRurrrrrdRRuLLLLrrrrdRllllluLLLdlluurDldRurrrrrrrrR
+3/19/2018 - 6:44:50 PM  :  Level 37	iterations: 22	iterations for first solution: 22	total solutions: 1	best solution length (moves/pushes): 95/27	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.040ms
+3/19/2018 - 6:44:50 PM  :  Best solution: drruulLuLLulldRRdRRRlddrruUllllulldRRRRddrruuUUddddlluuRlddrruUlluLrdrrUdllluLulDldRRRRRlddrruU
+3/19/2018 - 6:44:50 PM  :  Level 38	iterations: 7	iterations for first solution: 7	total solutions: 1	best solution length (moves/pushes): 39/8	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.032ms
+3/19/2018 - 6:44:50 PM  :  Best solution: llluuurrrdDuurrrrddllLrrrddlllULUdLruRR
+3/19/2018 - 6:44:50 PM  :  Level 39	iterations: 18	iterations for first solution: 18	total solutions: 1	best solution length (moves/pushes): 87/27	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.062ms
+3/19/2018 - 6:44:50 PM  :  Best solution: ruuLLLuullddRluurrdDrrrddlUruLLLuullddRRDuRRurDllldDllddrrUUUUlluurrDullddrRRRdRUddrruL
+3/19/2018 - 6:44:50 PM  :  Level 40	iterations: 0	iterations for first solution: 0	total solutions: 1	best solution length (moves/pushes): 22/7	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.001ms
+3/19/2018 - 6:44:50 PM  :  Best solution: UdrruLuulldDuRurDlDurD
+3/19/2018 - 6:44:50 PM  :  Level 41	iterations: 0	iterations for first solution: 0	total solutions: 1	best solution length (moves/pushes): 60/15	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.008ms
+3/19/2018 - 6:44:50 PM  :  Best solution: urrrDullDurrdLrrddlUruulldRurDldRlululldRRurDrddlllUluRRRurD
+3/19/2018 - 6:44:51 PM  :  Level 42	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 94/22	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.952ms
+3/19/2018 - 6:44:51 PM  :  Best solution: rddLUrddLdllluurRllddrrruruuuulDrdddldllluurrRddlUruLrUruulDDrDulDlddrUluRlddlluuRRdrUUruulDDD
+3/19/2018 - 6:44:53 PM  :  Level 43	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 65/22	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.872ms
+3/19/2018 - 6:44:53 PM  :  Best solution: ldddlLDuLrdLddrUllluRdrrUdlluRuRDuRRdrUlllldlluRRRRRllldddrUUluRR
+3/19/2018 - 6:44:53 PM  :  Level 44	iterations: 0	iterations for first solution: 0	total solutions: 1	best solution length (moves/pushes): 1/1	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.000ms
+3/19/2018 - 6:44:53 PM  :  Best solution: R
+3/19/2018 - 6:44:53 PM  :  Level 45	iterations: 3	iterations for first solution: 3	total solutions: 1	best solution length (moves/pushes): 63/11	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.007ms
+3/19/2018 - 6:44:53 PM  :  Best solution: ruLdlluuururrdLullddddrruLdlUUdrrUdlluUddrruUruLdddlluuRlddrruU
+3/19/2018 - 6:44:53 PM  :  Level 46	iterations: 11	iterations for first solution: 11	total solutions: 1	best solution length (moves/pushes): 47/8	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.028ms
+3/19/2018 - 6:44:53 PM  :  Best solution: dlluuRuRDrUlldlddrrUdlluururrdLddlluuluururrrDD
+3/19/2018 - 6:44:53 PM  :  Level 47	iterations: 62	iterations for first solution: 62	total solutions: 1	best solution length (moves/pushes): 133/30	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.412ms
+3/19/2018 - 6:44:53 PM  :  Best solution: rrruuulldRRddlllluuRRurrrrdLulDulldRRDullllddrrrRRluuurrdLLLLrrddrRlllllluuRRRlllddrrrrrrdrruLLLLLLdlluuurrrurDDulllldddrrurRlldlluRR
+3/19/2018 - 6:44:55 PM  :  Level 48	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 48/10	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.528ms
+3/19/2018 - 6:44:55 PM  :  Best solution: rddrDulDLrrrddlUruLuluullddDuuurrddrdLLrrddlUruL
+3/19/2018 - 6:44:56 PM  :  Level 49	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 71/17	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.502ms
+3/19/2018 - 6:44:56 PM  :  Best solution: ldddRluuurrrddlDDDlddrruLuuulluRluurDDldRuuurrddLruulldDrDDDuuulldRurDD
+3/19/2018 - 6:44:56 PM  :  Level 50	iterations: 32	iterations for first solution: 32	total solutions: 1	best solution length (moves/pushes): 76/23	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.202ms
+3/19/2018 - 6:44:56 PM  :  Best solution: llulDDulldRRRurrrrdddlllllUUrurrdLLuLDlluRRRdrrurrdddlllllUUruRRRllldlluRRRR
+3/19/2018 - 6:44:56 PM  :  Level 51	iterations: 1	iterations for first solution: 1	total solutions: 1	best solution length (moves/pushes): 54/10	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.003ms
+3/19/2018 - 6:44:56 PM  :  Best solution: rddllluUdrdrruulLuLDlluurDldRRurDrrddlllUdrrruullulldR
+3/19/2018 - 6:44:56 PM  :  Level 52	iterations: 0	iterations for first solution: 0	total solutions: 1	best solution length (moves/pushes): 47/14	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.005ms
+3/19/2018 - 6:44:56 PM  :  Best solution: dLrdddLruLUllddRRdrUluuruulDDlluRldddrUluRuRurD
+3/19/2018 - 6:44:56 PM  :  Level 53	iterations: 45	iterations for first solution: 45	total solutions: 1	best solution length (moves/pushes): 71/18	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.056ms
+3/19/2018 - 6:44:56 PM  :  Best solution: rUruuLDuullDlddRUddrrUdlluuUdddrruLrUdldlUrruUddllluurDuRllddRdrruLdlUU
+3/19/2018 - 6:45:01 PM  :  Level 54	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 40/16	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:05s.000ms
+3/19/2018 - 6:45:01 PM  :  Best solution: drURuulDrdLruRRRdrUllllddrUluRRRRdrUUruL
+3/19/2018 - 6:45:01 PM  :  Level 55	iterations: 13	iterations for first solution: 13	total solutions: 1	best solution length (moves/pushes): 72/27	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.038ms
+3/19/2018 - 6:45:01 PM  :  Best solution: rdrrrddlUruLLLrrrddddlUUruulllulldRRRRurDDDlUddRRluuuLLLulldRRRRurDDDldR
+3/19/2018 - 6:45:01 PM  :  Level 56	iterations: 1	iterations for first solution: 1	total solutions: 1	best solution length (moves/pushes): 41/8	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.002ms
+3/19/2018 - 6:45:01 PM  :  Best solution: luuLulldRurDrddllUdrruululldRdRdrruulLulD
+3/19/2018 - 6:45:02 PM  :  Level 57	iterations: 151	iterations for first solution: 151	total solutions: 1	best solution length (moves/pushes): 120/39	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.624ms
+3/19/2018 - 6:45:02 PM  :  Best solution: dddrdrruLLdLUUdlldRRuuUdddRurrddlUruLdlluuuruulDDDDRdLrrruLLdlUUdlldRuruUddldRRluuuruulDDDDldRurrrddlUruLLLdRurDlllluRRR
+3/19/2018 - 6:45:02 PM  :  Level 58	iterations: 10	iterations for first solution: 10	total solutions: 1	best solution length (moves/pushes): 46/11	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.010ms
+3/19/2018 - 6:45:02 PM  :  Best solution: luluurDRDulldRddrruLrruuLLLrrrddllUddlUrrruulL
+3/19/2018 - 6:45:10 PM  :  Level 59	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 534/68	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:07s.938ms
+3/19/2018 - 6:45:10 PM  :  Best solution: ldllllldddlUruurrrrruullllllllddddRluuuurrrrrrrrddllllldRldLruulDrrRllddlUrurrurrruullllllllddddRRdrUllluuuurrrrrrrrddllllllDurrdLrrurrruullllllllddddrRdrUllluuuurrrrrrrrddllllllDRdLruurrdLrurrdLullllddrUrurrdLLrrruruullllllllddddRRuuRRRRRRurDDDrdLuuullllllldRlddrUUluRlddlluuuurrrrrrrrddllldLrrruruullllllllddddrruurRllddrUruRRRllldlluRdrrrruRllldlluRRRllllddlluuuurrrrrrrrrdDluullllllllddddrrrurrruRlllllddlluuuurrrrrrrrrddrddlUdddlluRRdrUUluUrDluLuullllllllddddrrrurrruRlllllddlluuuurrrrrrrrrDDDDurDluuulullllllllddddrrrurrrruRurDD
+3/19/2018 - 6:45:11 PM  :  Level 60	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 149/34	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.082ms
+3/19/2018 - 6:45:11 PM  :  Best solution: urrrrrrdddLLulldRDuRRlldDrddlUUUddLLdlluRRRllUUluurDDuuuurrrrrrddDDDuuuuullllllddddDuuuuurrrrrrdddllulldRRlddrddlUlldlluRRRlluuuuuurrrrrrdddLLulldRRR
+3/19/2018 - 6:45:13 PM  :  Level 61	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 56/15	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.673ms
+3/19/2018 - 6:45:13 PM  :  Best solution: lDDlDLrDrUluRuuruullllldddddRRRdrUUUdlldlluuuuurrrrrddLL
+3/19/2018 - 6:45:16 PM  :  Level 62	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 116/37	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:03s.595ms
+3/19/2018 - 6:45:16 PM  :  Best solution: LLLLullDRRRRllldLLLrruulDLddlluuRlddrruRuLddlluRluRRRllddrUruLrRlldlluRdrrurRlldlluRRurrdRldLLuRlllddrUrruRlldlluRRR
+3/19/2018 - 6:45:17 PM  :  Level 63	iterations: 35	iterations for first solution: 35	total solutions: 1	best solution length (moves/pushes): 139/50	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.163ms
+3/19/2018 - 6:45:17 PM  :  Best solution: llllLLulLLLLLLulldRurDrrrrrrrddlUruLLLLLLLulldRRRRRRRRurDllllllddlUrurrrrrdRlulllllLrrrrrrrdRRRRlllllullllllulldRRRRRRRRdrUdrrrrRdrruLLLLLL
+3/19/2018 - 6:45:19 PM  :  Level 64	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 71/15	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.303ms
+3/19/2018 - 6:45:19 PM  :  Best solution: ldlluulUluurDurrdLDuulldRurrddlDuLuurDlddrDDuuluurDlulldRurrdDuulldRurD
+3/19/2018 - 6:45:21 PM  :  Level 65	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 115/34	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.551ms
+3/19/2018 - 6:45:21 PM  :  Best solution: uuuuLrddddlluuRUruulDrdDDulUdldlluRRRlddrdrruLLLLdlUruLrrururuulDDuulldRRdrDLrDuluuurDDDlLdlluRRddrdrruLLLulldRuruR
+3/19/2018 - 6:45:32 PM  :  Level 66	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 120/18	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:10s.215ms
+3/19/2018 - 6:45:32 PM  :  Best solution: DDrrdrddddldLruruuuulullDDrddldDuuruuluulldlddddrdRluluuuururrddrddlUUUUrrdrddddldldLrururuuuululldddddDlDRddlUruurDlulD
+3/19/2018 - 6:45:32 PM  :  Level 67	iterations: 14	iterations for first solution: 14	total solutions: 1	best solution length (moves/pushes): 37/8	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.022ms
+3/19/2018 - 6:45:32 PM  :  Best solution: uurrdDrdLuuullddRRdrrddllUlURuuullddR
+3/19/2018 - 6:45:34 PM  :  Level 68	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 37/11	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.970ms
+3/19/2018 - 6:45:34 PM  :  Best solution: luuurrrRlldRRllulldddrrUUruLLulDDDldR
+3/19/2018 - 6:45:39 PM  :  Level 69	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 175/40	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:05s.154ms
+3/19/2018 - 6:45:39 PM  :  Best solution: rurrrurrDrUdrddllUdrUlUdrruLuLDuuurDDDluLLrrrdrddlUUluurDlllulDrdLrurrrDrddllUUrrdLulUllldLrrddlllluuurDDurrrurrruulDrdLLLrrrdddlUruullldllllddRRluurrruulDrdLrurrrddlUruLLLulD
+3/19/2018 - 6:45:41 PM  :  Level 70	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 50/18	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.108ms
+3/19/2018 - 6:45:41 PM  :  Best solution: rdrrrddlUruLLLulldRRdRlulldRDDDuuuurRdLulDDDldRurD
+3/19/2018 - 6:45:42 PM  :  Level 71	iterations: 64	iterations for first solution: 64	total solutions: 1	best solution length (moves/pushes): 210/29	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.620ms
+3/19/2018 - 6:45:42 PM  :  Best solution: urDlulldRurrdDuLullddddddrrrrrrrrrruuuuulllddllldlluRuululldRurrdddRluuLrddrRlluululldRurrdddrrRdrUUdlllluuulllddddddrrrrrrrrrruuuuullulldRRlddlllluuulldRurDDullldddddrrrrrrrrrruuuuuLLulldRRRllddllldlluRRRRdrUU
+3/19/2018 - 6:45:44 PM  :  Level 72	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 30/11	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.315ms
+3/19/2018 - 6:45:44 PM  :  Best solution: llLulDrDDDrrddlULuuuulldRurDDD
+3/19/2018 - 6:45:45 PM  :  Level 73	iterations: 159	iterations for first solution: 159	total solutions: 1	best solution length (moves/pushes): 204/35	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.042ms
+3/19/2018 - 6:45:45 PM  :  Best solution: uulllluurDDDurruLrdrddddlllluuRuuluurDrrdrruLLrdddddlllluuruUluurDDrruLdlluurDldRurrrdddddlllluurUURlluurDrdRlulldRRurrDDDDuuuullldddlddrrrdrruLLLLrrruuuuLrddddllldlUrrrruuuulLulDrrrddddllllUdrrrruuuulllD
+3/19/2018 - 6:45:47 PM  :  Level 74	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 48/14	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.636ms
+3/19/2018 - 6:45:47 PM  :  Best solution: lulDDDRlldRurRlluurrDRRRurrddlUluRlldlDulullddrR
+3/19/2018 - 6:45:48 PM  :  Level 75	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 115/31	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.321ms
+3/19/2018 - 6:45:48 PM  :  Best solution: ddlluLuLrRllLrrrddrruLruLddlluRlulldRluulldRRdrRuRlLdlUUluRRRllddrrddrrruuLLLLrddrrUdllullUrrddrruLrruLLLLrrddlUruL
+3/19/2018 - 6:45:55 PM  :  Level 76	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 290/58	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:07s.085ms
+3/19/2018 - 6:45:55 PM  :  Best solution: rddrddrrrrUUlDrdLLLdlUUdrrruuuuurrdLDDuuulDrddlddllluluuuuurrddddLdlUrddrrruuUdddlllululuurDuuurrddddlddrrrrUluuruulDDDDrUUdddLuuuuurrdLdldddLrruuuuulDrddlddlLrruuUdddlldlUrrrruuuuulDrddlddlllUlUUUluurrrddddLruuuulllddrUluRurrdddddlddrrrruuuulDDDrdLLLdlUUlUluuruuRurDDDuulllddddrUUUluRRurDD
+3/19/2018 - 6:45:56 PM  :  Level 77	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 94/16	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.422ms
+3/19/2018 - 6:45:56 PM  :  Best solution: ddddrrurrruLdllLdlUUdrrrrrrruLdlllllluUrurrrrrDDuullllldlluRdddrrrruRldlllluuuRRRRlllldddrruRR
+3/19/2018 - 6:45:58 PM  :  Level 78	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 72/17	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.852ms
+3/19/2018 - 6:45:58 PM  :  Best solution: rrrruUlLuurrDulDlulldRlDurRdLruurrdDDuuulllldldRurrdRluurDrDulldRlulldRR
+3/19/2018 - 6:45:58 PM  :  Level 79	iterations: 22	iterations for first solution: 22	total solutions: 1	best solution length (moves/pushes): 56/18	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.051ms
+3/19/2018 - 6:45:58 PM  :  Best solution: lLLdlluRRluurDDRRRdrUlllluurrDullddrRdrruLLLrrrruulDrdLL
+3/19/2018 - 6:46:00 PM  :  Level 80	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 92/21	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.997ms
+3/19/2018 - 6:46:00 PM  :  Best solution: lddrUdrruLUUUllluUddrrrUdllluuluurDrrdRRlddllluUddrrrddddlluuRlddrruUlldRdrUruLUUdddlluRdrUU
+3/19/2018 - 6:46:01 PM  :  Level 81	iterations: 136	iterations for first solution: 136	total solutions: 1	best solution length (moves/pushes): 60/14	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.314ms
+3/19/2018 - 6:46:01 PM  :  Best solution: luuurrdLDldddrruLUddlUruUlDruUruulldDrddlluRdrddlUruUddlUluR
+3/19/2018 - 6:46:01 PM  :  Level 82	iterations: 27	iterations for first solution: 27	total solutions: 1	best solution length (moves/pushes): 56/16	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.049ms
+3/19/2018 - 6:46:01 PM  :  Best solution: drrruUlUdrruLuLLulldRDuRldDlddrUdrrruuuuLLulDrrrddlUruLL
+3/19/2018 - 6:46:05 PM  :  Level 83	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 277/58	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:04s.063ms
+3/19/2018 - 6:46:05 PM  :  Best solution: rruuuuuLullDRlDDDDrrruuuuLLrrddlUrdddllluuuRuulDrdRdrddllluuUruulldRurDlddddrddlUrrruuuruLuLulldRldddDrrruuuuLrddlUrdddllluuuRRlluurDlddddrrruuluLuurDrDDDDllluuUruulldRddddrddlUrruruuuulullddrRurDDluuulDrrddDuluulldRRurDDlullddDrddlUrruRlldlUUUUdddrrdRllluuuuruulldRRurDldRdrDD
+3/19/2018 - 6:46:11 PM  :  Level 84	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 447/88	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:06s.648ms
+3/19/2018 - 6:46:11 PM  :  Best solution: uRlddRluurDrruLdDulluRdrdDuulldRurDruuLuullllddddddrrrRRRllUUUUddddrrdrruLLLLLLLrrruulluuRdrdddllldlUrrrruuruuLddddllllUUUdddrrrruulluuRdrdddlllluuuUddddrrrruuruuLddddlllluuuuluurDDuurrrrDullllddDDDuuuuurrrrdDrdLdlluuRlddrUrUdlluRdrdddllldlUrrrruuruuLddddllllUUUUluurrrrrDDuullllDurrrrddrddllluuRddrruLdlluurDrUddddlllluuuUluurrrrrDulllllddrddddrrrruuulldRurDDuruuLuulllllddrUluRRRllddddddrrrRuulluuRdrdddRRdrruLLLLLLLdlUUUUUUluRRlddddddrrrruuruuL
+3/19/2018 - 6:46:16 PM  :  Level 85	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 68/21	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:04s.637ms
+3/19/2018 - 6:46:16 PM  :  Best solution: luuuuuRRRRRldLLLulDDDDldRRRRlddrruUUruLddlllluuuurrrrRlllllddddrruuR
+3/19/2018 - 6:46:18 PM  :  Level 86	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 87/21	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.046ms
+3/19/2018 - 6:46:18 PM  :  Best solution: uRlddrrrUrruullDLDururrddlLdLLdlluurDuuRuRldldlddRurrrurruululDDLDururrddlLdLLrruulDrdL
+3/19/2018 - 6:46:22 PM  :  Level 87	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 39/11	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:03s.521ms
+3/19/2018 - 6:46:22 PM  :  Best solution: lululuRdrddrruLdlUluuUUluRRRRdrruulDldR
+3/19/2018 - 6:46:30 PM  :  Level 88	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 261/42	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:08s.320ms
+3/19/2018 - 6:46:30 PM  :  Best solution: rrruuuulUrdddlUdDrdLruuuuulDrddlddLrruuuulDruuuulDrddldDuuUrdddddlldlluRRRRuuuuuuurrdddddddLruuuuuuulllDDruurrdddddddldlUrruuuuuuullddddldDuruuuuurrdddddddllUUddrruuuuuuulllddDDuruuurrdddddddlluuUUUdddddLruuuuuUdddddldLdlluRRRuruulDuuuuuRldddddDruuuuuuRurDDDDDD
+3/19/2018 - 6:46:32 PM  :  Level 89	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 90/18	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.182ms
+3/19/2018 - 6:46:32 PM  :  Best solution: urrddLruulldDDrDulDDlluuuuRllulldRRRddddrruruuruullDDrddldlluuuuRlddddrruruulDDruuruullDDD
+3/19/2018 - 6:46:32 PM  :  Level 90	iterations: 19	iterations for first solution: 19	total solutions: 1	best solution length (moves/pushes): 130/30	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.152ms
+3/19/2018 - 6:46:32 PM  :  Best solution: rrDllulldRdDuuRlddrdLuuurRllddlldRRurrdrruLLLLuurrurrdLDDrdLullluurRurDDullldddlluRdrUUdrrRuullulDDurrrddllLrrrdrruLLuullldddlluRR
+3/19/2018 - 6:46:34 PM  :  Level 91	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 33/10	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.299ms
+3/19/2018 - 6:46:34 PM  :  Best solution: ulllddrUluRRRdrrdrrruulDLrrdLLuLL
+3/19/2018 - 6:46:40 PM  :  Level 92	iterations: 251	iterations for first solution: 251	total solutions: 1	best solution length (moves/pushes): 450/110	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:06s.471ms
+3/19/2018 - 6:46:40 PM  :  Best solution: uuullllLLrrddllULLrUdldlluRRRuUluurDDDRRRRRRlllddllUdrruulLrrrrrRlllllldLLdlluRRRUUdrrrrrrrddrruuLrddlluUllllddllUluRluluurDDDrddrruuLrddlluLrdrruulLrrrrrrrruullDDlllllldlLrUUddldlluRRRurrrddllUluRRlluluurDDDrrRlldLrurrRRRRuurrddddllUUllllllldLdlluRRRurrrrrrrddrruuuullDDuurrddLLDuLLLLrrrrdDuullllLLrrddllUlUUluurDDDRRRRRRllllldLLdlluRRRurrrrrrRddrddlUruruuuullddllllddllUdrruurrrrdDuullllddlluluRddrruurrrrddrruuLrddlluUllllddlluuRRRRRRddrddlUUrruuL
+3/19/2018 - 6:46:50 PM  :  Level 93	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 153/30	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:09s.796ms
+3/19/2018 - 6:46:50 PM  :  Best solution: dRlulUUdrdrddRdrruulDlluluuRlddLrruuuRldlluLdlUrrdddddlluRdrUUrruuururrdLLulDDllluuurDlulDrrDlulDrdRDrdrdrrrdLullululululldRurrddrdrdrruLrddLdlUruuLrddlU
+3/19/2018 - 6:46:50 PM  :  Level 94	iterations: 134	iterations for first solution: 134	total solutions: 1	best solution length (moves/pushes): 149/45	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.523ms
+3/19/2018 - 6:46:50 PM  :  Best solution: rdRRurDlllulldRDuRRRurrdLDuLLLrrrdDllldlUrrrruulllulldRRlDurRRurrdLLLrrddllldlluRuuRRRlllddRluurrrurrdLLrddrddlUluLrdrruLLruulLLulldRRRRurDDDrddlUruL
+3/19/2018 - 6:46:50 PM  :  Level 95	iterations: 1	iterations for first solution: 1	total solutions: 1	best solution length (moves/pushes): 58/8	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.010ms
+3/19/2018 - 6:46:50 PM  :  Best solution: rrDllddRddrrrruuuLuulldRlllddrddrrUrruulDrddlllluuUdddrruL
+3/19/2018 - 6:46:57 PM  :  Level 96	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 245/68	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:07s.000ms
+3/19/2018 - 6:46:57 PM  :  Best solution: LrRRlllLrrrrdrruLdddLLdlluRuuurRdrddlLdlUUUUrrdrruLLrdddllluuuUdRluUddrRlluuruLdddrrdrruLLLrrdddllluuUllulldRRRRRRllUUddrrdrruLLLLLruuruulDDuulldRurrddlDDuuruLdddDDuurrrdddlldlluRRluuuuuuulldRurDDDDrrrdddLruululllLulldRRRRRRdrruLLLrrdddlLdlluRRR
+3/19/2018 - 6:47:01 PM  :  Level 97	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 100/27	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:03s.381ms
+3/19/2018 - 6:47:01 PM  :  Best solution: urrRlllddrDuRRllluurrrRdDuuluurDrRRRRRllllllldlllddrrrruUluRRRRRRllldLulldlllddrrrruUluRdddDuuuuRRRR
+3/19/2018 - 6:47:14 PM  :  Level 98	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 138/44	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:13s.470ms
+3/19/2018 - 6:47:14 PM  :  Best solution: lldlluuuullLLLuLulldRDRRRRRRurDDullllllluurDrdrrrrrdDuulllllulldRRRRRllllDurrrrRurDDulllllldDrddlUUUddlluRUddrUluUluRdRRRRRlllllddrUluRRRR
+3/19/2018 - 6:47:36 PM  :  Level 99	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 182/55	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:22s.263ms
+3/19/2018 - 6:47:36 PM  :  Best solution: rrdrrrrrddrrrrrruRldllURlUdrdrruLLdlUrrrdrrruulDrdLLruLLrdLuLLrrdLLLLuRRlldLLrrrrrruLdllllldlUrrrruRRllldlllUdrrrrrrrruLLLdllllluUruulDrdLLrddrrruRRRRRdrruulDrdLLLLLLLLLdlUUUruulDrdL
+3/19/2018 - 6:47:38 PM  :  Level 100	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 68/18	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.359ms
+3/19/2018 - 6:47:38 PM  :  Best solution: lddrDluuurDrrrDldddrruLdlUUUruLLLrrdddrruLdlUruulllulDrrrrddlUruLLLD
+3/19/2018 - 6:47:38 PM  :  Level 101	iterations: 1	iterations for first solution: 1	total solutions: 1	best solution length (moves/pushes): 280/35	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.103ms
+3/19/2018 - 6:47:38 PM  :  Best solution: rrruUddlluullluuRlddrrrddrruurruullDlldlllldDuurrrruuLrddllllddllddrrUrrUUdrruuuulLuullddRddRRlddrrrddLruullluuluuRlddrddddRluurrrruUrruullDlluLrdDlldddllUdrruuurrDullllDuruuRlddrrrurrDulluLLrrddlllldDuurrrruulluullddRRlddrddddrRlluuuurruuLrddllddddrrddrruuLuurUdlLuullllddllddrrU
+3/19/2018 - 6:47:41 PM  :  Level 102	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 215/36	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.654ms
+3/19/2018 - 6:47:41 PM  :  Best solution: rrururrrddddLruulDruuulDLLrrrddlUruullldLrrurrdddddlUruuuLrdddldlluRdrruuuluulldldllluurrDrrurrdLLLrrrrdddLUruulllldLrurrrDDuullldldlluuurrDrrrrrddddlUdlluRdrruuululllddlULLuurrDrdLLdlUdlUUdrUdrrrurrrrdddLUddlluRdrU
+3/19/2018 - 6:47:42 PM  :  Level 103	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 33/8	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.875ms
+3/19/2018 - 6:47:42 PM  :  Best solution: dlldLrurruululldRDlllddRdrruLURuL
+3/19/2018 - 6:47:44 PM  :  Level 104	iterations: 221	iterations for first solution: 221	total solutions: 1	best solution length (moves/pushes): 169/43	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.971ms
+3/19/2018 - 6:47:44 PM  :  Best solution: ulLDuLrdDDuuulLrrddrdddlUUrruuullllDlluRRRRdDrruuLulDrrddllDllUUddrrrruuullDDuulLrrddrdLrddlUUrruuulllldlluRRdddRRlluuuRldddrrUdlluuurRDDrruuLulDDurrddlDLddrUluUrruullDD
+3/19/2018 - 6:47:51 PM  :  Level 105	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 75/23	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:06s.535ms
+3/19/2018 - 6:47:51 PM  :  Best solution: luuLulldRRRdrruLdldlUrrruRlddrUUlddddRdrruLLUluurDDllldLdlluRRUruulDDDlddrU
+3/19/2018 - 6:47:54 PM  :  Level 106	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 132/26	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:03s.011ms
+3/19/2018 - 6:47:54 PM  :  Best solution: ddrrrdRlulldRRllulldRRRlluuurrrurrdLLullldddrrrrUruulldLLrrurrdLullllDrrurrdLullldDururrrdddllldlluRRRlluururrdLLulDDurrrrddLrDulLdR
+3/19/2018 - 6:47:55 PM  :  Level 107	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 47/11	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.395ms
+3/19/2018 - 6:47:55 PM  :  Best solution: lllURdrruuuuullDDlDurDuuulllddRldRluuurDRllddrR
+3/19/2018 - 6:48:01 PM  :  Level 108	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 158/29	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:05s.384ms
+3/19/2018 - 6:48:01 PM  :  Best solution: rrrrdrruRdrrUruuLullDDDuuurrdrddlUddlLLruuuurrDulldddRlldLLrrruuuurrdLrrddLdlllllLLrrrrrrruruulDululDDDldllllulllddrrUruLLruulldDrrrrrdrrRlllllldllUdrruulLulD
+3/19/2018 - 6:48:08 PM  :  Level 109	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 206/42	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:07s.405ms
+3/19/2018 - 6:48:08 PM  :  Best solution: ruurrddLrdddddllDlUlUlUdrUddrrrruuuuulLuulldddDDrDullluRdrrdrdrrdddllUdrruuullululldRdRRRllluurDldRRDluluuUUURRuullDurrrrddddddDDuuuuuuuulllldDrrRluurrdDllllDDlddrrrdRllluluurDldRuuuurrrrDDDuuulllldddrDldRR
+3/19/2018 - 6:48:08 PM  :  Level 110	iterations: 33	iterations for first solution: 33	total solutions: 1	best solution length (moves/pushes): 67/14	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.084ms
+3/19/2018 - 6:48:08 PM  :  Best solution: uulllluRdrrrddlUruLLrruurrdLulDulluurDldRRdrruLdlDllUdrddrUlululldR
+3/19/2018 - 6:48:11 PM  :  Level 111	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 267/60	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.392ms
+3/19/2018 - 6:48:11 PM  :  Best solution: DluuurDRllddrUdRUrrdddllUdrruuulllluurDDrrUUUdddlluRdrrdddlluUddrruuLuLrUllldRRurUruuLrddlUUruLdLruLrddddldDrUllldRurrrdddlllUdrrruuluUUUruulldRlLrrddddrdddllluUUrruuruUldddldlluRRdrUllddRuruUdllddddrUUddrruuLuuuUUdddlldRlddrdrruulUllddrUruUlldRurUUddlddrUUUruuLrddlU
+3/19/2018 - 6:48:15 PM  :  Level 112	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 120/41	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:04s.259ms
+3/19/2018 - 6:48:15 PM  :  Best solution: rrruuuruuuLLLDlddrUlulluururrDLDRRRurDDDuuluLrrdddrdLulDDDuuruuulllluurDldRRRurDDDrdLulDDuruuulllDLddrUUluRRRurDDDrdLulD
+3/19/2018 - 6:48:34 PM  :  Level 113	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 130/22	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:19s.458ms
+3/19/2018 - 6:48:34 PM  :  Best solution: rRRdrRlluurDrdLdRlddrUlulUrrDluuLLrrddddrUluluulLdlUUrdrrrdddrUlluullluUdllluurruurrddLddrdrrrrDDlluullllulluurRllddrrrrdrrrddddrU
+3/19/2018 - 6:48:37 PM  :  Level 114	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 123/29	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:03s.050ms
+3/19/2018 - 6:48:37 PM  :  Best solution: ddrrdLuluuluullddRlddldRdrrUdlluuuurRllddddrruLdlUUUddrrRllluuUluurDldRRldddrrrurrdLLLrrrurrdLLulldlLdlUUUddrrrurrdLLLLdlUU
+3/19/2018 - 6:48:39 PM  :  Level 115	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 99/19	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.748ms
+3/19/2018 - 6:48:39 PM  :  Best solution: dllUUddrrrrUUddlllluuUluRddddrruRldlluRluuuRRdrRRlllullddrddrrrUUdldlluRRllluuurrdrRllullddrdrrdrUU
+3/19/2018 - 6:48:42 PM  :  Level 116	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 48/10	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.465ms
+3/19/2018 - 6:48:42 PM  :  Best solution: drrrUddrruUddlluuRuRldldlUdlluRdrrdrruUlldlluRRR
+3/19/2018 - 6:48:50 PM  :  Level 117	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 133/23	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:08s.595ms
+3/19/2018 - 6:48:50 PM  :  Best solution: lllllddrrrdDuullllldddrRRllluurruuurrrrrrddddLruulululllllddldddrrruRUruLLLulDrdLulDrrurrddlddrUllllUdrrrrUUruLLLdlUlDruUrdrrddldlllU
+3/19/2018 - 6:49:00 PM  :  Level 118	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 202/44	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:09s.491ms
+3/19/2018 - 6:49:00 PM  :  Best solution: rrruuluuululldRdDDDuuuulldRurDRlDDuuuurDrDrddddlldlluRRRRuuuululldddDuuuurrdrddddlldlluRuuuuurrdrdddddrUluuuulLrrddddrUlulUrrDlddlLdlluRRluuuUddddrRlluuuuruulDDDDDuuururDrddlUruLLulDDDuurrrdrdrdLdLUUddL
+3/19/2018 - 6:49:00 PM  :  Level 119	iterations: 64	iterations for first solution: 64	total solutions: 1	best solution length (moves/pushes): 305/36	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.380ms
+3/19/2018 - 6:49:00 PM  :  Best solution: drddrruruuuulullldDDuuurrrdrddddldlluuruuLDDulluRdrdDuuluuurrrdrddddldlLLruuruuLddddldlluRdrruuuulldRurDDulluuRuurrrdrddddldldlUUdLruUddldlluRdrruuuruuLrddlddrruruuuulullldDrDDuuluurrrdrddddldlldlluRdrrururuuuululllddDldRuuuurrrdrddddldlLLrrruruuuululllddrrddLDuuluuurrrdrddddldldlluRldlluRdrruuuulldRurDD
+3/19/2018 - 6:49:02 PM  :  Level 120	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 90/25	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.804ms
+3/19/2018 - 6:49:02 PM  :  Best solution: lddldRuuuluuRlddrddldddrUluuruuluurRRRRRurDDulllllllddrUdddlddrUUUUluuRRRRRlllllddrUluRRRR
+3/19/2018 - 6:49:03 PM  :  Level 121	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 115/33	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.461ms
+3/19/2018 - 6:49:03 PM  :  Best solution: rRdrUllllluuUruUddlUluRRUdldddddrrrrrdrruLLLLLLrrrrrruullDurrddlLdllulldlUUUUruulldRddddrrrdrruLLLLdlUUUUrUUlldRdrU
+3/19/2018 - 6:49:06 PM  :  Level 122	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 46/16	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.942ms
+3/19/2018 - 6:49:06 PM  :  Best solution: lluuuRRlldRDDDDldRRRRRRRurDllllllluuuluuuuurrD
+3/19/2018 - 6:49:10 PM  :  Level 123	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 97/26	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:03s.493ms
+3/19/2018 - 6:49:10 PM  :  Best solution: ddlDuruulDruuulDulldRRllulldRRRurrDLLLrrrDulllulldRurrrrddDlUruulldLrRllulldRRRurrDDuulldRurDlddD
+3/19/2018 - 6:49:14 PM  :  Level 124	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 71/13	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:04s.001ms
+3/19/2018 - 6:49:14 PM  :  Best solution: urrDDuulldRlulldRurrrDlulldRRlldddddrrrrrrrrrruuuuulllddllldlluRRRRdrUU
+3/19/2018 - 6:49:23 PM  :  Level 125	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 245/54	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:08s.903ms
+3/19/2018 - 6:49:23 PM  :  Best solution: ululDDDuurrddLrrddllULLrURlUddlLuRldLLrrrrrdrruuLrddllulllllulDrrrrrUdrdrruulLLrruululldRDDrdLLrruruuLrddlldlLrrruruululDrrddlldlluRldLLLullddrUluRdrrrrrrruLdlllluLrdrrrrruruullDDrdLLLLruRldlLrrruRlldllLrrrrrrdrruulLruulldDlldlllLrrrrrurrdLLLLLL
+3/19/2018 - 6:49:24 PM  :  Level 126	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 62/8	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.732ms
+3/19/2018 - 6:49:24 PM  :  Best solution: ddlllluUddrrrruuulllLdddrruUddlluuurRdLrddlluUrrddrruuLrddlluU
+3/19/2018 - 6:49:28 PM  :  Level 127	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 42/14	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:03s.900ms
+3/19/2018 - 6:49:28 PM  :  Best solution: uRRRdrUUUlluurDRdddlllluuuRRdRluurDrDulldR
+3/19/2018 - 6:49:31 PM  :  Level 128	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 42/11	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.936ms
+3/19/2018 - 6:49:31 PM  :  Best solution: rrurruulllulldRRdLLrruRRurrdLddlldllUUluRR
+3/19/2018 - 6:49:34 PM  :  Level 129	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 3/1	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.799ms
+3/19/2018 - 6:49:34 PM  :  Best solution: ldR
+3/19/2018 - 6:49:37 PM  :  Level 130	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 23/8	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.968ms
+3/19/2018 - 6:49:37 PM  :  Best solution: lulluurrDRRRlllulldRRRR
+3/19/2018 - 6:49:39 PM  :  Level 131	iterations: 367	iterations for first solution: 367	total solutions: 1	best solution length (moves/pushes): 148/39	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.896ms
+3/19/2018 - 6:49:39 PM  :  Best solution: ddldRDRddlUUUUUUluRurDldddRlddrUrruulDrdLLdlUrrrdLulDluURlUdrdrruulDrdLdllddrUluuurrdLuluUddrrddLuuluuluurrdLulDrdddldRurrddldlUUUddrUluUUdddrruLdlU
+3/19/2018 - 6:49:41 PM  :  Level 132	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 83/19	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.984ms
+3/19/2018 - 6:49:41 PM  :  Best solution: DDDuurrDullddrRRlddllUUUdrruulLrrddrRlllluuulDrrrddrruLdllluurrDrdLLrddlluUUdrruulL
+3/19/2018 - 6:49:45 PM  :  Level 133	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 188/41	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:04s.116ms
+3/19/2018 - 6:49:45 PM  :  Best solution: uurrrrrdddLruuulllllddRluurrrrrdddlLuLLrrddllUdrrurruLdldlluRRluRldlLUdrruLLUUluRRRdrrrdddLLLrrruLdllulldRdrruruLLLddrUllUrdrruLdlluUddrruLdlUrrrrruullllulldRurrdrrrddlllllUURRllluRdrrRluL
+3/19/2018 - 6:49:50 PM  :  Level 134	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 86/20	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:04s.674ms
+3/19/2018 - 6:49:50 PM  :  Best solution: rurrdLuluuulLrrruRRlldddddLLruuuullulldRRRRddddldlUUUUdddrruuuulLulldRRRlddddrrrrrruUU
+3/19/2018 - 6:49:55 PM  :  Level 135	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 221/33	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:04s.753ms
+3/19/2018 - 6:49:55 PM  :  Best solution: dlddRluLrurrrrddlLuuluullDulldddRluuurrrrddlddRRuuluulllldddrRlluuurrdDrrrddllUdrruuluulllldddrRuuurrddrddRRlluuluullddRRlldlluuRurrrddRddllUluRldlluururDllddrrrdrruuRlddrruruulDllddlluuRRluulldDullddrRurrrRRllddllUluRRRR
+3/19/2018 - 6:49:57 PM  :  Level 136	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 307/50	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.579ms
+3/19/2018 - 6:49:57 PM  :  Best solution: llldlluRdrrurrrddLLrruulDullLLrrrrrddLuulllldlddrrrUUluRlluurrrrDDrddlLrUULLdlluRRRllldlddrrrUrrruuLddlldllluuruuurrrrDDLrDuuullllddrRRllldlddrrruUlluuurrrrdDlLLrrruulllldDrrdddllluuRurrrrrddLUruLuullllddrrddRluLuluurrrrddLrrddLuulLdddllluuRuuurrrrddddLruuuulllldddlddrrrUrruullLrrruulllldDrrrrddllUdrruulLL
+3/19/2018 - 6:50:02 PM  :  Level 137	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 226/46	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:04s.648ms
+3/19/2018 - 6:50:02 PM  :  Best solution: uuurRlldddrrUULuurDllDrurDllDDrrUrruuLLrrddlldlllldddrruUUrrurruullulDldDuurrrrddlldlLLrdddlluuUrrrruUddlluuurRddrruLdlULuurDllDDDrrurruuLddldlllldddrruUUrruruuLulDldDuurrrddldlLLLdddllluuuurrDrrrrruULulDDurrddlLrruruuLdllddLL
+3/19/2018 - 6:50:06 PM  :  Level 138	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 59/18	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:04s.632ms
+3/19/2018 - 6:50:06 PM  :  Best solution: rrrdddrRddlUrdrruUddlluuRuulDLDRllUUUluRdddrrdddlUUruLdlUUU
+3/19/2018 - 6:50:17 PM  :  Level 139	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 120/25	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:10s.207ms
+3/19/2018 - 6:50:17 PM  :  Best solution: ddrdrrrruRldlllluluurDDDrrrrurRlldlllluurrrDulllddrddlUUrrRlllUdddlluRdrruurruullLdlUUUUluRdddrdddrddlUUUdrrruullLdlUUUU
+3/19/2018 - 6:50:21 PM  :  Level 140	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 223/57	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:04s.787ms
+3/19/2018 - 6:50:21 PM  :  Best solution: rddrRuRuRuRurrdLdLdLdLLLrrrururuulDlDlDldlLulldRurDrrurururrdLdLdLLuRldLLulldRRlluuullddddrdrrrUUUdRlluuurDlddrrRuruRldldllUUluurrdLLLLulDrrrrdddrrurururrdLdLdLLrruruulDlDldLLulluullDDDuuurrrrdddrrururrdLdLLrruulDldLrurrdLL
+3/19/2018 - 6:50:22 PM  :  Level 141	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 38/12	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.915ms
+3/19/2018 - 6:50:22 PM  :  Best solution: llUrurrrddrruLUlllldlluRRRUUluRRldddRR
+3/19/2018 - 6:50:27 PM  :  Level 142	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 31/7	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:04s.186ms
+3/19/2018 - 6:50:27 PM  :  Best solution: lldRurrDuluulDrdrruLdlLdlluRdrR
+3/19/2018 - 6:50:32 PM  :  Level 143	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 37/8	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:05s.626ms
+3/19/2018 - 6:50:32 PM  :  Best solution: rdrUllldlluRRRRllluurRDuuuuullluuuurD
+3/19/2018 - 6:50:48 PM  :  Level 144	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 239/23	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:15s.638ms
+3/19/2018 - 6:50:48 PM  :  Best solution: luluuuluRdrrurrdrdddrdLuuuluullLdlddlldRurrddrrRllluulldRuuurrurrdrdddlldlldllUdrrurrruruurruLdlluuurrDulldddrddlldlldlluUruuurruuulDrdrrddrddlldddrUluurrrddLruuluuluullulDrrrddrddlldlldlluuluRdddrrurrurruuluuurrdDuLrdLdddrddlLUddlUrrUldlU
+3/19/2018 - 6:50:52 PM  :  Level 145	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 67/18	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:04s.016ms
+3/19/2018 - 6:50:52 PM  :  Best solution: rdDulDLdddrruUddlluuurRllddLDlluRuRldRdrrruRDrruLLdlDurruuLddllDulD
+3/19/2018 - 6:50:52 PM  :  Level 146	iterations: 2	iterations for first solution: 2	total solutions: 1	best solution length (moves/pushes): 119/14	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.055ms
+3/19/2018 - 6:50:52 PM  :  Best solution: rdDrruuuululDrrdddLruuullullldldRldddrdrUlluuuruurrrrdrdddlddLruruuuullullldlddddrrRuurRlllLrrddRluullDurruUddrrUdlluuL
+3/19/2018 - 6:51:00 PM  :  Level 147	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 241/43	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:07s.826ms
+3/19/2018 - 6:51:00 PM  :  Best solution: lllllldddRDuRuLdlUUluRRRRRRdrrruullDlddrruLullllllddrrrDllluuurrrrdRRllullllddrrrdrddlUddllUdrruruuLdddlluUluuuurrrrrrdRdrUllllullllddddrUdddrruuuulLdRurDlllUrrrdDullluUdrddddrrUruulllluuluRddrrrdrddlUddlluuluuuuRRllddrddddrruruuLLLdlUUUluRR
+3/19/2018 - 6:51:09 PM  :  Level 148	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 291/43	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:09s.587ms
+3/19/2018 - 6:51:09 PM  :  Best solution: lllullddrdrdrrrrUUdldlllululuurrrrdrRdddrruLdlUldlllululuurrrrdrrurrdLLLLullllddrdrdrrrrrrrruLLdlluUdRlldlllululuurrrrdrRurrdLLddldlllululuurrrDlullddrdrdrrrruuuLrddldlllululuurrrrDrrddrdrrrrruLdlluLLdlUUdrrrdrruLLLLdlUldlllululuurrrrdrRDuurrdLLLLLulllddrdrdrrrrUUdldlllululuurrrrdrRurrdLLLL
+3/19/2018 - 6:51:12 PM  :  Level 149	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 37/18	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.741ms
+3/19/2018 - 6:51:12 PM  :  Best solution: RurDDDlddrURRRRllddddllUUUluRRRRlllUU
+3/19/2018 - 6:51:16 PM  :  Level 150	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 196/35	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:04s.090ms
+3/19/2018 - 6:51:16 PM  :  Best solution: lldllllllUrdrrULrUdlLrrurrDuluurDDllddrRlluuruLdddrrdrUllllllluRdrrruurrDullddrRllllluRdrrrruRldlllluRdrrruullDurrddlLrrurRlldllLrrrurrRRllllddrUluRldlllulldRRRuurrdrRurrdRdrUllulldllullddRRdrUluR
+3/19/2018 - 6:51:20 PM  :  Level 151	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 312/68	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:03s.927ms
+3/19/2018 - 6:51:20 PM  :  Best solution: luuuuLrdddllURdddlUrruUllDrruUdldddlUrruuuUluurDDDDlddllluuuruRldldddrrruurDldllluuururRlldldddrrruruuUddllUdrddRuuuuluurDDDDlddlUUrddrUdRluUUdddrRRllllllluuuruRldldddrrrrrrrurDlllllllluuururDDDuulldddrRRRRRRRurDllllluuuULuurDDDDDldRlluuuluRRlddrrddRRlluuuUddddrrRllluuuuluurDldlddrrddrrrRlllllluuuururDDDDldRRRR
+3/19/2018 - 6:51:27 PM  :  Level 152	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 344/30	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:07s.010ms
+3/19/2018 - 6:51:27 PM  :  Best solution: lluuUrrdrrrrrdrdLLLLLrrrruullluuulullldDrrddrrrrrddllllLuurruurrrrdrdrddrruuululululllDurrrdrdrdrdddlluulululLrrdrdrddLruululullLrrrdrdrddlLLuulllllululuurrrrdDululllddrrddddrrrRllllLrrrrrRllllluuululuurrrrddDuululllddrrddddrrrrrRlllllluuululDuuurrrrddrrrrdrdrddLruululullllululllddrrddddrrrrruullLrrrddRRRllluulllLruuululllddrrdDDurrrrrddllllL
+3/19/2018 - 6:51:29 PM  :  Level 153	iterations: 500	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 52/17	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.250ms
+3/19/2018 - 6:51:29 PM  :  Best solution: lDRRllDDDrUldDuruUldddDrUddLruuUUlddddLruuuuuuRlddrU
+3/19/2018 - 6:51:29 PM  :  Level 154	iterations: 1	iterations for first solution: 1	total solutions: 1	best solution length (moves/pushes): 429/2	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.034ms
+3/19/2018 - 6:51:29 PM  :  Best solution: ruuuuuuuuuuuurrrrrrrrrrrrrrrrrrrrrddddddddddllllllllllllllllluuuuuurrrrrrrrrrrrrddlllllllllllddrrrrrrrrrrrrruuuuuulllllllllllllllllddddddddddrrrrrrrrrrrrrrrrrrrrruuuuuuuuuuuuuulllllllllllllllllllllllllddddddddddddDuuuuuuuuuuuuurrrrrrrrrrrrrrrrrrrrrrrrrddddddddddddddllllllllllllllllllllluuuuuuuuuurrrrrrrrrrrrrrrrrddddddllllllllllllluurrrrrrrrrrruulllllllllllllddddddrrrrrrrrrrrrrrrrruuuuuuuuuulllllllllllllllllllllddddddddddddlL
+3/19/2018 - 6:51:31 PM  :  Level 155	iterations: 0	iterations for first solution: 0	total solutions: 1	best solution length (moves/pushes): 282/175	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.356ms
+3/19/2018 - 6:51:31 PM  :  Best solution: uulldRRRRRRRRdrUUUruLLLLLLLLLLLLulDDDrdLLLLLLLLLLLulllddrrUdlluurRluurrdDldRRRRRRRRRRdrUUUluRRRRRRRRRdrUUUUUUruLLLulDDDrdLLLdlUUUruLLLulDDDrdLLLLdlUUUUdrruulLLrddlluUUluRRRRRRRRRRRRRRRRRRRurDDDDDDlddrUUUUUUruLLLLLLLLLLLLLLLLLLLLulDrdLLLLLulldRurDDDDDrddlluRdrUluRRurDDDDrrddllUUUUUU
+3/19/2018 - 6:51:31 PM  :  Solved 68/155
+3/19/2018 - 6:51:31 PM  :  Total Rollouts for first solutions: 3316
+3/19/2018 - 6:51:31 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NO SP-MCTS 
+Method: MCTS 
+iterations: 1000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 10
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: True
+Node Elimination:True
+Stop on Result: True
+level path: ./microban.txt
+********************************
+********************************
+
+3/19/2018 - 6:51:31 PM  :  Level 1	iterations: 11	iterations for first solution: 11	total solutions: 1	best solution length (moves/pushes): 33/8	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.041ms
+3/19/2018 - 6:51:31 PM  :  Best solution: dlUrrrdLullddrUluRuulDrddrruLdlUU
+3/19/2018 - 6:51:31 PM  :  Level 2	iterations: 0	iterations for first solution: 0	total solutions: 1	best solution length (moves/pushes): 16/3	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.002ms
+3/19/2018 - 6:51:31 PM  :  Best solution: rddLruulDuullddR
+3/19/2018 - 6:51:31 PM  :  Level 3	iterations: 10	iterations for first solution: 10	total solutions: 1	best solution length (moves/pushes): 41/13	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.025ms
+3/19/2018 - 6:51:31 PM  :  Best solution: ruuLLLulDrrrrddlUruLLLddllluurRDrdLuuurDD
+3/19/2018 - 6:51:31 PM  :  Level 4	iterations: 1	iterations for first solution: 1	total solutions: 1	best solution length (moves/pushes): 59/13	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.008ms
+3/19/2018 - 6:51:31 PM  :  Best solution: ulllDldRRluurDurrdLLrrddlUruulldLrurrdLLulllddrrRurrddlUruL
+3/19/2018 - 6:51:31 PM  :  Level 5	iterations: 0	iterations for first solution: 0	total solutions: 1	best solution length (moves/pushes): 61/12	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.007ms
+3/19/2018 - 6:51:31 PM  :  Best solution: LulDruurrdLrrddlUlldRuuLdddlluRdrUruululDrrddlUruulldDrddlluR
+3/19/2018 - 6:51:31 PM  :  Level 6	iterations: 66	iterations for first solution: 66	total solutions: 1	best solution length (moves/pushes): 221/45	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.503ms
+3/19/2018 - 6:51:31 PM  :  Best solution: dlllllululDulldRRllddrrUdlUluurrDRlulDrrRllllddrUluurrrdrRlllullddrdrUlluurrrdrrRdrrruullDllllulDrrrrrurrddlLulllllullddrdrUlluurrrdrrrrdLLullullDRlldRurRRRRlllllddrUluRRRRdrrrruullDurrddlLLruLLLLulldRRRRRdrrruullDurrddlL
+3/19/2018 - 6:51:31 PM  :  Level 7	iterations: 0	iterations for first solution: 0	total solutions: 1	best solution length (moves/pushes): 42/6	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.014ms
+3/19/2018 - 6:51:31 PM  :  Best solution: rruuuulLullddddRdrrruulLrUluullddRlddrdrrU
+3/19/2018 - 6:51:32 PM  :  Level 8	iterations: 27	iterations for first solution: 27	total solutions: 1	best solution length (moves/pushes): 99/34	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.135ms
+3/19/2018 - 6:51:32 PM  :  Best solution: llDDDDDDldddrruuLrddlluUruuuuuuurrdLulDDDDDDLddlluuRRdddrruuLUUUUUUluRddddddlllddrrUdlluurRdrUUUUUU
+3/19/2018 - 6:51:32 PM  :  Level 9	iterations: 0	iterations for first solution: 0	total solutions: 1	best solution length (moves/pushes): 30/10	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.002ms
+3/19/2018 - 6:51:32 PM  :  Best solution: urrDulldRdRluurDrDDlUruLdlUruL
+3/19/2018 - 6:51:33 PM  :  Level 10	iterations: 339	iterations for first solution: 339	total solutions: 1	best solution length (moves/pushes): 141/21	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.429ms
+3/19/2018 - 6:51:33 PM  :  Best solution: rddrruuLLrrddrruuLruuurrdddLruuullddDlLddlluuRlddrrrrUdlllluurRddrruUUUddddlllllluuRRddrruuRlddlluuRlddrrrruUddlllluurRddrruuUdddlluuRlddrruU
+3/19/2018 - 6:51:33 PM  :  Level 11	iterations: 7	iterations for first solution: 7	total solutions: 1	best solution length (moves/pushes): 116/20	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.056ms
+3/19/2018 - 6:51:33 PM  :  Best solution: ulllddddrrrruLdllluuuurrrdDlDurrddlUdLLLulldRuruuurrrdDlddlLullddrUrrrrruLdllllluRdrrrruulDrdLLLUllddrUrrrruuuullldD
+3/19/2018 - 6:51:33 PM  :  Level 12	iterations: 3	iterations for first solution: 3	total solutions: 1	best solution length (moves/pushes): 54/13	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.017ms
+3/19/2018 - 6:51:33 PM  :  Best solution: uululldRdRluurDrDDrddlluRdrUluuulldRurDDRddlluRdrrruuL
+3/19/2018 - 6:51:34 PM  :  Level 13	iterations: 207	iterations for first solution: 207	total solutions: 1	best solution length (moves/pushes): 155/47	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.609ms
+3/19/2018 - 6:51:34 PM  :  Best solution: dDuurDldDRUddrruLdldlUURlUrddrruLdlluurDrdLuluUdrdddlUruululuurDrDDlDuruulldRddRdrruLdldlUUUdRluUluurDrDDDluUruLdlUrdddddrUUdrruLLdlUUUruLrdDlddrruLdlUUruL
+3/19/2018 - 6:51:34 PM  :  Level 14	iterations: 6	iterations for first solution: 6	total solutions: 1	best solution length (moves/pushes): 51/10	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.018ms
+3/19/2018 - 6:51:34 PM  :  Best solution: uullllddrdrUlluurrrrddLLLrrruullDurrddlLdllURRuullD
+3/19/2018 - 6:51:34 PM  :  Level 15	iterations: 11	iterations for first solution: 11	total solutions: 1	best solution length (moves/pushes): 47/14	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.012ms
+3/19/2018 - 6:51:34 PM  :  Best solution: DrdddllUUddrruuulLLLrrrrdLullldlluRRRRDrrddllUU
+3/19/2018 - 6:51:41 PM  :  Level 16	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 180/44	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:07s.009ms
+3/19/2018 - 6:51:41 PM  :  Best solution: lddrUUddrruLLuluurDrDulldRddrruLdllURlUUruLLrrddddrruLdlluururDlluulLrrddddrUluRluullulDDDDldRuuuurrrrddddrruLLdlUUUrrDluuLLrrddddrruLulluulLrrrdrddLuluullulDDurrrrddddlUUUruLLLulD
+3/19/2018 - 6:51:41 PM  :  Level 17	iterations: 12	iterations for first solution: 12	total solutions: 1	best solution length (moves/pushes): 32/9	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.012ms
+3/19/2018 - 6:51:41 PM  :  Best solution: ldDurrDulldRddrruLdlUrUdldlUUdrU
+3/19/2018 - 6:51:41 PM  :  Level 18	iterations: 29	iterations for first solution: 29	total solutions: 1	best solution length (moves/pushes): 77/13	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.075ms
+3/19/2018 - 6:51:41 PM  :  Best solution: ruuuulllddrRDrddlUruUUdllluurrurrdLLrddddlUruuululldddrRdrUUdllluuurrdLrurrdL
+3/19/2018 - 6:51:41 PM  :  Level 19	iterations: 63	iterations for first solution: 63	total solutions: 1	best solution length (moves/pushes): 68/24	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.122ms
+3/19/2018 - 6:51:41 PM  :  Best solution: urrDDDlddrUUUUruLLLdlluRdrRuLrrDlllluRRdrrDulluRdrdDuuruLdddlddrUUUU
+3/19/2018 - 6:51:41 PM  :  Level 20	iterations: 38	iterations for first solution: 38	total solutions: 1	best solution length (moves/pushes): 60/16	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.148ms
+3/19/2018 - 6:51:41 PM  :  Best solution: urDDDrrruulLLLrddlddrUUUdrrruullulldRRllulldRurrrdRllulldRRR
+3/19/2018 - 6:51:41 PM  :  Level 21	iterations: 0	iterations for first solution: 0	total solutions: 1	best solution length (moves/pushes): 17/5	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.001ms
+3/19/2018 - 6:51:41 PM  :  Best solution: dllUdlUluurDRddlU
+3/19/2018 - 6:51:41 PM  :  Level 22	iterations: 4	iterations for first solution: 4	total solutions: 1	best solution length (moves/pushes): 93/25	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.031ms
+3/19/2018 - 6:51:41 PM  :  Best solution: drrruulDLdlUrrrdLullUdddrUluuUdddrruLrruuulldlluRddDrddlUUUUluurDDuRldDDrddlUUUUruLdddrrruuuL
+3/19/2018 - 6:51:41 PM  :  Level 23	iterations: 38	iterations for first solution: 38	total solutions: 1	best solution length (moves/pushes): 72/12	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.063ms
+3/19/2018 - 6:51:41 PM  :  Best solution: ruuuLrdddldlUrruullluRRdrddllUdrruululldRddrruuruLLrdddlluuRurDllluRdrrD
+3/19/2018 - 6:51:41 PM  :  Level 24	iterations: 76	iterations for first solution: 76	total solutions: 1	best solution length (moves/pushes): 47/13	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.147ms
+3/19/2018 - 6:51:41 PM  :  Best solution: ullDDlddrruLulDruuurrdLulDDldRdrruLLullddRRuulD
+3/19/2018 - 6:51:41 PM  :  Level 25	iterations: 0	iterations for first solution: 0	total solutions: 1	best solution length (moves/pushes): 33/7	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.002ms
+3/19/2018 - 6:51:41 PM  :  Best solution: urrdLullddrUluRluurDlddrrruuLLulD
+3/19/2018 - 6:51:43 PM  :  Level 26	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 32/7	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.609ms
+3/19/2018 - 6:51:43 PM  :  Best solution: rdddlUruulldRurDlddrddlUruLuurDD
+3/19/2018 - 6:51:43 PM  :  Level 27	iterations: 22	iterations for first solution: 22	total solutions: 1	best solution length (moves/pushes): 56/10	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.031ms
+3/19/2018 - 6:51:43 PM  :  Best solution: dlULddlluuuurrrDulllddddrruuLrdrruLuullldDrRdrUlllDurrrU
+3/19/2018 - 6:51:43 PM  :  Level 28	iterations: 26	iterations for first solution: 26	total solutions: 1	best solution length (moves/pushes): 35/11	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.039ms
+3/19/2018 - 6:51:43 PM  :  Best solution: rDulldRddrruLUddlUUluurrDDldRuuulDD
+3/19/2018 - 6:51:43 PM  :  Level 29	iterations: 66	iterations for first solution: 66	total solutions: 1	best solution length (moves/pushes): 202/28	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.412ms
+3/19/2018 - 6:51:43 PM  :  Best solution: lulldRurrdrrddllllllluuRurrdRlulldRurrdRRllullldlddrrrrrrruUlllulldRurrdrrUruulDDDllulldRllllddrrrrrrrUUUdddllllllluurrrrRlllllddrrrrrrruuuUddddllllllluurrrrrRllllllddrrrrrrruUUruuLDDuuulldRdrdDuuluurDD
+3/19/2018 - 6:51:43 PM  :  Level 30	iterations: 1	iterations for first solution: 1	total solutions: 1	best solution length (moves/pushes): 29/7	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.007ms
+3/19/2018 - 6:51:44 PM  :  Best solution: luuurDDrruLdllddrUdrUruulLulD
+3/19/2018 - 6:51:44 PM  :  Level 31	iterations: 8	iterations for first solution: 8	total solutions: 1	best solution length (moves/pushes): 23/6	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.037ms
+3/19/2018 - 6:51:44 PM  :  Best solution: RurDDullDurrdrddlluUluR
+3/19/2018 - 6:51:44 PM  :  Level 32	iterations: 129	iterations for first solution: 129	total solutions: 1	best solution length (moves/pushes): 35/9	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.204ms
+3/19/2018 - 6:51:44 PM  :  Best solution: ullDullddrUrurrdLLLddrUluRuulDrrrdL
+3/19/2018 - 6:51:47 PM  :  Level 33	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 42/9	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.758ms
+3/19/2018 - 6:51:47 PM  :  Best solution: dlLrruulLrrddllUdLulDuuurDlddrruLrdrruulLL
+3/19/2018 - 6:51:48 PM  :  Level 34	iterations: 226	iterations for first solution: 226	total solutions: 1	best solution length (moves/pushes): 101/20	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.101ms
+3/19/2018 - 6:51:48 PM  :  Best solution: drUdrUdrrULLruRldldlluRRdrruululDrrdrruLdldlUdlluRRRlluurDlddrrrruulLddlluRluurDldlluRdrdrrrruulllulD
+3/19/2018 - 6:51:53 PM  :  Level 35	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 72/20	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:05s.849ms
+3/19/2018 - 6:51:53 PM  :  Best solution: llluuuRUdDrDullddrdrruLuLuuurDlddrddlUUUUruLrdDlddlUUrrDlddrruLdlUruLdlU
+3/19/2018 - 6:52:00 PM  :  Level 36	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 170/36	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:07s.018ms
+3/19/2018 - 6:52:00 PM  :  Best solution: ldlllllluLrdrrrruRldlluRdrruRldlluRlldlluRlldllluurDldRRRRluLdlluurDldRRRurrRdrruLLrrdrruLdllluLLLrrrrdrrrrruLdlllllulllLrrrrrdrruLLrrdrruLdllluLLrrrdrruLLdllulLrrdrruLLL
+3/19/2018 - 6:52:01 PM  :  Level 37	iterations: 41	iterations for first solution: 41	total solutions: 1	best solution length (moves/pushes): 111/27	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.098ms
+3/19/2018 - 6:52:01 PM  :  Best solution: drruulLuLLdRluulldRRdrRuLrdRlluLullddRluurrdrrdddrruUUUddlllulullddrRRluulDldRurrdRRlddrruUUdlllulldRRRRlddrruU
+3/19/2018 - 6:52:01 PM  :  Level 38	iterations: 1	iterations for first solution: 1	total solutions: 1	best solution length (moves/pushes): 39/8	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.005ms
+3/19/2018 - 6:52:01 PM  :  Best solution: llluuurrrdDuurrrrddllLrrrddlllULUdLruRR
+3/19/2018 - 6:52:01 PM  :  Level 39	iterations: 26	iterations for first solution: 26	total solutions: 1	best solution length (moves/pushes): 93/27	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.112ms
+3/19/2018 - 6:52:01 PM  :  Best solution: ruuLLLuullddRluurrdDDDuurrrddlUruLLLuullddRRRRllddllddrrUUUUrrurDllllluurrDullddrRRRdRUddrruL
+3/19/2018 - 6:52:01 PM  :  Level 40	iterations: 3	iterations for first solution: 3	total solutions: 1	best solution length (moves/pushes): 28/9	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.004ms
+3/19/2018 - 6:52:01 PM  :  Best solution: lUdrUdrruLuullDRurDlDurDlulD
+3/19/2018 - 6:52:01 PM  :  Level 41	iterations: 14	iterations for first solution: 14	total solutions: 1	best solution length (moves/pushes): 60/13	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.033ms
+3/19/2018 - 6:52:01 PM  :  Best solution: urrrDullDRurrdddlllUluurrdRurDllulldRRRllddrrURldlluururDurD
+3/19/2018 - 6:52:04 PM  :  Level 42	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 68/20	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:03s.226ms
+3/19/2018 - 6:52:04 PM  :  Best solution: rddLruulDrddLUUdddllluurRRuruulDDrDLddllluurRRddlUdlluurRdrUUruulDDD
+3/19/2018 - 6:52:07 PM  :  Level 43	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 69/22	Init Time: 00h:00m:00s.001ms - Solving Time: 00h:00m:03s.233ms
+3/19/2018 - 6:52:07 PM  :  Best solution: ldddlLDuLrdLdlluuRDuRdddrUluuRRRurDllllddrUluRRRlllllddRurrddlUUluRRR
+3/19/2018 - 6:52:07 PM  :  Level 44	iterations: 0	iterations for first solution: 0	total solutions: 1	best solution length (moves/pushes): 1/1	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.000ms
+3/19/2018 - 6:52:07 PM  :  Best solution: R
+3/19/2018 - 6:52:07 PM  :  Level 45	iterations: 23	iterations for first solution: 23	total solutions: 1	best solution length (moves/pushes): 49/11	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.030ms
+3/19/2018 - 6:52:07 PM  :  Best solution: lluuururrdLulldddrdrruLUUruLdLrdddlluRluUddrdrUUU
+3/19/2018 - 6:52:07 PM  :  Level 46	iterations: 8	iterations for first solution: 8	total solutions: 1	best solution length (moves/pushes): 47/8	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.016ms
+3/19/2018 - 6:52:07 PM  :  Best solution: dlluuRuRDrUlldlddrrUdlluururrdLddlluuluururrrDD
+3/19/2018 - 6:52:07 PM  :  Level 47	iterations: 52	iterations for first solution: 52	total solutions: 1	best solution length (moves/pushes): 143/26	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.235ms
+3/19/2018 - 6:52:07 PM  :  Best solution: rrruuulldRRddlllluuRRRurDurrdLLDuulldRlllddrrrRlllluurrrurDllllddrrrrRlUdrRlllllluurrrurDllllddrrrrrrdrruLLLLLLdlluuurrrrDulllldddrrurRlldlluRR
+3/19/2018 - 6:52:11 PM  :  Level 48	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 44/10	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:03s.391ms
+3/19/2018 - 6:52:11 PM  :  Best solution: rddrDulDLruuullddDrrrrddllUdrruLuLLrrddlUruL
+3/19/2018 - 6:52:14 PM  :  Level 49	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 69/17	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.886ms
+3/19/2018 - 6:52:14 PM  :  Best solution: lddRluurDlddRluurDuurrddLDDDlddrruLuuuuruullldddRluurDrDDDuuulldRurDD
+3/19/2018 - 6:52:15 PM  :  Level 50	iterations: 169	iterations for first solution: 169	total solutions: 1	best solution length (moves/pushes): 202/47	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.212ms
+3/19/2018 - 6:52:15 PM  :  Best solution: llulDDulldRRurrrrrdddlllllUUluRRRRllldRlddrrrrruuuLLLLulDrdLrurrdLLulDulldRRRurrrrdddlllllUdrrrrruuulldLrurrdddllllluUluRRRlldRurRdLLLddrrrrruuuLLdlllulldRurrdrrurrdddllllluUruLrRlldlluRRdrruRRlldlluRRR
+3/19/2018 - 6:52:15 PM  :  Level 51	iterations: 1	iterations for first solution: 1	total solutions: 1	best solution length (moves/pushes): 42/8	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.008ms
+3/19/2018 - 6:52:15 PM  :  Best solution: rddllluURuLrdddrruuLrddllluuurDllluurDldRR
+3/19/2018 - 6:52:15 PM  :  Level 52	iterations: 8	iterations for first solution: 8	total solutions: 1	best solution length (moves/pushes): 43/12	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.025ms
+3/19/2018 - 6:52:15 PM  :  Best solution: dddLruLruLrddddlUlluuRlddrURlluuRDldRuuRurD
+3/19/2018 - 6:52:15 PM  :  Level 53	iterations: 52	iterations for first solution: 52	total solutions: 1	best solution length (moves/pushes): 55/14	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.081ms
+3/19/2018 - 6:52:15 PM  :  Best solution: rUruuLullDRllddRUUdddrruLdlUrrruuLrddlUUddllluurRllddrU
+3/19/2018 - 6:52:24 PM  :  Level 54	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 138/30	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:08s.463ms
+3/19/2018 - 6:52:24 PM  :  Best solution: drURuulDrddlluluRddrruLruulDrRRRlllddlUrurrrdrUUdlllldldlUrrdrUluRRRdrruulDruuulldRddllllulDrrrrrruruLdldllllddlluluRdRluRRldRuRRllddrUluR
+3/19/2018 - 6:52:24 PM  :  Level 55	iterations: 8	iterations for first solution: 8	total solutions: 1	best solution length (moves/pushes): 70/27	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.031ms
+3/19/2018 - 6:52:24 PM  :  Best solution: rdrrrddlUruLLrrddddlUUruullLulldRRRRurDDDldRRlluUruLLLulldRRRRurDDDldR
+3/19/2018 - 6:52:24 PM  :  Level 56	iterations: 0	iterations for first solution: 0	total solutions: 1	best solution length (moves/pushes): 23/6	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.002ms
+3/19/2018 - 6:52:24 PM  :  Best solution: luuLulldRurDrddllURuulD
+3/19/2018 - 6:52:24 PM  :  Level 57	iterations: 61	iterations for first solution: 61	total solutions: 1	best solution length (moves/pushes): 110/37	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.251ms
+3/19/2018 - 6:52:24 PM  :  Best solution: dddrdrruLLdLUlldRRRurrddlUlluUUruulDDDDrdrruLdlLrruLdlUUdlldRRuuUdddRluuuruulDDDDldRurrrddlUruLLLdRurDlllluRRR
+3/19/2018 - 6:52:24 PM  :  Level 58	iterations: 10	iterations for first solution: 10	total solutions: 1	best solution length (moves/pushes): 56/11	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.007ms
+3/19/2018 - 6:52:24 PM  :  Best solution: luluurDRDulldRddrruruuLLrrddlLrruullLrrrddlldlUrUdrruulL
+3/19/2018 - 6:52:57 PM  :  Level 59	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 284/52	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:32s.993ms
+3/19/2018 - 6:52:57 PM  :  Best solution: ldllllldRlddlUrururrdLrruruullllllllddddRluuuurrrrrrrrddllllldRRurrruullllllllddddrRdrUllluuuurrrrrrrrddllllllDRdLruurrdLullddrUluRRRRRRuullllllllddddRluuuurrrrrrrrddldLulllddLrururrrrurDDullldLrrurrdDrddlluRuuuluullllllllddddRRdrUUluRRRRRRllllldRurrrrurDDDuullldLLullddrUluRRRRRRurDD
+3/19/2018 - 6:52:57 PM  :  Level 60	iterations: 228	iterations for first solution: 228	total solutions: 1	best solution length (moves/pushes): 315/54	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.404ms
+3/19/2018 - 6:52:57 PM  :  Best solution: urrrrrrdddLLulldRRRllDDrddlUUdLruUddlLdlluRRRllUUluurDuuurrrrrrddDDDuullulldRRRllddrddlUUUddllluUluuruurrrrrrddDllulldRdddllluuluuruurrrrrrdddDuuuullllllddDDDuuuuurrrrrrdddlLulldRdddlldlUrrruuuRldddlllUdrrruuurRlldddllluUluurDDDuuuuurrrrrrddDllldddlldlluRRRlluuuuuurrrrrrdddlllddrddlUUUddllluuuuuurrrrrrdddllulldRRR
+3/19/2018 - 6:52:59 PM  :  Level 61	iterations: 601	iterations for first solution: 601	total solutions: 1	best solution length (moves/pushes): 172/27	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.831ms
+3/19/2018 - 6:52:59 PM  :  Best solution: lDDlDLrDrrUruLLrddlluRuuuruullllldddddRRRdrUUrrdLulUdrddllullluuuuurrrrrddLddrddlUUdlluRldlluuuuurrrrrddlLrruullllldddddrrruRUddrruLdlUlldlluuuuurrrrrddLruullllldddddrrrruU
+3/19/2018 - 6:52:59 PM  :  Level 62	iterations: 71	iterations for first solution: 71	total solutions: 1	best solution length (moves/pushes): 116/40	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.151ms
+3/19/2018 - 6:52:59 PM  :  Best solution: LLLLullDRdLruRlldLLrruulDrrrRllllLddlluuRRddlUruRRRldLLdlluRluRRlddrUrrruRllulDrdLLdlluurRRRlllldRurrrRlldLdlUluRRRR
+3/19/2018 - 6:52:59 PM  :  Level 63	iterations: 27	iterations for first solution: 27	total solutions: 1	best solution length (moves/pushes): 133/50	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.104ms
+3/19/2018 - 6:52:59 PM  :  Best solution: llllLLulLLLLLLulldRurDrrrrrrrddlUruLLLLLLLulldRRRRRRRllllddlUrurrrrRurDllllllLrrrrrrdRRRRRlllllullllllulldRRRRRRRRdrUdrrrrRdrruLLLLLL
+3/19/2018 - 6:53:05 PM  :  Level 64	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 93/21	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:05s.849ms
+3/19/2018 - 6:53:05 PM  :  Best solution: ldlluulUluurDurrdLDuulldRldRuurrdLLrrdLDuululDrrddDulUruulldldRuRurrddlddDuuuruulDDDuulldRurD
+3/19/2018 - 6:53:11 PM  :  Level 65	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 117/23	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:05s.859ms
+3/19/2018 - 6:53:11 PM  :  Best solution: uuuuLrddddlluuRUruulDulldRurrddDDulldlluRdrdrdrruLuulLrrddLruuuuulldRDrdddlLuuRlddLruururDluuurDlddldlluRdddlUruLruRR
+3/19/2018 - 6:53:11 PM  :  Level 66	iterations: 5	iterations for first solution: 5	total solutions: 1	best solution length (moves/pushes): 123/17	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.231ms
+3/19/2018 - 6:53:11 PM  :  Best solution: DDrrdrddddldLruruuuulullDDrddlUddDrddlluRurruruuuululllldlddddrdRluluuuururrrrdrddddldlDururuuuululldDrddldDrdLddrUluuuuUUU
+3/19/2018 - 6:53:11 PM  :  Level 67	iterations: 22	iterations for first solution: 22	total solutions: 1	best solution length (moves/pushes): 55/10	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.055ms
+3/19/2018 - 6:53:11 PM  :  Best solution: uurrdrddrddllUdrruulLruulDDuuullddRRdrrddllUlURuuullddR
+3/19/2018 - 6:53:15 PM  :  Level 68	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 72/17	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:03s.753ms
+3/19/2018 - 6:53:15 PM  :  Best solution: luuurrrRlllldddrrUdlluuurrrrdrruLLLLLulDDDuurrDRRllulldlddRuuurrrrrrdLLL
+3/19/2018 - 6:53:25 PM  :  Level 69	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 159/38	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:09s.706ms
+3/19/2018 - 6:53:25 PM  :  Best solution: rurrrurrDrUdrddllUdrUlUdrruLuLDuLLrruurDlddrddlUruUluurDldllulDrdLLrrddlllluuurDDldRuurrrurrurDlllldllddRluurrrurrDurDrddlUdlUUdrruLuLLLulDrrrrddlUruLLLdLruulD
+3/19/2018 - 6:53:30 PM  :  Level 70	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 50/18	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:05s.212ms
+3/19/2018 - 6:53:30 PM  :  Best solution: rdrrrddlUruLLLulldRRdRlulldRDDDuuuurRdLulDDDldRurD
+3/19/2018 - 6:53:31 PM  :  Level 71	iterations: 64	iterations for first solution: 64	total solutions: 1	best solution length (moves/pushes): 242/33	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.761ms
+3/19/2018 - 6:53:31 PM  :  Best solution: ulldRurrDLrDulullddddddrrrrrrrrrruuuuulllddllldlluRuululldRRurDllldddddrrrrrrrrrruuuuulllddllLdlluRUdRRRdrruLuurrrdddddlllllllllluuuuurrurrdLLrddrrRdrUlllluululldRurrdddrrrrUdlllluuulldRurDDullldddddrrrrrrrrrruuuuullulldRRRllddllldlluRRRRdrUU
+3/19/2018 - 6:53:35 PM  :  Level 72	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 32/12	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:04s.519ms
+3/19/2018 - 6:53:35 PM  :  Best solution: llLulDrDDDrrddlULLruuuulldRurDDD
+3/19/2018 - 6:53:36 PM  :  Level 73	iterations: 179	iterations for first solution: 179	total solutions: 1	best solution length (moves/pushes): 213/31	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.997ms
+3/19/2018 - 6:53:36 PM  :  Best solution: uulllluurDDDurruLrdrddddlllluuRuuluurDDrrrruLdddddlllluurUUrrruLdllluurDldRddlddrrrruuuuluLrrdddddlllluuruuRRurDlllluRdrrrDDDuuulllddlddrrrdrruLuuuuluLrrdddddLLrruuuulllluurDrrrdddddllLrrruuuullulDDurrrddddllldlUU
+3/19/2018 - 6:53:40 PM  :  Level 74	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 48/12	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:03s.531ms
+3/19/2018 - 6:53:40 PM  :  Best solution: lulDDDRRlluurrDRRllullddrddrruUddlluuRllldRurruR
+3/19/2018 - 6:53:40 PM  :  Level 75	iterations: 135	iterations for first solution: 135	total solutions: 1	best solution length (moves/pushes): 218/44	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.374ms
+3/19/2018 - 6:53:40 PM  :  Best solution: ddlluLuRddrruLdlluuLrdRlulLdRluulldRRdrRdrrruuLrddllluuLdlUrrddrrruulLLdlluUddrruLdlUrrddrrUdllulluluuRRRlllddrrrddrrruuLddllulluUdrrddrruLLulldRluluuRRlddrdRdrruuLrddlluRuLrrrdLLulLrrddlUllUUdrdrruLdlluluuRdddrruLdlUU
+3/19/2018 - 6:53:54 PM  :  Level 76	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 486/70	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:13s.369ms
+3/19/2018 - 6:53:54 PM  :  Best solution: rddrddrrrrUUluuurrdLDldDrdLuuurDuuulDrddlddrUldLLdlUUluuuuurrddddLddrrruuUrDlddllluuruuuulllddddRdrdrrruuruuulDrddlddllluluuuuurrddddLdlUUdrddrrrrUldllluluuUddrddrrruuUruulDDDDrdLruUlddLLdlUrrrruuUldddlllUdrrruuuuurrdLulDrddlddlllululuuuurrrddddLddrrruuUdddllluuruuuulllddrUluRlddddRdrdrrrruuuuulDrddlddllluluuuuuurrdddddLdlUrddrrrruuuulDrddldlllululuurDuuuurrdddddlddrrrruuulDrddlllluuruuuuLrddddldlUluuuuRlddddrrddrrrruulDrdLLLdlUUluluuruuurrdddddLruuuuulldRurDDDuulllddddRUUUluRRurDD
+3/19/2018 - 6:53:57 PM  :  Level 77	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 115/28	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:03s.124ms
+3/19/2018 - 6:53:57 PM  :  Best solution: ddddrrurrruLdllLdlUUUddrrrrrrruLdlllllluururrrrrDDrdLLLLruRldlLdlluuururrrrrdDlldllLdlUUdrrrrrurrdLLLLLuRRRllldLdlU
+3/19/2018 - 6:54:02 PM  :  Level 78	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 88/18	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:05s.230ms
+3/19/2018 - 6:54:02 PM  :  Best solution: rrrruUddlllluUrRuurrDDDuuulldRldllddrrrdrruLdllluluurrururDDullullDRdrRllulldRurRRllldRR
+3/19/2018 - 6:54:02 PM  :  Level 79	iterations: 23	iterations for first solution: 23	total solutions: 1	best solution length (moves/pushes): 84/20	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.044ms
+3/19/2018 - 6:54:02 PM  :  Best solution: lLLdlluRRRRRlllluurDurrDulldDrRdrrULLLrrrruulDrddllluuulllddRuurrddrdrruLdlluLrdrruL
+3/19/2018 - 6:54:12 PM  :  Level 80	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 239/50	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:09s.867ms
+3/19/2018 - 6:54:12 PM  :  Best solution: lddrUdrruLUUUUdllluUluurDrrdRRllullDurrdrddddddlluuRldRdrruuLuuuurRllddlllUdrrruurrdrUlllddddrddlUUUUUdllluUddrrrdddlluRdrUUUllluuluurDrrdRRlDurRlllullDurrdrdDlllUdrrrDDrdLuuullluUddrrrddlldRdrUUUUUdllluuluurDrrdRddllluUddrrruuRlddllluuluR
+3/19/2018 - 6:54:12 PM  :  Level 81	iterations: 156	iterations for first solution: 156	total solutions: 1	best solution length (moves/pushes): 88/24	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.360ms
+3/19/2018 - 6:54:12 PM  :  Best solution: luuurrdLDlUddddrruLdlUUdrUUUruullDurDDDDlddrruLulluRdrUUruulldDrddlluRdrUdddlUruulldRdrU
+3/19/2018 - 6:54:12 PM  :  Level 82	iterations: 34	iterations for first solution: 34	total solutions: 1	best solution length (moves/pushes): 52/14	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.067ms
+3/19/2018 - 6:54:12 PM  :  Best solution: drrruUlUdrruLuLLulldRDDlddrUdrrruuuulLulDrrrddlUruLL
+3/19/2018 - 6:54:18 PM  :  Level 83	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 261/53	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:05s.674ms
+3/19/2018 - 6:54:18 PM  :  Best solution: rruuuuuLullDDDDuuuRldddDrrruuuuLrddlUrdddllluuuRRlluurDurDrDulllddddrddlUUUUUdddrrruUlULuulldRurrDulDrrDDuulllDurrrddDDllluUddrrrrdLuuulUrdddllluuURuulldRddddrdRlluuuurRlluurrDrDululDrrdDuulllddddrrrrdLullluuuurrrddDuuulllddddrdRRluRuulUrdddllluuuRRluurDrDulldR
+3/19/2018 - 6:54:27 PM  :  Level 84	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 189/54	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:08s.834ms
+3/19/2018 - 6:54:27 PM  :  Best solution: dRluuRDrruLdDulldRluuRdrrdLDuruuLuullllddddddrrrRRRdrruLLLLLruuulluRdrdddlLrruuulldRurDDuruuLuulllldddddddrruLdlUUUUUUluRRRllddddddrrrRuulluuRdrdddRRdrruLLLLLLLdlUUUUUUluRRlddddddrrrruuruuL
+3/19/2018 - 6:54:36 PM  :  Level 85	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 68/21	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:08s.797ms
+3/19/2018 - 6:54:36 PM  :  Best solution: luuuuuRRRRRldLLLulDDDDldRRRRlddrruUUruLddlllluuuurrrrRlllllddddrruuR
+3/19/2018 - 6:54:36 PM  :  Level 86	iterations: 17	iterations for first solution: 17	total solutions: 1	best solution length (moves/pushes): 129/27	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.106ms
+3/19/2018 - 6:54:36 PM  :  Best solution: uRlddrrrUrruullDLDururrddlLdLLdlluuruRldDldRuuuruRldlddrrrurruululDDulldRDuurrrddlLdLLrrurruulllldldDuurrDrdLLruuurDurrddlLulDrdL
+3/19/2018 - 6:54:43 PM  :  Level 87	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 61/16	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:07s.380ms
+3/19/2018 - 6:54:43 PM  :  Best solution: luRluurDllluRUddrruLdlUrdddrUdrruLLdlUluurrDLdlUrddrruLdlUruL
+3/19/2018 - 6:55:03 PM  :  Level 88	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 496/81	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:19s.510ms
+3/19/2018 - 6:55:03 PM  :  Best solution: rrruulDruuulUdDruuuulDrddddddLLdlluRRRuUruuuuurrdddddddldlUUdrruuuuuuulldddlDDDuurDDuuuuulDDruuurrdddddddldlUrruuuuuuulldddddlUruuuurrdddddddllUluuruulDruuurrdddddddllLLdlluRRRurUlddRuuUdlUrUUluurDurrdddddddLruuuuuuulldDDuuurrdddddddlLLuuuUddddLrruuUdddrruuuuuuullldDDuruurrdddddddlluuuUUldDrddldldlluRRRuruuluuuurrrdddddddldlUrruuuuuuulllddddDuuuuurrrdddddddllUdrruuuuuuulllddrUlddddDrdLruUluuuuuRRurDllldddddrUUUluurrrDDDDDuuuuulllddrUluRRlldddddddLrruuuuuuururDllldddddddldlluRRRuruuuuuurrDDDD
+3/19/2018 - 6:55:07 PM  :  Level 89	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 118/25	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:04s.747ms
+3/19/2018 - 6:55:07 PM  :  Best solution: LrddrDluuuurrddLruulldDrddlddrUluUddrUluUrruullDDDDrUddLLruuuuurrddLdlddldlUrrruuuruulldDDrddlllUdrrruulDDrdLLruuuuulL
+3/19/2018 - 6:55:19 PM  :  Level 90	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 69/13	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:11s.757ms
+3/19/2018 - 6:55:19 PM  :  Best solution: lldRRurrDulllddDuururrdLulldddrrdrruLdlluluuurrdLrrDullulDDurrrdDrdLL
+3/19/2018 - 6:55:19 PM  :  Level 91	iterations: 8	iterations for first solution: 8	total solutions: 1	best solution length (moves/pushes): 54/14	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.034ms
+3/19/2018 - 6:55:19 PM  :  Best solution: rrdrrruulDrdLuLrdLuLLullllddrrURldlluurRdrRlluRllldRRR
+3/19/2018 - 6:55:20 PM  :  Level 92	iterations: 30	iterations for first solution: 30	total solutions: 1	best solution length (moves/pushes): 390/102	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.550ms
+3/19/2018 - 6:55:20 PM  :  Best solution: uuullllLLrrddllULUdLruRldldlluRRRurRRRRRRddrruuLrddlluUllllddllUluUdRRlluluurDDDrrRRRRRddrruuLLrruullDDLLLrrrrrddllUUlllLLLrrrrrrrruullDDDulllllldLrurrrrrrrrddldlUrruulllllllldlLdlluRRRUrrrrrrrDullllddllUluRddrruurrrrrrddldlUrruullllllLrddlluluUdRRlluluurDDDrrRRRRllllldLrurrrrrRuurrddLLrrddllUULLLrrrrruullDDDDuulllLddlluuRRRRRRddrruuLrddlluUddrddlUUrruullllllllldLdlluRRRurrrddllUluRRRRRR
+3/19/2018 - 6:55:39 PM  :  Level 93	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 69/13	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:18s.826ms
+3/19/2018 - 6:55:39 PM  :  Best solution: rDlulUlluurrDullddrRdrrdrrddllUdrruLuLullDuulluRdrddllddrrUdlUrUdlluR
+3/19/2018 - 6:55:39 PM  :  Level 94	iterations: 20	iterations for first solution: 20	total solutions: 1	best solution length (moves/pushes): 83/29	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.036ms
+3/19/2018 - 6:55:39 PM  :  Best solution: rdRRurDlllulldRDuRRRurrdLDDllldlluRuurrRurrdLddrddlUruLLruuLLLulldRRRRurDDDrddlUruL
+3/19/2018 - 6:55:39 PM  :  Level 95	iterations: 6	iterations for first solution: 6	total solutions: 1	best solution length (moves/pushes): 37/8	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.056ms
+3/19/2018 - 6:55:39 PM  :  Best solution: ddRDlddrrUdrrruuLUruullDLulldddddrruR
+3/19/2018 - 6:55:51 PM  :  Level 96	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 171/38	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:11s.985ms
+3/19/2018 - 6:55:51 PM  :  Best solution: RRllLrrrdrddLLrruululllLrrrrdrruLdddlldlluRRluuurRdrruLdddLruuuLrdddlLrruuluLrrdddlldlluRuuUrrrdddlLrruulullUdrrrdddlldlluRuuullulldRRRRRluUruulDDDDrRdrruLLLrrdddlLdlluRRR
+3/19/2018 - 6:55:57 PM  :  Level 97	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 101/23	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:06s.393ms
+3/19/2018 - 6:55:57 PM  :  Best solution: drDluuurrRRddlLrruuluurDrRRRRRllllllldllldddrrurrddldllUdrrruuuuUluRRRRRRllldLulldlllddRRRllluurrrurD
+3/19/2018 - 6:56:24 PM  :  Level 98	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 209/64	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:26s.527ms
+3/19/2018 - 6:56:24 PM  :  Best solution: lldlluuuullLLLuLulldRDRDuRRRRRurDllllluLulDrrdrrrrrDDuullllllulldRRRRRRRurDDulllllldDrddlUUdlluRUddrruLdlUrUUruLullddRDuluRddrddlluRurDluuRRRRRRlllllluurDrdrrrrurDlllllullddrdrddlUluuuRRRRRRlllllldddrUUluRRRRR
+3/19/2018 - 6:57:01 PM  :  Level 99	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 316/89	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:37s.914ms
+3/19/2018 - 6:57:01 PM  :  Best solution: rrdrrrrrddrrrrrruRdrrruulDrdLuLrdLLLLLUUUdddrruLrdrruLdlllLLrrruRldlluRuuluRRdrruruulldDlldddldlLrrruuururrdLLulDDDldlldlUUUruulDrdLddrrrRlllluuLrddrrrrRRRRurrdLLLLuLrRldLLrrruRllldlLrrrrrrruulDrdLLLulldllLrrrRllluRldlLrrrrrurrdLulLdlluRldlldlUUdrrrrrRuLdllllluUddrrrrrrurrdLLLLLLLdlUUdrrruRRRRRdrruulDrdLLLLLLLLLdlU
+3/19/2018 - 6:57:04 PM  :  Level 100	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 59/13	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.794ms
+3/19/2018 - 6:57:04 PM  :  Best solution: lddrDluuurDrrrDldddrruuLrddlUlUUruLdddrruLdlUruulLrrddlUruL
+3/19/2018 - 6:57:05 PM  :  Level 101	iterations: 33	iterations for first solution: 33	total solutions: 1	best solution length (moves/pushes): 274/33	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:01s.093ms
+3/19/2018 - 6:57:05 PM  :  Best solution: ruuuulLrrddddrruUddlddLruuluuuulluullddRRlddrrrddrruurruullDlldlllldDuurrrrddrruUddlluuuuLrddllllddllddrrUrrUUdrrrruurruullDlldddllddRRlluurruuuulLrrddddllddrrddrruuLuuluuuulluullddRddRRlddrrrruUrruullDllDDulldddllUdrruuurrurrDulldllllDurrddddrRddrruuLuurUdlddLruuLuullddddR
+3/19/2018 - 6:57:20 PM  :  Level 102	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 213/44	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:14s.768ms
+3/19/2018 - 6:57:20 PM  :  Best solution: rrururrrddddLruulDruuulDLLrrrddlUrdddlUruuuLrdddlUruululldRlLdllluurrDrdLLLrrrurrurrdLLLLrrrDullldllldlUruurrDullddlUrdrdrruLrurrrrdddldlluRdrruuululllldLdlUUdrrrurrrrdddLUUruLLrddddlluRdrUUUruulldLLdlUrrrurrdLLLL
+3/19/2018 - 6:57:26 PM  :  Level 103	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 67/12	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:05s.386ms
+3/19/2018 - 6:57:26 PM  :  Best solution: ulLrrddllddlluRUrUUddldlluurRdrrruullDurrddlLulllddrrdrUllluurrDDuR
+3/19/2018 - 6:57:28 PM  :  Level 104	iterations: 295	iterations for first solution: 295	total solutions: 1	best solution length (moves/pushes): 199/35	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.338ms
+3/19/2018 - 6:57:28 PM  :  Best solution: ulLLLDurrDurrddldlllUdrrrruuulldDDuuullDurrddrdddlUruuluulldlluRRRRurrdLulDrrddllDrruuullDurrddldlllUUddrrrruuulllLdddrrrddlUruruuulllldlluRRdddrRlluuuRRurrdddlDruuuullddDrruuLrddldLddrUluurruululDDD
+3/19/2018 - 6:57:44 PM  :  Level 105	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 147/36	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:16s.467ms
+3/19/2018 - 6:57:44 PM  :  Best solution: lddLdlluRRRurrdLuluuuLrddlUdDrrrdRllulluuUrrrddddrdrruLLLuurDldRdrruLLullllDlddrUUUruulDrrruuRurrdLLLdllldDruuuRdrdrUllllddDlddrUUUruulDrrrruUruulD
+3/19/2018 - 6:57:53 PM  :  Level 106	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 348/53	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:08s.285ms
+3/19/2018 - 6:57:53 PM  :  Best solution: ddrrrrDlulldRRllulldRuuurrrurrdLulllldddrrdLuluurrurrdDuulllldddrrrdRllluluurrRlllddldRurrrdrUlllldRRlluuurrrurrdLulllldddrrrrdLruUdldLrruuruulDLrDulLulldddrrdLuluuRlddrrrdrUlllluururrdLulldddrrrrUdlllluuRlddldRuuururrdLLrrurrdLullllDrrRurrddldlldLulUdrrrruruLLulllDrurrrdddllllldRurrrruulLrrddllllUddRRurruullullDDuurrdLulDrrrrdddLulldlluRRdRluRdR
+3/19/2018 - 6:57:55 PM  :  Level 107	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 10/2	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:02s.746ms
+3/19/2018 - 6:57:55 PM  :  Best solution: uuuuulllDD
+3/19/2018 - 6:58:07 PM  :  Level 108	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 134/25	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:11s.864ms
+3/19/2018 - 6:58:07 PM  :  Best solution: rrrrdrruRdrrUruuLullDDDuuurrdrddlUddlLLLrruuuurrDrddldllllLrrrrruruulDuulldddldllLLrrrrruuuurrdLulDDDldllllulllddrrUrrrrrRllllluLLLulD
+3/19/2018 - 6:58:17 PM  :  Level 109	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 268/46	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:09s.285ms
+3/19/2018 - 6:58:17 PM  :  Best solution: ruurrddLrdddddllDlUrrruuuuuuullllddrRRllldddrDrdrruuuuUllllddlldRuruurrrrddddddddllUdrruuuuuuuulluurrDDDDDDDuuuuullllddlddRdRluluuruurrrrdddddDuuuuuullllddlddrdrRRluLrdDluuuLrddlUUUUdlldRurDldRurDldRRlluuuuUrruullDurrrrddddddDuuuuulluulldDDDlddrrrdRllluluurDldRurDldRR
+3/19/2018 - 6:58:20 PM  :  Level 110	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 31/4	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:03s.407ms
+3/19/2018 - 6:58:20 PM  :  Best solution: uulluuuurDldddlluRdrrruurrdLulL
+3/19/2018 - 6:58:28 PM  :  Level 111	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 215/44	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:08s.494ms
+3/19/2018 - 6:58:28 PM  :  Best solution: DluuurDlddrRlluurRllddrrUdlUrrrdLuUUUUddddrdddlllUdrrruuluuuruuuLdddddrdddllluUluRRldddrrruulUUUUUdddddLulluurDldRldRuuRlddddrrruuluUUUruLdddlldRldddrrruulUUUruulLrrddldllddRlddrUUluurruUddlldRdddrruuLrddlluUrUdlluR
+3/19/2018 - 6:58:34 PM  :  Level 112	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 97/27	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:05s.484ms
+3/19/2018 - 6:58:34 PM  :  Best solution: rrruuuruuuLLLDlddrUlulluururrDLDDuRRlDurRuLrrDlllldlluuRurrDulldRdRluurDrrrdDDrdLulDDDuuruuulullD
+3/19/2018 - 6:59:07 PM  :  Level 113	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 144/20	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:33s.500ms
+3/19/2018 - 6:59:07 PM  :  Best solution: rRRdrRuLLLLdlUUrdrrrddRlluullluUdrdrrrrddDluluullllulluurruurrddLLrddrdrrrdddddrUluuluullllulluuRlddrrrrdrrrddddrUUlluullllulluurRllddrrrrdrrrrD
+3/19/2018 - 6:59:11 PM  :  Level 114	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 92/21	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:03s.760ms
+3/19/2018 - 6:59:11 PM  :  Best solution: dddLrurrdLuluuruLdddldRuuulLrrddrrdLullddllURdrUllUdrrRurrdLLLrrrurrdLullldlLrrrurrdLLLLdllU
+3/19/2018 - 6:59:19 PM  :  Level 115	iterations: 1000	iterations for first solution: -1	total solutions: 0	best solution length (moves/pushes): 131/23	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:08s.271ms
+3/19/2018 - 6:59:19 PM  :  Best solution: drrUdllllUUUluRddddrruLuluuRRllddrdrdrruUddllluuluurrdrRRldddlluRlluluurrdrrruullDurrddlLulllddrdrrdrUUdllluluurrrdRddllldlUUUluRRR
+3/19/2018 - 6:59:19 PM  :  Level 116	iterations: 1	iterations for first solution: 1	total solutions: 1	best solution length (moves/pushes): 65/14	Init Time: 00h:00m:00s.000ms - Solving Time: 00h:00m:00s.010ms
+3/19/2018 - 6:59:19 PM  :  Best solution: drrrdrruUruulldRlllDurrrdddlluUluRdRlddrruUlllLdlluRRdRUrrrddllUU
