@@ -17150,3 +17150,338 @@ level path: ../Release/Levels/sokoban.txt
 ********************************
 ********************************
 
+3/19/2018 - 1:48:58 PM  :  Solved 6/30
+3/19/2018 - 1:48:58 PM  :  avg rollouts: 2
+3/19/2018 - 1:48:58 PM  :  avg nodes:18
+3/19/2018 - 1:48:58 PM  :  avg visits: 939
+3/19/2018 - 1:48:58 PM  :  avg raveVisits: 154.400346620451
+3/19/2018 - 1:48:58 PM  :  median visits: 1
+3/19/2018 - 1:48:58 PM  :  median raveVisits: 0
+3/19/2018 - 1:52:26 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 1000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 2
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+
+3/19/2018 - 1:53:02 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 1000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 2
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+
+3/19/2018 - 1:53:22 PM  :  Solved 2/30
+3/19/2018 - 1:53:22 PM  :  avg rollouts: 0
+3/19/2018 - 1:53:22 PM  :  avg nodes:14
+3/19/2018 - 1:53:22 PM  :  avg visits: 239.470085470085
+3/19/2018 - 1:53:22 PM  :  avg raveVisits: 39.6688034188034
+3/19/2018 - 1:53:22 PM  :  median visits: 1
+3/19/2018 - 1:53:22 PM  :  median raveVisits: 0
+3/19/2018 - 1:53:22 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 2000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 2
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+
+3/19/2018 - 1:54:02 PM  :  Solved 2/30
+3/19/2018 - 1:54:02 PM  :  avg rollouts: 0
+3/19/2018 - 1:54:02 PM  :  avg nodes:14
+3/19/2018 - 1:54:02 PM  :  avg visits: 478.173076923077
+3/19/2018 - 1:54:02 PM  :  avg raveVisits: 77.1581196581197
+3/19/2018 - 1:54:02 PM  :  median visits: 1
+3/19/2018 - 1:54:02 PM  :  median raveVisits: 0
+3/19/2018 - 1:54:02 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 5000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: True
+RAVE: True
+RAVE Threshold: 2
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+
+3/19/2018 - 1:55:45 PM  :  Solved 2/30
+3/19/2018 - 1:55:45 PM  :  avg rollouts: 0
+3/19/2018 - 1:55:45 PM  :  avg nodes:14
+3/19/2018 - 1:55:45 PM  :  avg visits: 1192.12393162393
+3/19/2018 - 1:55:45 PM  :  avg raveVisits: 188.168803418803
+3/19/2018 - 1:55:45 PM  :  median visits: 1
+3/19/2018 - 1:55:45 PM  :  median raveVisits: 0
+3/19/2018 - 1:56:07 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 1000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: False
+RAVE: True
+RAVE Threshold: 2
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+
+3/19/2018 - 1:56:36 PM  :  Solved 8/30
+3/19/2018 - 1:56:36 PM  :  avg rollouts: 7
+3/19/2018 - 1:56:36 PM  :  avg nodes:92
+3/19/2018 - 1:56:36 PM  :  avg visits: 51.8467048710602
+3/19/2018 - 1:56:36 PM  :  avg raveVisits: 15.6679799426934
+3/19/2018 - 1:56:36 PM  :  median visits: 1
+3/19/2018 - 1:56:36 PM  :  median raveVisits: 0
+3/19/2018 - 1:56:36 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 2000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: False
+RAVE: True
+RAVE Threshold: 2
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+
+3/19/2018 - 1:57:34 PM  :  Solved 5/30
+3/19/2018 - 1:57:34 PM  :  avg rollouts: 4
+3/19/2018 - 1:57:34 PM  :  avg nodes:135
+3/19/2018 - 1:57:34 PM  :  avg visits: 78.69505628977
+3/19/2018 - 1:57:34 PM  :  avg raveVisits: 24.6703377386197
+3/19/2018 - 1:57:34 PM  :  median visits: 1
+3/19/2018 - 1:57:34 PM  :  median raveVisits: 0
+3/19/2018 - 1:57:34 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 5000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: False
+RAVE: True
+RAVE Threshold: 2
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+
+3/19/2018 - 4:09:18 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 500
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: False
+RAVE: True
+RAVE Threshold: 10
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+
+3/19/2018 - 4:09:37 PM  :  Solved 9/30
+3/19/2018 - 4:09:37 PM  :  avg rollouts: 23
+3/19/2018 - 4:09:37 PM  :  avg nodes:105.2
+3/19/2018 - 4:09:37 PM  :  avg visits: 23.3584431889517
+3/19/2018 - 4:09:37 PM  :  avg raveVisits: 31.9833647206529
+3/19/2018 - 4:09:37 PM  :  median visits: 1
+3/19/2018 - 4:09:37 PM  :  median raveVisits: 1
+3/19/2018 - 4:09:37 PM  :  
+
+
+********************************
+********************************
+BEGIN TASK:
+Game: sokoban
+Use Normalized Position: True
+Use Tunnel Macro: True
+Use Goal Macro: False
+Goal Cut ignored with Goal Macro disabled
+
+NOSP-MCTS 
+Method: MCTS 
+iterations: 1000
+UCT constant: 0.35
+SP_UCT constant: 100
+Reward Type: InverseBM
+epsilon: 0.2
+UCB1Tuned: False
+RAVE: True
+RAVE Threshold: 10
+Node Recycling: False
+Memory Budget: Ignored with node recycling disabled
+Avoid Cycles: False
+Node Elimination:False
+Stop on Result: False
+level path: ../Release/Levels/sokoban.txt
+********************************
+********************************
+
+3/19/2018 - 4:10:14 PM  :  Solved 10/30
+3/19/2018 - 4:10:14 PM  :  avg rollouts: 86
+3/19/2018 - 4:10:14 PM  :  avg nodes:166.666666666667
+3/19/2018 - 4:10:14 PM  :  avg visits: 31.1512922465209
+3/19/2018 - 4:10:14 PM  :  avg raveVisits: 48.9705765407555
+3/19/2018 - 4:10:14 PM  :  median visits: 1
+3/19/2018 - 4:10:14 PM  :  median raveVisits: 1

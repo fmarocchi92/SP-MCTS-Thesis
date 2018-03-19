@@ -119,10 +119,10 @@ namespace MCTS2016.Optimizations.UCT
             if (rave)
             {
                 // Standard UCT formula, check if is correct to use parent.visits insted of parent.RAVEvisits!!!!
-                RAVEScore = RAVEwins / RAVEvisits + const_C * Math.Sqrt(2 * Math.Log(parent.visits) / RAVEvisits);
+                RAVEScore = (RAVEwins + wins) / (RAVEvisits + visits) + const_C * Math.Sqrt(2 * Math.Log(parent.visits + parent.RAVEvisits) / (RAVEvisits + visits));
                 if (double.IsNaN(RAVEScore))
                     RAVEScore = 0;
-                alpha = RAVEScore == 0 ? 0 : Math.Max(0, (raveThreshold - RAVEvisits) / raveThreshold);
+                alpha = RAVEScore == 0 ? 0 : Math.Max(0, (raveThreshold - visits) / raveThreshold);
             }
                         
             if (ucb1Tuned)
@@ -198,8 +198,19 @@ namespace MCTS2016.Optimizations.UCT
             {
                 if (c == this) continue;
                 if (!moveSet.Contains(c.Move)) continue;
-                c.RAVEvisits++;
-                c.RAVEwins += result;
+                
+
+                RaveUpdate(c, result);
+            }
+        }
+
+        private void RaveUpdate(Opt_SP_UCTTreeNode node, double result)
+        {
+            while (node != null)
+            {      
+                node.RAVEvisits++;
+                node.RAVEwins += result;
+                node = node.parent;
             }
         }
 
