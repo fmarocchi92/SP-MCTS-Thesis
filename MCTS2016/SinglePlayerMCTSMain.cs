@@ -64,7 +64,8 @@ namespace MCTS2016
             {
                 throw new ArgumentException("Need three arguments: game method level");
             }
-
+            //textWriter = File.WriteAllText("Log.txt");
+            File.Delete("Log.txt");
             textWriter = File.AppendText("Log.txt");
 
 
@@ -175,7 +176,7 @@ namespace MCTS2016
                                 return;
                             }
                             configurationString += "\nNOSP-MCTS \nMethod: MCTS \niterations: " + iterations + "\nUCT constant: " + const_C+ "\nSP_UCT constant: "+ const_D +  "\nReward Type: "+rewardType+"\nepsilon: "+epsilon+
-                                "\nUCB1Tuned: "+ucb1Tuned+"\nRAVE: "+rave+"\nRAVE Threshold: "+raveThreshold+"\nNode Recycling: "+nodeRecycling+"\nMemory Budget: "+(nodeRecycling?""+memoryBudget:"Ignored with node recycling disabled")+"\nAvoid Cycles: "+avoidCycles+"\nNode Elimination:"+useNodeElimination+"\nStop on Result: "+stopOnResult+"\nlevel path: "+ level + "\n********************************\n********************************\n";
+                                "\nUCB1Tuned: "+ucb1Tuned+"\nRAVE: "+rave+"\nRAVE Threshold: "+raveThreshold+"\nNode Recycling: "+nodeRecycling+"\nMemory Budget: "+(nodeRecycling?""+memoryBudget:"Ignored with node recycling disabled")+"\nAvoid Cycles: "+avoidCycles+"\nNode Elimination:"+useNodeElimination+"\nStop on Result: "+stopOnResult+"\nlevel path: "+ level + "\nseed"+seed+"\n********************************\n********************************\n";
                             Log(configurationString);
                             MultiThreadSokobanTest(const_C, const_D, iterations, 1, level, seed, true, rewardType, stopOnResult, epsilon, true, 1);
                             break;
@@ -198,6 +199,26 @@ namespace MCTS2016
                             configurationString+= "\nMethod: IDA* \nMaximum cost: " + maxCost + "\nReward Type: " + rewardType + "\nlevel: "+level+ "\n********************************\n********************************\n";
                             Log(configurationString);
                             SokobanIDAStarTest(level, maxCost, rewardType, maxTableSize, useNormalizedPosition, useTunnelMacro, useGoalMacro, useGoalCut);
+                            break;
+                        case "random":
+                            if (!int.TryParse(commands[1], out iterations))
+                            {
+                                PrintInputError("seed requires an unsigned integer value");
+                                return;
+                            }
+                            if (!int.TryParse(commands[2], out int maxDepth))
+                            {
+                                PrintInputError("seed requires an unsigned integer value");
+                                return;
+                            }
+                            if (!uint.TryParse(commands[3], out seed))
+                            {
+                                PrintInputError("seed requires an unsigned integer value");
+                                return;
+                            }
+                            configurationString += "\nMethod: random \niterations: " + iterations + "\nMax Iteration Depth: " + maxDepth + "\nseed: " + seed+ "\nlevel: " + level + "\n********************************\n********************************\n";
+                            Log(configurationString);
+                            SokobanRandom(level,maxDepth,iterations, seed);
                             break;
                     }
                     break;
@@ -414,6 +435,64 @@ namespace MCTS2016
             return scores;
         }
 
+        private static void SokobanRandom(string levelPath, int maxDepth, int iterations, uint seed)
+        {
+            string[] levels = ReadSokobanLevels(levelPath);
+            int randomSolved = 0;
+            List<IPuzzleMove> moves=null;
+            RNG.Seed(seed + threadIndex);
+            MersenneTwister rng;
+
+
+            for (int i = 0; i < levels.Length; i++)
+            {
+                RNG.Seed(seed + threadIndex);
+                rng = new MersenneTwister(seed + threadIndex);
+                IPuzzleState state = new AbstractSokobanState(levels[i], RewardType.R0, useNormalizedPosition, useGoalMacro, useTunnelMacro, useGoalCut, null, rng);
+                IPuzzleMove move = null;
+                int restart = 0;
+                IPuzzleState clone = state.Clone();
+                string solution;
+                while (!state.EndState() && restart < iterations)
+                {
+                    moves = new List<IPuzzleMove>();
+                    state = clone.Clone();
+                    int count = 0;
+                    
+                    while (!state.isTerminal() && count < maxDepth)
+                    {
+                        move = state.GetRandomMove();
+                        moves.Add(move);
+                        state.DoMove(move);
+                        count++;
+                    }
+
+                    restart++;
+                }
+                if (state.EndState())
+                {
+                    solution = "";
+                    int pushCount = 0;
+                    foreach (SokobanPushMove push in moves)
+                    {
+                        foreach (IPuzzleMove m in push.MoveList)
+                        {
+                            if (m > 3)
+                                pushCount++;
+                            solution += m;
+                        }
+                    }
+                    Log("Level " + (i + 1) + "\titerations: " + restart + "\tsolution length:  (moves/pushes)"+ solution.Length+"/"+pushCount +"\tsolution: "+ solution);
+                    randomSolved++;
+                }
+                else
+                {
+                    Log("Level " + (i + 1) + "\tNo solution found");
+                }
+            }
+            Log("Solved: " + randomSolved + "/" + levels.Length);
+        }
+
         private static int[] SokobanTest(double const_C, double const_D, int iterations, int restarts, string[] levels, uint seed, bool abstractSokoban, RewardType rewardType, bool stopOnResult, double epsilonValue, bool log)
         {
             uint threadIndex = GetThreadIndex();
@@ -426,27 +505,9 @@ namespace MCTS2016
             IPuzzleState[] states = new IPuzzleState[levels.Length];
 
             //SokobanMCTSStrategy player;
-
-            //IPuzzleState state = new AbstractSokobanState(levels[0], rewardType, useNormalizedPosition, useGoalMacro, useTunnelMacro, useGoalCut, simulationStrategy, rng);
-            //IPuzzleMove move = null;
-            //int restart = 0;
-            //IPuzzleState clone = state.Clone();
-
-            //while (!state.EndState() && restart < 1000)
-            //{
-            //    state = clone.Clone();
-            //    int count = 0;
-                
-            //    while (!state.isTerminal() && count < 100)
-            //    {
-            //        move = state.GetRandomMove();
-            //        state.DoMove(move);
-            //        count++;
-            //    }
-            //    Debug.WriteLine(restart + "\t" +count);
-            //    restart++;
-            //}
             
+            //Debug.WriteLine("Solved random: "+randomSolved+"/"+levels.Length);
+                
             //    Debug.WriteLine(restart);
             
 
@@ -459,7 +520,7 @@ namespace MCTS2016
             int totalNodes = 0;
             List<int> visitsList = new List<int>();
             List<int> raveVisitsList = new List<int>();
-
+            double totalDepth = 0;
             for (int i = 0; i < states.Length; i++)
             {
                 RNG.Seed(seed + threadIndex);
@@ -526,13 +587,13 @@ namespace MCTS2016
                     solvedLevels++;
                 }
                 totalRollouts += mcts.IterationsForFirstSolution;
-
+                totalDepth += mcts.maxDepth;
                 rolloutsCount[i] = mcts.IterationsExecuted;
                 scores[i] = rolloutsCount[i];
                 solved[i] = states[i].EndState();
                 if (log)
                 {
-                    Log("Level " + (i + 1) + "\titerations: " + mcts.IterationsExecuted + "\titerations for first solution: " + mcts.IterationsForFirstSolution + "\ttotal solutions: " + mcts.SolutionCount + "\tbest solution length (moves/pushes): " + moves.Count() + "/" + pushCount + "\tInit Time: " + TimeFormat(stateInitializationTime) + " - Solving Time: " + TimeFormat(solvingTime) + "\tBest solution: " + moves);
+                    Log("Level " + (i + 1) + "\titerations: " + mcts.IterationsExecuted + "\titerations for first solution: " + mcts.IterationsForFirstSolution + "\ttotal solutions: " + mcts.SolutionCount + "\tbest solution length (moves/pushes): " + moves.Count() + "/" + pushCount + "\tInit Time: " + TimeFormat(stateInitializationTime) + " - Solving Time: " + TimeFormat(solvingTime) + "\tTree depth: " + mcts.maxDepth + "\tBest solution: " + moves);
                 }
                 totalNodes += mcts.NodeCount;
                 visitsList.AddRange(mcts.visits);
@@ -563,6 +624,7 @@ namespace MCTS2016
             Log("avg raveVisits: " + avgRaveVisits);
             Log("median visits: " + (visitsList.Count % 2 == 0 ? visitsList[visitsList.Count / 2] : (visitsList[visitsList.Count / 2] + visitsList[1 + visitsList.Count / 2]) / 2));
             Log("median raveVisits: " + (raveVisitsList.Count % 2 == 0 ? raveVisitsList[raveVisitsList.Count / 2] : (raveVisitsList[raveVisitsList.Count / 2] + raveVisitsList[1 + raveVisitsList.Count / 2]) / 2));
+            Log("avg depth: " + totalDepth / states.Length);
             return rolloutsCount;
         }
 

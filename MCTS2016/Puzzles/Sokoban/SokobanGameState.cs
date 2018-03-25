@@ -639,6 +639,8 @@ namespace MCTS2016.Puzzles.Sokoban
         public double GetResult()
         {
             double reward = 0;
+            //Debug.WriteLine(this);
+            //Debug.WriteLine(rewardType);
             switch (rewardType)
             {
                 case RewardType.R0:

@@ -35,6 +35,7 @@ namespace MCTS2016.SP_MCTS.Optimizations
         private int nodeCount;
         public List<int> visits = new List<int>();
         public List<int> raveVisits = new List<int>();
+        public int maxDepth;
 
         public OptMCTSAlgorithm(ISPTreeNodeCreator treeCreator, int iterations, int memoryBudget, bool stopOnResult, bool avoidCycles, bool useNodeElimination)
         {
@@ -66,7 +67,9 @@ namespace MCTS2016.SP_MCTS.Optimizations
             {
                 search = true;
             }
-            
+            double minReward = double.MaxValue;
+            double maxReward = double.MinValue;
+            maxDepth = 0;
             // If needed clean the pool, restore all objects in the pool to the initial value
             if (objectPool.NeedToClean)
             {
@@ -88,13 +91,14 @@ namespace MCTS2016.SP_MCTS.Optimizations
                 long averageUsedMemoryPerIteration = 0;
 #endif
             int deadlocksInTree = 0;
+            int currentDepth = 0;
             for (iterationsExecuted = 0; iterationsExecuted < iterations; iterationsExecuted++)
             {
                 
                 looped = false;
                 ISPTreeNode node = rootNode;
                 IPuzzleState state = rootState.Clone();
-                
+                //Debug.WriteLine(node.TreeToString(0));
                 HashSet<IPuzzleState> visitedStatesInRollout = new HashSet<IPuzzleState>() { state.Clone() };
 
                 // Clear lists of moves used for RAVE updates && best rollout
@@ -250,7 +254,8 @@ namespace MCTS2016.SP_MCTS.Optimizations
                 
                 //Keep topScore and update bestRollout
                 double result = state.GetResult();
-
+                minReward = Math.Min(result, minReward);
+                maxReward = Math.Max(result, maxReward);
                 if (state.EndState() && !solutionHashes.Contains(solutionHash))
                 {
                     solutionHashes.Add(solutionHash);
@@ -269,9 +274,10 @@ namespace MCTS2016.SP_MCTS.Optimizations
                         break;
                     }
                 }
-                
+
 
                 // Backpropagate
+                currentDepth = 0;
                 while (node != null)
                 {
                     if (looped)
@@ -290,12 +296,13 @@ namespace MCTS2016.SP_MCTS.Optimizations
                         }
                         node.Parent.RemoveChild(node);
                         nodeCount--;
+                        currentDepth--;
                     }
 
                     // RAVE Optimization
                     node.Update(result, allFirstMoves);
                     node = parent;
-
+                    currentDepth++;
                     // Node Recycling Optimization
                     if (((Opt_SP_UCTTreeNode)rootNode).NodeRecycling)
                     {
@@ -307,12 +314,14 @@ namespace MCTS2016.SP_MCTS.Optimizations
                     }
                 }
 
+                maxDepth = Math.Max(maxDepth, currentDepth);
+
                 if (!rootNode.HasChildren() && !rootNode.HasMovesToTry())
                 {
                     break;
                 }
 
-                    if (!search)
+                if (!search)
                 {
                     search = true;
                     return null;
@@ -340,12 +349,13 @@ namespace MCTS2016.SP_MCTS.Optimizations
             //Console.WriteLine();
 
             objectPool.NeedToClean = true;
-                        
+
             //#if DEBUG
             //    Console.WriteLine(rootNode.ChildrenToString());
             //    Console.WriteLine(rootNode.TreeToString(0));
             //#endif
-            
+
+
             IPuzzleMove bestMove;
             if (bestRollout != null && bestRollout.Count > 0) //Remove first move from rollout so that if the topScore is not beaten we can just take the next move on the next search
             {
@@ -357,7 +367,7 @@ namespace MCTS2016.SP_MCTS.Optimizations
                 bestMove = rootNode.GetBestMove();
             }
             Debug.WriteLine(rootNode.TreeToString(2));
-
+            Debug.WriteLine("Min Reward: " + minReward + " - Max Reward: " + maxReward);
             visits = new List<int>();
             raveVisits = new List<int>();
             CountVisits((Opt_SP_UCTTreeNode)rootNode, visits, raveVisits);
