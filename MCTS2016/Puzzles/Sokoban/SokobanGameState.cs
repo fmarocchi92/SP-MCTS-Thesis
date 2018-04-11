@@ -806,7 +806,7 @@ namespace MCTS2016.Puzzles.Sokoban
 
         public void Pass()
         {
-            return;
+            throw new NotImplementedException();
         }
 
         public string PrettyPrintDistance()
@@ -1097,7 +1097,7 @@ namespace MCTS2016.Puzzles.Sokoban
 
         public double GetHeuristicEvaluation()
         {
-            return GetResult();
+            return HungarianDistance();
         }
 
         //void FindMacros()

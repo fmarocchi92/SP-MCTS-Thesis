@@ -109,6 +109,27 @@ namespace MCTS2016.Optimizations.UCT
             return childNodes[0];
         }
 
+        private ISPTreeNode RouletteWheelSelection()
+        {
+            childNodes.Sort((x, y) => -x.SP_UCTValue().CompareTo(y.SP_UCTValue()));
+            double totalValue = 0;
+            foreach (Opt_SP_UCTTreeNode child in childNodes)
+            {
+                totalValue += child.SP_UCTValue();
+            }
+            double randomValue = Math.Abs(rnd.NextDouble() * totalValue);
+            totalValue = 0;
+            foreach (Opt_SP_UCTTreeNode child in childNodes)
+            {
+                totalValue += Math.Abs(child.SP_UCTValue());
+                if (totalValue >= randomValue)
+                {
+                    return child;
+                }
+            }
+            return childNodes[0];
+        }
+
         private double SP_UCTValue()
         {
             double RAVEScore = 0;
@@ -134,8 +155,8 @@ namespace MCTS2016.Optimizations.UCT
                                                 + Math.Sqrt(2 * Math.Log(parent.visits) / visits));
             }
 
-            UCTScore = wins / visits + topScore * 0.02 + const_C * Math.Sqrt(ucb1min * Math.Log(parent.visits) / visits);
-                        //+Math.Sqrt((squaredReward - visits * Math.Pow(wins / visits, 2) + const_D) / visits); //EXTRA COSTANTE //this should probably be used only in score maximization problems
+            UCTScore = wins / visits + topScore * 0.02 + const_C * Math.Sqrt(ucb1min * Math.Log(parent.visits) / visits)
+                        +Math.Sqrt((squaredReward - visits * Math.Pow(wins / visits, 2) + const_D) / visits); //EXTRA COSTANTE //this should probably be used only in score maximization problems
             
             
             return alpha * RAVEScore + (1 - alpha) * UCTScore;

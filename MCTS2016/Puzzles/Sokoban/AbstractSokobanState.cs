@@ -227,7 +227,7 @@ namespace MCTS2016.Puzzles.Sokoban
             {
                 s += m;
             }
-            return s;
+            return s+"\nh: "+GetHeuristicEvaluation();
         }
 
         public void Restart()
@@ -544,7 +544,7 @@ namespace MCTS2016.Puzzles.Sokoban
 
         public double GetHeuristicEvaluation()
         {
-            return GetResult();
+            return state.GetHeuristicEvaluation();
         }
     }
 }

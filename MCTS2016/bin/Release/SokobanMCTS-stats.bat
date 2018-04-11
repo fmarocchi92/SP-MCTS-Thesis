@@ -2,16 +2,14 @@
 ::FABIO STOP
 SET ucb1=false
 SET rave=false
-SET rewardType=InverseBM
+SET rewardType=NegativeBM
 SET tunnelMacro=true
 SET normalizedPositions=true
-SET epsilon=1
+SET epsilon=0.2
 SET iterations=1000
 SET avoidCycles=true
 SET nodeElimination=true
 SET seed=1
-SET level=./Levels/test.txt
+SET level=./Levels/microban.txt
 
-.\MCTS2016.exe sokoban:%normalizedPositions%:%tunnelMacro%:false:false mcts:%iterations%:0.001:100:%rewardType%:%epsilon%:true:1:%ucb1%:%rave%:10:false:5000:%avoidCycles%:%nodeElimination% %level%
-.\MCTS2016.exe sokoban:%normalizedPositions%:%tunnelMacro%:false:false mcts:%iterations%:0.005:100:%rewardType%:%epsilon%:true:1:%ucb1%:%rave%:10:false:5000:%avoidCycles%:%nodeElimination% %level%
-.\MCTS2016.exe sokoban:%normalizedPositions%:%tunnelMacro%:false:false mcts:%iterations%:0.02:100:%rewardType%:%epsilon%:true:1:%ucb1%:%rave%:10:false:5000:%avoidCycles%:%nodeElimination% %level%
+.\UCB1Tuned.exe sokoban:true:true:false:false mcts:5000:6:100:NegativeBM:true:1:false:false:5:false:1:true:true:EpsilonGreedy:-1 ./microban.txt

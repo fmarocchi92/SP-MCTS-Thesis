@@ -21,6 +21,7 @@ namespace MCTS2016.IDAStar
         int nodeCount;
         int maxDepth;
         int maxNodes;
+        double bestScore;
 
         public int NodeCount { get => nodeCount; set => nodeCount = value; }
 
@@ -33,10 +34,13 @@ namespace MCTS2016.IDAStar
             secondLevelTable = new TranspositionTable(tableSize);
             double threshold = rootState.GetHeuristicEvaluation();
             result = null;
+            bestScore = double.MaxValue;
             double value = 1;
+            double lastIterationNodeCount = 0;
             AStarNode rootNode = new AStarNode(rootState, null, null);
             while (value > RESULT)
             {
+                lastIterationNodeCount = nodeCount;
                 visited = new List<IPuzzleState>() { rootState.Clone() };
                 value = Search(rootNode, 0, threshold);
                 if (value != RESULT && value > threshold)
@@ -49,21 +53,28 @@ namespace MCTS2016.IDAStar
                 }
                 if(threshold == double.MaxValue)
                 {
-                    Debug.WriteLine("Unsolvable");
+                    //Debug.WriteLine("Unsolvable");
                     value = NOT_FOUND;
                 }
             }
+            //SinglePlayerMCTSMain.Log("Last iteration nodes: " + (nodeCount - lastIterationNodeCount));
             return BuildSolution(result);
         }
 
         private double Search(AStarNode node, double cost, double threshold)
         {
+            double h = node.state.GetHeuristicEvaluation();
+            if(h < bestScore && cost > 0)
+            {
+                bestScore = h;
+                result = node;
+            }
             nodeCount++;
             if (nodeCount > maxNodes || cost > maxDepth)
             {
                 return NOT_FOUND;
             }
-            double value = cost + node.state.GetHeuristicEvaluation();
+            double value = cost + h;
             int currentHash = node.state.GetHashCode();
             TranspositionTableEntry entry;
             if (node.state.EndState())
@@ -87,19 +98,27 @@ namespace MCTS2016.IDAStar
             {                
                 //Debug.WriteLine(node.state);
             }
+            List<AStarNode> childNodes = new List<AStarNode>();
             foreach(IPuzzleMove move in moves)
             {
-                
                 IPuzzleState clone = node.state.Clone();
-                //Debug.WriteLine(clone.PrettyPrint());
                 clone.DoMove(move);
-                if (((SokobanPushMove)move).IsGoalMacro)
-                {
-                    Debug.WriteLine("GOAL_MACRO:");
-                    Debug.WriteLine(node.state);
-                    Debug.WriteLine(move);
-                    Debug.WriteLine(clone);
-                }
+                childNodes.Add(new AStarNode(clone, move, node));
+            }
+            childNodes.Sort((x, y) => (x.state.GetHeuristicEvaluation().CompareTo(y.state.GetHeuristicEvaluation())));
+            foreach(AStarNode childNode in childNodes)
+            {
+                IPuzzleMove move = childNode.move;
+                IPuzzleState clone = childNode.state;
+                //Debug.WriteLine(clone.PrettyPrint());
+                //clone.DoMove(move);
+                //if (((SokobanPushMove)move).IsGoalMacro)
+                //{
+                //    Debug.WriteLine("GOAL_MACRO:");
+                //    Debug.WriteLine(node.state);
+                //    Debug.WriteLine(move);
+                //    Debug.WriteLine(clone);
+                //}
                 int childHash = clone.GetHashCode();
                 //Debug.WriteLine(move);
                 //Debug.WriteLine(clone.PrettyPrint());
@@ -117,7 +136,7 @@ namespace MCTS2016.IDAStar
                 else
                 {
                     StoreInTranspositionTable(childHash, clone.GetHeuristicEvaluation() + cost + move.GetCost(), childDepth, true);
-                    value = Search(new AStarNode(clone, move, node), cost + move.GetCost(), threshold);
+                    value = Search(childNode, cost + move.GetCost(), threshold);
                 }
                 if (value == RESULT)
                 {

@@ -19,6 +19,7 @@ namespace MCTS2016.Puzzles.Sokoban
     enum SimulationType
     {
         Random,
-        E_Greedy
+        EpsilonGreedy,
+        IDAstar
     }
 }

@@ -53,6 +53,7 @@
     <Compile Include="Puzzles\Sokoban\HungarianAlgorithm.cs" />
     <Compile Include="Puzzles\Sokoban\RewardType.cs" />
     <Compile Include="Puzzles\Sokoban\SokobanEGreedyStrategy.cs" />
+    <Compile Include="Puzzles\Sokoban\SokobanIDAstarStrategy.cs" />
     <Compile Include="Puzzles\Sokoban\SokobanInertiaStrategy.cs" />
     <Compile Include="Puzzles\Sokoban\SokobanMCTSStrategy.cs" />
     <Compile Include="Puzzles\Sokoban\SokobanPushMove.cs" />

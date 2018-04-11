@@ -36,6 +36,8 @@ namespace MCTS2016.SP_MCTS.Optimizations
         public List<int> visits = new List<int>();
         public List<int> raveVisits = new List<int>();
         public int maxDepth;
+        public int nodesEliminated;
+        public int nodesNotExpanded;
 
         public OptMCTSAlgorithm(ISPTreeNodeCreator treeCreator, int iterations, int memoryBudget, bool stopOnResult, bool avoidCycles, bool useNodeElimination)
         {
@@ -62,6 +64,8 @@ namespace MCTS2016.SP_MCTS.Optimizations
         {
             IterationsForFirstSolution = -1;
             nodeCount = 0;
+            nodesEliminated = 0;
+            nodesNotExpanded = 0;
             bool looped;
             if (!search)
             {
@@ -161,7 +165,7 @@ namespace MCTS2016.SP_MCTS.Optimizations
                                 }
                             }
                         }
-                        
+
                         if (visitedStatesInRollout.Contains(state))
                         {
                             if (avoidCycles)
@@ -183,11 +187,13 @@ namespace MCTS2016.SP_MCTS.Optimizations
                                 }
                                 else //all moves visited
                                 {
+                                    nodesNotExpanded++;
                                     state = backupState;
                                 }
                             }
                             else
                             {
+                                nodesNotExpanded++;
                                 looped = true;
                             }
                         }
@@ -206,6 +212,10 @@ namespace MCTS2016.SP_MCTS.Optimizations
                     {
                         state.Pass();
                     }
+                }
+                else
+                {
+                    nodesNotExpanded++;
                 }
                  
 
@@ -246,9 +256,10 @@ namespace MCTS2016.SP_MCTS.Optimizations
                         allFirstMoves.Add(move);
                         visitedStatesInRollout.Add(state.Clone());
                     }
-                    else
+                    else //simulation ended
                     {
-                        state.Pass();
+                        break;
+                        //state.Pass();
                     }
                 }
                 
@@ -262,7 +273,7 @@ namespace MCTS2016.SP_MCTS.Optimizations
                     solutionCount++;
                     if (iterationsForFirstSolution < 0)
                     {
-                        iterationsForFirstSolution = iterationsExecuted;
+                        iterationsForFirstSolution = iterationsExecuted+1;
                     }
                 }
                 if (result > topScore || result == topScore && currentRollout.Count < bestRollout.Count)
@@ -271,6 +282,7 @@ namespace MCTS2016.SP_MCTS.Optimizations
                     bestRollout = currentRollout;
                     if (state.EndState() && stopOnResult)
                     {
+                        iterationsExecuted++;
                         break;
                     }
                 }
@@ -291,11 +303,12 @@ namespace MCTS2016.SP_MCTS.Optimizations
                         if (node.Parent == null)//unsolvable level. The tree has been completely explored. Return current best score
                         {
                             //SinglePlayerMCTSMain.Log("Unsolvable Level");
-                            Console.WriteLine("\nUnsolvable Level");
+                            //Console.WriteLine("\nUnsolvable Level");
                             break;
                         }
                         node.Parent.RemoveChild(node);
                         nodeCount--;
+                        nodesEliminated++;
                         currentDepth--;
                     }
 
@@ -366,7 +379,7 @@ namespace MCTS2016.SP_MCTS.Optimizations
             {
                 bestMove = rootNode.GetBestMove();
             }
-            Debug.WriteLine(rootNode.TreeToString(2));
+            Debug.WriteLine(rootNode.TreeToString(0));
             Debug.WriteLine("Min Reward: " + minReward + " - Max Reward: " + maxReward);
             visits = new List<int>();
             raveVisits = new List<int>();

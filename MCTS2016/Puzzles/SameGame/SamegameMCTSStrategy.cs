@@ -22,6 +22,7 @@ namespace MCTS2016.Puzzles.SameGame
         private double maxTimeInMinutes;
 
         public int iterations { get; set; }
+        public OptMCTSAlgorithm Mcts { get => mcts; set => mcts = value; }
 
         public SamegameMCTSStrategy(MersenneTwister rng, bool ucb1Tuned, bool rave, int raveThreshold, bool nodeRecycling, int memoryBudget, bool useNodeElimination, int iterations = 1000, OptMCTSAlgorithm mcts = null, double const_C = 4.31, double const_D = 96.67)
         {

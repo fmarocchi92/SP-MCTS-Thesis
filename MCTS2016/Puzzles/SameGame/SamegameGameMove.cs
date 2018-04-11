@@ -80,7 +80,7 @@ namespace MCTS2016.Puzzles.SameGame
             {
                 return 1;
             }
-            return 1/((Blocks.Count - 2)^2);
+            return 1/((Blocks.Count - 2)*(Blocks.Count-2));
         }
     }
 }

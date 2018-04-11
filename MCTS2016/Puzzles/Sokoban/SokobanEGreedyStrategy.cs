@@ -56,6 +56,7 @@ namespace MCTS2016.Puzzles.Sokoban
                     }
                     clone = gameState.Clone();
                 }
+                //return bestMoves[0];
                 return bestMoves[rng.Next(bestMoves.Count())];
             }
             else
