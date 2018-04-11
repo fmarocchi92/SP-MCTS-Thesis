@@ -1,0 +1,22 @@
+\chapter{Introduction}
+\label{Introduzione}
+This thesis focuses on the application of Artificial Intelligence (AI) to puzzle games. This field was born in the ’50s and the first AI algorithms, developed for two-players-board games (like Checkers and Chess), were able to play only final moves of the game or they could only play at beginners level. In the following years, these programs could compete against human-expert players due to more advanced techniques that have been developed. In some cases, it has been possible to solve a game, i.e. predict the result of a game played from a certain state in which all the players did the optimal moves.
+
+\medskip\noindent
+The aim of this thesis is to evaluate the performance of \textit{Monte Carlo Tree Search} (MCTS) applied to the puzzle game Sokoban, a single-player computer game in which the player inside a maze has to push boxes to assigned positions. Only one box at a time can be pushed and the boxes can not be pulled.
+
+\medskip\noindent
+MCTS has been introduced in 2006 by Rèmi Coulom \cite{coulom:inria-00116992}, combining tree search with Monte-Carlo evaluations which introduced independence from domain knowledge and a fine-grained control of the growth of the tree. Shortly after, Kocsis and Szepesvàri \cite{Kocsis:2006:BBM:2091602.2091633} formalized this approach into the \textit{Upper Confidence Bounds for Trees} (UCT) algorithm, which nowadays is the most used algorithm of the MCTS family. In contrast with the classical AI algorithms (like Minimax), that completely explore the search tree, MCTS builds up a tree in an incremental and asymmetric manner guided by many random simulated games. In this way it can explore only the most promising areas of the tree. Moreover, the exploration can be stopped at any time returning the current best result, this make MCTS very efficient in terms of time and memory. Kocsis and Szepesvàri were also able to prove that, with enough iterations of the algorithm, MCTS converges to the same result of Minimax.
+
+\medskip\noindent
+Due to the successful application of MCTS algorithm to many board games, in this thesis we evaluate its efficiency in Sokoban comparing it to another well known algorithm, \textit{Iterative Deepening A*}, which has been proven to have a huge success in this puzzle game \cite{Junghanns99pushingthe}.
+
+\section{Thesis outline}
+The structure of the thesis is describe in the following:
+\begin{itemize}
+    \item Chapter 2 provides a background of Sokoban, outlining its rules and complexity. It also provides a description of the used algorithm \textit{Iterative Deepening A*} and its enhancements for the chosen puzzle.
+    \item Chapter 3 reports the state of art of the \textit{Monte Carlo Tree Search} (MCTS) algorithm, a description of it and enhancements that have been developed. It also describes a case study, represented by Samegame, in with MCTS has been successfully used.
+    \item Chapter 4 presents our solution to the puzzle solving problem, describing the domain dependent/independent enhancements used to improve performance.
+    \item Chapter 5 outlines all the experiments used in this thesis in order to compare the efficiency of the different algorithms in the different domains. Then compares the results obtained by the algorithms in the proposed experiments in order to determine which algorithm has better performance in each domain.
+    \item Chapter 6 presents an analysis of the results with respect to the aim of the thesis and also set out possible further improvements that can be integrated in this work. 
+\end{itemize}
